@@ -3,12 +3,12 @@
 declare(strict_types=1);
 
 /**
- * Rebuilds index.json: one entry per repo under the owner carrying the `osmium-service` topic,
+ * Rebuilds index.json: one entry per public repo under the owner that has a service.json at its root,
  * with its latest vX.Y.Z release tag, the commit that tag points at, and the service.json at that commit.
  * Osmium installs read this one file instead of crawling every service repo.
  *
- * Only public reads: the search API (own quota), git's ref listing, and raw.githubusercontent.com -
- * so a run costs a couple of API calls however many services there are.
+ * Only public reads: the repo listing API (one request per 100 repos), git's ref listing, and
+ * raw.githubusercontent.com - so a run costs a couple of API calls however many services there are.
  *
  * Exits non-zero (leaving index.json untouched) if GitHub fails on anything but a missing file, so a
  * hiccup can never publish a shortened catalogue.
@@ -16,7 +16,7 @@ declare(strict_types=1);
  * Usage: php build-index.php [owner]   (GITHUB_TOKEN is optional; raises the search quota)
  */
 
-const TOPIC = 'osmium-service';
+const INDEX_REPO = 'store-index'; // This repo is not a service
 const TAG_PATTERN = '/^v?(\d+\.\d+\.\d+)$/';
 const PARALLEL = 20;
 
@@ -69,16 +69,17 @@ function bodyOrNull(array $response, string $what): ?string
     return $response['body'];
 }
 
-// 1. Every repo under the owner with the topic (paged; GitHub search returns at most 1000)
-$query = rawurlencode('topic:' . TOPIC . " user:{$owner}");
+// 1. Every public repo under the owner (paged). A repo with no usable service.json is skipped in step 3, so no topic is needed.
 $repos = [];
 for ($page = 1; $page <= 10; $page++) {
-    $r = fetchMany(["https://api.github.com/search/repositories?q={$query}&per_page=100&page={$page}"], $token, apiHost: true)[0];
-    $json = json_decode(bodyOrNull($r, 'search') ?? fail('search returned 404'), true);
-    $items = $json['items'] ?? fail('search returned an unreadable response');
-    if (($json['incomplete_results'] ?? false) === true) fail('GitHub search returned incomplete results; not publishing a partial catalogue');
-    foreach ($items as $item) $repos[] = $item;
-    if (count($items) < 100) break;
+    $r = fetchMany(["https://api.github.com/orgs/{$owner}/repos?type=public&per_page=100&page={$page}"], $token, apiHost: true)[0];
+    $json = json_decode(bodyOrNull($r, 'repo listing') ?? fail("no organisation named {$owner}"), true);
+    if (!is_array($json)) fail('repo listing returned an unreadable response');
+    foreach ($json as $item) {
+        $isService = ($item['name'] ?? '') !== INDEX_REPO && !($item['archived'] ?? false) && !($item['fork'] ?? false);
+        if ($isService) $repos[] = $item;
+    }
+    if (count($json) < 100) break;
 }
 
 // 2. Release tags and their commits, from git's own ref listing (an annotated tag's commit is its peeled "^{}" line)
