@@ -1,0 +1,41 @@
+name: Build index
+
+# Rebuilds index.json from the service repos and commits it if anything changed.
+# Runs every 15 minutes, on demand, and when a service repo sends a "service-released" dispatch.
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+  repository_dispatch:
+    types: [service-released]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-index
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild index.json
+        run: php build-index.php
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit if changed
+        run: |
+          git config user.name "osmium-store-index"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.json
+          if git diff --cached --quiet; then
+            echo "index.json unchanged"
+          else
+            git commit -m "Update index"
+            git push
+          fi
