@@ -331,15 +331,15 @@
         },
         {
             "repo": "Osmium-Services/osmium-mailgun",
-            "tag": "v1.0.0",
-            "commitSha": "d9ad8bd39462226161db28407d9dc8015eaf3133",
-            "pushedAt": "2026-10-05T12:25:26Z",
+            "tag": "v1.0.1",
+            "commitSha": "3843bd08c607f931105e0aa97609fee0c80dd0fa",
+            "pushedAt": "2026-10-05T12:42:15Z",
             "manifest": {
                 "id": "mailgun",
                 "name": "Mailgun",
-                "version": "1.0.0",
+                "version": "1.0.1",
                 "description": "Send site email through Mailgun's HTTP API - useful where hosting blocks outbound SMTP. Appears as a provider on the Email settings page.",
-                "category": "other",
+                "category": "email",
                 "author": {
                     "name": "Gavin Cox"
                 },
@@ -387,15 +387,15 @@
         },
         {
             "repo": "Osmium-Services/osmium-mailtrap",
-            "tag": "v1.0.0",
-            "commitSha": "3f5bbd3d3d21d558370b91601c85f774c5ef90df",
-            "pushedAt": "2026-10-05T12:25:41Z",
+            "tag": "v1.0.1",
+            "commitSha": "03e97019ffbbda35c3a24cdc010bcd9b4b696b0c",
+            "pushedAt": "2026-10-05T12:42:24Z",
             "manifest": {
                 "id": "mailtrap",
                 "name": "Mailtrap",
-                "version": "1.0.0",
+                "version": "1.0.1",
                 "description": "Send site email through Mailtrap - live sending, or a sandbox inbox that catches every email so nothing reaches real customers while testing. Appears as a provider on the Email settings page.",
-                "category": "other",
+                "category": "email",
                 "author": {
                     "name": "Gavin Cox"
                 },
@@ -511,15 +511,15 @@
         },
         {
             "repo": "Osmium-Services/osmium-microsoft-graph",
-            "tag": "v1.0.0",
-            "commitSha": "0219fbb14c1a3f67295c773fcabd6419d5318ed5",
-            "pushedAt": "2026-10-05T12:25:32Z",
+            "tag": "v1.0.1",
+            "commitSha": "458d0eb5d789c38304db57be358e49dd263a00ff",
+            "pushedAt": "2026-10-05T12:42:20Z",
             "manifest": {
                 "id": "microsoft-graph",
                 "name": "Microsoft 365 Mail",
-                "version": "1.0.0",
+                "version": "1.0.1",
                 "description": "Send site email through the Microsoft Graph API using an Azure AD app registration - for Microsoft 365 tenants that have disabled SMTP AUTH. Appears as a provider on the Email settings page.",
-                "category": "other",
+                "category": "email",
                 "author": {
                     "name": "Gavin Cox"
                 },
