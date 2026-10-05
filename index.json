@@ -154,6 +154,65 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-google-maps-embed",
+            "tag": "v1.1.0",
+            "commitSha": "743478279598e7cdc4f5acaaf8002bad13179e15",
+            "pushedAt": "2026-10-05T11:29:28Z",
+            "manifest": {
+                "id": "google-maps-embed",
+                "name": "Google Maps Embed",
+                "version": "1.1.0",
+                "description": "Google Maps Embed (a single place in an iframe) for a theme to place anywhere (e.g. a contact page), from one admin-editable embed URL",
+                "category": "content",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "google-maps-embed",
+                                "label": "Google Maps Embed",
+                                "icon": "bx bx-map",
+                                "route": "admin/settings/google-maps-embed",
+                                "activePattern": "admin/settings/google-maps-embed",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/settings/google-maps-embed": {
+                            "controller": "controllers/GoogleMapsEmbedController.php",
+                            "class": "Osmium\\Services\\GoogleMapsEmbed\\Controllers\\GoogleMapsEmbedController",
+                            "method": "index",
+                            "title": "Google Maps Embed"
+                        }
+                    }
+                },
+                "frontend": {
+                    "themeBlocks": [
+                        {
+                            "hook": "map",
+                            "file": "theme/google-maps-embed.phtml"
+                        }
+                    ]
+                },
+                "setup": {
+                    "postInstallNote": "Paste the embed URL on the Google Maps Embed settings page (Google Maps > Share > Embed a map; copy only the src URL, not the whole iframe). Then place the map in a theme with <?php $template['serviceBlock']('map'); ?> where it should appear, e.g. the contact page. Nothing renders until a URL is saved. The iframe loads Google immediately, with no consent step."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-google-merchant-center",
             "tag": "v1.0.1",
             "commitSha": "2402af7ef88dc3de298befd668a2850ceecf081c",
@@ -271,6 +330,118 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-mailgun",
+            "tag": "v1.0.0",
+            "commitSha": "d9ad8bd39462226161db28407d9dc8015eaf3133",
+            "pushedAt": "2026-10-05T12:25:26Z",
+            "manifest": {
+                "id": "mailgun",
+                "name": "Mailgun",
+                "version": "1.0.0",
+                "description": "Send site email through Mailgun's HTTP API - useful where hosting blocks outbound SMTP. Appears as a provider on the Email settings page.",
+                "category": "other",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "mailgun",
+                                "label": "Mailgun",
+                                "icon": "bx bx-envelope",
+                                "route": "admin/settings/mailgun",
+                                "activePattern": "admin/settings/mailgun",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/settings/mailgun": {
+                            "controller": "controllers/MailgunController.php",
+                            "class": "Osmium\\Services\\Mailgun\\Controllers\\MailgunController",
+                            "method": "index",
+                            "title": "Mailgun"
+                        }
+                    }
+                },
+                "hooks": {
+                    "mail.providers": [
+                        "Osmium\\Services\\Mailgun\\Models\\MailgunMailProvider::provider"
+                    ]
+                },
+                "setup": {
+                    "postInstallNote": "Enter the sending domain, region and API key on the Mailgun settings page, then choose Mailgun as the Provider on Settings > Email and use Send test email."
+                }
+            }
+        },
+        {
+            "repo": "Osmium-Services/osmium-mailtrap",
+            "tag": "v1.0.0",
+            "commitSha": "3f5bbd3d3d21d558370b91601c85f774c5ef90df",
+            "pushedAt": "2026-10-05T12:25:41Z",
+            "manifest": {
+                "id": "mailtrap",
+                "name": "Mailtrap",
+                "version": "1.0.0",
+                "description": "Send site email through Mailtrap - live sending, or a sandbox inbox that catches every email so nothing reaches real customers while testing. Appears as a provider on the Email settings page.",
+                "category": "other",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "mailtrap",
+                                "label": "Mailtrap",
+                                "icon": "bx bx-envelope",
+                                "route": "admin/settings/mailtrap",
+                                "activePattern": "admin/settings/mailtrap",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/settings/mailtrap": {
+                            "controller": "controllers/MailtrapController.php",
+                            "class": "Osmium\\Services\\Mailtrap\\Controllers\\MailtrapController",
+                            "method": "index",
+                            "title": "Mailtrap"
+                        }
+                    }
+                },
+                "hooks": {
+                    "mail.providers": [
+                        "Osmium\\Services\\Mailtrap\\Models\\MailtrapMailProvider::provider"
+                    ]
+                },
+                "setup": {
+                    "postInstallNote": "Enter an API token on the Mailtrap settings page and choose Live sending (a verified sending domain is needed) or Sandbox (enter the inbox ID). Then choose Mailtrap as the Provider on Settings > Email and use Send test email."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-meta-pixel",
             "tag": "v1.0.3",
             "commitSha": "4e166d97e1f4db1d462173f50985d53e40eae016",
@@ -335,6 +506,62 @@
                 },
                 "setup": {
                     "postInstallNote": "Disabled by default. A theme must call ServiceThemeBlocks::render('head', ['site' => $site]) in its <head> template before enabling this does anything visible. Needs a consent tool: the pixel sends nothing until a cookie named osmium_cookie_consent (or window.OsmiumCookieConsent.cookieName) reads 'accepted' - the Cookie Consent service does this. Tracks PageView only - shop events (ViewContent, AddToCart, Purchase) aren't included."
+                }
+            }
+        },
+        {
+            "repo": "Osmium-Services/osmium-microsoft-graph",
+            "tag": "v1.0.0",
+            "commitSha": "0219fbb14c1a3f67295c773fcabd6419d5318ed5",
+            "pushedAt": "2026-10-05T12:25:32Z",
+            "manifest": {
+                "id": "microsoft-graph",
+                "name": "Microsoft 365 Mail",
+                "version": "1.0.0",
+                "description": "Send site email through the Microsoft Graph API using an Azure AD app registration - for Microsoft 365 tenants that have disabled SMTP AUTH. Appears as a provider on the Email settings page.",
+                "category": "other",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "microsoft-graph",
+                                "label": "Microsoft 365 Mail",
+                                "icon": "bx bx-envelope",
+                                "route": "admin/settings/microsoft-graph",
+                                "activePattern": "admin/settings/microsoft-graph",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/settings/microsoft-graph": {
+                            "controller": "controllers/MicrosoftGraphController.php",
+                            "class": "Osmium\\Services\\MicrosoftGraph\\Controllers\\MicrosoftGraphController",
+                            "method": "index",
+                            "title": "Microsoft 365 Mail"
+                        }
+                    }
+                },
+                "hooks": {
+                    "mail.providers": [
+                        "Osmium\\Services\\MicrosoftGraph\\Models\\MicrosoftGraphMailProvider::provider"
+                    ]
+                },
+                "setup": {
+                    "postInstallNote": "Enter the Tenant ID, Client ID and client secret of an Azure AD app registration with the Mail.Send application permission (admin consent granted) on the Microsoft 365 Mail settings page. Mail is sent as the From address on Settings > Email, so scope the app to that mailbox with an Exchange ApplicationAccessPolicy. Then choose Microsoft 365 Mail as the Provider on Settings > Email and use Send test email."
                 }
             }
         },
