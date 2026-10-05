@@ -442,6 +442,62 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-mailjet",
+            "tag": "v1.0.0",
+            "commitSha": "1837f26efd2521e2e9333431f972c182b6f2e5da",
+            "pushedAt": "2026-10-05T13:08:17Z",
+            "manifest": {
+                "id": "mailjet",
+                "name": "Mailjet",
+                "version": "1.0.0",
+                "description": "Send site email through Mailjet's HTTP API - a free plan of 6,000 emails a month, and useful where hosting blocks outbound SMTP. Appears as a provider on the Email settings page.",
+                "category": "email",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "mailjet",
+                                "label": "Mailjet",
+                                "icon": "bx bx-envelope",
+                                "route": "admin/settings/mailjet",
+                                "activePattern": "admin/settings/mailjet",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/settings/mailjet": {
+                            "controller": "controllers/MailjetController.php",
+                            "class": "Osmium\\Services\\Mailjet\\Controllers\\MailjetController",
+                            "method": "index",
+                            "title": "Mailjet"
+                        }
+                    }
+                },
+                "hooks": {
+                    "mail.providers": [
+                        "Osmium\\Services\\Mailjet\\Models\\MailjetMailProvider::provider"
+                    ]
+                },
+                "setup": {
+                    "postInstallNote": "Enter a Mailjet API key and secret key on the Mailjet settings page, and make sure the From address on Settings > Email is a verified sender or domain in Mailjet. Then choose Mailjet as the Provider on Settings > Email and use Send test email."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-mailtrap",
             "tag": "v1.0.1",
             "commitSha": "03e97019ffbbda35c3a24cdc010bcd9b4b696b0c",
