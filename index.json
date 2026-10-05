@@ -60,14 +60,14 @@
         },
         {
             "repo": "Osmium-Services/osmium-clarity",
-            "tag": "v1.0.0",
-            "commitSha": "fdc3422aeb825debb684eaead292f87fa8987fb0",
-            "pushedAt": "2026-10-05T14:57:15Z",
+            "tag": "v1.1.0",
+            "commitSha": "8853020846a502e34673dbf1c8ce36b1d047adeb",
+            "pushedAt": "2026-10-05T15:57:03Z",
             "manifest": {
                 "id": "clarity",
                 "name": "Microsoft Clarity",
-                "version": "1.0.0",
-                "description": "Microsoft Clarity heatmaps and session recordings - free, consent-gated, gated on an admin-editable toggle and production-only",
+                "version": "1.1.0",
+                "description": "Microsoft Clarity heatmaps and session recordings - free, consent-gated, gated on an admin-editable toggle and production-only; requires the Cookie Consent service",
                 "category": "marketing-analytics",
                 "author": {
                     "name": "Gavin Cox"
@@ -76,7 +76,9 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": []
+                    "services": [
+                        "cookie-consent"
+                    ]
                 },
                 "autoload": [
                     "models"
@@ -123,7 +125,7 @@
                     ]
                 },
                 "setup": {
-                    "postInstallNote": "Disabled by default. A theme must call ServiceThemeBlocks::render('head', ['site' => $site]) in its <head> template before enabling this does anything visible. Needs a consent tool: Clarity gets consent denied until a cookie named osmium_cookie_consent (or window.OsmiumCookieConsent.cookieName) reads 'accepted' - the Cookie Consent service does this. Clarity's own Cookies setting should also be off for no cookies before consent."
+                    "postInstallNote": "Disabled by default. A theme must call ServiceThemeBlocks::render('head', ['site' => $site]) in its <head> template before enabling this does anything visible. Requires Cookie Consent (installed with this service, but disabled by default - enable it too): Clarity gets consent denied until a cookie named osmium_cookie_consent (or window.OsmiumCookieConsent.cookieName) reads 'accepted'. Clarity's own Cookies setting should also be off for no cookies before consent."
                 }
             }
         },
@@ -300,14 +302,14 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-analytics",
-            "tag": "v1.0.4",
-            "commitSha": "8916275d8674fffa83bdd8cbb36eb2f535368e6f",
-            "pushedAt": "2026-10-05T15:07:26Z",
+            "tag": "v1.1.0",
+            "commitSha": "f83b11bd5c2d846b8eb5a25c6439db166bc36495",
+            "pushedAt": "2026-10-05T15:25:35Z",
             "manifest": {
                 "id": "analytics",
                 "name": "Google Analytics",
-                "version": "1.0.4",
-                "description": "Google Tag Manager / GA4 loading with Consent Mode v2, gated on an admin-editable toggle and production-only",
+                "version": "1.1.0",
+                "description": "Google Tag Manager / GA4 loading with Consent Mode v2, gated on an admin-editable toggle and production-only; requires the Cookie Consent service",
                 "category": "marketing-analytics",
                 "author": {
                     "name": "Gavin Cox"
@@ -316,7 +318,9 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": []
+                    "services": [
+                        "cookie-consent"
+                    ]
                 },
                 "autoload": [
                     "models"
@@ -780,14 +784,14 @@
         },
         {
             "repo": "Osmium-Services/osmium-meta-pixel",
-            "tag": "v1.0.4",
-            "commitSha": "0c93fd696f04a2f13571d6abd40e3e285e034d5a",
-            "pushedAt": "2026-10-05T15:01:31Z",
+            "tag": "v1.1.3",
+            "commitSha": "dd5be537c96a0862422d4e9583e0f0fd5ab3bb16",
+            "pushedAt": "2026-10-05T15:55:05Z",
             "manifest": {
                 "id": "meta-pixel",
                 "name": "Meta Pixel",
-                "version": "1.0.4",
-                "description": "Meta (Facebook/Instagram) Pixel PageView tracking, consent-gated, gated on an admin-editable toggle and production-only",
+                "version": "1.1.3",
+                "description": "Meta (Facebook/Instagram) Pixel PageView tracking, consent-gated, gated on an admin-editable toggle and production-only; requires the Cookie Consent service",
                 "category": "marketing-analytics",
                 "author": {
                     "name": "Gavin Cox"
@@ -796,7 +800,9 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": []
+                    "services": [
+                        "cookie-consent"
+                    ]
                 },
                 "autoload": [
                     "models"
@@ -842,7 +848,7 @@
                     ]
                 },
                 "setup": {
-                    "postInstallNote": "Disabled by default. A theme must call ServiceThemeBlocks::render('head', ['site' => $site]) in its <head> template before enabling this does anything visible. Needs a consent tool: the pixel sends nothing until a cookie named osmium_cookie_consent (or window.OsmiumCookieConsent.cookieName) reads 'accepted' - the Cookie Consent service does this. Tracks PageView only - shop events (ViewContent, AddToCart, Purchase) aren't included."
+                    "postInstallNote": "Disabled by default. A theme must call ServiceThemeBlocks::render('head', ['site' => $site]) in its <head> template before enabling this does anything visible. Requires Cookie Consent (installed with this service, but disabled by default - enable it too): the pixel sends nothing until a cookie named osmium_cookie_consent (or window.OsmiumCookieConsent.cookieName) reads 'accepted'. Tracks PageView only - shop events (ViewContent, AddToCart, Purchase) aren't included."
                 }
             }
         },
