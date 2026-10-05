@@ -59,6 +59,75 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-clarity",
+            "tag": "v1.0.0",
+            "commitSha": "fdc3422aeb825debb684eaead292f87fa8987fb0",
+            "pushedAt": "2026-10-05T14:57:15Z",
+            "manifest": {
+                "id": "clarity",
+                "name": "Microsoft Clarity",
+                "version": "1.0.0",
+                "description": "Microsoft Clarity heatmaps and session recordings - free, consent-gated, gated on an admin-editable toggle and production-only",
+                "category": "marketing-analytics",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "csp": {
+                    "script-src": [
+                        "https://www.clarity.ms",
+                        "https://*.clarity.ms"
+                    ],
+                    "connect-src": [
+                        "https://*.clarity.ms",
+                        "https://c.bing.com"
+                    ]
+                },
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "clarity",
+                                "label": "Microsoft Clarity",
+                                "icon": "bx bx-line-chart",
+                                "route": "admin/settings/clarity",
+                                "activePattern": "admin/settings/clarity",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/settings/clarity": {
+                            "controller": "controllers/ClarityController.php",
+                            "class": "Osmium\\Services\\Clarity\\Controllers\\ClarityController",
+                            "method": "index",
+                            "title": "Microsoft Clarity"
+                        }
+                    }
+                },
+                "frontend": {
+                    "themeBlocks": [
+                        {
+                            "hook": "head",
+                            "file": "theme/clarity-headscript.phtml"
+                        }
+                    ]
+                },
+                "setup": {
+                    "postInstallNote": "Disabled by default. A theme must call ServiceThemeBlocks::render('head', ['site' => $site]) in its <head> template before enabling this does anything visible. Needs a consent tool: Clarity gets consent denied until a cookie named osmium_cookie_consent (or window.OsmiumCookieConsent.cookieName) reads 'accepted' - the Cookie Consent service does this. Clarity's own Cookies setting should also be off for no cookies before consent."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-cookie-consent",
             "tag": "v1.0.2",
             "commitSha": "1889cb0384ffbfed4d79d1d5cf3aae078e52d896",
@@ -126,6 +195,85 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-freeagent",
+            "tag": "v1.0.0",
+            "commitSha": "07001bbb09f76a5b1b33f3659b0a3dab4ab4f3d1",
+            "pushedAt": "2026-10-05T14:35:58Z",
+            "manifest": {
+                "id": "freeagent",
+                "name": "FreeAgent",
+                "version": "1.0.0",
+                "description": "Connects the shop to FreeAgent (OAuth2) and adds a 'Push to FreeAgent' button on paid orders that creates a sales invoice. Locked to one named FreeAgent company",
+                "category": "business",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "migrations": "migrations",
+                "hooks": {
+                    "order.panels": [
+                        "Osmium\\Services\\Freeagent\\Models\\FreeagentOrderSync::orderPanel"
+                    ],
+                    "order.action": [
+                        "Osmium\\Services\\Freeagent\\Models\\FreeagentOrderSync::orderAction"
+                    ]
+                },
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "freeagent",
+                                "label": "FreeAgent",
+                                "icon": "bx bx-receipt",
+                                "route": "admin/settings/freeagent",
+                                "activePattern": "admin/settings/freeagent",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/settings/freeagent": {
+                            "controller": "controllers/FreeagentController.php",
+                            "class": "Osmium\\Services\\Freeagent\\Controllers\\FreeagentController",
+                            "method": "index",
+                            "title": "FreeAgent"
+                        },
+                        "admin/settings/freeagent/connect": {
+                            "controller": "controllers/FreeagentController.php",
+                            "class": "Osmium\\Services\\Freeagent\\Controllers\\FreeagentController",
+                            "method": "connect",
+                            "title": "FreeAgent"
+                        },
+                        "admin/settings/freeagent/callback": {
+                            "controller": "controllers/FreeagentController.php",
+                            "class": "Osmium\\Services\\Freeagent\\Controllers\\FreeagentController",
+                            "method": "callback",
+                            "title": "FreeAgent"
+                        },
+                        "admin/settings/freeagent/action": {
+                            "controller": "controllers/FreeagentController.php",
+                            "class": "Osmium\\Services\\Freeagent\\Controllers\\FreeagentController",
+                            "method": "action",
+                            "title": "FreeAgent"
+                        }
+                    }
+                },
+                "setup": {
+                    "requiresConnection": true,
+                    "postInstallNote": "Pushing is locked until configured. Create an app in the FreeAgent developer dashboard, enter its OAuth identifier/secret on the settings page and add the shown redirect URI to the app. Set Allowed company to the exact name of the FreeAgent company, then connect, then pick the sales category and tax rate. Pushing creates real invoices."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-geocoder",
             "tag": "v1.0.2",
             "commitSha": "860bcfceda5ac5221a41f75414f6ea10fb5c3bae",
@@ -152,13 +300,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-analytics",
-            "tag": "v1.0.2",
-            "commitSha": "8439b77f5fce8328376115be147a09624e06b247",
-            "pushedAt": "2026-10-05T06:58:24Z",
+            "tag": "v1.0.4",
+            "commitSha": "8916275d8674fffa83bdd8cbb36eb2f535368e6f",
+            "pushedAt": "2026-10-05T15:07:26Z",
             "manifest": {
                 "id": "analytics",
                 "name": "Google Analytics",
-                "version": "1.0.2",
+                "version": "1.0.4",
                 "description": "Google Tag Manager / GA4 loading with Consent Mode v2, gated on an admin-editable toggle and production-only",
                 "category": "marketing-analytics",
                 "author": {
@@ -173,6 +321,19 @@
                 "autoload": [
                     "models"
                 ],
+                "csp": {
+                    "script-src": [
+                        "https://www.googletagmanager.com"
+                    ],
+                    "connect-src": [
+                        "https://www.google-analytics.com",
+                        "https://*.google-analytics.com",
+                        "https://*.analytics.google.com"
+                    ],
+                    "frame-src": [
+                        "https://www.googletagmanager.com"
+                    ]
+                },
                 "admin": {
                     "menu": {
                         "section": "Content",
@@ -211,13 +372,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-maps-embed",
-            "tag": "v1.1.0",
-            "commitSha": "743478279598e7cdc4f5acaaf8002bad13179e15",
-            "pushedAt": "2026-10-05T11:29:28Z",
+            "tag": "v1.1.1",
+            "commitSha": "9c691144bd8a8384b9a9f473dbfeac02fd0e206f",
+            "pushedAt": "2026-10-05T15:08:32Z",
             "manifest": {
                 "id": "google-maps-embed",
                 "name": "Google Maps Embed",
-                "version": "1.1.0",
+                "version": "1.1.1",
                 "description": "Google Maps Embed (a single place in an iframe) for a theme to place anywhere (e.g. a contact page), from one admin-editable embed URL",
                 "category": "content",
                 "author": {
@@ -232,6 +393,11 @@
                 "autoload": [
                     "models"
                 ],
+                "csp": {
+                    "frame-src": [
+                        "https://www.google.com"
+                    ]
+                },
                 "admin": {
                     "menu": {
                         "section": "Content",
@@ -382,6 +548,65 @@
                     "assets": [
                         "assets/google-reviews.js"
                     ]
+                }
+            }
+        },
+        {
+            "repo": "Osmium-Services/osmium-hcaptcha",
+            "tag": "v1.0.0",
+            "commitSha": "6d5962b44df3c731a47656700157b63be78fdaa3",
+            "pushedAt": "2026-10-05T14:43:55Z",
+            "manifest": {
+                "id": "hcaptcha",
+                "name": "hCaptcha",
+                "version": "1.0.0",
+                "description": "Spam protection for forms via hCaptcha - a privacy-focused alternative to Google reCAPTCHA and Cloudflare Turnstile, admin-editable site/secret key",
+                "category": "security-privacy",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "hcaptcha",
+                                "label": "hCaptcha",
+                                "icon": "bx bx-shield-quarter",
+                                "route": "admin/settings/hcaptcha",
+                                "activePattern": "admin/settings/hcaptcha",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/settings/hcaptcha": {
+                            "controller": "controllers/HcaptchaController.php",
+                            "class": "Osmium\\Services\\Hcaptcha\\Controllers\\HcaptchaController",
+                            "method": "index",
+                            "title": "hCaptcha"
+                        }
+                    }
+                },
+                "frontend": {
+                    "themeBlocks": [
+                        {
+                            "hook": "head",
+                            "file": "theme/hcaptcha-headscript.phtml"
+                        }
+                    ]
+                },
+                "setup": {
+                    "postInstallNote": "Disabled by default. A theme must call ServiceThemeBlocks::render('head', ['hcaptcha' => ..., 'site' => $site]) in its <head> template to load the widget script. A form wanting protection renders <div class=\"h-captcha\" data-sitekey=\"...\"></div> inside the form (site key available via HcaptchaConfig::get()->siteKey) and its handler calls HcaptchaConfig::verify($_POST['h-captcha-response'] ?? '') before processing. Same verify() contract as Turnstile and reCAPTCHA. hCaptcha refuses localhost as a hostname, so test on a hosts-file name."
                 }
             }
         },
@@ -555,13 +780,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-meta-pixel",
-            "tag": "v1.0.3",
-            "commitSha": "4e166d97e1f4db1d462173f50985d53e40eae016",
-            "pushedAt": "2026-10-05T07:29:30Z",
+            "tag": "v1.0.4",
+            "commitSha": "0c93fd696f04a2f13571d6abd40e3e285e034d5a",
+            "pushedAt": "2026-10-05T15:01:31Z",
             "manifest": {
                 "id": "meta-pixel",
                 "name": "Meta Pixel",
-                "version": "1.0.3",
+                "version": "1.0.4",
                 "description": "Meta (Facebook/Instagram) Pixel PageView tracking, consent-gated, gated on an admin-editable toggle and production-only",
                 "category": "marketing-analytics",
                 "author": {
@@ -754,14 +979,93 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-quickbooks",
+            "tag": "v1.0.0",
+            "commitSha": "3fe85cbc81553f1694857443414fb46570503541",
+            "pushedAt": "2026-10-05T14:02:40Z",
+            "manifest": {
+                "id": "quickbooks",
+                "name": "QuickBooks",
+                "version": "1.0.0",
+                "description": "Connects the shop to QuickBooks (OAuth2) and adds a 'Push to QuickBooks' button on paid orders that creates a sales invoice. Locked to one named QuickBooks company",
+                "category": "business",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "migrations": "migrations",
+                "hooks": {
+                    "order.panels": [
+                        "Osmium\\Services\\QuickBooks\\Models\\QuickBooksOrderSync::orderPanel"
+                    ],
+                    "order.action": [
+                        "Osmium\\Services\\QuickBooks\\Models\\QuickBooksOrderSync::orderAction"
+                    ]
+                },
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "quickbooks",
+                                "label": "QuickBooks",
+                                "icon": "bx bx-receipt",
+                                "route": "admin/settings/quickbooks",
+                                "activePattern": "admin/settings/quickbooks",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/settings/quickbooks": {
+                            "controller": "controllers/QuickBooksController.php",
+                            "class": "Osmium\\Services\\QuickBooks\\Controllers\\QuickBooksController",
+                            "method": "index",
+                            "title": "QuickBooks"
+                        },
+                        "admin/settings/quickbooks/connect": {
+                            "controller": "controllers/QuickBooksController.php",
+                            "class": "Osmium\\Services\\QuickBooks\\Controllers\\QuickBooksController",
+                            "method": "connect",
+                            "title": "QuickBooks"
+                        },
+                        "admin/settings/quickbooks/callback": {
+                            "controller": "controllers/QuickBooksController.php",
+                            "class": "Osmium\\Services\\QuickBooks\\Controllers\\QuickBooksController",
+                            "method": "callback",
+                            "title": "QuickBooks"
+                        },
+                        "admin/settings/quickbooks/action": {
+                            "controller": "controllers/QuickBooksController.php",
+                            "class": "Osmium\\Services\\QuickBooks\\Controllers\\QuickBooksController",
+                            "method": "action",
+                            "title": "QuickBooks"
+                        }
+                    }
+                },
+                "setup": {
+                    "requiresConnection": true,
+                    "postInstallNote": "Pushing is locked until configured. Create an Intuit developer app (accounting scope), enter its client ID/secret on the settings page and add the shown redirect URI to the app's Redirect URIs. Connect, then set 'Allowed company' to the exact name of the connected QuickBooks company - pushes are refused unless it matches. Pushing creates real invoices. Non-US companies must also set a tax code ID."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-recaptcha",
-            "tag": "v1.0.2",
-            "commitSha": "06f72f4d7a7659714c1e97a816ce2220a9192145",
-            "pushedAt": "2026-10-05T06:58:35Z",
+            "tag": "v1.0.3",
+            "commitSha": "b2fe16d5244e933fcfba09c862280226b1b07afb",
+            "pushedAt": "2026-10-05T15:05:01Z",
             "manifest": {
                 "id": "recaptcha",
                 "name": "Google reCAPTCHA v3",
-                "version": "1.0.2",
+                "version": "1.0.3",
                 "description": "Spam protection for forms via Google reCAPTCHA v3 - score-based, invisible by default, admin-editable site/secret key and score threshold",
                 "category": "security-privacy",
                 "author": {
@@ -776,6 +1080,18 @@
                 "autoload": [
                     "models"
                 ],
+                "csp": {
+                    "script-src": [
+                        "https://www.google.com",
+                        "https://www.gstatic.com"
+                    ],
+                    "connect-src": [
+                        "https://www.google.com"
+                    ],
+                    "frame-src": [
+                        "https://www.google.com"
+                    ]
+                },
                 "admin": {
                     "menu": {
                         "section": "Content",
@@ -869,6 +1185,85 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-sage",
+            "tag": "v1.0.0",
+            "commitSha": "fb64c1cf3d25544ec91876b623429eb3617cf192",
+            "pushedAt": "2026-10-05T14:13:51Z",
+            "manifest": {
+                "id": "sage",
+                "name": "Sage Accounting",
+                "version": "1.0.0",
+                "description": "Connects the shop to Sage Accounting (OAuth2) and adds a 'Push to Sage' button on paid orders that creates a sales invoice. Locked to one named Sage business",
+                "category": "business",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "migrations": "migrations",
+                "hooks": {
+                    "order.panels": [
+                        "Osmium\\Services\\Sage\\Models\\SageOrderSync::orderPanel"
+                    ],
+                    "order.action": [
+                        "Osmium\\Services\\Sage\\Models\\SageOrderSync::orderAction"
+                    ]
+                },
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "sage",
+                                "label": "Sage Accounting",
+                                "icon": "bx bx-receipt",
+                                "route": "admin/settings/sage",
+                                "activePattern": "admin/settings/sage",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/settings/sage": {
+                            "controller": "controllers/SageController.php",
+                            "class": "Osmium\\Services\\Sage\\Controllers\\SageController",
+                            "method": "index",
+                            "title": "Sage"
+                        },
+                        "admin/settings/sage/connect": {
+                            "controller": "controllers/SageController.php",
+                            "class": "Osmium\\Services\\Sage\\Controllers\\SageController",
+                            "method": "connect",
+                            "title": "Sage"
+                        },
+                        "admin/settings/sage/callback": {
+                            "controller": "controllers/SageController.php",
+                            "class": "Osmium\\Services\\Sage\\Controllers\\SageController",
+                            "method": "callback",
+                            "title": "Sage"
+                        },
+                        "admin/settings/sage/action": {
+                            "controller": "controllers/SageController.php",
+                            "class": "Osmium\\Services\\Sage\\Controllers\\SageController",
+                            "method": "action",
+                            "title": "Sage"
+                        }
+                    }
+                },
+                "setup": {
+                    "requiresConnection": true,
+                    "postInstallNote": "Pushing is locked until configured. Create an app in the Sage developer portal, enter its client ID/secret on the settings page and add the shown redirect URI as the app callback URL. Set Allowed business to the exact name of the Sage business, then connect, then pick the sales ledger account and tax rate. Pushing creates real invoices."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-shows",
             "tag": "v1.0.1",
             "commitSha": "046cf44bf482dab81a782e6649e094a70da31560",
@@ -927,6 +1322,88 @@
                 },
                 "setup": {
                     "postInstallNote": "Public listing consumption (e.g. a /shows/ page) isn't included - wire your own page to call the Show model's listUpcoming()/listPast() methods."
+                }
+            }
+        },
+        {
+            "repo": "Osmium-Services/osmium-square",
+            "tag": "v1.0.0",
+            "commitSha": "faf8fb1cf351e29710cfc7c130a5876a8e636660",
+            "pushedAt": "2026-10-05T13:43:21Z",
+            "manifest": {
+                "id": "square",
+                "name": "Square",
+                "version": "1.0.0",
+                "description": "Takes card payments at checkout through Square (Web Payments SDK card form on your own page, charged server-side with the CreatePayment API). Appears as a payment provider in Settings > Payments",
+                "category": "payments",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "hooks": {
+                    "payment.providers": [
+                        "Osmium\\Services\\Square\\Models\\SquarePaymentProvider::provider"
+                    ],
+                    "payment.create": [
+                        "Osmium\\Services\\Square\\Models\\SquarePaymentProvider::create"
+                    ],
+                    "payment.confirm": [
+                        "Osmium\\Services\\Square\\Models\\SquarePaymentProvider::confirm"
+                    ]
+                },
+                "csp": {
+                    "script-src": [
+                        "https://web.squarecdn.com",
+                        "https://sandbox.web.squarecdn.com"
+                    ],
+                    "frame-src": [
+                        "https://web.squarecdn.com",
+                        "https://sandbox.web.squarecdn.com"
+                    ],
+                    "connect-src": [
+                        "https://pci-connect.squareup.com",
+                        "https://pci-connect.squareupsandbox.com"
+                    ]
+                },
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "square",
+                                "label": "Square",
+                                "icon": "bx bx-credit-card",
+                                "route": "admin/settings/square",
+                                "activePattern": "admin/settings/square",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/settings/square": {
+                            "controller": "controllers/SquareController.php",
+                            "class": "Osmium\\Services\\Square\\Controllers\\SquareController",
+                            "method": "index",
+                            "title": "Square"
+                        }
+                    }
+                },
+                "api": {
+                    "routes": {
+                        "api/checkout-square-charge": "controllers/square-charge.php"
+                    }
+                },
+                "setup": {
+                    "requiresConnection": true,
+                    "postInstallNote": "Square is off until configured. Enter the Application ID, Access Token and Location ID from the Square Developer Console on the Square settings page, then choose Square as the Active Checkout Provider in Settings > Payments. The checkout page's card form must tokenize the card with the Square Web Payments SDK and POST the token to /api/checkout-square-charge before calling the normal order confirmation."
                 }
             }
         },
@@ -1008,13 +1485,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-turnstile",
-            "tag": "v1.0.2",
-            "commitSha": "adc4163fbf14eddd67d7668c358d20c39362aaae",
-            "pushedAt": "2026-10-05T06:58:42Z",
+            "tag": "v1.0.3",
+            "commitSha": "3f1fb3d94b59d5af9e2874daa4db27eb2caae9d7",
+            "pushedAt": "2026-10-05T15:06:09Z",
             "manifest": {
                 "id": "turnstile",
                 "name": "Cloudflare Turnstile",
-                "version": "1.0.2",
+                "version": "1.0.3",
                 "description": "Spam protection for forms via Cloudflare Turnstile - free, no DNS dependency, admin-editable site/secret key and widget mode",
                 "category": "security-privacy",
                 "author": {
@@ -1029,6 +1506,14 @@
                 "autoload": [
                     "models"
                 ],
+                "csp": {
+                    "script-src": [
+                        "https://challenges.cloudflare.com"
+                    ],
+                    "frame-src": [
+                        "https://challenges.cloudflare.com"
+                    ]
+                },
                 "admin": {
                     "menu": {
                         "section": "Content",
