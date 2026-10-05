@@ -757,6 +757,62 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-resend",
+            "tag": "v1.0.0",
+            "commitSha": "acda5774c6091d3be40299def998e7c38750e58a",
+            "pushedAt": "2026-10-05T13:03:12Z",
+            "manifest": {
+                "id": "resend",
+                "name": "Resend",
+                "version": "1.0.0",
+                "description": "Send site email through Resend's HTTP API - a simple developer-friendly API with a free plan, and useful where hosting blocks outbound SMTP. Appears as a provider on the Email settings page.",
+                "category": "email",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "resend",
+                                "label": "Resend",
+                                "icon": "bx bx-envelope",
+                                "route": "admin/settings/resend",
+                                "activePattern": "admin/settings/resend",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/settings/resend": {
+                            "controller": "controllers/ResendController.php",
+                            "class": "Osmium\\Services\\Resend\\Controllers\\ResendController",
+                            "method": "index",
+                            "title": "Resend"
+                        }
+                    }
+                },
+                "hooks": {
+                    "mail.providers": [
+                        "Osmium\\Services\\Resend\\Models\\ResendMailProvider::provider"
+                    ]
+                },
+                "setup": {
+                    "postInstallNote": "Enter a Resend API key on the Resend settings page, and make sure the From address on Settings > Email uses a domain verified in Resend. Then choose Resend as the Provider on Settings > Email and use Send test email."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-shows",
             "tag": "v1.0.1",
             "commitSha": "046cf44bf482dab81a782e6649e094a70da31560",
