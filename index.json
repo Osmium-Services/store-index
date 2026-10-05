@@ -3,6 +3,62 @@
     "generatedWeek": "2026-W41",
     "services": [
         {
+            "repo": "Osmium-Services/osmium-brevo",
+            "tag": "v1.0.0",
+            "commitSha": "447114edcaf988095b1e28236ef6e7c428637ed4",
+            "pushedAt": "2026-10-05T12:52:59Z",
+            "manifest": {
+                "id": "brevo",
+                "name": "Brevo",
+                "version": "1.0.0",
+                "description": "Send site email through Brevo's HTTP API - a generous free plan, and useful where hosting blocks outbound SMTP. Appears as a provider on the Email settings page.",
+                "category": "email",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "brevo",
+                                "label": "Brevo",
+                                "icon": "bx bx-envelope",
+                                "route": "admin/settings/brevo",
+                                "activePattern": "admin/settings/brevo",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/settings/brevo": {
+                            "controller": "controllers/BrevoController.php",
+                            "class": "Osmium\\Services\\Brevo\\Controllers\\BrevoController",
+                            "method": "index",
+                            "title": "Brevo"
+                        }
+                    }
+                },
+                "hooks": {
+                    "mail.providers": [
+                        "Osmium\\Services\\Brevo\\Models\\BrevoMailProvider::provider"
+                    ]
+                },
+                "setup": {
+                    "postInstallNote": "Enter a Brevo API key on the Brevo settings page, and make sure the From address on Settings > Email is a verified sender in Brevo. Then choose Brevo as the Provider on Settings > Email and use Send test email."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-cookie-consent",
             "tag": "v1.0.2",
             "commitSha": "1889cb0384ffbfed4d79d1d5cf3aae078e52d896",
