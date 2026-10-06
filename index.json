@@ -198,13 +198,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-freeagent",
-            "tag": "v1.0.0",
-            "commitSha": "07001bbb09f76a5b1b33f3659b0a3dab4ab4f3d1",
-            "pushedAt": "2026-10-05T14:35:58Z",
+            "tag": "v1.1.0",
+            "commitSha": "b6851c6fb6299f58b2c897d819c93b13edf36cd4",
+            "pushedAt": "2026-10-06T10:44:50Z",
             "manifest": {
                 "id": "freeagent",
                 "name": "FreeAgent",
-                "version": "1.0.0",
+                "version": "1.1.0",
                 "description": "Connects the shop to FreeAgent (OAuth2) and adds a 'Push to FreeAgent' button on paid orders that creates a sales invoice. Locked to one named FreeAgent company",
                 "category": "business",
                 "author": {
@@ -440,13 +440,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-merchant-center",
-            "tag": "v1.0.1",
-            "commitSha": "2402af7ef88dc3de298befd668a2850ceecf081c",
-            "pushedAt": "2026-10-05T06:58:26Z",
+            "tag": "v1.1.0",
+            "commitSha": "22e215de5b6faf3b6f52896e30691202410fee38",
+            "pushedAt": "2026-10-06T11:09:44Z",
             "manifest": {
                 "id": "google-merchant-center",
                 "name": "Google Merchant Center",
-                "version": "1.0.1",
+                "version": "1.1.0",
                 "description": "Pushes product data to Google Merchant Center (Merchant API) whenever a product is saved, status-changed or removed. Service-account auth, admin-editable credentials, test connection and one-click full sync",
                 "category": "marketing-analytics",
                 "author": {
@@ -910,13 +910,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-paypal",
-            "tag": "v1.0.1",
-            "commitSha": "a0e95ff2a5983b1b12243213897f07284e61e582",
-            "pushedAt": "2026-10-05T06:58:33Z",
+            "tag": "v1.1.0",
+            "commitSha": "b6300d41f1bb49629fac07da222b2cc79657d040",
+            "pushedAt": "2026-10-06T11:09:37Z",
             "manifest": {
                 "id": "paypal",
                 "name": "PayPal",
-                "version": "1.0.1",
+                "version": "1.1.0",
                 "description": "Takes PayPal payments at checkout (Orders v2, server-side capture), with a signature-verified webhook to reconcile orders. Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "author": {
@@ -1333,13 +1333,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-square",
-            "tag": "v1.0.0",
-            "commitSha": "faf8fb1cf351e29710cfc7c130a5876a8e636660",
-            "pushedAt": "2026-10-05T13:43:21Z",
+            "tag": "v1.0.1",
+            "commitSha": "f2cd7ee605e237ef4ad0dcded48448e517361f84",
+            "pushedAt": "2026-10-06T11:09:40Z",
             "manifest": {
                 "id": "square",
                 "name": "Square",
-                "version": "1.0.0",
+                "version": "1.0.1",
                 "description": "Takes card payments at checkout through Square (Web Payments SDK card form on your own page, charged server-side with the CreatePayment API). Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "author": {
@@ -1415,13 +1415,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-stripe",
-            "tag": "v1.0.1",
-            "commitSha": "3420f0949ee6965f1a50156e14b4c358bc77b469",
-            "pushedAt": "2026-10-05T06:58:40Z",
+            "tag": "v1.1.0",
+            "commitSha": "c6d30c1b1354fe306ad955b524eb24476b4934ed",
+            "pushedAt": "2026-10-06T11:09:34Z",
             "manifest": {
                 "id": "stripe",
                 "name": "Stripe",
-                "version": "1.0.1",
+                "version": "1.1.0",
                 "description": "Takes card payments at checkout through Stripe (PaymentIntents, plus Apple Pay/Google Pay via the card element), with a signature-verified webhook to reconcile orders. Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "author": {
