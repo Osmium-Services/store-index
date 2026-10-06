@@ -784,14 +784,14 @@
         },
         {
             "repo": "Osmium-Services/osmium-meta-pixel",
-            "tag": "v1.1.3",
-            "commitSha": "dd5be537c96a0862422d4e9583e0f0fd5ab3bb16",
-            "pushedAt": "2026-10-05T15:55:05Z",
+            "tag": "v1.2.1",
+            "commitSha": "9f07591b4db2269a4be003310e01fac571f25168",
+            "pushedAt": "2026-10-06T20:07:29Z",
             "manifest": {
                 "id": "meta-pixel",
                 "name": "Meta Pixel",
-                "version": "1.1.3",
-                "description": "Meta (Facebook/Instagram) Pixel PageView tracking, consent-gated, gated on an admin-editable toggle and production-only; requires the Cookie Consent service",
+                "version": "1.2.1",
+                "description": "Meta (Facebook/Instagram) Pixel PageView plus optional shop events (ViewContent, AddToCart, Purchase) and server-side Purchase, consent-gated, gated on an admin-editable toggle and production-only; requires the Cookie Consent service",
                 "category": "marketing-analytics",
                 "author": {
                     "name": "Gavin Cox"
@@ -807,6 +807,15 @@
                 "autoload": [
                     "models"
                 ],
+                "hooks": {
+                    "order.created": [
+                        "Osmium\\Services\\MetaPixel\\Models\\MetaServerEvents::orderCreated"
+                    ],
+                    "order.paid": [
+                        "Osmium\\Services\\MetaPixel\\Models\\MetaServerEvents::orderPaid"
+                    ]
+                },
+                "migrations": "migrations/",
                 "csp": {
                     "script-src": [
                         "https://connect.facebook.net"
@@ -848,7 +857,7 @@
                     ]
                 },
                 "setup": {
-                    "postInstallNote": "Disabled by default. A theme must call ServiceThemeBlocks::render('head', ['site' => $site]) in its <head> template before enabling this does anything visible. Requires Cookie Consent (installed with this service, but disabled by default - enable it too): the pixel sends nothing until a cookie named osmium_cookie_consent (or window.OsmiumCookieConsent.cookieName) reads 'accepted'. Tracks PageView only - shop events (ViewContent, AddToCart, Purchase) aren't included."
+                    "postInstallNote": "Disabled by default. A theme must call ServiceThemeBlocks::render('head', ['site' => $site]) in its <head> template before enabling this does anything visible. Requires Cookie Consent (installed with this service, but disabled by default - enable it too): the pixel script is not even fetched from Meta until a cookie named osmium_cookie_consent (or window.OsmiumCookieConsent.cookieName) reads 'accepted'. Shop events and the server Purchase are off until switched on in settings; the theme must output the shop event tags (THEME-CONTRACT.md section 7) and load shop-events.js."
                 }
             }
         },
