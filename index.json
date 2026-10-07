@@ -375,6 +375,88 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-google-maps",
+            "tag": "v1.0.0",
+            "commitSha": "13adb2a65fcb8bc8e29bc142a49d630e2c26c659",
+            "pushedAt": "2026-10-07T14:19:09Z",
+            "manifest": {
+                "id": "google-maps",
+                "name": "Google Maps",
+                "version": "1.0.0",
+                "description": "Draws a map of pins (clustered, with a fullscreen button) on Google Maps, for a theme to place anywhere - the Google counterpart of Leaflet Maps, taking the same pin list. Needs your own API key (billing account); loads Google only after cookie consent",
+                "category": "developer",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": [
+                        "cookie-consent"
+                    ]
+                },
+                "autoload": [
+                    "models"
+                ],
+                "csp": {
+                    "script-src": [
+                        "https://maps.googleapis.com",
+                        "blob:"
+                    ],
+                    "style-src": [
+                        "https://fonts.googleapis.com"
+                    ],
+                    "font-src": [
+                        "https://fonts.gstatic.com"
+                    ],
+                    "connect-src": [
+                        "https://maps.googleapis.com",
+                        "https://*.googleapis.com",
+                        "https://*.gstatic.com",
+                        "https://*.google.com"
+                    ],
+                    "frame-src": [
+                        "https://*.google.com"
+                    ]
+                },
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "google-maps",
+                                "label": "Google Maps",
+                                "icon": "bx bx-map-alt",
+                                "route": "admin/settings/google-maps",
+                                "activePattern": "admin/settings/google-maps",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/settings/google-maps": {
+                            "controller": "controllers/GoogleMapsController.php",
+                            "class": "Osmium\\Services\\GoogleMaps\\Controllers\\GoogleMapsController",
+                            "method": "index",
+                            "title": "Google Maps"
+                        }
+                    }
+                },
+                "frontend": {
+                    "themeBlocks": [
+                        {
+                            "hook": "google-maps-assets",
+                            "file": "theme/google-maps-assets.phtml"
+                        }
+                    ]
+                },
+                "setup": {
+                    "postInstallNote": "Create a Maps JavaScript API key in Google Cloud (billing account required) and restrict it by HTTP referrer to your site. Paste it on the Google Maps settings page and tick Enabled; Cookie Consent must be enabled too. Add <?php $template['serviceBlock']('google-maps-assets'); ?> once on any page that shows a map, then place a map with <div data-osmium-map='JSON'></div> - the same pin JSON as Leaflet Maps: {\"pins\":[{\"lat\":51.5,\"lng\":-0.12,\"title\":\"Name\",\"text\":\"Details\",\"url\":\"https://...\",\"inactive\":false}],\"height\":\"400px\",\"fullscreen\":true}. Install only one of Leaflet Maps and Google Maps on a site. Google loads only after a visitor accepts cookies (on dev and staging, where there is no banner, it loads at once). Untested against a live Google account."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-google-maps-embed",
             "tag": "v1.1.1",
             "commitSha": "9c691144bd8a8384b9a9f473dbfeac02fd0e206f",
@@ -611,6 +693,45 @@
                 },
                 "setup": {
                     "postInstallNote": "Disabled by default. A theme must call ServiceThemeBlocks::render('head', ['hcaptcha' => ..., 'site' => $site]) in its <head> template to load the widget script. A form wanting protection renders <div class=\"h-captcha\" data-sitekey=\"...\"></div> inside the form (site key available via HcaptchaConfig::get()->siteKey) and its handler calls HcaptchaConfig::verify($_POST['h-captcha-response'] ?? '') before processing. Same verify() contract as Turnstile and reCAPTCHA. hCaptcha refuses localhost as a hostname, so test on a hosts-file name."
+                }
+            }
+        },
+        {
+            "repo": "Osmium-Services/osmium-leaflet-maps",
+            "tag": "v1.1.0",
+            "commitSha": "fb36126037833e91ae4603917f5129cb07774b16",
+            "pushedAt": "2026-10-07T14:29:03Z",
+            "manifest": {
+                "id": "leaflet-maps",
+                "name": "Leaflet Maps",
+                "version": "1.1.0",
+                "description": "Draws a map of pins (clustered, with a fullscreen button) from OpenStreetMap tiles using a bundled Leaflet, for a theme to place anywhere - no API key, no cookies",
+                "category": "developer",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [],
+                "csp": {
+                    "img-src": [
+                        "https://*.tile.openstreetmap.org"
+                    ]
+                },
+                "frontend": {
+                    "themeBlocks": [
+                        {
+                            "hook": "leaflet-maps-assets",
+                            "file": "theme/leaflet-maps-assets.phtml"
+                        }
+                    ]
+                },
+                "setup": {
+                    "postInstallNote": "Add <?php $template['serviceBlock']('leaflet-maps-assets'); ?> once on any page that shows a map (it loads Leaflet's CSS and JS). Then place a map with <div data-osmium-map='JSON'></div>, where JSON is {\"pins\":[{\"lat\":51.5,\"lng\":-0.12,\"title\":\"Name\",\"text\":\"Details\",\"url\":\"https://...\",\"inactive\":false}],\"height\":\"400px\",\"fullscreen\":true}. title, text, url, inactive, height, fullscreen and consent are optional. Build the JSON with htmlspecialchars(json_encode(...), ENT_QUOTES). Privacy: no cookies are set, but when a map is drawn the visitor's browser fetches tiles from openstreetmap.org, so their IP address reaches OpenStreetMap - name it in your privacy notice. Add \"consent\":true to a map's JSON to hold it back until the visitor accepts cookies (live sites with Cookie Consent; on dev and staging it draws at once)."
                 }
             }
         },
@@ -1341,6 +1462,68 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-sinch",
+            "tag": "v1.0.0",
+            "commitSha": "f620c8dbfe3573df21613a3a87fb897a011aac2d",
+            "pushedAt": "2026-10-07T12:48:08Z",
+            "manifest": {
+                "id": "sinch",
+                "name": "Sinch SMS",
+                "version": "1.0.0",
+                "description": "Send SMS through Sinch's SMS REST API. Admin-editable credentials and sender, plus a test-text button. A capability for core and other services: answers the sms.providers and sms.send hooks",
+                "category": "sms",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "provides": [
+                    "sms"
+                ],
+                "autoload": [
+                    "models"
+                ],
+                "hooks": {
+                    "sms.providers": [
+                        "Osmium\\Services\\Sinch\\Models\\SinchSms::provider"
+                    ],
+                    "sms.send": [
+                        "Osmium\\Services\\Sinch\\Models\\SinchSms::send"
+                    ]
+                },
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "sinch",
+                                "label": "Sinch SMS",
+                                "icon": "bx bx-message-dots",
+                                "route": "admin/settings/sinch",
+                                "activePattern": "admin/settings/sinch",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/settings/sinch": {
+                            "controller": "controllers/SinchController.php",
+                            "class": "Osmium\\Services\\Sinch\\Controllers\\SinchController",
+                            "method": "index",
+                            "title": "Sinch SMS"
+                        }
+                    }
+                },
+                "setup": {
+                    "postInstallNote": "Disabled by default. Enter the service plan ID, API token, region and a sender (a Sinch number or an alphanumeric sender ID) on the Sinch SMS settings page, press Send test text, then switch on Send SMS through Sinch. This service only sends; core and other services text through the sms.send hook. Only one SMS provider can be installed at a time."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-square",
             "tag": "v1.0.1",
             "commitSha": "f2cd7ee605e237ef4ad0dcded48448e517361f84",
@@ -1562,6 +1745,130 @@
                 },
                 "setup": {
                     "postInstallNote": "Disabled by default. A theme must call ServiceThemeBlocks::render('head', ['turnstile' => ..., 'site' => $site]) in its <head> template to load the widget script. A form wanting protection renders <div class=\"cf-turnstile\" data-sitekey=\"...\"></div> (site key available via TurnstileConfig::get()->siteKey) and its handler calls TurnstileConfig::verify($_POST['cf-turnstile-response'] ?? '') before processing."
+                }
+            }
+        },
+        {
+            "repo": "Osmium-Services/osmium-twilio",
+            "tag": "v1.1.1",
+            "commitSha": "26a3144a0ed3807946f96c4c4188b50ebbfcdf13",
+            "pushedAt": "2026-10-07T12:39:54Z",
+            "manifest": {
+                "id": "twilio",
+                "name": "Twilio SMS",
+                "version": "1.1.1",
+                "description": "Send SMS through Twilio's Messages API. Admin-editable credentials and sender, plus a test-text button. A capability for core and other services: answers the sms.providers and sms.send hooks",
+                "category": "sms",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "provides": [
+                    "sms"
+                ],
+                "autoload": [
+                    "models"
+                ],
+                "hooks": {
+                    "sms.providers": [
+                        "Osmium\\Services\\Twilio\\Models\\TwilioSms::provider"
+                    ],
+                    "sms.send": [
+                        "Osmium\\Services\\Twilio\\Models\\TwilioSms::send"
+                    ]
+                },
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "twilio",
+                                "label": "Twilio SMS",
+                                "icon": "bx bx-message-dots",
+                                "route": "admin/settings/twilio",
+                                "activePattern": "admin/settings/twilio",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/settings/twilio": {
+                            "controller": "controllers/TwilioController.php",
+                            "class": "Osmium\\Services\\Twilio\\Controllers\\TwilioController",
+                            "method": "index",
+                            "title": "Twilio SMS"
+                        }
+                    }
+                },
+                "setup": {
+                    "postInstallNote": "Disabled by default. Enter the Account SID, Auth Token and a sender (a Twilio number, an alphanumeric sender ID, or a Messaging Service SID) on the Twilio SMS settings page, press Send test text, then switch on Send SMS through Twilio. This service only sends; core and other services text through the sms.send hook. Only one SMS provider can be installed at a time."
+                }
+            }
+        },
+        {
+            "repo": "Osmium-Services/osmium-vonage",
+            "tag": "v1.0.1",
+            "commitSha": "b19aadf0e9d5d095b86bba1846b64249d96044a0",
+            "pushedAt": "2026-10-07T12:39:57Z",
+            "manifest": {
+                "id": "vonage",
+                "name": "Vonage SMS",
+                "version": "1.0.1",
+                "description": "Send SMS through Vonage's SMS API. Admin-editable credentials and sender, plus a test-text button. A capability for core and other services: answers the sms.providers and sms.send hooks",
+                "category": "sms",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "provides": [
+                    "sms"
+                ],
+                "autoload": [
+                    "models"
+                ],
+                "hooks": {
+                    "sms.providers": [
+                        "Osmium\\Services\\Vonage\\Models\\VonageSms::provider"
+                    ],
+                    "sms.send": [
+                        "Osmium\\Services\\Vonage\\Models\\VonageSms::send"
+                    ]
+                },
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "vonage",
+                                "label": "Vonage SMS",
+                                "icon": "bx bx-message-dots",
+                                "route": "admin/settings/vonage",
+                                "activePattern": "admin/settings/vonage",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/settings/vonage": {
+                            "controller": "controllers/VonageController.php",
+                            "class": "Osmium\\Services\\Vonage\\Controllers\\VonageController",
+                            "method": "index",
+                            "title": "Vonage SMS"
+                        }
+                    }
+                },
+                "setup": {
+                    "postInstallNote": "Disabled by default. Enter the API key, API secret and a sender (a Vonage number or an alphanumeric sender ID) on the Vonage SMS settings page, press Send test text, then switch on Send SMS through Vonage. This service only sends; core and other services text through the sms.send hook. Only one SMS provider can be installed at a time."
                 }
             }
         },
