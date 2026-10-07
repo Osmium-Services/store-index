@@ -582,13 +582,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-reviews",
-            "tag": "v1.0.1",
-            "commitSha": "9cca96975f688f819ee22df3a4533ee17e8abf51",
-            "pushedAt": "2026-10-05T06:58:29Z",
+            "tag": "v1.0.2",
+            "commitSha": "35af7a9581c60e028095d52600ec6ca4a9fd593a",
+            "pushedAt": "2026-10-07T16:18:25Z",
             "manifest": {
                 "id": "google-reviews",
                 "name": "Google Reviews",
-                "version": "1.0.1",
+                "version": "1.0.2",
                 "description": "Hand-curated Google review admin CRUD and homepage social-proof widget model",
                 "category": "marketing-analytics",
                 "author": {
@@ -630,10 +630,7 @@
                             "class": "Osmium\\Services\\GoogleReviews\\Controllers\\GoogleReviewsController",
                             "method": "action"
                         }
-                    },
-                    "assets": [
-                        "assets/google-reviews.js"
-                    ]
+                    }
                 }
             }
         },
@@ -1401,13 +1398,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-shows",
-            "tag": "v1.0.1",
-            "commitSha": "046cf44bf482dab81a782e6649e094a70da31560",
-            "pushedAt": "2026-10-05T06:58:38Z",
+            "tag": "v1.0.2",
+            "commitSha": "9fc36d47fe8a64da69fa6373b2a13dee04cda0f5",
+            "pushedAt": "2026-10-07T16:18:16Z",
             "manifest": {
                 "id": "shows",
                 "name": "Shows",
-                "version": "1.0.1",
+                "version": "1.0.2",
                 "description": "Curated trade show/event listings with postcode geocoding and logo upload",
                 "category": "content",
                 "author": {
@@ -1451,10 +1448,7 @@
                             "class": "Osmium\\Services\\Shows\\Controllers\\ShowsController",
                             "method": "action"
                         }
-                    },
-                    "assets": [
-                        "assets/shows.js"
-                    ]
+                    }
                 },
                 "setup": {
                     "postInstallNote": "Public listing consumption (e.g. a /shows/ page) isn't included - wire your own page to call the Show model's listUpcoming()/listPast() methods."
