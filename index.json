@@ -3,6 +3,75 @@
     "generatedWeek": "2026-W41",
     "services": [
         {
+            "repo": "Osmium-Services/osmium-blog",
+            "tag": "v0.3.1",
+            "commitSha": "2279b2f00d035c79bfdfbc1a98ea74699edc7385",
+            "pushedAt": "2026-10-07T19:23:05Z",
+            "manifest": {
+                "id": "blog",
+                "name": "Blog",
+                "version": "0.3.1",
+                "description": "Blog posts written in admin and published as ordinary pages under /blog/, with the markup supplied by the theme",
+                "category": "content",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "migrations": "migrations/",
+                "hooks": {
+                    "page.claim": [
+                        "Osmium\\Services\\Blog\\Models\\BlogClaim::page"
+                    ],
+                    "pages.owners": [
+                        "Osmium\\Services\\Blog\\Models\\BlogOwners::pages"
+                    ]
+                },
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "blog",
+                                "label": "Blog",
+                                "icon": "bx bx-news",
+                                "placement": "top",
+                                "route": "admin/blog",
+                                "activePattern": "admin/blog*",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/blog": {
+                            "controller": "controllers/BlogController.php",
+                            "class": "Osmium\\Services\\Blog\\Controllers\\BlogController",
+                            "method": "index",
+                            "title": "Blog"
+                        },
+                        "admin/blog/edit": {
+                            "controller": "controllers/BlogController.php",
+                            "class": "Osmium\\Services\\Blog\\Controllers\\BlogController",
+                            "method": "edit",
+                            "title": "Edit Post"
+                        },
+                        "admin/blog/action": {
+                            "controller": "controllers/BlogController.php",
+                            "class": "Osmium\\Services\\Blog\\Controllers\\BlogController",
+                            "method": "action"
+                        }
+                    }
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-brevo",
             "tag": "v1.0.0",
             "commitSha": "447114edcaf988095b1e28236ef6e7c428637ed4",
