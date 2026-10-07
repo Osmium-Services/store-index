@@ -695,13 +695,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-leaflet-maps",
-            "tag": "v1.1.0",
-            "commitSha": "fb36126037833e91ae4603917f5129cb07774b16",
+            "tag": "v1.1.1",
+            "commitSha": "c7fddf155c03c080c5345eb9e5629aa00ea1ad77",
             "pushedAt": "2026-10-07T14:29:03Z",
             "manifest": {
                 "id": "leaflet-maps",
                 "name": "Leaflet Maps",
-                "version": "1.1.0",
+                "version": "1.1.1",
                 "description": "Draws a map of pins (clustered, with a fullscreen button) from OpenStreetMap tiles using a bundled Leaflet, for a theme to place anywhere - no API key, no cookies",
                 "category": "developer",
                 "author": {
