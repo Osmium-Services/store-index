@@ -131,13 +131,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-cookie-consent",
-            "tag": "v1.0.2",
-            "commitSha": "1889cb0384ffbfed4d79d1d5cf3aae078e52d896",
-            "pushedAt": "2026-10-05T06:58:19Z",
+            "tag": "v1.1.0",
+            "commitSha": "ab4e8fb77029edf41026d1cf311db308b6e42b4d",
+            "pushedAt": "2026-10-07T16:24:00Z",
             "manifest": {
                 "id": "cookie-consent",
                 "name": "Cookie Consent",
-                "version": "1.0.2",
+                "version": "1.1.0",
                 "description": "GDPR-style cookie consent banner and status ribbon, production-only, with an admin-editable cookie name/privacy URL/colors/copy",
                 "category": "security-privacy",
                 "author": {
@@ -192,7 +192,7 @@
                     ]
                 },
                 "setup": {
-                    "postInstallNote": "Disabled by default. The 'head' hook (cookie name + Consent Mode wiring for Analytics, if also installed) is live-wired into osmium-base's homepage. The 'body-end' hook (banner + status ribbon markup) has no theme calling it yet - a real theme must call ServiceThemeBlocks::render('body-end', ['cookieConsent' => ..., 'site' => $site]) near </body>, and include assets/js/site-modal.js for the accept/reject/ribbon behaviour."
+                    "postInstallNote": "Disabled by default. The 'head' hook (cookie name, Consent Mode wiring for Analytics if also installed, and this service's own site-modal.css and site-modal.js, loaded only when enabled and not on dev/staging) is live-wired into osmium-base's homepage. The 'body-end' hook (banner + status ribbon markup) has no theme calling it yet - a real theme must call ServiceThemeBlocks::render('body-end', ['cookieConsent' => ..., 'site' => $site]) near </body>. A theme no longer loads site-modal.css/js itself."
                 }
             }
         },
