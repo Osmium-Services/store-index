@@ -4,13 +4,13 @@
     "services": [
         {
             "repo": "Osmium-Services/osmium-blog",
-            "tag": "v0.3.2",
-            "commitSha": "f280c8aabe2bb2114037cbeebd029cbcf544f1b3",
-            "pushedAt": "2026-10-07T19:33:20Z",
+            "tag": "v0.3.3",
+            "commitSha": "181180c9ba8e5b8fda5a042980b5fef2e541af2f",
+            "pushedAt": "2026-10-07T19:54:14Z",
             "manifest": {
                 "id": "blog",
                 "name": "Blog",
-                "version": "0.3.2",
+                "version": "0.3.3",
                 "description": "Blog posts written in admin and published as ordinary pages under /blog/, with the markup supplied by the theme",
                 "category": "content",
                 "author": {
