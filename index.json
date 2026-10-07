@@ -376,13 +376,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-maps",
-            "tag": "v1.0.0",
-            "commitSha": "13adb2a65fcb8bc8e29bc142a49d630e2c26c659",
-            "pushedAt": "2026-10-07T14:19:09Z",
+            "tag": "v1.0.1",
+            "commitSha": "9a8074cbc3d6b313b7562ba8ea6d3d175a889321",
+            "pushedAt": "2026-10-07T16:28:54Z",
             "manifest": {
                 "id": "google-maps",
                 "name": "Google Maps",
-                "version": "1.0.0",
+                "version": "1.0.1",
                 "description": "Draws a map of pins (clustered, with a fullscreen button) on Google Maps, for a theme to place anywhere - the Google counterpart of Leaflet Maps, taking the same pin list. Needs your own API key (billing account); loads Google only after cookie consent",
                 "category": "developer",
                 "author": {
@@ -697,7 +697,7 @@
             "repo": "Osmium-Services/osmium-leaflet-maps",
             "tag": "v1.1.1",
             "commitSha": "c7fddf155c03c080c5345eb9e5629aa00ea1ad77",
-            "pushedAt": "2026-10-07T14:29:03Z",
+            "pushedAt": "2026-10-07T16:28:51Z",
             "manifest": {
                 "id": "leaflet-maps",
                 "name": "Leaflet Maps",
