@@ -183,13 +183,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-brevo",
-            "tag": "v1.0.0",
-            "commitSha": "447114edcaf988095b1e28236ef6e7c428637ed4",
-            "pushedAt": "2026-10-05T12:52:59Z",
+            "tag": "v1.1.0",
+            "commitSha": "0d88f24bc9c377e5d6afa73165a4d43c5788fe8d",
+            "pushedAt": "2026-10-08T19:57:41Z",
             "manifest": {
                 "id": "brevo",
                 "name": "Brevo",
-                "version": "1.0.0",
+                "version": "1.1.0",
                 "description": "Send site email through Brevo's HTTP API - a generous free plan, and useful where hosting blocks outbound SMTP. Appears as a provider on the Email settings page.",
                 "category": "email",
                 "author": {
@@ -913,13 +913,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-mailgun",
-            "tag": "v1.0.1",
-            "commitSha": "3843bd08c607f931105e0aa97609fee0c80dd0fa",
-            "pushedAt": "2026-10-05T12:42:15Z",
+            "tag": "v1.1.0",
+            "commitSha": "61a3e88552e43ca81571a1f830d3adcc042578ea",
+            "pushedAt": "2026-10-08T19:57:30Z",
             "manifest": {
                 "id": "mailgun",
                 "name": "Mailgun",
-                "version": "1.0.1",
+                "version": "1.1.0",
                 "description": "Send site email through Mailgun's HTTP API - useful where hosting blocks outbound SMTP. Appears as a provider on the Email settings page.",
                 "category": "email",
                 "author": {
@@ -969,13 +969,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-mailjet",
-            "tag": "v1.0.0",
-            "commitSha": "1837f26efd2521e2e9333431f972c182b6f2e5da",
-            "pushedAt": "2026-10-05T13:08:17Z",
+            "tag": "v1.1.0",
+            "commitSha": "97fa65acfa97598cb16adc14226660c7d148d7c4",
+            "pushedAt": "2026-10-08T19:57:44Z",
             "manifest": {
                 "id": "mailjet",
                 "name": "Mailjet",
-                "version": "1.0.0",
+                "version": "1.1.0",
                 "description": "Send site email through Mailjet's HTTP API - a free plan of 6,000 emails a month, and useful where hosting blocks outbound SMTP. Appears as a provider on the Email settings page.",
                 "category": "email",
                 "author": {
@@ -1025,13 +1025,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-mailtrap",
-            "tag": "v1.0.1",
-            "commitSha": "03e97019ffbbda35c3a24cdc010bcd9b4b696b0c",
-            "pushedAt": "2026-10-05T12:42:24Z",
+            "tag": "v1.1.0",
+            "commitSha": "ab9c3f811ddfab927b38046cc33ef932ac377d6c",
+            "pushedAt": "2026-10-08T19:57:34Z",
             "manifest": {
                 "id": "mailtrap",
                 "name": "Mailtrap",
-                "version": "1.0.1",
+                "version": "1.1.0",
                 "description": "Send site email through Mailtrap - live sending, or a sandbox inbox that catches every email so nothing reaches real customers while testing. Appears as a provider on the Email settings page.",
                 "category": "email",
                 "author": {
@@ -1442,13 +1442,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-resend",
-            "tag": "v1.0.0",
-            "commitSha": "acda5774c6091d3be40299def998e7c38750e58a",
-            "pushedAt": "2026-10-05T13:03:12Z",
+            "tag": "v1.1.0",
+            "commitSha": "317b43f83563793b74e3c23ca80e5e1edcd3c6f9",
+            "pushedAt": "2026-10-08T19:57:38Z",
             "manifest": {
                 "id": "resend",
                 "name": "Resend",
-                "version": "1.0.0",
+                "version": "1.1.0",
                 "description": "Send site email through Resend's HTTP API - a simple developer-friendly API with a free plan, and useful where hosting blocks outbound SMTP. Appears as a provider on the Email settings page.",
                 "category": "email",
                 "author": {
