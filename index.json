@@ -100,13 +100,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-blog",
-            "tag": "v0.4.1",
-            "commitSha": "35597a70eb95e02f659bb4e8227b52f2e0e374f1",
-            "pushedAt": "2026-10-08T09:50:36Z",
+            "tag": "v0.5.0",
+            "commitSha": "2332c974902f2becc938ad9c1bf21d4dd1ce48c5",
+            "pushedAt": "2026-10-08T10:50:31Z",
             "manifest": {
                 "id": "blog",
                 "name": "Blog",
-                "version": "0.4.1",
+                "version": "0.5.0",
                 "description": "Blog posts written in admin and published as ordinary pages under /blog/, with the markup supplied by the theme",
                 "category": "content",
                 "author": {
@@ -142,6 +142,14 @@
                                 "route": "admin/blog",
                                 "activePattern": "admin/blog*",
                                 "role": null
+                            },
+                            {
+                                "id": "settings",
+                                "label": "Blog",
+                                "icon": "bx bx-news",
+                                "route": "admin/settings/blog",
+                                "activePattern": "admin/settings/blog",
+                                "role": "admin"
                             }
                         ]
                     },
@@ -157,6 +165,12 @@
                             "class": "Osmium\\Services\\Blog\\Controllers\\BlogController",
                             "method": "edit",
                             "title": "Edit Post"
+                        },
+                        "admin/settings/blog": {
+                            "controller": "controllers/SettingsController.php",
+                            "class": "Osmium\\Services\\Blog\\Controllers\\SettingsController",
+                            "method": "index",
+                            "title": "Blog Settings"
                         },
                         "admin/blog/action": {
                             "controller": "controllers/BlogController.php",
