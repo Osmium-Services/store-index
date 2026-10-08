@@ -3,6 +3,102 @@
     "generatedWeek": "2026-W41",
     "services": [
         {
+            "repo": "Osmium-Services/osmium-analytics",
+            "tag": "v1.0.0",
+            "commitSha": "1d052bdbaec7f3bc1c5b9147b8e7e74aa07812a3",
+            "pushedAt": "2026-10-08T08:47:13Z",
+            "manifest": {
+                "id": "osmium-analytics",
+                "name": "Osmium Analytics",
+                "version": "1.0.0",
+                "description": "Cookieless, first-party visitor statistics: visits, top pages, referrers, device and country, with a retention setting",
+                "category": "marketing-analytics",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "migrations": "migrations/",
+                "hooks": {
+                    "page.viewed": [
+                        "Osmium\\Services\\OsmiumAnalytics\\Models\\Tracker::pageViewed"
+                    ]
+                },
+                "admin": {
+                    "menu": {
+                        "section": "Traffic",
+                        "items": [
+                            {
+                                "id": "visits",
+                                "label": "Visits",
+                                "placement": "traffic",
+                                "route": "admin/traffic/visits",
+                                "activePattern": "admin/traffic/visits",
+                                "role": null
+                            },
+                            {
+                                "id": "page-hits",
+                                "label": "Top Pages",
+                                "placement": "traffic",
+                                "route": "admin/traffic/page-hits",
+                                "activePattern": "admin/traffic/page-hits",
+                                "role": null
+                            },
+                            {
+                                "id": "referrers",
+                                "label": "Top Referrers",
+                                "placement": "traffic",
+                                "route": "admin/traffic/referrers",
+                                "activePattern": "admin/traffic/referrers",
+                                "role": null
+                            },
+                            {
+                                "id": "settings",
+                                "label": "Osmium Analytics",
+                                "icon": "bx bx-line-chart",
+                                "route": "admin/settings/osmium-analytics",
+                                "activePattern": "admin/settings/osmium-analytics",
+                                "role": "admin"
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/traffic/visits": {
+                            "controller": "controllers/VisitsController.php",
+                            "class": "Osmium\\Services\\OsmiumAnalytics\\Controllers\\VisitsController",
+                            "method": "index",
+                            "title": "Visits"
+                        },
+                        "admin/traffic/page-hits": {
+                            "controller": "controllers/PageHitsController.php",
+                            "class": "Osmium\\Services\\OsmiumAnalytics\\Controllers\\PageHitsController",
+                            "method": "index",
+                            "title": "Page Hits"
+                        },
+                        "admin/traffic/referrers": {
+                            "controller": "controllers/ReferrersController.php",
+                            "class": "Osmium\\Services\\OsmiumAnalytics\\Controllers\\ReferrersController",
+                            "method": "index",
+                            "title": "Referrers"
+                        },
+                        "admin/settings/osmium-analytics": {
+                            "controller": "controllers/SettingsController.php",
+                            "class": "Osmium\\Services\\OsmiumAnalytics\\Controllers\\SettingsController",
+                            "method": "index",
+                            "title": "Osmium Analytics"
+                        }
+                    }
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-blog",
             "tag": "v0.3.3",
             "commitSha": "181180c9ba8e5b8fda5a042980b5fef2e541af2f",
@@ -371,13 +467,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-analytics",
-            "tag": "v1.1.0",
-            "commitSha": "f83b11bd5c2d846b8eb5a25c6439db166bc36495",
-            "pushedAt": "2026-10-05T15:25:35Z",
+            "tag": "v2.0.0",
+            "commitSha": "4eda715d0d29b2b5bfd7ad7b3ffd2c908b989f64",
+            "pushedAt": "2026-10-08T08:30:59Z",
             "manifest": {
-                "id": "analytics",
+                "id": "google-analytics",
                 "name": "Google Analytics",
-                "version": "1.1.0",
+                "version": "2.0.0",
                 "description": "Google Tag Manager / GA4 loading with Consent Mode v2, gated on an admin-editable toggle and production-only; requires the Cookie Consent service",
                 "category": "marketing-analytics",
                 "author": {
@@ -412,19 +508,19 @@
                         "section": "Content",
                         "items": [
                             {
-                                "id": "analytics",
+                                "id": "google-analytics",
                                 "label": "Google Analytics",
                                 "icon": "bx bx-bar-chart-alt-2",
-                                "route": "admin/settings/analytics",
-                                "activePattern": "admin/settings/analytics",
+                                "route": "admin/settings/google-analytics",
+                                "activePattern": "admin/settings/google-analytics",
                                 "role": null
                             }
                         ]
                     },
                     "routes": {
-                        "admin/settings/analytics": {
-                            "controller": "controllers/AnalyticsController.php",
-                            "class": "Osmium\\Services\\Analytics\\Controllers\\AnalyticsController",
+                        "admin/settings/google-analytics": {
+                            "controller": "controllers/GoogleAnalyticsController.php",
+                            "class": "Osmium\\Services\\GoogleAnalytics\\Controllers\\GoogleAnalyticsController",
                             "method": "index",
                             "title": "Google Analytics"
                         }
