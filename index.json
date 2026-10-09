@@ -100,13 +100,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-blog",
-            "tag": "v0.6.1",
-            "commitSha": "a121b0f08cd37d80a3056713a944c6421de243b9",
-            "pushedAt": "2026-10-09T15:53:54Z",
+            "tag": "v0.6.2",
+            "commitSha": "8083506370e729fc5d18534952c80867d7a31e11",
+            "pushedAt": "2026-10-09T18:51:24Z",
             "manifest": {
                 "id": "osmium-blog",
                 "name": "Osmium Blog",
-                "version": "0.6.1",
+                "version": "0.6.2",
                 "description": "Blog posts written in admin and published as ordinary pages under /blog/, with the markup supplied by the theme",
                 "category": "content",
                 "author": {
