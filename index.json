@@ -4,13 +4,13 @@
     "services": [
         {
             "repo": "Osmium-Services/osmium-analytics",
-            "tag": "v1.0.0",
-            "commitSha": "1d052bdbaec7f3bc1c5b9147b8e7e74aa07812a3",
-            "pushedAt": "2026-10-08T20:45:50Z",
+            "tag": "v1.0.1",
+            "commitSha": "fcfa854a2f6fea03619293275ec279e757323cb5",
+            "pushedAt": "2026-10-09T15:53:52Z",
             "manifest": {
                 "id": "osmium-analytics",
                 "name": "Osmium Analytics",
-                "version": "1.0.0",
+                "version": "1.0.1",
                 "description": "Cookieless, first-party visitor statistics: visits, top pages, referrers, device and country, with a retention setting",
                 "category": "marketing-analytics",
                 "author": {
@@ -100,13 +100,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-blog",
-            "tag": "v0.6.0",
-            "commitSha": "1e2daaf224f83036719e50c3eca5af0c08c7bb97",
-            "pushedAt": "2026-10-09T15:05:57Z",
+            "tag": "v0.6.1",
+            "commitSha": "a121b0f08cd37d80a3056713a944c6421de243b9",
+            "pushedAt": "2026-10-09T15:53:54Z",
             "manifest": {
                 "id": "osmium-blog",
                 "name": "Osmium Blog",
-                "version": "0.6.0",
+                "version": "0.6.1",
                 "description": "Blog posts written in admin and published as ordinary pages under /blog/, with the markup supplied by the theme",
                 "category": "content",
                 "author": {
@@ -310,13 +310,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-cookie-consent",
-            "tag": "v1.1.0",
-            "commitSha": "ab4e8fb77029edf41026d1cf311db308b6e42b4d",
-            "pushedAt": "2026-10-07T16:24:00Z",
+            "tag": "v1.1.1",
+            "commitSha": "7a5e35ae5589ba683676b35dfaaa4819b8e228c7",
+            "pushedAt": "2026-10-09T15:53:56Z",
             "manifest": {
                 "id": "cookie-consent",
                 "name": "Cookie Consent",
-                "version": "1.1.0",
+                "version": "1.1.1",
                 "description": "GDPR-style cookie consent banner and status ribbon, production-only, with an admin-editable cookie name/privacy URL/colors/copy",
                 "category": "security-privacy",
                 "author": {
@@ -377,13 +377,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-faqs",
-            "tag": "v1.0.3",
-            "commitSha": "b4a1ac1eba0c738e1647a166454dcb768395cc02",
-            "pushedAt": "2026-10-09T15:01:27Z",
+            "tag": "v1.0.4",
+            "commitSha": "c1bf8e2edc7cc7d241d07634c32d27d91f69a644",
+            "pushedAt": "2026-10-09T15:53:59Z",
             "manifest": {
                 "id": "osmium-faqs",
                 "name": "Osmium FAQs",
-                "version": "1.0.3",
+                "version": "1.0.4",
                 "description": "Named lists of questions and answers managed in admin, for a theme to show anywhere, with FAQPage schema for search engines",
                 "category": "content",
                 "author": {
@@ -441,13 +441,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-freeagent",
-            "tag": "v1.1.0",
-            "commitSha": "b6851c6fb6299f58b2c897d819c93b13edf36cd4",
-            "pushedAt": "2026-10-06T10:44:50Z",
+            "tag": "v1.1.1",
+            "commitSha": "516a9bf8f6693dadeacb0692d26ec203be330bbc",
+            "pushedAt": "2026-10-09T15:54:05Z",
             "manifest": {
                 "id": "freeagent",
                 "name": "FreeAgent",
-                "version": "1.1.0",
+                "version": "1.1.1",
                 "description": "Connects the shop to FreeAgent (OAuth2) and adds a 'Push to FreeAgent' button on paid orders that creates a sales invoice. Locked to one named FreeAgent company",
                 "category": "business",
                 "author": {
@@ -825,13 +825,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-reviews",
-            "tag": "v1.0.2",
-            "commitSha": "35af7a9581c60e028095d52600ec6ca4a9fd593a",
-            "pushedAt": "2026-10-07T16:18:25Z",
+            "tag": "v1.0.3",
+            "commitSha": "e1c815052a8d97326f617fba68f890ec1ca6c7a0",
+            "pushedAt": "2026-10-09T15:54:01Z",
             "manifest": {
                 "id": "google-reviews",
                 "name": "Google Reviews",
-                "version": "1.0.2",
+                "version": "1.0.3",
                 "description": "Hand-curated Google review admin CRUD and homepage social-proof widget model",
                 "category": "marketing-analytics",
                 "author": {
@@ -1356,13 +1356,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-quickbooks",
-            "tag": "v1.0.0",
-            "commitSha": "3fe85cbc81553f1694857443414fb46570503541",
-            "pushedAt": "2026-10-05T14:02:40Z",
+            "tag": "v1.0.1",
+            "commitSha": "f6b17ab293615759e2dd3d7809464e3b492e80d0",
+            "pushedAt": "2026-10-09T15:54:07Z",
             "manifest": {
                 "id": "quickbooks",
                 "name": "QuickBooks",
-                "version": "1.0.0",
+                "version": "1.0.1",
                 "description": "Connects the shop to QuickBooks (OAuth2) and adds a 'Push to QuickBooks' button on paid orders that creates a sales invoice. Locked to one named QuickBooks company",
                 "category": "business",
                 "author": {
@@ -1562,13 +1562,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-sage",
-            "tag": "v1.0.0",
-            "commitSha": "fb64c1cf3d25544ec91876b623429eb3617cf192",
-            "pushedAt": "2026-10-05T14:13:51Z",
+            "tag": "v1.0.1",
+            "commitSha": "d8105f7e31b56d198c971ca45911f100f931f940",
+            "pushedAt": "2026-10-09T15:54:10Z",
             "manifest": {
                 "id": "sage",
                 "name": "Sage Accounting",
-                "version": "1.0.0",
+                "version": "1.0.1",
                 "description": "Connects the shop to Sage Accounting (OAuth2) and adds a 'Push to Sage' button on paid orders that creates a sales invoice. Locked to one named Sage business",
                 "category": "business",
                 "author": {
@@ -1641,13 +1641,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-shows",
-            "tag": "v1.1.1",
-            "commitSha": "9729bd05b95f2b1515db9c8ea0a7efd812b5f5b3",
-            "pushedAt": "2026-10-09T15:14:14Z",
+            "tag": "v1.1.2",
+            "commitSha": "c152736f1decfbf9bbedc48747fec78d467b6940",
+            "pushedAt": "2026-10-09T15:54:03Z",
             "manifest": {
                 "id": "osmium-shows",
                 "name": "Osmium Shows",
-                "version": "1.1.1",
+                "version": "1.1.2",
                 "description": "Curated trade show/event listings with postcode geocoding and logo upload",
                 "category": "content",
                 "author": {
@@ -2112,13 +2112,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-xero",
-            "tag": "v1.0.1",
-            "commitSha": "e14d2e267d7cd3724169125e7d6d9a53d88108e3",
-            "pushedAt": "2026-10-05T06:58:44Z",
+            "tag": "v1.0.2",
+            "commitSha": "729196f27b5f7fca335f48e81ae4c01ee926aafa",
+            "pushedAt": "2026-10-09T15:54:12Z",
             "manifest": {
                 "id": "xero",
                 "name": "Xero",
-                "version": "1.0.1",
+                "version": "1.0.2",
                 "description": "Connects the shop to Xero (OAuth2) and adds a 'Push to Xero' button on paid orders that creates an AUTHORISED sales invoice. Locked to one named Xero organisation",
                 "category": "business",
                 "author": {
