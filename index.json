@@ -239,13 +239,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-clarity",
-            "tag": "v1.1.0",
-            "commitSha": "8853020846a502e34673dbf1c8ce36b1d047adeb",
-            "pushedAt": "2026-10-05T15:57:03Z",
+            "tag": "v1.1.1",
+            "commitSha": "04245c69b0bc894c1d090799811c8314185aaa20",
+            "pushedAt": "2026-10-09T15:59:20Z",
             "manifest": {
                 "id": "clarity",
                 "name": "Microsoft Clarity",
-                "version": "1.1.0",
+                "version": "1.1.1",
                 "description": "Microsoft Clarity heatmaps and session recordings - free, consent-gated, gated on an admin-editable toggle and production-only; requires the Cookie Consent service",
                 "category": "marketing-analytics",
                 "author": {
@@ -310,13 +310,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-cookie-consent",
-            "tag": "v1.1.1",
-            "commitSha": "7a5e35ae5589ba683676b35dfaaa4819b8e228c7",
-            "pushedAt": "2026-10-09T15:53:56Z",
+            "tag": "v1.1.2",
+            "commitSha": "4eaee5c149103a409145e3e8181b536cf1d668d3",
+            "pushedAt": "2026-10-09T15:59:23Z",
             "manifest": {
                 "id": "cookie-consent",
                 "name": "Cookie Consent",
-                "version": "1.1.1",
+                "version": "1.1.2",
                 "description": "GDPR-style cookie consent banner and status ribbon, production-only, with an admin-editable cookie name/privacy URL/colors/copy",
                 "category": "security-privacy",
                 "author": {
@@ -545,13 +545,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-analytics",
-            "tag": "v2.0.0",
-            "commitSha": "4eda715d0d29b2b5bfd7ad7b3ffd2c908b989f64",
-            "pushedAt": "2026-10-08T08:30:59Z",
+            "tag": "v2.0.1",
+            "commitSha": "ff7055cbabf8cdfe218dac6885694ec7a012bb7b",
+            "pushedAt": "2026-10-09T15:59:25Z",
             "manifest": {
                 "id": "google-analytics",
                 "name": "Google Analytics",
-                "version": "2.0.0",
+                "version": "2.0.1",
                 "description": "Google Tag Manager / GA4 loading with Consent Mode v2, gated on an admin-editable toggle and production-only; requires the Cookie Consent service",
                 "category": "marketing-analytics",
                 "author": {
@@ -619,13 +619,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-maps",
-            "tag": "v1.0.1",
-            "commitSha": "9a8074cbc3d6b313b7562ba8ea6d3d175a889321",
-            "pushedAt": "2026-10-07T16:28:54Z",
+            "tag": "v1.0.2",
+            "commitSha": "96bf2eaa6025587e52676c8dd0afe69d64b18967",
+            "pushedAt": "2026-10-09T15:59:27Z",
             "manifest": {
                 "id": "google-maps",
                 "name": "Google Maps",
-                "version": "1.0.1",
+                "version": "1.0.2",
                 "description": "Draws a map of pins (clustered, with a fullscreen button) on Google Maps, for a theme to place anywhere - the Google counterpart of Leaflet Maps, taking the same pin list. Needs your own API key (billing account); loads Google only after cookie consent",
                 "category": "developer",
                 "author": {
@@ -938,13 +938,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-leaflet-maps",
-            "tag": "v1.1.1",
-            "commitSha": "c7fddf155c03c080c5345eb9e5629aa00ea1ad77",
-            "pushedAt": "2026-10-07T16:28:51Z",
+            "tag": "v1.1.2",
+            "commitSha": "acf1b3d2308ab20b7458b2e3e17d30efd077bec7",
+            "pushedAt": "2026-10-09T15:59:29Z",
             "manifest": {
                 "id": "leaflet-maps",
                 "name": "Leaflet Maps",
-                "version": "1.1.1",
+                "version": "1.1.2",
                 "description": "Draws a map of pins (clustered, with a fullscreen button) from OpenStreetMap tiles using a bundled Leaflet, for a theme to place anywhere - no API key, no cookies",
                 "category": "developer",
                 "author": {
@@ -1145,13 +1145,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-meta-pixel",
-            "tag": "v1.2.1",
-            "commitSha": "9f07591b4db2269a4be003310e01fac571f25168",
-            "pushedAt": "2026-10-06T20:07:29Z",
+            "tag": "v1.2.2",
+            "commitSha": "fce9af2a334f76d77325d2fce6e7a3592169f793",
+            "pushedAt": "2026-10-09T15:59:34Z",
             "manifest": {
                 "id": "meta-pixel",
                 "name": "Meta Pixel",
-                "version": "1.2.1",
+                "version": "1.2.2",
                 "description": "Meta (Facebook/Instagram) Pixel PageView plus optional shop events (ViewContent, AddToCart, Purchase) and server-side Purchase, consent-gated, gated on an admin-editable toggle and production-only; requires the Cookie Consent service",
                 "category": "marketing-analytics",
                 "author": {
@@ -1435,13 +1435,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-recaptcha",
-            "tag": "v1.0.3",
-            "commitSha": "b2fe16d5244e933fcfba09c862280226b1b07afb",
-            "pushedAt": "2026-10-05T15:05:01Z",
+            "tag": "v1.0.4",
+            "commitSha": "c3563f618e73e3e2d11454f0816845899f69370e",
+            "pushedAt": "2026-10-09T15:59:32Z",
             "manifest": {
                 "id": "recaptcha",
                 "name": "Google reCAPTCHA v3",
-                "version": "1.0.3",
+                "version": "1.0.4",
                 "description": "Spam protection for forms via Google reCAPTCHA v3 - score-based, invisible by default, admin-editable site/secret key and score threshold",
                 "category": "security-privacy",
                 "author": {
