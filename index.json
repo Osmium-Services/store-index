@@ -1628,13 +1628,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-restock-leads",
-            "tag": "v0.1.0",
-            "commitSha": "4fa135f25e9675c442b0cc729609889ca2393546",
-            "pushedAt": "2026-10-10T16:47:44Z",
+            "tag": "v0.1.1",
+            "commitSha": "be8877805c5f7c09e9a1e23b3e74bef3f3fa5346",
+            "pushedAt": "2026-10-10T16:52:12Z",
             "manifest": {
                 "id": "osmium-restock-leads",
                 "name": "Osmium Restock Leads",
-                "version": "0.1.0",
+                "version": "0.1.1",
                 "description": "Lets customers leave their email to hear when an out-of-stock product is back, collects those requests, and lists them in admin",
                 "category": "shop",
                 "author": {
@@ -1685,7 +1685,7 @@
                     }
                 },
                 "setup": {
-                    "postInstallNote": "Leads are only collected and listed under Shop > Restock Leads: nothing emails customers when stock returns, so do that yourself. Point the theme's notify-me form (fields email, pid, token and the zip honeypot) at /api/restock-leads/. The product page then gets restockNotifySet (true once this visitor has asked for that product) and restockNotice (sent or failed, shown once)."
+                    "postInstallNote": "Leads are only collected and listed under Shop > Restock Leads: nothing emails customers when stock returns, so do that yourself. Point the theme's notify-me form (fields email, pid, token and the zip honeypot) at /api/restock-leads/. The product page then gets restockNotifySet (true once this visitor has asked for that product in this session; no cookie of its own is set) and restockNotice (sent or failed, shown once)."
                 }
             }
         },
