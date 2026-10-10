@@ -441,13 +441,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-featured-products",
-            "tag": "v0.1.1",
-            "commitSha": "0cd7294251b88fd5d44abdc73592824cfa333212",
-            "pushedAt": "2026-10-10T16:25:16Z",
+            "tag": "v0.1.2",
+            "commitSha": "baf930bd45588256dccb4c8a061ed0a6c0b161a7",
+            "pushedAt": "2026-10-10T18:33:30Z",
             "manifest": {
                 "id": "osmium-featured-products",
                 "name": "Osmium Featured Products",
-                "version": "0.1.1",
+                "version": "0.1.2",
                 "description": "A hand-picked list of up to 5 featured products, ordered by drag and drop in admin, with an edit lock for busy admin teams and the list handed to the theme",
                 "category": "shop",
                 "author": {
@@ -457,7 +457,8 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": []
+                    "services": [],
+                    "shop": true
                 },
                 "autoload": [
                     "models"
@@ -507,13 +508,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-freeagent",
-            "tag": "v1.1.2",
-            "commitSha": "600a2ee0f5a199c52adea9af5c2d0c18cf500876",
-            "pushedAt": "2026-10-10T12:00:29Z",
+            "tag": "v1.1.3",
+            "commitSha": "fe9dde243b1d04123f60e796930d85a6d9dc94bf",
+            "pushedAt": "2026-10-10T18:33:49Z",
             "manifest": {
                 "id": "freeagent",
                 "name": "FreeAgent",
-                "version": "1.1.2",
+                "version": "1.1.3",
                 "description": "Connects the shop to FreeAgent (OAuth2) and adds a 'Push to FreeAgent' button on paid orders that creates a sales invoice. Locked to one named FreeAgent company",
                 "category": "business",
                 "author": {
@@ -523,7 +524,8 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": []
+                    "services": [],
+                    "shop": true
                 },
                 "autoload": [
                     "models"
@@ -831,13 +833,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-merchant-center",
-            "tag": "v1.1.0",
-            "commitSha": "22e215de5b6faf3b6f52896e30691202410fee38",
-            "pushedAt": "2026-10-06T11:09:44Z",
+            "tag": "v1.1.1",
+            "commitSha": "d285d1c8bc20327cffed9aee70868256a365ffc6",
+            "pushedAt": "2026-10-10T18:33:51Z",
             "manifest": {
                 "id": "google-merchant-center",
                 "name": "Google Merchant Center",
-                "version": "1.1.0",
+                "version": "1.1.1",
                 "description": "Pushes product data to Google Merchant Center (Merchant API) whenever a product is saved, status-changed or removed. Service-account auth, admin-editable credentials, test connection and one-click full sync",
                 "category": "marketing-analytics",
                 "author": {
@@ -847,7 +849,8 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": []
+                    "services": [],
+                    "shop": true
                 },
                 "autoload": [
                     "models"
@@ -1346,13 +1349,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-paypal",
-            "tag": "v1.1.1",
-            "commitSha": "fd0e5954211599db2f0c74f661a92ea9b68d7980",
-            "pushedAt": "2026-10-10T17:32:47Z",
+            "tag": "v1.1.2",
+            "commitSha": "0f685d74b53f9cc9f2a15e7699f7be15b9cab8eb",
+            "pushedAt": "2026-10-10T18:33:40Z",
             "manifest": {
                 "id": "paypal",
                 "name": "PayPal",
-                "version": "1.1.1",
+                "version": "1.1.2",
                 "description": "Takes PayPal payments at checkout (Orders v2, server-side capture), with a signature-verified webhook to reconcile orders. Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "author": {
@@ -1362,7 +1365,8 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": []
+                    "services": [],
+                    "shop": true
                 },
                 "autoload": [
                     "models"
@@ -1425,13 +1429,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-quickbooks",
-            "tag": "v1.0.2",
-            "commitSha": "05e346859dd41442e3984a44ef8b1eb918323822",
-            "pushedAt": "2026-10-10T12:00:22Z",
+            "tag": "v1.0.3",
+            "commitSha": "887366f62a2d6c618ebab5a2484afafd64f3fe73",
+            "pushedAt": "2026-10-10T18:33:46Z",
             "manifest": {
                 "id": "quickbooks",
                 "name": "QuickBooks",
-                "version": "1.0.2",
+                "version": "1.0.3",
                 "description": "Connects the shop to QuickBooks (OAuth2) and adds a 'Push to QuickBooks' button on paid orders that creates a sales invoice. Locked to one named QuickBooks company",
                 "category": "business",
                 "author": {
@@ -1441,7 +1445,8 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": []
+                    "services": [],
+                    "shop": true
                 },
                 "autoload": [
                     "models"
@@ -1631,13 +1636,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-restock-leads",
-            "tag": "v0.1.1",
-            "commitSha": "be8877805c5f7c09e9a1e23b3e74bef3f3fa5346",
-            "pushedAt": "2026-10-10T16:52:12Z",
+            "tag": "v0.1.2",
+            "commitSha": "21c743783698c0a72d66c37d776eff9a26f3f924",
+            "pushedAt": "2026-10-10T18:33:31Z",
             "manifest": {
                 "id": "osmium-restock-leads",
                 "name": "Osmium Restock Leads",
-                "version": "0.1.1",
+                "version": "0.1.2",
                 "description": "Lets customers leave their email to hear when an out-of-stock product is back, collects those requests, and lists them in admin",
                 "category": "shop",
                 "author": {
@@ -1647,7 +1652,8 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": []
+                    "services": [],
+                    "shop": true
                 },
                 "autoload": [
                     "models"
@@ -1694,13 +1700,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-reviews",
-            "tag": "v0.2.1",
-            "commitSha": "c08c7d16e3863321dbd64db0aa3590453752c602",
-            "pushedAt": "2026-10-10T15:59:37Z",
+            "tag": "v0.2.2",
+            "commitSha": "9c87bc212a22e462280238225e0698942fca62e5",
+            "pushedAt": "2026-10-10T18:33:33Z",
             "manifest": {
                 "id": "osmium-reviews",
                 "name": "Osmium Reviews",
-                "version": "0.2.1",
+                "version": "0.2.2",
                 "description": "Customer product reviews: a submit endpoint with spam protection, moderation in admin, and review data for the product page",
                 "category": "shop",
                 "author": {
@@ -1710,7 +1716,8 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": []
+                    "services": [],
+                    "shop": true
                 },
                 "autoload": [
                     "models"
@@ -1785,13 +1792,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-sage",
-            "tag": "v1.0.2",
-            "commitSha": "eef502c6a1b0cfe0f890f4aa74085cbdf1b4ed28",
-            "pushedAt": "2026-10-10T12:00:25Z",
+            "tag": "v1.0.3",
+            "commitSha": "e91eab48bcbaaf4aca400b8edab2af6aa784d569",
+            "pushedAt": "2026-10-10T18:33:47Z",
             "manifest": {
                 "id": "sage",
                 "name": "Sage Accounting",
-                "version": "1.0.2",
+                "version": "1.0.3",
                 "description": "Connects the shop to Sage Accounting (OAuth2) and adds a 'Push to Sage' button on paid orders that creates a sales invoice. Locked to one named Sage business",
                 "category": "business",
                 "author": {
@@ -1801,7 +1808,8 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": []
+                    "services": [],
+                    "shop": true
                 },
                 "autoload": [
                     "models"
@@ -1864,13 +1872,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-search-analytics",
-            "tag": "v0.1.0",
-            "commitSha": "b1b58045209c101f4adeb36e0f9bb1d85824bc9b",
-            "pushedAt": "2026-10-10T16:41:44Z",
+            "tag": "v0.1.1",
+            "commitSha": "7595ec0bccfdd83bc8e005502d1e4a87936aa465",
+            "pushedAt": "2026-10-10T18:33:35Z",
             "manifest": {
                 "id": "osmium-search-analytics",
                 "name": "Osmium Search Analytics",
-                "version": "0.1.0",
+                "version": "0.1.1",
                 "description": "Records what customers search for in the shop, shows the top and zero-result searches in admin, and adds a search synonym in one click from a failed search",
                 "category": "shop",
                 "author": {
@@ -1880,7 +1888,8 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": []
+                    "services": [],
+                    "shop": true
                 },
                 "autoload": [
                     "models"
@@ -2049,13 +2058,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-square",
-            "tag": "v1.0.1",
-            "commitSha": "f2cd7ee605e237ef4ad0dcded48448e517361f84",
-            "pushedAt": "2026-10-06T11:09:40Z",
+            "tag": "v1.0.2",
+            "commitSha": "5f979c78d6e0c226755900a63e70ded3fe1869f3",
+            "pushedAt": "2026-10-10T18:33:42Z",
             "manifest": {
                 "id": "square",
                 "name": "Square",
-                "version": "1.0.1",
+                "version": "1.0.2",
                 "description": "Takes card payments at checkout through Square (Web Payments SDK card form on your own page, charged server-side with the CreatePayment API). Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "author": {
@@ -2065,7 +2074,8 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": []
+                    "services": [],
+                    "shop": true
                 },
                 "autoload": [
                     "models"
@@ -2131,13 +2141,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-stock-control",
-            "tag": "v0.6.0",
-            "commitSha": "ac117aae3b28890db98e405362c7aa7008f9b8e5",
-            "pushedAt": "2026-10-10T14:58:29Z",
+            "tag": "v0.6.1",
+            "commitSha": "45c58c36b53915644ce4f575bc699cdd5670401b",
+            "pushedAt": "2026-10-10T18:33:36Z",
             "manifest": {
                 "id": "osmium-stock-control",
                 "name": "Osmium Stock Control",
-                "version": "0.6.0",
+                "version": "0.6.1",
                 "description": "Counts stock down when an order is paid, stops customers adding more than is in stock, and treats a kit's parts as stock of their own",
                 "category": "shop",
                 "author": {
@@ -2147,7 +2157,8 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": []
+                    "services": [],
+                    "shop": true
                 },
                 "autoload": [
                     "models"
@@ -2244,13 +2255,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-stripe",
-            "tag": "v1.1.1",
-            "commitSha": "6c048a7ffe856fc04e9a16e83f9d86a186864733",
-            "pushedAt": "2026-10-10T17:32:45Z",
+            "tag": "v1.1.2",
+            "commitSha": "9479e541afecf0df0df1198d4281667df123cf42",
+            "pushedAt": "2026-10-10T18:33:38Z",
             "manifest": {
                 "id": "stripe",
                 "name": "Stripe",
-                "version": "1.1.1",
+                "version": "1.1.2",
                 "description": "Takes card payments at checkout through Stripe (PaymentIntents, plus Apple Pay/Google Pay via the card element), with a signature-verified webhook to reconcile orders. Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "author": {
@@ -2260,7 +2271,8 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": []
+                    "services": [],
+                    "shop": true
                 },
                 "autoload": [
                     "models"
@@ -2514,13 +2526,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-xero",
-            "tag": "v1.0.3",
-            "commitSha": "97a5b9a87c045ff186940cd04c5e73ca774bf6ca",
-            "pushedAt": "2026-10-10T12:00:20Z",
+            "tag": "v1.0.4",
+            "commitSha": "a1cecc290dbe97d6995131fc83e42e540b7c95de",
+            "pushedAt": "2026-10-10T18:33:44Z",
             "manifest": {
                 "id": "xero",
                 "name": "Xero",
-                "version": "1.0.3",
+                "version": "1.0.4",
                 "description": "Connects the shop to Xero (OAuth2) and adds a 'Push to Xero' button on paid orders that creates an AUTHORISED sales invoice. Locked to one named Xero organisation",
                 "category": "business",
                 "author": {
@@ -2530,7 +2542,8 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": []
+                    "services": [],
+                    "shop": true
                 },
                 "autoload": [
                     "models"
