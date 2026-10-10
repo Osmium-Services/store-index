@@ -1844,6 +1844,98 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-stock-control",
+            "tag": "v0.1.0",
+            "commitSha": "68c2685fd6d65ac9199defac2a56e3d77e18e01e",
+            "pushedAt": "2026-10-10T11:33:52Z",
+            "manifest": {
+                "id": "osmium-stock-control",
+                "name": "Osmium Stock Control",
+                "version": "0.1.0",
+                "description": "Counts stock down when an order is paid, stops customers adding more than is in stock, and treats a kit's parts as stock of their own",
+                "category": "shop",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "hooks": {
+                    "basket.line.check": [
+                        "Osmium\\Services\\StockControl\\Models\\StockHooks::basketLineCheck"
+                    ],
+                    "order.check": [
+                        "Osmium\\Services\\StockControl\\Models\\StockHooks::orderCheck"
+                    ],
+                    "order.paid": [
+                        "Osmium\\Services\\StockControl\\Models\\StockHooks::orderPaid"
+                    ],
+                    "order.panels": [
+                        "Osmium\\Services\\StockControl\\Models\\StockOrderHooks::orderPanel"
+                    ],
+                    "order.action": [
+                        "Osmium\\Services\\StockControl\\Models\\StockOrderHooks::orderAction"
+                    ]
+                },
+                "migrations": "migrations/",
+                "admin": {
+                    "menu": {
+                        "section": "Shop",
+                        "items": [
+                            {
+                                "id": "stock",
+                                "label": "Stock",
+                                "icon": "bx bx-package",
+                                "placement": "top",
+                                "route": "admin/stock",
+                                "activePattern": "admin/stock*",
+                                "role": null
+                            },
+                            {
+                                "id": "stock-settings",
+                                "label": "Stock Settings",
+                                "icon": "bx bx-cog",
+                                "route": "admin/settings/stock-control",
+                                "activePattern": "admin/settings/stock-control",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/stock": {
+                            "controller": "controllers/StockController.php",
+                            "class": "Osmium\\Services\\StockControl\\Controllers\\StockController",
+                            "method": "index",
+                            "title": "Stock"
+                        },
+                        "admin/stock/edit": {
+                            "controller": "controllers/StockController.php",
+                            "class": "Osmium\\Services\\StockControl\\Controllers\\StockController",
+                            "method": "edit",
+                            "title": "Set Stock"
+                        },
+                        "admin/stock/action": {
+                            "controller": "controllers/StockController.php",
+                            "class": "Osmium\\Services\\StockControl\\Controllers\\StockController",
+                            "method": "action"
+                        },
+                        "admin/settings/stock-control": {
+                            "controller": "controllers/StockSettingsController.php",
+                            "class": "Osmium\\Services\\StockControl\\Controllers\\StockSettingsController",
+                            "method": "index",
+                            "title": "Stock Settings"
+                        }
+                    }
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-stripe",
             "tag": "v1.1.0",
             "commitSha": "c6d30c1b1354fe306ad955b524eb24476b4934ed",
