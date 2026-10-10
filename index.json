@@ -1346,13 +1346,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-paypal",
-            "tag": "v1.1.0",
-            "commitSha": "b6300d41f1bb49629fac07da222b2cc79657d040",
-            "pushedAt": "2026-10-06T11:09:37Z",
+            "tag": "v1.1.1",
+            "commitSha": "fd0e5954211599db2f0c74f661a92ea9b68d7980",
+            "pushedAt": "2026-10-10T17:32:47Z",
             "manifest": {
                 "id": "paypal",
                 "name": "PayPal",
-                "version": "1.1.0",
+                "version": "1.1.1",
                 "description": "Takes PayPal payments at checkout (Orders v2, server-side capture), with a signature-verified webhook to reconcile orders. Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "author": {
@@ -1412,7 +1412,10 @@
                 "api": {
                     "routes": {
                         "api/checkout-paypal-webhook": "controllers/paypal-webhook.php"
-                    }
+                    },
+                    "external": [
+                        "api/checkout-paypal-webhook"
+                    ]
                 },
                 "setup": {
                     "requiresConnection": true,
@@ -2241,13 +2244,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-stripe",
-            "tag": "v1.1.0",
-            "commitSha": "c6d30c1b1354fe306ad955b524eb24476b4934ed",
-            "pushedAt": "2026-10-06T11:09:34Z",
+            "tag": "v1.1.1",
+            "commitSha": "6c048a7ffe856fc04e9a16e83f9d86a186864733",
+            "pushedAt": "2026-10-10T17:32:45Z",
             "manifest": {
                 "id": "stripe",
                 "name": "Stripe",
-                "version": "1.1.0",
+                "version": "1.1.1",
                 "description": "Takes card payments at checkout through Stripe (PaymentIntents, plus Apple Pay/Google Pay via the card element), with a signature-verified webhook to reconcile orders. Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "author": {
@@ -2307,7 +2310,10 @@
                 "api": {
                     "routes": {
                         "api/checkout-stripe-webhook": "controllers/stripe-webhook.php"
-                    }
+                    },
+                    "external": [
+                        "api/checkout-stripe-webhook"
+                    ]
                 },
                 "setup": {
                     "requiresConnection": true,
