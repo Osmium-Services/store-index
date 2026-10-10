@@ -380,13 +380,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-faqs",
-            "tag": "v1.0.4",
-            "commitSha": "c1bf8e2edc7cc7d241d07634c32d27d91f69a644",
-            "pushedAt": "2026-10-09T15:53:59Z",
+            "tag": "v1.1.0",
+            "commitSha": "3116fd36d29292b02ec1a5a013054a114361d1b4",
+            "pushedAt": "2026-10-10T22:26:43Z",
             "manifest": {
                 "id": "osmium-faqs",
                 "name": "Osmium FAQs",
-                "version": "1.0.4",
+                "version": "1.1.0",
                 "description": "Named lists of questions and answers managed in admin, for a theme to show anywhere, with FAQPage schema for search engines",
                 "category": "content",
                 "author": {
@@ -401,6 +401,11 @@
                 "autoload": [
                     "models"
                 ],
+                "hooks": {
+                    "mcp.tools": [
+                        "Osmium\\Services\\Faqs\\Models\\FaqMcp::tools"
+                    ]
+                },
                 "migrations": "migrations/",
                 "admin": {
                     "menu": {
