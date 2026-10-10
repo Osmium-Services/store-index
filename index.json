@@ -1797,6 +1797,69 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-search-analytics",
+            "tag": "v0.1.0",
+            "commitSha": "b1b58045209c101f4adeb36e0f9bb1d85824bc9b",
+            "pushedAt": "2026-10-10T16:41:44Z",
+            "manifest": {
+                "id": "osmium-search-analytics",
+                "name": "Osmium Search Analytics",
+                "version": "0.1.0",
+                "description": "Records what customers search for in the shop, shows the top and zero-result searches in admin, and adds a search synonym in one click from a failed search",
+                "category": "shop",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "migrations": "migrations/",
+                "hooks": {
+                    "search.performed": [
+                        "Osmium\\Services\\SearchAnalytics\\Models\\SearchHooks::searchPerformed"
+                    ]
+                },
+                "admin": {
+                    "menu": {
+                        "section": "Shop",
+                        "items": [
+                            {
+                                "id": "search-analytics",
+                                "label": "Search Analytics",
+                                "icon": "bx bx-search-alt",
+                                "placement": "top",
+                                "route": "admin/search-analytics",
+                                "activePattern": "admin/search-analytics*",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/search-analytics": {
+                            "controller": "controllers/SearchAnalyticsController.php",
+                            "class": "Osmium\\Services\\SearchAnalytics\\Controllers\\SearchAnalyticsController",
+                            "method": "index",
+                            "title": "Search Analytics"
+                        },
+                        "admin/search-analytics/action": {
+                            "controller": "controllers/SearchAnalyticsController.php",
+                            "class": "Osmium\\Services\\SearchAnalytics\\Controllers\\SearchAnalyticsController",
+                            "method": "action"
+                        }
+                    }
+                },
+                "setup": {
+                    "postInstallNote": "Searches are recorded from now on (one row per term per day, no visitor details). Look under Shop > Search Analytics for the top and zero-result searches of the last 30 days, and use Add synonym on a failed search that has a suggestion. Synonyms are saved to the shop's search-synonyms.php, which core search reads whether or not this service is installed."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-shows",
             "tag": "v1.1.2",
             "commitSha": "c152736f1decfbf9bbedc48747fec78d467b6940",
