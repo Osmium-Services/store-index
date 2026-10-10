@@ -441,13 +441,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-freeagent",
-            "tag": "v1.1.1",
-            "commitSha": "516a9bf8f6693dadeacb0692d26ec203be330bbc",
-            "pushedAt": "2026-10-09T15:54:05Z",
+            "tag": "v1.1.2",
+            "commitSha": "600a2ee0f5a199c52adea9af5c2d0c18cf500876",
+            "pushedAt": "2026-10-10T12:00:29Z",
             "manifest": {
                 "id": "freeagent",
                 "name": "FreeAgent",
-                "version": "1.1.1",
+                "version": "1.1.2",
                 "description": "Connects the shop to FreeAgent (OAuth2) and adds a 'Push to FreeAgent' button on paid orders that creates a sales invoice. Locked to one named FreeAgent company",
                 "category": "business",
                 "author": {
@@ -1356,13 +1356,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-quickbooks",
-            "tag": "v1.0.1",
-            "commitSha": "f6b17ab293615759e2dd3d7809464e3b492e80d0",
-            "pushedAt": "2026-10-09T15:54:07Z",
+            "tag": "v1.0.2",
+            "commitSha": "05e346859dd41442e3984a44ef8b1eb918323822",
+            "pushedAt": "2026-10-10T12:00:22Z",
             "manifest": {
                 "id": "quickbooks",
                 "name": "QuickBooks",
-                "version": "1.0.1",
+                "version": "1.0.2",
                 "description": "Connects the shop to QuickBooks (OAuth2) and adds a 'Push to QuickBooks' button on paid orders that creates a sales invoice. Locked to one named QuickBooks company",
                 "category": "business",
                 "author": {
@@ -1562,13 +1562,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-sage",
-            "tag": "v1.0.1",
-            "commitSha": "d8105f7e31b56d198c971ca45911f100f931f940",
-            "pushedAt": "2026-10-09T15:54:10Z",
+            "tag": "v1.0.2",
+            "commitSha": "eef502c6a1b0cfe0f890f4aa74085cbdf1b4ed28",
+            "pushedAt": "2026-10-10T12:00:25Z",
             "manifest": {
                 "id": "sage",
                 "name": "Sage Accounting",
-                "version": "1.0.1",
+                "version": "1.0.2",
                 "description": "Connects the shop to Sage Accounting (OAuth2) and adds a 'Push to Sage' button on paid orders that creates a sales invoice. Locked to one named Sage business",
                 "category": "business",
                 "author": {
@@ -2204,13 +2204,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-xero",
-            "tag": "v1.0.2",
-            "commitSha": "729196f27b5f7fca335f48e81ae4c01ee926aafa",
-            "pushedAt": "2026-10-09T15:54:12Z",
+            "tag": "v1.0.3",
+            "commitSha": "97a5b9a87c045ff186940cd04c5e73ca774bf6ca",
+            "pushedAt": "2026-10-10T12:00:20Z",
             "manifest": {
                 "id": "xero",
                 "name": "Xero",
-                "version": "1.0.2",
+                "version": "1.0.3",
                 "description": "Connects the shop to Xero (OAuth2) and adds a 'Push to Xero' button on paid orders that creates an AUTHORISED sales invoice. Locked to one named Xero organisation",
                 "category": "business",
                 "author": {
