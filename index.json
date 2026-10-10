@@ -441,13 +441,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-featured-products",
-            "tag": "v0.1.0",
-            "commitSha": "deda0d130b392902b7e99857f24ddf3a666e7c0c",
-            "pushedAt": "2026-10-10T16:23:26Z",
+            "tag": "v0.1.1",
+            "commitSha": "0cd7294251b88fd5d44abdc73592824cfa333212",
+            "pushedAt": "2026-10-10T16:25:16Z",
             "manifest": {
                 "id": "osmium-featured-products",
                 "name": "Osmium Featured Products",
-                "version": "0.1.0",
+                "version": "0.1.1",
                 "description": "A hand-picked list of up to 5 featured products, ordered by drag and drop in admin, with an edit lock for busy admin teams and the list handed to the theme",
                 "category": "shop",
                 "author": {
@@ -478,7 +478,7 @@
                             {
                                 "id": "featured-products",
                                 "label": "Featured Products",
-                                "icon": "bx bx-star",
+                                "icon": "bx bx-crown",
                                 "placement": "top",
                                 "route": "admin/featured-products",
                                 "activePattern": "admin/featured-products*",
