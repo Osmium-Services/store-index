@@ -1627,6 +1627,69 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-restock-leads",
+            "tag": "v0.1.0",
+            "commitSha": "4fa135f25e9675c442b0cc729609889ca2393546",
+            "pushedAt": "2026-10-10T16:47:44Z",
+            "manifest": {
+                "id": "osmium-restock-leads",
+                "name": "Osmium Restock Leads",
+                "version": "0.1.0",
+                "description": "Lets customers leave their email to hear when an out-of-stock product is back, collects those requests, and lists them in admin",
+                "category": "shop",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "migrations": "migrations/",
+                "hooks": {
+                    "product.page.data": [
+                        "Osmium\\Services\\RestockLeads\\Models\\RestockHooks::productPageData"
+                    ]
+                },
+                "admin": {
+                    "menu": {
+                        "section": "Shop",
+                        "items": [
+                            {
+                                "id": "restock-leads",
+                                "label": "Restock Leads",
+                                "icon": "bx bx-bell",
+                                "placement": "top",
+                                "route": "admin/restock-leads",
+                                "activePattern": "admin/restock-leads*",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/restock-leads": {
+                            "controller": "controllers/RestockLeadsController.php",
+                            "class": "Osmium\\Services\\RestockLeads\\Controllers\\RestockLeadsController",
+                            "method": "index",
+                            "title": "Restock Leads"
+                        }
+                    }
+                },
+                "api": {
+                    "routes": {
+                        "api/restock-leads": "controllers/submit.php"
+                    }
+                },
+                "setup": {
+                    "postInstallNote": "Leads are only collected and listed under Shop > Restock Leads: nothing emails customers when stock returns, so do that yourself. Point the theme's notify-me form (fields email, pid, token and the zip honeypot) at /api/restock-leads/. The product page then gets restockNotifySet (true once this visitor has asked for that product) and restockNotice (sent or failed, shown once)."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-reviews",
             "tag": "v0.2.1",
             "commitSha": "c08c7d16e3863321dbd64db0aa3590453752c602",
