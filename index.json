@@ -380,13 +380,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-faqs",
-            "tag": "v1.1.0",
-            "commitSha": "3116fd36d29292b02ec1a5a013054a114361d1b4",
-            "pushedAt": "2026-10-10T22:26:43Z",
+            "tag": "v1.2.0",
+            "commitSha": "5fcba40ec56f9b0304c88de97785f7e0a878689e",
+            "pushedAt": "2026-10-10T22:40:22Z",
             "manifest": {
                 "id": "osmium-faqs",
                 "name": "Osmium FAQs",
-                "version": "1.1.0",
+                "version": "1.2.0",
                 "description": "Named lists of questions and answers managed in admin, for a theme to show anywhere, with FAQPage schema for search engines",
                 "category": "content",
                 "author": {
