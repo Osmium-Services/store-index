@@ -1561,6 +1561,97 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-reviews",
+            "tag": "v0.1.0",
+            "commitSha": "e6359959664c440f20b9c0011296ae58aa9c1a2a",
+            "pushedAt": "2026-10-10T15:27:22Z",
+            "manifest": {
+                "id": "osmium-reviews",
+                "name": "Osmium Reviews",
+                "version": "0.1.0",
+                "description": "Customer product reviews: a submit endpoint with spam protection, moderation in admin, and review data for the product page",
+                "category": "shop",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "migrations": "migrations/",
+                "hooks": {
+                    "product.page.data": [
+                        "Osmium\\Services\\Reviews\\Models\\ReviewsHooks::productPageData"
+                    ],
+                    "dashboard.widgets": [
+                        "Osmium\\Services\\Reviews\\Models\\ReviewsHooks::dashboard"
+                    ]
+                },
+                "admin": {
+                    "menu": {
+                        "section": "Shop",
+                        "items": [
+                            {
+                                "id": "reviews",
+                                "label": "Reviews",
+                                "icon": "bx bx-star",
+                                "placement": "top",
+                                "route": "admin/reviews",
+                                "activePattern": "admin/reviews*",
+                                "role": null
+                            },
+                            {
+                                "id": "reviews-settings",
+                                "label": "Review Settings",
+                                "icon": "bx bx-cog",
+                                "route": "admin/settings/reviews",
+                                "activePattern": "admin/settings/reviews",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/reviews": {
+                            "controller": "controllers/ReviewsController.php",
+                            "class": "Osmium\\Services\\Reviews\\Controllers\\ReviewsController",
+                            "method": "index",
+                            "title": "Reviews"
+                        },
+                        "admin/reviews/edit": {
+                            "controller": "controllers/ReviewsController.php",
+                            "class": "Osmium\\Services\\Reviews\\Controllers\\ReviewsController",
+                            "method": "edit",
+                            "title": "Edit Review"
+                        },
+                        "admin/reviews/action": {
+                            "controller": "controllers/ReviewsController.php",
+                            "class": "Osmium\\Services\\Reviews\\Controllers\\ReviewsController",
+                            "method": "action"
+                        },
+                        "admin/settings/reviews": {
+                            "controller": "controllers/ReviewsSettingsController.php",
+                            "class": "Osmium\\Services\\Reviews\\Controllers\\ReviewsSettingsController",
+                            "method": "index",
+                            "title": "Review Settings"
+                        }
+                    }
+                },
+                "api": {
+                    "routes": {
+                        "api/reviews": "controllers/submit.php"
+                    }
+                },
+                "setup": {
+                    "postInstallNote": "Reviews arrive unpublished: approve them under Shop > Reviews. Point the theme's review form (fields name, email, pid, rating, message, zip honeypot, token) at /api/reviews. The product page then gets reviews, reviewCount, ratingAverage and reviewNotice (sent or failed, shown once). Add the people to email about new reviews under Settings > Reviews."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-sage",
             "tag": "v1.0.2",
             "commitSha": "eef502c6a1b0cfe0f890f4aa74085cbdf1b4ed28",
