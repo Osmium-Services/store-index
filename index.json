@@ -440,6 +440,72 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-featured-products",
+            "tag": "v0.1.0",
+            "commitSha": "deda0d130b392902b7e99857f24ddf3a666e7c0c",
+            "pushedAt": "2026-10-10T16:23:26Z",
+            "manifest": {
+                "id": "osmium-featured-products",
+                "name": "Osmium Featured Products",
+                "version": "0.1.0",
+                "description": "A hand-picked list of up to 5 featured products, ordered by drag and drop in admin, with an edit lock for busy admin teams and the list handed to the theme",
+                "category": "shop",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "migrations": "migrations/",
+                "hooks": {
+                    "featured.products": [
+                        "Osmium\\Services\\FeaturedProducts\\Models\\FeaturedHooks::featuredProducts"
+                    ],
+                    "dashboard.widgets": [
+                        "Osmium\\Services\\FeaturedProducts\\Models\\FeaturedHooks::dashboard"
+                    ]
+                },
+                "admin": {
+                    "menu": {
+                        "section": "Shop",
+                        "items": [
+                            {
+                                "id": "featured-products",
+                                "label": "Featured Products",
+                                "icon": "bx bx-star",
+                                "placement": "top",
+                                "route": "admin/featured-products",
+                                "activePattern": "admin/featured-products*",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/featured-products": {
+                            "controller": "controllers/FeaturedProductsController.php",
+                            "class": "Osmium\\Services\\FeaturedProducts\\Controllers\\FeaturedProductsController",
+                            "method": "index",
+                            "title": "Featured Products"
+                        },
+                        "admin/featured-products/action": {
+                            "controller": "controllers/FeaturedProductsController.php",
+                            "class": "Osmium\\Services\\FeaturedProducts\\Controllers\\FeaturedProductsController",
+                            "method": "action"
+                        }
+                    }
+                },
+                "setup": {
+                    "postInstallNote": "Pick up to 5 products under Shop > Featured Products. Show them from a theme by including the shop's featured-products controller, which gives the page featuredProducts (product cards in your order). Editing locks the page for other admins until you press Save, or after 30 minutes idle."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-freeagent",
             "tag": "v1.1.2",
             "commitSha": "600a2ee0f5a199c52adea9af5c2d0c18cf500876",
