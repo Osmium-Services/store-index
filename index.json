@@ -102,7 +102,7 @@
             "repo": "Osmium-Services/osmium-blog",
             "tag": "v0.8.0",
             "commitSha": "c9c46b7df10cbec5a3c86ee1eab55d55246b4e31",
-            "pushedAt": "2026-10-11T01:12:18Z",
+            "pushedAt": "2026-10-11T08:31:09Z",
             "manifest": {
                 "id": "osmium-blog",
                 "name": "Osmium Blog",
@@ -382,7 +382,7 @@
             "repo": "Osmium-Services/osmium-faqs",
             "tag": "v1.4.0",
             "commitSha": "d098b6466ea21af9de3002404695998c751c4da8",
-            "pushedAt": "2026-10-11T01:18:41Z",
+            "pushedAt": "2026-10-11T08:31:11Z",
             "manifest": {
                 "id": "osmium-faqs",
                 "name": "Osmium FAQs",
@@ -1875,6 +1875,65 @@
                 "setup": {
                     "requiresConnection": true,
                     "postInstallNote": "Pushing is locked until configured. Create an app in the Sage developer portal, enter its client ID/secret on the settings page and add the shown redirect URI as the app callback URL. Set Allowed business to the exact name of the Sage business, then connect, then pick the sales ledger account and tax rate. Pushing creates real invoices."
+                }
+            }
+        },
+        {
+            "repo": "Osmium-Services/osmium-schema",
+            "tag": "v0.1.0",
+            "commitSha": "9233ce0785bbc62fea5744b49d1364bc59638101",
+            "pushedAt": "2026-10-11T08:44:49Z",
+            "manifest": {
+                "id": "schema",
+                "name": "Schema",
+                "version": "0.1.0",
+                "description": "Site-wide structured data: Organization or LocalBusiness (address, geo, opening hours, contact point) and WebSite, as JSON-LD with fixed @ids other services can reference",
+                "category": "marketing-analytics",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "schema",
+                                "label": "Schema",
+                                "icon": "bx bx-code-curly",
+                                "route": "admin/settings/schema",
+                                "activePattern": "admin/settings/schema",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/settings/schema": {
+                            "controller": "controllers/SchemaController.php",
+                            "class": "Osmium\\Services\\Schema\\Controllers\\SchemaController",
+                            "method": "index",
+                            "title": "Schema"
+                        }
+                    }
+                },
+                "frontend": {
+                    "themeBlocks": [
+                        {
+                            "hook": "head",
+                            "file": "theme/schema-site.phtml"
+                        }
+                    ]
+                },
+                "setup": {
+                    "postInstallNote": "Prints nothing until a name is saved on Content > Schema. The 'head' hook is printed by a theme's <head> template via ServiceThemeBlocks::render('head', [...]). Other services can reference the organisation by its @id: <site URL>/#organization (and <site URL>/#website)."
                 }
             }
         },
