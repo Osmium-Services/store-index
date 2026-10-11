@@ -1880,13 +1880,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-schema",
-            "tag": "v0.4.0",
-            "commitSha": "4a49c28e0262c2e0f4c5643c817dbad0396a2cc0",
-            "pushedAt": "2026-10-11T09:35:28Z",
+            "tag": "v0.4.1",
+            "commitSha": "c5330ed67e6ee33643b3c7430b8c17a42a0a109c",
+            "pushedAt": "2026-10-11T10:32:09Z",
             "manifest": {
                 "id": "schema",
                 "name": "Schema",
-                "version": "0.4.0",
+                "version": "0.4.1",
                 "description": "Site-wide structured data: Organization or LocalBusiness (address, opening hours, contact point, and geo looked up from the postcode) and WebSite, as JSON-LD with fixed @ids other services can reference",
                 "category": "marketing-analytics",
                 "author": {
@@ -1935,7 +1935,7 @@
                     ]
                 },
                 "setup": {
-                    "postInstallNote": "Prints nothing until the site has a name; empty Schema fields fall back to the site name, Branding company details and the uploaded logo. Needs the core change that passes company details to theme blocks. The 'head' hook is printed by a theme's <head> template via ServiceThemeBlocks::render('head', [...]). Other services can reference the organisation by its @id: <site URL>/#organization (and <site URL>/#website)."
+                    "postInstallNote": "Adds nothing to the page until the site has a name; empty Schema fields fall back to the site name, Branding company details and the uploaded logo. Needs the core change that passes company details to theme blocks. The 'head' hook is output by a theme's <head> template via ServiceThemeBlocks::render('head', [...]). Other services can reference the organisation by its @id: <site URL>/#organization (and <site URL>/#website)."
                 }
             }
         },
@@ -2127,14 +2127,14 @@
         },
         {
             "repo": "Osmium-Services/osmium-social-links",
-            "tag": "v0.2.0",
-            "commitSha": "6aab381bb6c3837e68d2c8924f022c97778b4475",
-            "pushedAt": "2026-10-11T09:51:14Z",
+            "tag": "v0.2.1",
+            "commitSha": "ce6cf91e135619beb7fd8405a7e9f31bd6181e70",
+            "pushedAt": "2026-10-11T10:32:12Z",
             "manifest": {
                 "id": "social-links",
                 "name": "Social Links",
-                "version": "0.2.0",
-                "description": "One place for the business's social profile URLs, printed as a list of links by a theme and available to other services such as Schema",
+                "version": "0.2.1",
+                "description": "One place for the business's social profile URLs, shown as a list of links by a theme and available to other services such as Schema",
                 "category": "content",
                 "author": {
                     "name": "Gavin Cox"
@@ -2180,7 +2180,7 @@
                     ]
                 },
                 "setup": {
-                    "postInstallNote": "Prints nothing until a link is saved on Content > Social Links. The 'social-links' hook is rendered in place by a theme (for example in its footer) with $template['serviceBlock']('social-links'); the markup is a plain list with a data-network attribute on each item for the theme to style. Icons are opt-in: set an icon class pattern on the settings page, and the theme must load that icon set itself. Other services read the saved URLs from this service's config context as $socialLinks['links'] without depending on it."
+                    "postInstallNote": "Adds nothing to the page until a link is saved on Content > Social Links. The 'social-links' hook is rendered in place by a theme (for example in its footer) with $template['serviceBlock']('social-links'); the markup is a plain list with a data-network attribute on each item for the theme to style. Icons are opt-in: set an icon class pattern on the settings page, and the theme must load that icon set itself. Other services read the saved URLs from this service's config context as $socialLinks['links'] without depending on it."
                 }
             }
         },
