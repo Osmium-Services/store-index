@@ -1714,13 +1714,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-reviews",
-            "tag": "v0.3.0",
-            "commitSha": "75af3b109cd1db601b3bb07d1412c232181d1e4d",
-            "pushedAt": "2026-10-11T17:26:32Z",
+            "tag": "v0.3.1",
+            "commitSha": "0a4652950cfe55e7ecf32a10054efbf41cbf794b",
+            "pushedAt": "2026-10-11T17:34:25Z",
             "manifest": {
                 "id": "osmium-reviews",
                 "name": "Osmium Reviews",
-                "version": "0.3.0",
+                "version": "0.3.1",
                 "description": "Customer product reviews: a submit endpoint with spam protection, moderation in admin, and review data for the product page",
                 "category": "shop",
                 "author": {
