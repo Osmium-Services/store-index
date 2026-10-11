@@ -2669,13 +2669,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-xero",
-            "tag": "v1.0.4",
-            "commitSha": "a1cecc290dbe97d6995131fc83e42e540b7c95de",
-            "pushedAt": "2026-10-10T18:33:44Z",
+            "tag": "v1.1.0",
+            "commitSha": "d866072cf50d1b10df1d0062d737a14f3f46d0a7",
+            "pushedAt": "2026-10-11T17:46:19Z",
             "manifest": {
                 "id": "xero",
                 "name": "Xero",
-                "version": "1.0.4",
+                "version": "1.1.0",
                 "description": "Connects the shop to Xero (OAuth2) and adds a 'Push to Xero' button on paid orders that creates an AUTHORISED sales invoice. Locked to one named Xero organisation",
                 "category": "business",
                 "author": {
@@ -2693,6 +2693,9 @@
                 ],
                 "migrations": "migrations",
                 "hooks": {
+                    "mcp.tools": [
+                        "Osmium\\Services\\Xero\\Models\\XeroMcp::tools"
+                    ],
                     "order.panels": [
                         "Osmium\\Services\\Xero\\Models\\XeroOrderSync::orderPanel"
                     ],
