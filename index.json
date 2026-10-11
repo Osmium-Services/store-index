@@ -6,7 +6,7 @@
             "repo": "Osmium-Services/osmium-analytics",
             "tag": "v1.1.0",
             "commitSha": "1195e8f41cc740fffa1f1873fce361f435904041",
-            "pushedAt": "2026-10-11T11:26:37Z",
+            "pushedAt": "2026-10-11T17:57:23Z",
             "manifest": {
                 "id": "osmium-analytics",
                 "name": "Osmium Analytics",
@@ -105,7 +105,7 @@
             "repo": "Osmium-Services/osmium-blog",
             "tag": "v0.8.2",
             "commitSha": "945eba7e47222886bc460f686c9b6c28ec8748fb",
-            "pushedAt": "2026-10-11T09:09:40Z",
+            "pushedAt": "2026-10-11T18:22:45Z",
             "manifest": {
                 "id": "osmium-blog",
                 "name": "Osmium Blog",
@@ -385,7 +385,7 @@
             "repo": "Osmium-Services/osmium-faqs",
             "tag": "v1.4.1",
             "commitSha": "532f8ab5a3498fee63af47c6b08411d9fac74176",
-            "pushedAt": "2026-10-11T08:53:27Z",
+            "pushedAt": "2026-10-11T18:27:25Z",
             "manifest": {
                 "id": "osmium-faqs",
                 "name": "Osmium FAQs",
@@ -1649,7 +1649,7 @@
             "repo": "Osmium-Services/osmium-restock-leads",
             "tag": "v0.2.0",
             "commitSha": "721220ffb9990a2ae5cf501b344b7e2b5a3c02a5",
-            "pushedAt": "2026-10-11T16:09:54Z",
+            "pushedAt": "2026-10-11T17:50:37Z",
             "manifest": {
                 "id": "osmium-restock-leads",
                 "name": "Osmium Restock Leads",
@@ -1716,7 +1716,7 @@
             "repo": "Osmium-Services/osmium-reviews",
             "tag": "v0.3.2",
             "commitSha": "3a395da99f159ec2cfb6a4d9e64830c8d72ac3e2",
-            "pushedAt": "2026-10-11T17:40:18Z",
+            "pushedAt": "2026-10-11T17:49:09Z",
             "manifest": {
                 "id": "osmium-reviews",
                 "name": "Osmium Reviews",
@@ -1952,7 +1952,7 @@
             "repo": "Osmium-Services/osmium-search-analytics",
             "tag": "v0.2.0",
             "commitSha": "74ddf11b3fbc8fffa93f53532560fb4c46253eb5",
-            "pushedAt": "2026-10-11T11:55:40Z",
+            "pushedAt": "2026-10-11T17:52:03Z",
             "manifest": {
                 "id": "osmium-search-analytics",
                 "name": "Osmium Search Analytics",
@@ -2283,7 +2283,7 @@
             "repo": "Osmium-Services/osmium-stock-control",
             "tag": "v0.7.0",
             "commitSha": "7cbe7e4930a2590b9078a7447401456baeede349",
-            "pushedAt": "2026-10-11T16:44:35Z",
+            "pushedAt": "2026-10-11T17:51:20Z",
             "manifest": {
                 "id": "osmium-stock-control",
                 "name": "Osmium Stock Control",
@@ -2671,7 +2671,7 @@
             "repo": "Osmium-Services/osmium-xero",
             "tag": "v1.1.0",
             "commitSha": "d866072cf50d1b10df1d0062d737a14f3f46d0a7",
-            "pushedAt": "2026-10-11T17:46:19Z",
+            "pushedAt": "2026-10-11T17:49:08Z",
             "manifest": {
                 "id": "xero",
                 "name": "Xero",
