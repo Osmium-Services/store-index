@@ -2278,13 +2278,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-stock-control",
-            "tag": "v0.6.2",
-            "commitSha": "07507b67303bfe2c272d6d3f702d70fd2406b7bb",
-            "pushedAt": "2026-10-10T20:37:21Z",
+            "tag": "v0.7.0",
+            "commitSha": "7cbe7e4930a2590b9078a7447401456baeede349",
+            "pushedAt": "2026-10-11T16:44:35Z",
             "manifest": {
                 "id": "osmium-stock-control",
                 "name": "Osmium Stock Control",
-                "version": "0.6.2",
+                "version": "0.7.0",
                 "description": "Counts stock down when an order is paid, stops customers adding more than is in stock, and treats a kit's parts as stock of their own",
                 "category": "shop",
                 "author": {
@@ -2315,6 +2315,9 @@
                     ],
                     "order.action": [
                         "Osmium\\Services\\StockControl\\Models\\StockOrderHooks::orderAction"
+                    ],
+                    "mcp.tools": [
+                        "Osmium\\Services\\StockControl\\Models\\StockMcp::tools"
                     ],
                     "dashboard.widgets": [
                         "Osmium\\Services\\StockControl\\Models\\StockWidgets::dashboard",
