@@ -4,13 +4,13 @@
     "services": [
         {
             "repo": "Osmium-Services/osmium-analytics",
-            "tag": "v1.0.1",
-            "commitSha": "fcfa854a2f6fea03619293275ec279e757323cb5",
-            "pushedAt": "2026-10-09T15:53:52Z",
+            "tag": "v1.1.0",
+            "commitSha": "1195e8f41cc740fffa1f1873fce361f435904041",
+            "pushedAt": "2026-10-11T11:26:37Z",
             "manifest": {
                 "id": "osmium-analytics",
                 "name": "Osmium Analytics",
-                "version": "1.0.1",
+                "version": "1.1.0",
                 "description": "Cookieless, first-party visitor statistics: visits, top pages, referrers, device and country, with a retention setting",
                 "category": "marketing-analytics",
                 "author": {
@@ -29,6 +29,9 @@
                 "hooks": {
                     "page.viewed": [
                         "Osmium\\Services\\OsmiumAnalytics\\Models\\Tracker::pageViewed"
+                    ],
+                    "mcp.tools": [
+                        "Osmium\\Services\\OsmiumAnalytics\\Models\\AnalyticsMcp::tools"
                     ]
                 },
                 "admin": {
