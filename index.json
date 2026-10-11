@@ -100,13 +100,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-blog",
-            "tag": "v0.8.0",
-            "commitSha": "c9c46b7df10cbec5a3c86ee1eab55d55246b4e31",
-            "pushedAt": "2026-10-11T08:31:09Z",
+            "tag": "v0.8.1",
+            "commitSha": "085fc80a228c39722f0b5989c770a7294c6a4d97",
+            "pushedAt": "2026-10-11T08:53:25Z",
             "manifest": {
                 "id": "osmium-blog",
                 "name": "Osmium Blog",
-                "version": "0.8.0",
+                "version": "0.8.1",
                 "description": "Blog posts written in admin and published as ordinary pages under /blog/, with the markup supplied by the theme",
                 "category": "content",
                 "author": {
@@ -380,13 +380,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-faqs",
-            "tag": "v1.4.0",
-            "commitSha": "d098b6466ea21af9de3002404695998c751c4da8",
-            "pushedAt": "2026-10-11T08:31:11Z",
+            "tag": "v1.4.1",
+            "commitSha": "532f8ab5a3498fee63af47c6b08411d9fac74176",
+            "pushedAt": "2026-10-11T08:53:27Z",
             "manifest": {
                 "id": "osmium-faqs",
                 "name": "Osmium FAQs",
-                "version": "1.4.0",
+                "version": "1.4.1",
                 "description": "Named lists of questions and answers managed in admin, for a theme to show anywhere, with FAQPage schema for search engines",
                 "category": "content",
                 "author": {
@@ -1880,14 +1880,14 @@
         },
         {
             "repo": "Osmium-Services/osmium-schema",
-            "tag": "v0.1.0",
-            "commitSha": "9233ce0785bbc62fea5744b49d1364bc59638101",
-            "pushedAt": "2026-10-11T08:44:49Z",
+            "tag": "v0.2.0",
+            "commitSha": "87484bc638a1c6aff095259772bcfaba4fc39d7e",
+            "pushedAt": "2026-10-11T08:55:06Z",
             "manifest": {
                 "id": "schema",
                 "name": "Schema",
-                "version": "0.1.0",
-                "description": "Site-wide structured data: Organization or LocalBusiness (address, geo, opening hours, contact point) and WebSite, as JSON-LD with fixed @ids other services can reference",
+                "version": "0.2.0",
+                "description": "Site-wide structured data: Organization or LocalBusiness (address, opening hours, contact point, and geo looked up from the postcode) and WebSite, as JSON-LD with fixed @ids other services can reference",
                 "category": "marketing-analytics",
                 "author": {
                     "name": "Gavin Cox"
@@ -1896,7 +1896,9 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": []
+                    "services": [
+                        "geocoder"
+                    ]
                 },
                 "autoload": [
                     "models"
