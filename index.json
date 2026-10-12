@@ -1889,13 +1889,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-schema",
-            "tag": "v0.4.1",
-            "commitSha": "c5330ed67e6ee33643b3c7430b8c17a42a0a109c",
-            "pushedAt": "2026-10-11T10:32:09Z",
+            "tag": "v0.4.2",
+            "commitSha": "a130ab76726abc8fc5d9d61b665266c2631bf3d6",
+            "pushedAt": "2026-10-12T12:59:44Z",
             "manifest": {
                 "id": "schema",
                 "name": "Schema",
-                "version": "0.4.1",
+                "version": "0.4.2",
                 "description": "Site-wide structured data: Organization or LocalBusiness (address, opening hours, contact point, and geo looked up from the postcode) and WebSite, as JSON-LD with fixed @ids other services can reference",
                 "category": "marketing-analytics",
                 "author": {
@@ -2139,13 +2139,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-social-links",
-            "tag": "v0.2.1",
-            "commitSha": "ce6cf91e135619beb7fd8405a7e9f31bd6181e70",
-            "pushedAt": "2026-10-11T10:32:12Z",
+            "tag": "v0.3.0",
+            "commitSha": "69c76ee5424618333eebf711181bc8195ef90c4d",
+            "pushedAt": "2026-10-12T12:59:46Z",
             "manifest": {
-                "id": "social-links",
-                "name": "Social Links",
-                "version": "0.2.1",
+                "id": "osmium-social-links",
+                "name": "Osmium Social Links",
+                "version": "0.3.0",
                 "description": "One place for the business's social profile URLs, shown as a list of links by a theme and available to other services such as Schema",
                 "category": "content",
                 "author": {
@@ -2177,7 +2177,7 @@
                     "routes": {
                         "admin/settings/social-links": {
                             "controller": "controllers/SocialLinksController.php",
-                            "class": "Osmium\\Services\\SocialLinks\\Controllers\\SocialLinksController",
+                            "class": "Osmium\\Services\\OsmiumSocialLinks\\Controllers\\SocialLinksController",
                             "method": "index",
                             "title": "Social Links"
                         }
@@ -2192,7 +2192,7 @@
                     ]
                 },
                 "setup": {
-                    "postInstallNote": "Adds nothing to the page until a link is saved on Content > Social Links. The 'social-links' hook is rendered in place by a theme (for example in its footer) with $template['serviceBlock']('social-links'); the markup is a plain list with a data-network attribute on each item for the theme to style. Icons are opt-in: set an icon class pattern on the settings page, and the theme must load that icon set itself. Other services read the saved URLs from this service's config context as $socialLinks['links'] without depending on it."
+                    "postInstallNote": "Adds nothing to the page until a link is saved on Content > Social Links. The 'social-links' hook is rendered in place by a theme (for example in its footer) with $template['serviceBlock']('social-links'); the markup is a plain list with a data-network attribute on each item for the theme to style. Icons are opt-in: set an icon class pattern on the settings page, and the theme must load that icon set itself. Other services read the saved URLs from this service's config context as $osmiumSocialLinks['links'] without depending on it."
                 }
             }
         },
