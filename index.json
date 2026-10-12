@@ -1224,6 +1224,62 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-mals",
+            "tag": "v0.1.1",
+            "commitSha": "6c44d19f91877301da57e23e48452f29832ab32c",
+            "pushedAt": "2026-10-12T20:22:26Z",
+            "manifest": {
+                "id": "mals",
+                "name": "Mals Ecommerce",
+                "version": "0.1.1",
+                "description": "Sells through the Mals hosted cart: add-to-cart buttons post to Mals, the checkout is Mals' own page, and the header shows the cart count. No basket or checkout pages of its own",
+                "category": "payments",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "mals",
+                                "label": "Mals Cart",
+                                "icon": "bx bx-cart",
+                                "route": "admin/settings/mals",
+                                "activePattern": "admin/settings/mals",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/settings/mals": {
+                            "controller": "controllers/MalsController.php",
+                            "class": "Osmium\\Services\\Mals\\Controllers\\MalsController",
+                            "method": "index",
+                            "title": "Mals Cart"
+                        }
+                    }
+                },
+                "setup": {
+                    "postInstallNote": "Enter the cart user ID and the add-to-cart and checkout URLs from your Mals account under Mals Cart. A theme reads the cart with $mals = \\Osmium\\Services\\Mals\\Models\\MalsCart::data(); (null when Mals is off or not set up): cartTotalItems, cartID, checkoutLink, addItemLink, hideZeroItems. The add-to-cart form posts to addItemLink with fields userid, product, qty, discountpr (':0,<price exc tax>'), units (weight), return, producturl, thumb and nocart. The shop's basket and checkout pages are not used; remove them from the site's pages if the shop switch created them. Prices sent to Mals are ex-VAT."
+                },
+                "csp": {
+                    "form-action": [
+                        "https://*.aitsafe.com"
+                    ]
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-meta-pixel",
             "tag": "v1.2.2",
             "commitSha": "fce9af2a334f76d77325d2fce6e7a3592169f793",
