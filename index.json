@@ -4,13 +4,13 @@
     "services": [
         {
             "repo": "Osmium-Services/osmium-analytics",
-            "tag": "v1.1.0",
-            "commitSha": "1195e8f41cc740fffa1f1873fce361f435904041",
-            "pushedAt": "2026-10-11T17:57:23Z",
+            "tag": "v1.1.1",
+            "commitSha": "780d0c82c3b5c768bb57ad8f85789ebd36ec341c",
+            "pushedAt": "2026-10-12T11:32:36Z",
             "manifest": {
                 "id": "osmium-analytics",
                 "name": "Osmium Analytics",
-                "version": "1.1.0",
+                "version": "1.1.1",
                 "description": "Cookieless, first-party visitor statistics: visits, top pages, referrers, device and country, with a retention setting",
                 "category": "marketing-analytics",
                 "author": {
@@ -316,13 +316,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-cookie-consent",
-            "tag": "v1.1.2",
-            "commitSha": "4eaee5c149103a409145e3e8181b536cf1d668d3",
-            "pushedAt": "2026-10-09T15:59:23Z",
+            "tag": "v1.1.3",
+            "commitSha": "a3b086f2ad1025591984fa0be0cf7827afb7bf14",
+            "pushedAt": "2026-10-12T11:32:33Z",
             "manifest": {
                 "id": "cookie-consent",
                 "name": "Cookie Consent",
-                "version": "1.1.2",
+                "version": "1.1.3",
                 "description": "GDPR-style cookie consent banner and status ribbon, production-only, with an admin-editable cookie name/privacy URL/colors/copy",
                 "category": "security-privacy",
                 "author": {
@@ -624,13 +624,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-analytics",
-            "tag": "v2.0.1",
-            "commitSha": "ff7055cbabf8cdfe218dac6885694ec7a012bb7b",
-            "pushedAt": "2026-10-09T15:59:25Z",
+            "tag": "v2.0.2",
+            "commitSha": "d7d5c4a13615ebf9d9ee47d9dcdfb98e1d9cbc84",
+            "pushedAt": "2026-10-12T11:32:27Z",
             "manifest": {
                 "id": "google-analytics",
                 "name": "Google Analytics",
-                "version": "2.0.1",
+                "version": "2.0.2",
                 "description": "Google Tag Manager / GA4 loading with Consent Mode v2, gated on an admin-editable toggle and production-only; requires the Cookie Consent service",
                 "category": "marketing-analytics",
                 "author": {
@@ -1520,13 +1520,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-recaptcha",
-            "tag": "v1.0.4",
-            "commitSha": "c3563f618e73e3e2d11454f0816845899f69370e",
-            "pushedAt": "2026-10-09T15:59:32Z",
+            "tag": "v1.0.5",
+            "commitSha": "28bee187a033b32c9e767fb69764dc90b6c6e062",
+            "pushedAt": "2026-10-12T11:32:30Z",
             "manifest": {
                 "id": "recaptcha",
                 "name": "Google reCAPTCHA v3",
-                "version": "1.0.4",
+                "version": "1.0.5",
                 "description": "Spam protection for forms via Google reCAPTCHA v3 - score-based, invisible by default, admin-editable site/secret key and score threshold",
                 "category": "security-privacy",
                 "author": {
