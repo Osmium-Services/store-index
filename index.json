@@ -1225,13 +1225,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-mals",
-            "tag": "v0.1.1",
-            "commitSha": "6c44d19f91877301da57e23e48452f29832ab32c",
-            "pushedAt": "2026-10-12T20:22:26Z",
+            "tag": "v0.2.0",
+            "commitSha": "f12ff069355e73e435ff1c784a8538e99f1b4f2c",
+            "pushedAt": "2026-10-13T08:26:21Z",
             "manifest": {
                 "id": "mals",
                 "name": "Mals Ecommerce",
-                "version": "0.1.1",
+                "version": "0.2.0",
                 "description": "Sells through the Mals hosted cart: add-to-cart buttons post to Mals, the checkout is Mals' own page, and the header shows the cart count. No basket or checkout pages of its own",
                 "category": "payments",
                 "author": {
@@ -1270,11 +1270,19 @@
                     }
                 },
                 "setup": {
-                    "postInstallNote": "Enter the cart user ID and the add-to-cart and checkout URLs from your Mals account under Mals Cart. A theme reads the cart with $mals = \\Osmium\\Services\\Mals\\Models\\MalsCart::data(); (null when Mals is off or not set up): cartTotalItems, cartID, checkoutLink, addItemLink, hideZeroItems. The add-to-cart form posts to addItemLink with fields userid, product, qty, discountpr (':0,<price exc tax>'), units (weight), return, producturl, thumb and nocart. The shop's basket and checkout pages are not used; remove them from the site's pages if the shop switch created them. Prices sent to Mals are ex-VAT."
+                    "postInstallNote": "Enter the cart user ID and the add-to-cart and checkout URLs from your Mals account under Mals Cart. A theme reads the cart with $mals = \\Osmium\\Services\\Mals\\Models\\MalsCart::data(); (null when Mals is off or not set up): cartTotalItems, cartID, checkoutLink, addItemLink, hideZeroItems. The add-to-cart form posts to addItemLink with fields userid, product, qty, discountpr (':0,<price exc tax>'), units (weight), return, producturl, thumb and nocart. The shop's basket and checkout pages are not used; remove them from the site's pages if the shop switch created them. Prices sent to Mals are ex-VAT. The add-to-cart link inside that form is <a href=\"#\" data-mals-add data-title=\"Product name\">add to cart</a>: the service loads the script that handles the click (no inline onclick, which the site's security policy blocks), so the theme must print $template['serviceBodyEndHtml'] before </body>."
                 },
                 "csp": {
                     "form-action": [
                         "https://*.aitsafe.com"
+                    ]
+                },
+                "frontend": {
+                    "themeBlocks": [
+                        {
+                            "hook": "body-end",
+                            "file": "theme/mals-cart-script.phtml"
+                        }
                     ]
                 }
             }
