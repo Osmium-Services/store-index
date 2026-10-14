@@ -189,14 +189,14 @@
         },
         {
             "repo": "Osmium-Services/osmium-brevo",
-            "tag": "v1.1.0",
-            "commitSha": "0d88f24bc9c377e5d6afa73165a4d43c5788fe8d",
-            "pushedAt": "2026-10-08T19:57:41Z",
+            "tag": "v1.2.0",
+            "commitSha": "012306526b32a48f5d42979dc9af66dfc0ca632f",
+            "pushedAt": "2026-10-14T11:15:33Z",
             "manifest": {
                 "id": "brevo",
                 "name": "Brevo",
-                "version": "1.1.0",
-                "description": "Send site email through Brevo's HTTP API - a generous free plan, and useful where hosting blocks outbound SMTP. Appears as a provider on the Email settings page.",
+                "version": "1.2.0",
+                "description": "Send site email through Brevo's HTTP API, and add newsletter signups to a Brevo list. A generous free plan, and useful where hosting blocks outbound SMTP. Appears as a provider on the Email settings page.",
                 "category": "email",
                 "author": {
                     "name": "Gavin Cox"
@@ -238,8 +238,13 @@
                         "Osmium\\Services\\Brevo\\Models\\BrevoMailProvider::provider"
                     ]
                 },
+                "api": {
+                    "routes": {
+                        "api/brevo-newsletter": "controllers/newsletter.php"
+                    }
+                },
                 "setup": {
-                    "postInstallNote": "Enter a Brevo API key on the Brevo settings page, and make sure the From address on Settings > Email is a verified sender in Brevo. Then choose Brevo as the Provider on Settings > Email and use Send test email."
+                    "postInstallNote": "Enter a Brevo API key on the Brevo settings page, and make sure the From address on Settings > Email is a verified sender in Brevo. Then choose Brevo as the Provider on Settings > Email and use Send test email. For newsletter signups, set the List ID on the Brevo settings page, switch signups on, and point the theme form (fields email, consent tick box, token and the zip honeypot) at /api/brevo-newsletter/. The visitor returns with ?newsletter=subscribed, invalid, no_consent or failed. Optional double opt-in: add a confirmation template ID and a thank-you page address, and the result becomes ?newsletter=confirm."
                 }
             }
         },
