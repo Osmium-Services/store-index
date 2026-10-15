@@ -629,13 +629,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-analytics",
-            "tag": "v2.0.2",
-            "commitSha": "d7d5c4a13615ebf9d9ee47d9dcdfb98e1d9cbc84",
-            "pushedAt": "2026-10-12T11:32:27Z",
+            "tag": "v2.0.3",
+            "commitSha": "3ed416004a4d4afecfc1d5ea0df88680c671da0e",
+            "pushedAt": "2026-10-15T19:13:08Z",
             "manifest": {
                 "id": "google-analytics",
                 "name": "Google Analytics",
-                "version": "2.0.2",
+                "version": "2.0.3",
                 "description": "Google Tag Manager / GA4 loading with Consent Mode v2, gated on an admin-editable toggle and production-only; requires the Cookie Consent service",
                 "category": "marketing-analytics",
                 "author": {
@@ -697,7 +697,7 @@
                     ]
                 },
                 "setup": {
-                    "postInstallNote": "Disabled by default. A theme must call ServiceThemeBlocks::render('head', ['analytics' => ..., 'site' => $site]) in its <head> template before enabling this does anything visible."
+                    "postInstallNote": "Disabled by default. A theme must call ServiceThemeBlocks::render('head', ['googleAnalytics' => ..., 'site' => $site]) in its <head> template before enabling this does anything visible."
                 }
             }
         },
@@ -964,13 +964,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-hcaptcha",
-            "tag": "v1.0.0",
-            "commitSha": "6d5962b44df3c731a47656700157b63be78fdaa3",
-            "pushedAt": "2026-10-05T14:43:55Z",
+            "tag": "v1.1.0",
+            "commitSha": "614fe52a183e25ee01c80037a7493e4029c5c591",
+            "pushedAt": "2026-10-15T17:19:42Z",
             "manifest": {
                 "id": "hcaptcha",
                 "name": "hCaptcha",
-                "version": "1.0.0",
+                "version": "1.1.0",
                 "description": "Spam protection for forms via hCaptcha - a privacy-focused alternative to Google reCAPTCHA and Cloudflare Turnstile, admin-editable site/secret key",
                 "category": "security-privacy",
                 "author": {
@@ -985,6 +985,33 @@
                 "autoload": [
                     "models"
                 ],
+                "csp": {
+                    "script-src": [
+                        "https://js.hcaptcha.com",
+                        "https://*.hcaptcha.com",
+                        "https://hcaptcha.com"
+                    ],
+                    "frame-src": [
+                        "https://*.hcaptcha.com",
+                        "https://hcaptcha.com"
+                    ],
+                    "style-src": [
+                        "https://*.hcaptcha.com",
+                        "https://hcaptcha.com"
+                    ],
+                    "connect-src": [
+                        "https://*.hcaptcha.com",
+                        "https://hcaptcha.com"
+                    ]
+                },
+                "hooks": {
+                    "form.verify": [
+                        "Osmium\\Services\\Hcaptcha\\Models\\HcaptchaHooks::verify"
+                    ],
+                    "form.widget": [
+                        "Osmium\\Services\\Hcaptcha\\Models\\HcaptchaHooks::widget"
+                    ]
+                },
                 "admin": {
                     "menu": {
                         "section": "Content",
@@ -1017,7 +1044,7 @@
                     ]
                 },
                 "setup": {
-                    "postInstallNote": "Disabled by default. A theme must call ServiceThemeBlocks::render('head', ['hcaptcha' => ..., 'site' => $site]) in its <head> template to load the widget script. A form wanting protection renders <div class=\"h-captcha\" data-sitekey=\"...\"></div> inside the form (site key available via HcaptchaConfig::get()->siteKey) and its handler calls HcaptchaConfig::verify($_POST['h-captcha-response'] ?? '') before processing. Same verify() contract as Turnstile and reCAPTCHA. hCaptcha refuses localhost as a hostname, so test on a hosts-file name."
+                    "postInstallNote": "Disabled by default. Once enabled with the keys from hCaptcha, every form that fires the form.verify and form.widget hooks (such as the product review form) is protected, with no per-form setup, and the visitor ticks the box before the Submit button works. A theme must echo $template['serviceHeadHtml'] in its <head> so the widget script loads. Other forms can call HcaptchaConfig::verify($_POST['h-captcha-response'] ?? '') directly. Same verify() contract as Turnstile and reCAPTCHA. Install only one protection per form: with several enabled, each shows its widget and all must pass. hCaptcha refuses localhost as a hostname, so test on a hosts-file name."
                 }
             }
         },
@@ -1589,13 +1616,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-recaptcha",
-            "tag": "v1.0.5",
-            "commitSha": "28bee187a033b32c9e767fb69764dc90b6c6e062",
-            "pushedAt": "2026-10-12T11:32:30Z",
+            "tag": "v1.1.0",
+            "commitSha": "82afe1cc703181a8064f0f859a11235246694ce0",
+            "pushedAt": "2026-10-15T17:19:46Z",
             "manifest": {
                 "id": "recaptcha",
                 "name": "Google reCAPTCHA v3",
-                "version": "1.0.5",
+                "version": "1.1.0",
                 "description": "Spam protection for forms via Google reCAPTCHA v3 - score-based, invisible by default, admin-editable site/secret key and score threshold",
                 "category": "security-privacy",
                 "author": {
@@ -1610,6 +1637,14 @@
                 "autoload": [
                     "models"
                 ],
+                "hooks": {
+                    "form.verify": [
+                        "Osmium\\Services\\Recaptcha\\Models\\RecaptchaHooks::verify"
+                    ],
+                    "form.widget": [
+                        "Osmium\\Services\\Recaptcha\\Models\\RecaptchaHooks::widget"
+                    ]
+                },
                 "csp": {
                     "script-src": [
                         "https://www.google.com",
@@ -1654,7 +1689,7 @@
                     ]
                 },
                 "setup": {
-                    "postInstallNote": "Disabled by default. Requires a Google Cloud project with billing enabled and the reCAPTCHA Enterprise/legacy API set up (free tier is 10,000 assessments/month as of April 2026 - see Cloudflare Turnstile instead for an unlimited-free alternative with an identical verify() contract). A theme must call ServiceThemeBlocks::render('head', ['recaptcha' => ..., 'site' => $site]) to load the client script, which auto-executes and writes a token into a hidden #recaptcha-token field on every form (action 'submit'). A form handler calls RecaptchaConfig::verify($_POST['recaptcha-token'] ?? '') before processing."
+                    "postInstallNote": "Disabled by default. Requires a Google Cloud project with billing enabled and the reCAPTCHA Enterprise/legacy API set up (free tier is 10,000 assessments/month as of April 2026 - see Cloudflare Turnstile instead for an unlimited-free alternative with an identical verify() contract). A theme must call ServiceThemeBlocks::render('head', ['recaptcha' => ..., 'site' => $site]) to load the client script, which auto-executes and writes a token into a hidden #recaptcha-token field on every form (action 'submit'). Every form that fires the form.verify and form.widget hooks (such as the product review form) is protected without per-form setup. A form handler calls RecaptchaConfig::verify($_POST['recaptcha-token'] ?? '') before processing. Install only one protection per form: with several enabled, all must pass."
                 }
             }
         },
@@ -1716,13 +1751,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-restock-leads",
-            "tag": "v0.2.1",
-            "commitSha": "465e5ec432658ccc04ace661c6c7cc2c55343b6d",
-            "pushedAt": "2026-10-13T19:23:25Z",
+            "tag": "v0.2.2",
+            "commitSha": "951c41416ce7df15e7893a1ccfbda4655b78f5fa",
+            "pushedAt": "2026-10-15T17:41:35Z",
             "manifest": {
                 "id": "osmium-restock-leads",
                 "name": "Osmium Restock Leads",
-                "version": "0.2.1",
+                "version": "0.2.2",
                 "description": "Lets customers leave their email to hear when an out-of-stock product is back, collects those requests, and lists them in admin",
                 "category": "shop",
                 "author": {
@@ -1783,13 +1818,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-reviews",
-            "tag": "v0.3.4",
-            "commitSha": "d24b1d5ff74a88d5dcebc16e1c2f367e7639088f",
-            "pushedAt": "2026-10-14T21:15:34Z",
+            "tag": "v0.3.9",
+            "commitSha": "fc37213dc29a179f1673645816491931c9a6a0d0",
+            "pushedAt": "2026-10-15T16:37:43Z",
             "manifest": {
                 "id": "osmium-reviews",
                 "name": "Osmium Reviews",
-                "version": "0.3.4",
+                "version": "0.3.9",
                 "description": "Customer product reviews: a submit endpoint with spam protection, moderation in admin, and review data for the product page",
                 "category": "shop",
                 "author": {
@@ -1815,6 +1850,9 @@
                     ],
                     "dashboard.widgets": [
                         "Osmium\\Services\\Reviews\\Models\\ReviewsHooks::dashboard"
+                    ],
+                    "email.samples": [
+                        "Osmium\\Services\\Reviews\\Models\\ReviewsHooks::emailSamples"
                     ]
                 },
                 "admin": {
@@ -2547,13 +2585,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-turnstile",
-            "tag": "v1.0.3",
-            "commitSha": "3f1fb3d94b59d5af9e2874daa4db27eb2caae9d7",
-            "pushedAt": "2026-10-05T15:06:09Z",
+            "tag": "v1.1.2",
+            "commitSha": "cff81cfd39cf4b2e9c8125dac6a70eaf6dafece8",
+            "pushedAt": "2026-10-15T18:45:57Z",
             "manifest": {
                 "id": "turnstile",
                 "name": "Cloudflare Turnstile",
-                "version": "1.0.3",
+                "version": "1.1.2",
                 "description": "Spam protection for forms via Cloudflare Turnstile - free, no DNS dependency, admin-editable site/secret key and widget mode",
                 "category": "security-privacy",
                 "author": {
@@ -2574,6 +2612,15 @@
                     ],
                     "frame-src": [
                         "https://challenges.cloudflare.com"
+                    ]
+                },
+                "migrations": "migrations/",
+                "hooks": {
+                    "form.verify": [
+                        "Osmium\\Services\\Turnstile\\Models\\TurnstileHooks::verify"
+                    ],
+                    "form.widget": [
+                        "Osmium\\Services\\Turnstile\\Models\\TurnstileHooks::widget"
                     ]
                 },
                 "admin": {
@@ -2608,7 +2655,7 @@
                     ]
                 },
                 "setup": {
-                    "postInstallNote": "Disabled by default. A theme must call ServiceThemeBlocks::render('head', ['turnstile' => ..., 'site' => $site]) in its <head> template to load the widget script. A form wanting protection renders <div class=\"cf-turnstile\" data-sitekey=\"...\"></div> (site key available via TurnstileConfig::get()->siteKey) and its handler calls TurnstileConfig::verify($_POST['cf-turnstile-response'] ?? '') before processing."
+                    "postInstallNote": "Disabled by default. Once enabled with the keys from Cloudflare, every form that fires the form.verify and form.widget hooks (such as the product review form) is protected, with no per-form setup. A theme must echo $template['serviceHeadHtml'] in its <head> so the widget script loads. Other forms can call TurnstileConfig::verify($_POST['cf-turnstile-response'] ?? '') directly. The Turnstile settings page shows how many checks passed and failed."
                 }
             }
         },
