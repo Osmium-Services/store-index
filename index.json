@@ -103,13 +103,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-blog",
-            "tag": "v0.8.3",
-            "commitSha": "eb4c875e49f8d2a9718d97fae39c66e1e3161381",
-            "pushedAt": "2026-10-13T19:23:20Z",
+            "tag": "v0.8.4",
+            "commitSha": "8bb0874c6d794be33a84eba900162bef989852bf",
+            "pushedAt": "2026-10-16T15:42:02Z",
             "manifest": {
                 "id": "osmium-blog",
                 "name": "Osmium Blog",
-                "version": "0.8.3",
+                "version": "0.8.4",
                 "description": "Blog posts written in admin and published as ordinary pages under /blog/, with the markup supplied by the theme",
                 "category": "content",
                 "author": {
@@ -1456,13 +1456,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-paypal",
-            "tag": "v1.1.2",
-            "commitSha": "0f685d74b53f9cc9f2a15e7699f7be15b9cab8eb",
-            "pushedAt": "2026-10-10T18:33:40Z",
+            "tag": "v1.1.4",
+            "commitSha": "392e08da9cdbffc26a2ab84cc27008c19e4238b4",
+            "pushedAt": "2026-10-16T15:53:32Z",
             "manifest": {
                 "id": "paypal",
                 "name": "PayPal",
-                "version": "1.1.2",
+                "version": "1.1.4",
                 "description": "Takes PayPal payments at checkout (Orders v2, server-side capture), with a signature-verified webhook to reconcile orders. Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "author": {
@@ -1818,13 +1818,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-reviews",
-            "tag": "v0.3.9",
-            "commitSha": "fc37213dc29a179f1673645816491931c9a6a0d0",
-            "pushedAt": "2026-10-15T16:37:43Z",
+            "tag": "v0.3.10",
+            "commitSha": "8589d81766cfba832bd90324d81ea03810bcf42f",
+            "pushedAt": "2026-10-16T15:42:04Z",
             "manifest": {
                 "id": "osmium-reviews",
                 "name": "Osmium Reviews",
-                "version": "0.3.9",
+                "version": "0.3.10",
                 "description": "Customer product reviews: a submit endpoint with spam protection, moderation in admin, and review data for the product page",
                 "category": "shop",
                 "author": {
@@ -2305,13 +2305,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-square",
-            "tag": "v1.0.2",
-            "commitSha": "5f979c78d6e0c226755900a63e70ded3fe1869f3",
-            "pushedAt": "2026-10-10T18:33:42Z",
+            "tag": "v1.0.3",
+            "commitSha": "9fbcd024baa5ce178f1cd92da74551db7b65bdf7",
+            "pushedAt": "2026-10-16T15:11:20Z",
             "manifest": {
                 "id": "square",
                 "name": "Square",
-                "version": "1.0.2",
+                "version": "1.0.3",
                 "description": "Takes card payments at checkout through Square (Web Payments SDK card form on your own page, charged server-side with the CreatePayment API). Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "author": {
@@ -2505,13 +2505,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-stripe",
-            "tag": "v1.1.2",
-            "commitSha": "9479e541afecf0df0df1198d4281667df123cf42",
-            "pushedAt": "2026-10-10T18:33:38Z",
+            "tag": "v1.1.4",
+            "commitSha": "fc5bf9031b7d7b513befebb0851590e45ceef648",
+            "pushedAt": "2026-10-16T15:53:30Z",
             "manifest": {
                 "id": "stripe",
                 "name": "Stripe",
-                "version": "1.1.2",
+                "version": "1.1.4",
                 "description": "Takes card payments at checkout through Stripe (PaymentIntents, plus Apple Pay/Google Pay via the card element), with a signature-verified webhook to reconcile orders. Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "author": {
