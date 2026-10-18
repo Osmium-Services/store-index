@@ -2135,13 +2135,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-shop",
-            "tag": "v0.12.0",
-            "commitSha": "968f40a2c7d7346bf2f1f121344a868731a31246",
-            "pushedAt": "2026-10-18T22:14:13Z",
+            "tag": "v0.13.0",
+            "commitSha": "69893168096bd13bcdef93805315065457b4e5d9",
+            "pushedAt": "2026-10-18T22:22:52Z",
             "manifest": {
                 "id": "osmium-shop",
                 "name": "Osmium Shop",
-                "version": "0.12.0",
+                "version": "0.13.0",
                 "description": "The shop: catalogue, baskets, checkout, orders, discounts and the admin screens that run them",
                 "category": "shop",
                 "author": {
@@ -2172,7 +2172,9 @@
                 "hooks": {
                     "mcp.tools": [
                         "Osmium\\Modules\\Admin\\Services\\BrandMcp::tools",
-                        "Osmium\\Modules\\Admin\\Services\\DiscountMcp::tools"
+                        "Osmium\\Modules\\Admin\\Services\\DiscountMcp::tools",
+                        "Osmium\\Modules\\Admin\\Services\\ProductMcp::tools",
+                        "Osmium\\Modules\\Admin\\Services\\ShopReportsMcp::tools"
                     ],
                     "email.samples": [
                         "Osmium\\Modules\\Checkout\\Services\\ShopEmailSamples::samples"
