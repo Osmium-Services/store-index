@@ -1260,13 +1260,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-mals",
-            "tag": "v0.2.0",
-            "commitSha": "f12ff069355e73e435ff1c784a8538e99f1b4f2c",
-            "pushedAt": "2026-10-13T08:26:21Z",
+            "tag": "v0.3.0",
+            "commitSha": "6ca56827ae576ab083b59a80726dceac8af14862",
+            "pushedAt": "2026-10-18T16:29:20Z",
             "manifest": {
                 "id": "mals",
                 "name": "Mals Ecommerce",
-                "version": "0.2.0",
+                "version": "0.3.0",
                 "description": "Sells through the Mals hosted cart: add-to-cart buttons post to Mals, the checkout is Mals' own page, and the header shows the cart count. No basket or checkout pages of its own",
                 "category": "payments",
                 "author": {
@@ -1281,6 +1281,11 @@
                 "autoload": [
                     "models"
                 ],
+                "hooks": {
+                    "payment.hosted": [
+                        "Osmium\\Services\\Mals\\Models\\MalsCart::hostedPayment"
+                    ]
+                },
                 "admin": {
                     "menu": {
                         "section": "Content",
