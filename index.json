@@ -2134,6 +2134,43 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-shop",
+            "tag": "v0.1.0",
+            "commitSha": "e8ad88c142be4b7101ce08289b5f4eb18b9ef448",
+            "pushedAt": "2026-10-18T19:33:30Z",
+            "manifest": {
+                "id": "osmium-shop",
+                "name": "Osmium Shop",
+                "version": "0.1.0",
+                "description": "The shop: catalogue, baskets, checkout, orders, discounts and the admin screens that run them",
+                "category": "shop",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [],
+                "migrations": "migrations/",
+                "admin": {
+                    "menu": {
+                        "section": "Shop",
+                        "group": {
+                            "id": "shop",
+                            "label": "Shop",
+                            "icon": "bx bx-store",
+                            "color": "#dc3545",
+                            "order": 30
+                        },
+                        "items": []
+                    }
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-shows",
             "tag": "v1.1.3",
             "commitSha": "80576e1702ec721d2f5334a1732b85ba917de31c",
