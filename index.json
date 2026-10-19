@@ -854,13 +854,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-merchant-center",
-            "tag": "v1.1.1",
-            "commitSha": "d285d1c8bc20327cffed9aee70868256a365ffc6",
-            "pushedAt": "2026-10-10T18:33:51Z",
+            "tag": "v1.2.0",
+            "commitSha": "3b4cb0e8649f4e4f62b92fa28599a2d52ad9baa3",
+            "pushedAt": "2026-10-19T10:08:33Z",
             "manifest": {
                 "id": "google-merchant-center",
                 "name": "Google Merchant Center",
-                "version": "1.1.1",
+                "version": "1.2.0",
                 "description": "Pushes product data to Google Merchant Center (Merchant API) whenever a product is saved, status-changed or removed. Service-account auth, admin-editable credentials, test connection and one-click full sync",
                 "category": "marketing-analytics",
                 "author": {
@@ -870,8 +870,9 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": [],
-                    "shop": true
+                    "services": [
+                        "osmium-shop"
+                    ]
                 },
                 "autoload": [
                     "models"
@@ -1466,13 +1467,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-paypal",
-            "tag": "v1.1.4",
-            "commitSha": "392e08da9cdbffc26a2ab84cc27008c19e4238b4",
-            "pushedAt": "2026-10-16T15:53:32Z",
+            "tag": "v1.2.0",
+            "commitSha": "5d630f08c7cf2cf043887c5faf2453c1de58e8b6",
+            "pushedAt": "2026-10-19T10:08:29Z",
             "manifest": {
                 "id": "paypal",
                 "name": "PayPal",
-                "version": "1.1.4",
+                "version": "1.2.0",
                 "description": "Takes PayPal payments at checkout (Orders v2, server-side capture), with a signature-verified webhook to reconcile orders. Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "author": {
@@ -1482,8 +1483,9 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": [],
-                    "shop": true
+                    "services": [
+                        "osmium-shop"
+                    ]
                 },
                 "autoload": [
                     "models"
@@ -2957,13 +2959,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-stripe",
-            "tag": "v1.1.4",
-            "commitSha": "fc5bf9031b7d7b513befebb0851590e45ceef648",
-            "pushedAt": "2026-10-16T15:53:30Z",
+            "tag": "v1.2.0",
+            "commitSha": "7eee3e6393813dbb2e832a7968f1c4817c09a88f",
+            "pushedAt": "2026-10-19T10:08:26Z",
             "manifest": {
                 "id": "stripe",
                 "name": "Stripe",
-                "version": "1.1.4",
+                "version": "1.2.0",
                 "description": "Takes card payments at checkout through Stripe (PaymentIntents, plus Apple Pay/Google Pay via the card element), with a signature-verified webhook to reconcile orders. Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "author": {
@@ -2973,8 +2975,9 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": [],
-                    "shop": true
+                    "services": [
+                        "osmium-shop"
+                    ]
                 },
                 "autoload": [
                     "models"
