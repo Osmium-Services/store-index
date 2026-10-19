@@ -459,13 +459,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-featured-products",
-            "tag": "v0.1.5",
-            "commitSha": "f051ac70eba2b113314a890dea94d72bf98597d4",
-            "pushedAt": "2026-10-18T17:46:27Z",
+            "tag": "v0.2.0",
+            "commitSha": "96814f40e5e24ee634c5daa267f096935fd9763f",
+            "pushedAt": "2026-10-19T09:51:45Z",
             "manifest": {
                 "id": "osmium-featured-products",
                 "name": "Osmium Featured Products",
-                "version": "0.1.5",
+                "version": "0.2.0",
                 "description": "A hand-picked list of up to 5 featured products, ordered by drag and drop in admin, with an edit lock for busy admin teams and the list handed to the theme",
                 "category": "shop",
                 "author": {
@@ -475,8 +475,9 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": [],
-                    "shop": true
+                    "services": [
+                        "osmium-shop"
+                    ]
                 },
                 "autoload": [
                     "models"
@@ -527,13 +528,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-freeagent",
-            "tag": "v1.1.3",
-            "commitSha": "fe9dde243b1d04123f60e796930d85a6d9dc94bf",
-            "pushedAt": "2026-10-10T18:33:49Z",
+            "tag": "v1.2.0",
+            "commitSha": "e1b67a31b5afafb0829da3d487bd482d2fe45628",
+            "pushedAt": "2026-10-19T09:51:48Z",
             "manifest": {
                 "id": "freeagent",
                 "name": "FreeAgent",
-                "version": "1.1.3",
+                "version": "1.2.0",
                 "description": "Connects the shop to FreeAgent (OAuth2) and adds a 'Push to FreeAgent' button on paid orders that creates a sales invoice. Locked to one named FreeAgent company",
                 "category": "business",
                 "author": {
@@ -543,8 +544,9 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": [],
-                    "shop": true
+                    "services": [
+                        "osmium-shop"
+                    ]
                 },
                 "autoload": [
                     "models"
@@ -1544,13 +1546,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-quickbooks",
-            "tag": "v1.0.3",
-            "commitSha": "887366f62a2d6c618ebab5a2484afafd64f3fe73",
-            "pushedAt": "2026-10-10T18:33:46Z",
+            "tag": "v1.1.0",
+            "commitSha": "6a540e34a1a4d43ffcb425bc5ec14bf716aa21cd",
+            "pushedAt": "2026-10-19T09:51:55Z",
             "manifest": {
                 "id": "quickbooks",
                 "name": "QuickBooks",
-                "version": "1.0.3",
+                "version": "1.1.0",
                 "description": "Connects the shop to QuickBooks (OAuth2) and adds a 'Push to QuickBooks' button on paid orders that creates a sales invoice. Locked to one named QuickBooks company",
                 "category": "business",
                 "author": {
@@ -1560,8 +1562,9 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": [],
-                    "shop": true
+                    "services": [
+                        "osmium-shop"
+                    ]
                 },
                 "autoload": [
                     "models"
@@ -1759,13 +1762,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-restock-leads",
-            "tag": "v0.2.4",
-            "commitSha": "4b22e151c1238d72af985dc56d7898d24601f865",
-            "pushedAt": "2026-10-18T17:46:30Z",
+            "tag": "v0.3.0",
+            "commitSha": "60cfa2359a3bad2030b1a532b0b70be86dd9d449",
+            "pushedAt": "2026-10-19T09:51:58Z",
             "manifest": {
                 "id": "osmium-restock-leads",
                 "name": "Osmium Restock Leads",
-                "version": "0.2.4",
+                "version": "0.3.0",
                 "description": "Lets customers leave their email to hear when an out-of-stock product is back, collects those requests, and lists them in admin",
                 "category": "shop",
                 "author": {
@@ -1775,8 +1778,9 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": [],
-                    "shop": true
+                    "services": [
+                        "osmium-shop"
+                    ]
                 },
                 "autoload": [
                     "models"
@@ -1827,13 +1831,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-reviews",
-            "tag": "v0.3.12",
-            "commitSha": "1be3ee5a883adbe39b337ff9ed34673751a1160f",
-            "pushedAt": "2026-10-18T17:46:34Z",
+            "tag": "v0.4.0",
+            "commitSha": "192fa8472e46f6489e7936f80f285175a8b5c7f6",
+            "pushedAt": "2026-10-19T09:52:02Z",
             "manifest": {
                 "id": "osmium-reviews",
                 "name": "Osmium Reviews",
-                "version": "0.3.12",
+                "version": "0.4.0",
                 "description": "Customer product reviews: a submit endpoint with spam protection, moderation in admin, and review data for the product page",
                 "category": "shop",
                 "author": {
@@ -1843,8 +1847,9 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": [],
-                    "shop": true
+                    "services": [
+                        "osmium-shop"
+                    ]
                 },
                 "autoload": [
                     "models"
@@ -1926,13 +1931,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-sage",
-            "tag": "v1.0.3",
-            "commitSha": "e91eab48bcbaaf4aca400b8edab2af6aa784d569",
-            "pushedAt": "2026-10-10T18:33:47Z",
+            "tag": "v1.1.0",
+            "commitSha": "f9bfaf066681c6253a50db0fd7a8da97fb36e241",
+            "pushedAt": "2026-10-19T09:51:52Z",
             "manifest": {
                 "id": "sage",
                 "name": "Sage Accounting",
-                "version": "1.0.3",
+                "version": "1.1.0",
                 "description": "Connects the shop to Sage Accounting (OAuth2) and adds a 'Push to Sage' button on paid orders that creates a sales invoice. Locked to one named Sage business",
                 "category": "business",
                 "author": {
@@ -1942,8 +1947,9 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": [],
-                    "shop": true
+                    "services": [
+                        "osmium-shop"
+                    ]
                 },
                 "autoload": [
                     "models"
@@ -2067,13 +2073,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-search-analytics",
-            "tag": "v0.2.3",
-            "commitSha": "dbdb5b4ff69ccb95c6875d3d690869b78e778973",
-            "pushedAt": "2026-10-18T17:46:37Z",
+            "tag": "v0.3.0",
+            "commitSha": "95654a3cca3974a5860166f55054173eb4dd91a9",
+            "pushedAt": "2026-10-19T09:52:05Z",
             "manifest": {
                 "id": "osmium-search-analytics",
                 "name": "Osmium Search Analytics",
-                "version": "0.2.3",
+                "version": "0.3.0",
                 "description": "Records what customers search for in the shop, shows the top and zero-result searches in admin, and adds a search synonym in one click from a failed search",
                 "category": "shop",
                 "author": {
@@ -2083,8 +2089,9 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": [],
-                    "shop": true
+                    "services": [
+                        "osmium-shop"
+                    ]
                 },
                 "autoload": [
                     "models"
@@ -2747,13 +2754,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-square",
-            "tag": "v1.0.3",
-            "commitSha": "9fbcd024baa5ce178f1cd92da74551db7b65bdf7",
-            "pushedAt": "2026-10-16T15:11:20Z",
+            "tag": "v1.1.0",
+            "commitSha": "1522f755cc5d15743b29cade4004173b14386ad4",
+            "pushedAt": "2026-10-19T09:52:08Z",
             "manifest": {
                 "id": "square",
                 "name": "Square",
-                "version": "1.0.3",
+                "version": "1.1.0",
                 "description": "Takes card payments at checkout through Square (Web Payments SDK card form on your own page, charged server-side with the CreatePayment API). Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "author": {
@@ -2763,8 +2770,9 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": [],
-                    "shop": true
+                    "services": [
+                        "osmium-shop"
+                    ]
                 },
                 "autoload": [
                     "models"
@@ -3229,13 +3237,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-xero",
-            "tag": "v1.1.0",
-            "commitSha": "d866072cf50d1b10df1d0062d737a14f3f46d0a7",
-            "pushedAt": "2026-10-11T17:49:08Z",
+            "tag": "v1.2.0",
+            "commitSha": "e3a57c3650d2254cb90ecf124d5240035725fb4c",
+            "pushedAt": "2026-10-19T09:52:11Z",
             "manifest": {
                 "id": "xero",
                 "name": "Xero",
-                "version": "1.1.0",
+                "version": "1.2.0",
                 "description": "Connects the shop to Xero (OAuth2) and adds a 'Push to Xero' button on paid orders that creates an AUTHORISED sales invoice. Locked to one named Xero organisation",
                 "category": "business",
                 "author": {
@@ -3245,8 +3253,9 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": [],
-                    "shop": true
+                    "services": [
+                        "osmium-shop"
+                    ]
                 },
                 "autoload": [
                     "models"
