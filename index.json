@@ -3040,13 +3040,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-turnstile",
-            "tag": "v1.1.2",
-            "commitSha": "cff81cfd39cf4b2e9c8125dac6a70eaf6dafece8",
-            "pushedAt": "2026-10-15T18:45:57Z",
+            "tag": "v1.2.0",
+            "commitSha": "3255431b601117e8bea6075c273f465ab22b4a9a",
+            "pushedAt": "2026-10-19T12:24:11Z",
             "manifest": {
                 "id": "turnstile",
                 "name": "Cloudflare Turnstile",
-                "version": "1.1.2",
+                "version": "1.2.0",
                 "description": "Spam protection for forms via Cloudflare Turnstile - free, no DNS dependency, admin-editable site/secret key and widget mode",
                 "category": "security-privacy",
                 "author": {
@@ -3101,16 +3101,8 @@
                         }
                     }
                 },
-                "frontend": {
-                    "themeBlocks": [
-                        {
-                            "hook": "head",
-                            "file": "theme/turnstile-headscript.phtml"
-                        }
-                    ]
-                },
                 "setup": {
-                    "postInstallNote": "Disabled by default. Once enabled with the keys from Cloudflare, every form that fires the form.verify and form.widget hooks (such as the product review form) is protected, with no per-form setup. A theme must echo $template['serviceHeadHtml'] in its <head> so the widget script loads. Other forms can call TurnstileConfig::verify($_POST['cf-turnstile-response'] ?? '') directly. The Turnstile settings page shows how many checks passed and failed."
+                    "postInstallNote": "Disabled by default. Once enabled with the keys from Cloudflare, every form that fires the form.verify and form.widget hooks (such as the product review form) is protected, with no per-form setup. The widget loads Cloudflare's script itself, only when the form is near the screen or touched, so pages without a protected form never contact Cloudflare; no theme change is needed. Other forms can call TurnstileConfig::verify($_POST['cf-turnstile-response'] ?? '') directly. The Turnstile settings page shows how many checks passed and failed."
                 }
             }
         },
