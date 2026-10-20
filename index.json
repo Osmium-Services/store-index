@@ -4,13 +4,13 @@
     "services": [
         {
             "repo": "Osmium-Services/osmium-analytics",
-            "tag": "v1.1.4",
-            "commitSha": "25fc8b0d3a6ba68247538ba2d0962c773990c103",
-            "pushedAt": "2026-10-18T17:43:59Z",
+            "tag": "v1.1.5",
+            "commitSha": "33eeca2afafc17b1afa419193e00bef6cd19e3bd",
+            "pushedAt": "2026-10-20T13:48:26Z",
             "manifest": {
                 "id": "osmium-analytics",
                 "name": "Osmium Analytics",
-                "version": "1.1.4",
+                "version": "1.1.5",
                 "description": "Cookieless, first-party visitor statistics: visits, top pages, referrers, device and country, with a retention setting",
                 "category": "marketing-analytics",
                 "author": {
