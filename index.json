@@ -2150,13 +2150,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-shop",
-            "tag": "v0.29.1",
-            "commitSha": "3f5ccd41d7928c4501f5659f3d0164b9d165cac0",
-            "pushedAt": "2026-10-23T19:30:42Z",
+            "tag": "v0.29.2",
+            "commitSha": "82dae2dd0a1c42b34434a92a33097e7bd98b388e",
+            "pushedAt": "2026-10-23T19:36:01Z",
             "manifest": {
                 "id": "osmium-shop",
                 "name": "Osmium Shop",
-                "version": "0.29.1",
+                "version": "0.29.2",
                 "description": "The shop: catalogue, baskets, checkout, orders, discounts and the admin screens that run them",
                 "category": "shop",
                 "author": {
