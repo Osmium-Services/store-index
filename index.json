@@ -103,13 +103,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-blog",
-            "tag": "v0.9.0",
-            "commitSha": "20daf3d2d7570b43db7b15395551a365e10b4b74",
-            "pushedAt": "2026-10-22T20:14:53Z",
+            "tag": "v0.9.1",
+            "commitSha": "96df86f74132cab4d58c3bc2ae73d7dd1a4aec73",
+            "pushedAt": "2026-10-23T19:30:39Z",
             "manifest": {
                 "id": "osmium-blog",
                 "name": "Osmium Blog",
-                "version": "0.9.0",
+                "version": "0.9.1",
                 "description": "Blog posts written in admin and published as ordinary pages under /blog/, with the markup supplied by the theme",
                 "category": "content",
                 "author": {
@@ -389,13 +389,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-faqs",
-            "tag": "v1.7.0",
-            "commitSha": "c852fa09d2c90439c692bdbca255e3e2dc69dbc6",
-            "pushedAt": "2026-10-23T16:16:19Z",
+            "tag": "v1.7.1",
+            "commitSha": "d34526168cb6ae9f1107a46878082eb86815f4eb",
+            "pushedAt": "2026-10-23T19:30:37Z",
             "manifest": {
                 "id": "osmium-faqs",
                 "name": "Osmium FAQs",
-                "version": "1.7.0",
+                "version": "1.7.1",
                 "description": "Named lists of questions and answers managed in admin, for a theme to show anywhere, with FAQPage schema for search engines",
                 "category": "content",
                 "author": {
@@ -1839,13 +1839,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-reviews",
-            "tag": "v0.5.0",
-            "commitSha": "bb97cf9c088b55ef23c362a4c3a1997e5559d60d",
-            "pushedAt": "2026-10-22T20:14:57Z",
+            "tag": "v0.5.1",
+            "commitSha": "2d619bd1c6fef8d5167a29dfc2565bcb9a9ea72b",
+            "pushedAt": "2026-10-23T19:30:41Z",
             "manifest": {
                 "id": "osmium-reviews",
                 "name": "Osmium Reviews",
-                "version": "0.5.0",
+                "version": "0.5.1",
                 "description": "Customer product reviews: a submit endpoint with spam protection, moderation in admin, and review data for the product page",
                 "category": "shop",
                 "author": {
@@ -2150,13 +2150,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-shop",
-            "tag": "v0.29.0",
-            "commitSha": "8bb4266c4436edfb7687e73ecd102c3cb6855721",
-            "pushedAt": "2026-10-23T16:16:18Z",
+            "tag": "v0.29.1",
+            "commitSha": "3f5ccd41d7928c4501f5659f3d0164b9d165cac0",
+            "pushedAt": "2026-10-23T19:30:42Z",
             "manifest": {
                 "id": "osmium-shop",
                 "name": "Osmium Shop",
-                "version": "0.29.0",
+                "version": "0.29.1",
                 "description": "The shop: catalogue, baskets, checkout, orders, discounts and the admin screens that run them",
                 "category": "shop",
                 "author": {
