@@ -796,14 +796,14 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-maps-embed",
-            "tag": "v1.1.2",
-            "commitSha": "c8a1a7b2ed255212f17c908956b6c84d691573cc",
-            "pushedAt": "2026-10-24T18:54:06Z",
+            "tag": "v2.0.0",
+            "commitSha": "5e79f51d431ed63963c30f43952ab6cdf7a1c896",
+            "pushedAt": "2026-10-24T20:50:52Z",
             "manifest": {
                 "id": "google-maps-embed",
                 "name": "Google Maps Embed",
-                "version": "1.1.2",
-                "description": "Google Maps Embed (a single place in an iframe) for a theme to place anywhere (e.g. a contact page), from one admin-editable embed URL",
+                "version": "2.0.0",
+                "description": "Google Maps Embed (a single place in an iframe): named maps managed in admin, for a theme to show anywhere, found by slug",
                 "category": "content",
                 "author": {
                     "name": "Gavin Cox"
@@ -830,32 +830,36 @@
                                 "id": "google-maps-embed",
                                 "label": "Google Maps Embed",
                                 "icon": "bx bx-map",
-                                "route": "admin/settings/google-maps-embed",
-                                "activePattern": "admin/settings/google-maps-embed",
+                                "route": "admin/google-maps-embed",
+                                "activePattern": "admin/google-maps-embed*",
                                 "role": null
                             }
                         ]
                     },
                     "routes": {
-                        "admin/settings/google-maps-embed": {
+                        "admin/google-maps-embed": {
                             "controller": "controllers/GoogleMapsEmbedController.php",
                             "class": "Osmium\\Services\\GoogleMapsEmbed\\Controllers\\GoogleMapsEmbedController",
                             "method": "index",
                             "title": "Google Maps Embed"
+                        },
+                        "admin/google-maps-embed/edit": {
+                            "controller": "controllers/GoogleMapsEmbedController.php",
+                            "class": "Osmium\\Services\\GoogleMapsEmbed\\Controllers\\GoogleMapsEmbedController",
+                            "method": "edit",
+                            "title": "Edit Map"
+                        },
+                        "admin/google-maps-embed/action": {
+                            "controller": "controllers/GoogleMapsEmbedController.php",
+                            "class": "Osmium\\Services\\GoogleMapsEmbed\\Controllers\\GoogleMapsEmbedController",
+                            "method": "action"
                         }
                     }
                 },
-                "frontend": {
-                    "themeBlocks": [
-                        {
-                            "hook": "map",
-                            "file": "theme/google-maps-embed.phtml"
-                        }
-                    ]
-                },
                 "setup": {
-                    "postInstallNote": "Paste the embed URL on the Google Maps Embed settings page (Google Maps > Share > Embed a map; copy only the src URL, not the whole iframe). Then place the map in a theme with <?php $template['serviceBlock']('map'); ?> where it should appear, e.g. the contact page. Nothing renders until a URL is saved. The iframe loads Google immediately, with no consent step."
-                }
+                    "postInstallNote": "Add a map under Content > Google Maps Embed (Google Maps > Share > Embed a map; copy only the src URL, not the whole iframe), then show it from a theme controller: $maps = new \\Osmium\\Services\\GoogleMapsEmbed\\Models\\GoogleMapsEmbeds($this->osmium->dataSource); $map = $maps->get('your-slug'); The theme prints the iframe (src = $map['url'], escaped) when $map is not null. Each edit page shows the snippet for its own map. The iframe loads Google immediately, with no consent step."
+                },
+                "migrations": "migrations/"
             }
         },
         {
