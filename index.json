@@ -1473,13 +1473,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-paypal",
-            "tag": "v1.3.0",
-            "commitSha": "a643062a2a6fce82c8ab628dd5304a22e51559d3",
-            "pushedAt": "2026-10-24T15:52:54Z",
+            "tag": "v1.4.0",
+            "commitSha": "9ef0fdd0d29ed8aab621a41c5ee3c8256bb2601e",
+            "pushedAt": "2026-10-24T16:04:02Z",
             "manifest": {
                 "id": "paypal",
                 "name": "PayPal",
-                "version": "1.3.0",
+                "version": "1.4.0",
                 "description": "Takes PayPal payments at checkout (Orders v2, server-side capture), with a signature-verified webhook to reconcile orders. Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "author": {
@@ -2156,13 +2156,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-shop",
-            "tag": "v0.33.1",
-            "commitSha": "4753d8ce80ea08418d9ae546c8b8615476e64aa8",
-            "pushedAt": "2026-10-24T15:56:22Z",
+            "tag": "v0.34.0",
+            "commitSha": "cb02a88becfc76a33514c590afcc1c5d243ad8d3",
+            "pushedAt": "2026-10-24T16:04:01Z",
             "manifest": {
                 "id": "osmium-shop",
                 "name": "Osmium Shop",
-                "version": "0.33.1",
+                "version": "0.34.0",
                 "description": "The shop: catalogue, baskets, checkout, orders, discounts and the admin screens that run them",
                 "category": "shop",
                 "author": {
