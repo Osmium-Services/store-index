@@ -3201,13 +3201,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-vonage",
-            "tag": "v1.0.2",
-            "commitSha": "02349d38cf38530556bd6da3bc29ed7a75d53700",
-            "pushedAt": "2026-10-24T19:15:27Z",
+            "tag": "v1.0.3",
+            "commitSha": "f68d4df4f7d9e0d2564111fecd566b55f8e9dba8",
+            "pushedAt": "2026-10-24T19:26:11Z",
             "manifest": {
                 "id": "vonage",
                 "name": "Vonage SMS",
-                "version": "1.0.2",
+                "version": "1.0.3",
                 "description": "Send SMS through Vonage's SMS API. Admin-editable credentials and sender, plus a test-text button. A capability for core and other services: answers the sms.providers and sms.send hooks",
                 "category": "sms",
                 "author": {
