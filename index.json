@@ -2592,13 +2592,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-shows",
-            "tag": "v1.2.0",
-            "commitSha": "376b60277391f998f7fbfadf5c2b4a0c0b0f92f2",
-            "pushedAt": "2026-10-24T09:02:37Z",
+            "tag": "v1.2.1",
+            "commitSha": "575556f9d1f9350200ca82fae1171441ecd22648",
+            "pushedAt": "2026-10-24T09:08:18Z",
             "manifest": {
                 "id": "osmium-shows",
                 "name": "Osmium Shows",
-                "version": "1.2.0",
+                "version": "1.2.1",
                 "description": "Curated trade show/event listings with postcode geocoding and logo upload",
                 "category": "content",
                 "author": {
