@@ -190,13 +190,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-brevo",
-            "tag": "v1.2.0",
-            "commitSha": "012306526b32a48f5d42979dc9af66dfc0ca632f",
-            "pushedAt": "2026-10-14T11:15:33Z",
+            "tag": "v1.2.1",
+            "commitSha": "5ce60a2c55c8ea8dd5e2ea08d8bbb3d665266ae9",
+            "pushedAt": "2026-10-24T19:04:21Z",
             "manifest": {
                 "id": "brevo",
                 "name": "Brevo",
-                "version": "1.2.0",
+                "version": "1.2.1",
                 "description": "Send site email through Brevo's HTTP API, and add newsletter signups to a Brevo list. A generous free plan, and useful where hosting blocks outbound SMTP. Appears as a provider on the Email settings page.",
                 "category": "email",
                 "author": {
@@ -251,13 +251,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-clarity",
-            "tag": "v1.1.1",
-            "commitSha": "04245c69b0bc894c1d090799811c8314185aaa20",
-            "pushedAt": "2026-10-09T15:59:20Z",
+            "tag": "v1.1.2",
+            "commitSha": "59fb53a042496a037ed2801b7cf18e31763eddd5",
+            "pushedAt": "2026-10-24T19:03:16Z",
             "manifest": {
                 "id": "clarity",
                 "name": "Microsoft Clarity",
-                "version": "1.1.1",
+                "version": "1.1.2",
                 "description": "Microsoft Clarity heatmaps and session recordings - free, consent-gated, gated on an admin-editable toggle and production-only; requires the Cookie Consent service",
                 "category": "marketing-analytics",
                 "author": {
@@ -534,13 +534,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-freeagent",
-            "tag": "v1.2.0",
-            "commitSha": "e1b67a31b5afafb0829da3d487bd482d2fe45628",
-            "pushedAt": "2026-10-19T09:51:48Z",
+            "tag": "v1.2.1",
+            "commitSha": "5ca29695608caeb8f393b2d807fa6795c63c0c31",
+            "pushedAt": "2026-10-24T19:19:38Z",
             "manifest": {
                 "id": "freeagent",
                 "name": "FreeAgent",
-                "version": "1.2.0",
+                "version": "1.2.1",
                 "description": "Connects the shop to FreeAgent (OAuth2) and adds a 'Push to FreeAgent' button on paid orders that creates a sales invoice. Locked to one named FreeAgent company",
                 "category": "business",
                 "author": {
@@ -1101,13 +1101,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-mailgun",
-            "tag": "v1.1.0",
-            "commitSha": "61a3e88552e43ca81571a1f830d3adcc042578ea",
-            "pushedAt": "2026-10-08T19:57:30Z",
+            "tag": "v1.1.1",
+            "commitSha": "82c97871a5a624982e16d994749b2608f119bd5c",
+            "pushedAt": "2026-10-24T19:07:01Z",
             "manifest": {
                 "id": "mailgun",
                 "name": "Mailgun",
-                "version": "1.1.0",
+                "version": "1.1.1",
                 "description": "Send site email through Mailgun's HTTP API - useful where hosting blocks outbound SMTP. Appears as a provider on the Email settings page.",
                 "category": "email",
                 "author": {
@@ -1157,13 +1157,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-mailjet",
-            "tag": "v1.1.0",
-            "commitSha": "97fa65acfa97598cb16adc14226660c7d148d7c4",
-            "pushedAt": "2026-10-08T19:57:44Z",
+            "tag": "v1.1.1",
+            "commitSha": "afee98c67b4021bab01e180bae26f1f1d432a575",
+            "pushedAt": "2026-10-24T19:08:13Z",
             "manifest": {
                 "id": "mailjet",
                 "name": "Mailjet",
-                "version": "1.1.0",
+                "version": "1.1.1",
                 "description": "Send site email through Mailjet's HTTP API - a free plan of 6,000 emails a month, and useful where hosting blocks outbound SMTP. Appears as a provider on the Email settings page.",
                 "category": "email",
                 "author": {
@@ -1213,13 +1213,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-mailtrap",
-            "tag": "v1.1.0",
-            "commitSha": "ab9c3f811ddfab927b38046cc33ef932ac377d6c",
-            "pushedAt": "2026-10-08T19:57:34Z",
+            "tag": "v1.1.1",
+            "commitSha": "e54214bd77211885ad6733447fbc4f7cd0b5e119",
+            "pushedAt": "2026-10-24T19:08:19Z",
             "manifest": {
                 "id": "mailtrap",
                 "name": "Mailtrap",
-                "version": "1.1.0",
+                "version": "1.1.1",
                 "description": "Send site email through Mailtrap - live sending, or a sandbox inbox that catches every email so nothing reaches real customers while testing. Appears as a provider on the Email settings page.",
                 "category": "email",
                 "author": {
@@ -1269,13 +1269,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-mals",
-            "tag": "v0.3.0",
-            "commitSha": "6ca56827ae576ab083b59a80726dceac8af14862",
-            "pushedAt": "2026-10-18T16:29:20Z",
+            "tag": "v0.3.1",
+            "commitSha": "4472eb3ddf90930d77cf6fae2c229e766daf4b2b",
+            "pushedAt": "2026-10-24T19:01:36Z",
             "manifest": {
                 "id": "mals",
                 "name": "Mals Ecommerce",
-                "version": "0.3.0",
+                "version": "0.3.1",
                 "description": "Sells through the Mals hosted cart: add-to-cart buttons post to Mals, the checkout is Mals' own page, and the header shows the cart count. No basket or checkout pages of its own",
                 "category": "payments",
                 "author": {
@@ -1338,13 +1338,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-meta-pixel",
-            "tag": "v1.2.2",
-            "commitSha": "fce9af2a334f76d77325d2fce6e7a3592169f793",
-            "pushedAt": "2026-10-09T15:59:34Z",
+            "tag": "v1.2.4",
+            "commitSha": "b61791fbd07b31b2f595c2d0a15aa97d54e8a62d",
+            "pushedAt": "2026-10-24T19:02:25Z",
             "manifest": {
                 "id": "meta-pixel",
                 "name": "Meta Pixel",
-                "version": "1.2.2",
+                "version": "1.2.4",
                 "description": "Meta (Facebook/Instagram) Pixel PageView plus optional shop events (ViewContent, AddToCart, Purchase) and server-side Purchase, consent-gated, gated on an admin-editable toggle and production-only; requires the Cookie Consent service",
                 "category": "marketing-analytics",
                 "author": {
@@ -1417,13 +1417,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-microsoft-graph",
-            "tag": "v1.1.0",
-            "commitSha": "a39c71af48e0f4a421418c6166a8d287f65dac3a",
-            "pushedAt": "2026-10-15T14:36:47Z",
+            "tag": "v1.1.1",
+            "commitSha": "52def6229c5c2659eed3b691105470d8938c722c",
+            "pushedAt": "2026-10-24T19:10:00Z",
             "manifest": {
                 "id": "microsoft-graph",
                 "name": "Microsoft 365 Mail",
-                "version": "1.1.0",
+                "version": "1.1.1",
                 "description": "Send site email through the Microsoft Graph API using an Azure AD app registration - for Microsoft 365 tenants that have disabled SMTP AUTH. Appears as a provider on the Email settings page.",
                 "category": "email",
                 "author": {
@@ -1560,13 +1560,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-quickbooks",
-            "tag": "v1.1.0",
-            "commitSha": "6a540e34a1a4d43ffcb425bc5ec14bf716aa21cd",
-            "pushedAt": "2026-10-19T09:51:55Z",
+            "tag": "v1.1.1",
+            "commitSha": "1d7c4f363361a588925ec0e24c8b788a3d839373",
+            "pushedAt": "2026-10-24T19:20:35Z",
             "manifest": {
                 "id": "quickbooks",
                 "name": "QuickBooks",
-                "version": "1.1.0",
+                "version": "1.1.1",
                 "description": "Connects the shop to QuickBooks (OAuth2) and adds a 'Push to QuickBooks' button on paid orders that creates a sales invoice. Locked to one named QuickBooks company",
                 "category": "business",
                 "author": {
@@ -1720,13 +1720,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-resend",
-            "tag": "v1.1.0",
-            "commitSha": "317b43f83563793b74e3c23ca80e5e1edcd3c6f9",
-            "pushedAt": "2026-10-08T19:57:38Z",
+            "tag": "v1.1.1",
+            "commitSha": "2db892cb7b6c810d9dc9cd3fcd49b98365b333b8",
+            "pushedAt": "2026-10-24T19:12:01Z",
             "manifest": {
                 "id": "resend",
                 "name": "Resend",
-                "version": "1.1.0",
+                "version": "1.1.1",
                 "description": "Send site email through Resend's HTTP API - a simple developer-friendly API with a free plan, and useful where hosting blocks outbound SMTP. Appears as a provider on the Email settings page.",
                 "category": "email",
                 "author": {
@@ -1945,13 +1945,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-sage",
-            "tag": "v1.1.0",
-            "commitSha": "f9bfaf066681c6253a50db0fd7a8da97fb36e241",
-            "pushedAt": "2026-10-19T09:51:52Z",
+            "tag": "v1.1.1",
+            "commitSha": "7efda5a10ee959d23b76b73281115262519f6821",
+            "pushedAt": "2026-10-24T19:23:33Z",
             "manifest": {
                 "id": "sage",
                 "name": "Sage Accounting",
-                "version": "1.1.0",
+                "version": "1.1.1",
                 "description": "Connects the shop to Sage Accounting (OAuth2) and adds a 'Push to Sage' button on paid orders that creates a sales invoice. Locked to one named Sage business",
                 "category": "business",
                 "author": {
@@ -2656,13 +2656,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-sinch",
-            "tag": "v1.0.0",
-            "commitSha": "f620c8dbfe3573df21613a3a87fb897a011aac2d",
-            "pushedAt": "2026-10-07T12:48:08Z",
+            "tag": "v1.0.1",
+            "commitSha": "638dc24301aa22034c2ea9f404004396d826dd59",
+            "pushedAt": "2026-10-24T19:13:10Z",
             "manifest": {
                 "id": "sinch",
                 "name": "Sinch SMS",
-                "version": "1.0.0",
+                "version": "1.0.1",
                 "description": "Send SMS through Sinch's SMS REST API. Admin-editable credentials and sender, plus a test-text button. A capability for core and other services: answers the sms.providers and sms.send hooks",
                 "category": "sms",
                 "author": {
@@ -3071,13 +3071,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-turnstile",
-            "tag": "v1.2.0",
-            "commitSha": "3255431b601117e8bea6075c273f465ab22b4a9a",
-            "pushedAt": "2026-10-19T12:24:11Z",
+            "tag": "v1.2.1",
+            "commitSha": "6bece8d75eec77e6179564bf055ee0de15eb2c52",
+            "pushedAt": "2026-10-24T18:59:53Z",
             "manifest": {
                 "id": "turnstile",
                 "name": "Cloudflare Turnstile",
-                "version": "1.2.0",
+                "version": "1.2.1",
                 "description": "Spam protection for forms via Cloudflare Turnstile - free, no DNS dependency, admin-editable site/secret key and widget mode",
                 "category": "security-privacy",
                 "author": {
@@ -3139,13 +3139,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-twilio",
-            "tag": "v1.1.1",
-            "commitSha": "26a3144a0ed3807946f96c4c4188b50ebbfcdf13",
-            "pushedAt": "2026-10-07T12:39:54Z",
+            "tag": "v1.1.2",
+            "commitSha": "fe1e71556536f4798c16a7c5cf6576365185f1c2",
+            "pushedAt": "2026-10-24T19:14:44Z",
             "manifest": {
                 "id": "twilio",
                 "name": "Twilio SMS",
-                "version": "1.1.1",
+                "version": "1.1.2",
                 "description": "Send SMS through Twilio's Messages API. Admin-editable credentials and sender, plus a test-text button. A capability for core and other services: answers the sms.providers and sms.send hooks",
                 "category": "sms",
                 "author": {
@@ -3201,13 +3201,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-vonage",
-            "tag": "v1.0.1",
-            "commitSha": "b19aadf0e9d5d095b86bba1846b64249d96044a0",
-            "pushedAt": "2026-10-07T12:39:57Z",
+            "tag": "v1.0.2",
+            "commitSha": "02349d38cf38530556bd6da3bc29ed7a75d53700",
+            "pushedAt": "2026-10-24T19:15:27Z",
             "manifest": {
                 "id": "vonage",
                 "name": "Vonage SMS",
-                "version": "1.0.1",
+                "version": "1.0.2",
                 "description": "Send SMS through Vonage's SMS API. Admin-editable credentials and sender, plus a test-text button. A capability for core and other services: answers the sms.providers and sms.send hooks",
                 "category": "sms",
                 "author": {
@@ -3263,13 +3263,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-xero",
-            "tag": "v1.2.0",
-            "commitSha": "e3a57c3650d2254cb90ecf124d5240035725fb4c",
-            "pushedAt": "2026-10-19T09:52:11Z",
+            "tag": "v1.2.1",
+            "commitSha": "33c9540908e4e31bc7255d0d4306c9d0f6951cb9",
+            "pushedAt": "2026-10-24T19:24:22Z",
             "manifest": {
                 "id": "xero",
                 "name": "Xero",
-                "version": "1.2.0",
+                "version": "1.2.1",
                 "description": "Connects the shop to Xero (OAuth2) and adds a 'Push to Xero' button on paid orders that creates an AUTHORISED sales invoice. Locked to one named Xero organisation",
                 "category": "business",
                 "author": {
