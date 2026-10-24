@@ -2781,13 +2781,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-square",
-            "tag": "v1.1.0",
-            "commitSha": "1522f755cc5d15743b29cade4004173b14386ad4",
-            "pushedAt": "2026-10-19T09:52:08Z",
+            "tag": "v1.1.1",
+            "commitSha": "b2184262040c9194bdb65b2cb93a75eb6f3cc222",
+            "pushedAt": "2026-10-24T17:25:42Z",
             "manifest": {
                 "id": "square",
                 "name": "Square",
-                "version": "1.1.0",
+                "version": "1.1.1",
                 "description": "Takes card payments at checkout through Square (Web Payments SDK card form on your own page, charged server-side with the CreatePayment API). Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "author": {
