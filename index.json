@@ -1473,13 +1473,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-paypal",
-            "tag": "v1.4.1",
-            "commitSha": "1a9a63cb1c13a8b54aef565f226f982f12e33fbe",
-            "pushedAt": "2026-10-24T17:00:16Z",
+            "tag": "v1.4.2",
+            "commitSha": "dc04be4e5045af3540bac8889773efc0d33891a6",
+            "pushedAt": "2026-10-24T18:19:24Z",
             "manifest": {
                 "id": "paypal",
                 "name": "PayPal",
-                "version": "1.4.1",
+                "version": "1.4.2",
                 "description": "Takes PayPal payments at checkout (Orders v2, server-side capture), with a signature-verified webhook to reconcile orders. Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "author": {
@@ -2156,13 +2156,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-shop",
-            "tag": "v0.35.0",
-            "commitSha": "09e85d66aac03f8110c92fa4840e3f62b3a071e7",
-            "pushedAt": "2026-10-24T16:16:01Z",
+            "tag": "v0.36.0",
+            "commitSha": "e28e653e33887ff210d4e156f3db0e24ce139885",
+            "pushedAt": "2026-10-24T18:17:50Z",
             "manifest": {
                 "id": "osmium-shop",
                 "name": "Osmium Shop",
-                "version": "0.35.0",
+                "version": "0.36.0",
                 "description": "The shop: catalogue, baskets, checkout, orders, discounts and the admin screens that run them",
                 "category": "shop",
                 "author": {
@@ -2781,13 +2781,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-square",
-            "tag": "v1.1.2",
-            "commitSha": "07192dee120e111533a1dab6933ca04da23c9ff0",
-            "pushedAt": "2026-10-24T17:52:24Z",
+            "tag": "v1.1.3",
+            "commitSha": "2f6c20f8337b0655b3346f7b897b190be52eb0ea",
+            "pushedAt": "2026-10-24T18:17:54Z",
             "manifest": {
                 "id": "square",
                 "name": "Square",
-                "version": "1.1.2",
+                "version": "1.1.3",
                 "description": "Takes card payments at checkout through Square (Web Payments SDK card form on your own page, charged server-side with the CreatePayment API). Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "author": {
@@ -2994,13 +2994,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-stripe",
-            "tag": "v1.2.3",
-            "commitSha": "6f93e30c5db4a0ae7ecca0efe6502de327e9e316",
-            "pushedAt": "2026-10-24T17:14:33Z",
+            "tag": "v1.2.4",
+            "commitSha": "a713eb92c607bf9950b98bf724b511d57fa1eb04",
+            "pushedAt": "2026-10-24T18:19:28Z",
             "manifest": {
                 "id": "stripe",
                 "name": "Stripe",
-                "version": "1.2.3",
+                "version": "1.2.4",
                 "description": "Takes card payments at checkout through Stripe (PaymentIntents, plus Apple Pay/Google Pay via the card element), with a signature-verified webhook to reconcile orders. Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "author": {
