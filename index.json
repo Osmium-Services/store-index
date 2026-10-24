@@ -922,13 +922,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-reviews",
-            "tag": "v1.0.3",
-            "commitSha": "e1c815052a8d97326f617fba68f890ec1ca6c7a0",
-            "pushedAt": "2026-10-09T15:54:01Z",
+            "tag": "v1.1.0",
+            "commitSha": "1d7c4cb88c10d846b06207df03510e52e328fa89",
+            "pushedAt": "2026-10-24T08:59:18Z",
             "manifest": {
                 "id": "google-reviews",
                 "name": "Google Reviews",
-                "version": "1.0.3",
+                "version": "1.1.0",
                 "description": "Hand-curated Google review admin CRUD and homepage social-proof widget model",
                 "category": "marketing-analytics",
                 "author": {
@@ -2592,13 +2592,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-shows",
-            "tag": "v1.1.3",
-            "commitSha": "80576e1702ec721d2f5334a1732b85ba917de31c",
-            "pushedAt": "2026-10-18T10:59:05Z",
+            "tag": "v1.2.0",
+            "commitSha": "376b60277391f998f7fbfadf5c2b4a0c0b0f92f2",
+            "pushedAt": "2026-10-24T09:02:37Z",
             "manifest": {
                 "id": "osmium-shows",
                 "name": "Osmium Shows",
-                "version": "1.1.3",
+                "version": "1.2.0",
                 "description": "Curated trade show/event listings with postcode geocoding and logo upload",
                 "category": "content",
                 "author": {
