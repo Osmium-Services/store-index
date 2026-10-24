@@ -2781,13 +2781,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-square",
-            "tag": "v1.1.1",
-            "commitSha": "b2184262040c9194bdb65b2cb93a75eb6f3cc222",
-            "pushedAt": "2026-10-24T17:25:42Z",
+            "tag": "v1.1.2",
+            "commitSha": "07192dee120e111533a1dab6933ca04da23c9ff0",
+            "pushedAt": "2026-10-24T17:52:24Z",
             "manifest": {
                 "id": "square",
                 "name": "Square",
-                "version": "1.1.1",
+                "version": "1.1.2",
                 "description": "Takes card payments at checkout through Square (Web Payments SDK card form on your own page, charged server-side with the CreatePayment API). Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "author": {
@@ -2820,13 +2820,23 @@
                         "https://web.squarecdn.com",
                         "https://sandbox.web.squarecdn.com"
                     ],
+                    "style-src": [
+                        "https://web.squarecdn.com",
+                        "https://sandbox.web.squarecdn.com"
+                    ],
+                    "font-src": [
+                        "https://square-fonts-production-f.squarecdn.com",
+                        "https://cash-f.squarecdn.com",
+                        "https://d1g145x70srn7h.cloudfront.net"
+                    ],
                     "frame-src": [
                         "https://web.squarecdn.com",
                         "https://sandbox.web.squarecdn.com"
                     ],
                     "connect-src": [
                         "https://pci-connect.squareup.com",
-                        "https://pci-connect.squareupsandbox.com"
+                        "https://pci-connect.squareupsandbox.com",
+                        "https://o160250.ingest.sentry.io"
                     ]
                 },
                 "admin": {
