@@ -2026,13 +2026,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-schema",
-            "tag": "v0.4.7",
-            "commitSha": "0554ba956d8ee2e078872eacb12c4ed652303a2e",
-            "pushedAt": "2026-10-24T20:34:03Z",
+            "tag": "v0.4.8",
+            "commitSha": "8cea650df8b5177ebb4c3abdc715d2e3d24eb2f7",
+            "pushedAt": "2026-10-24T20:43:56Z",
             "manifest": {
                 "id": "schema",
                 "name": "Osmium Schema",
-                "version": "0.4.7",
+                "version": "0.4.8",
                 "description": "Site-wide structured data: Organization or LocalBusiness (address, opening hours, contact point, and geo looked up from the postcode) and WebSite, as JSON-LD with fixed @ids other services can reference",
                 "category": "marketing-analytics",
                 "author": {
