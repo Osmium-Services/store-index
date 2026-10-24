@@ -2984,13 +2984,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-stripe",
-            "tag": "v1.2.2",
-            "commitSha": "83c60bc71361ebd9e22f752f674b5756b15f1de2",
-            "pushedAt": "2026-10-24T17:00:12Z",
+            "tag": "v1.2.3",
+            "commitSha": "6f93e30c5db4a0ae7ecca0efe6502de327e9e316",
+            "pushedAt": "2026-10-24T17:14:33Z",
             "manifest": {
                 "id": "stripe",
                 "name": "Stripe",
-                "version": "1.2.2",
+                "version": "1.2.3",
                 "description": "Takes card payments at checkout through Stripe (PaymentIntents, plus Apple Pay/Google Pay via the card element), with a signature-verified webhook to reconcile orders. Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "author": {
