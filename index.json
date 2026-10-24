@@ -2718,13 +2718,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-social-links",
-            "tag": "v0.3.2",
-            "commitSha": "6d74397686fca704ee18db3ae7b03f3c9e432521",
-            "pushedAt": "2026-10-24T20:16:00Z",
+            "tag": "v0.3.3",
+            "commitSha": "f2d0f561336ec2064195b4f23d2677c3a943ee42",
+            "pushedAt": "2026-10-24T20:39:25Z",
             "manifest": {
                 "id": "osmium-social-links",
                 "name": "Osmium Social Links",
-                "version": "0.3.2",
+                "version": "0.3.3",
                 "description": "One place for the business's social profile URLs, shown as a list of links by a theme and available to other services such as Schema",
                 "category": "content",
                 "author": {
