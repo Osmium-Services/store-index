@@ -103,13 +103,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-blog",
-            "tag": "v0.10.1",
-            "commitSha": "06e7d0a0f28b33f47816eea21c4a660dc44a9fcd",
-            "pushedAt": "2026-10-23T21:20:47Z",
+            "tag": "v0.10.2",
+            "commitSha": "78ef74a2118aeebffaf216eda3ae8d0b4c39480d",
+            "pushedAt": "2026-10-24T20:23:55Z",
             "manifest": {
                 "id": "osmium-blog",
                 "name": "Osmium Blog",
-                "version": "0.10.1",
+                "version": "0.10.2",
                 "description": "Blog posts written in admin and published as ordinary pages under /blog/, with the markup supplied by the theme",
                 "category": "content",
                 "author": {
@@ -1845,13 +1845,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-reviews",
-            "tag": "v0.6.1",
-            "commitSha": "98afebbcb2efc37922ff99905b1f8ed66a42a69d",
-            "pushedAt": "2026-10-23T21:20:50Z",
+            "tag": "v0.6.2",
+            "commitSha": "a4a0052f0c578467e91880c516c4afa000da5d04",
+            "pushedAt": "2026-10-24T20:23:59Z",
             "manifest": {
                 "id": "osmium-reviews",
                 "name": "Osmium Reviews",
-                "version": "0.6.1",
+                "version": "0.6.2",
                 "description": "Customer product reviews: a submit endpoint with spam protection, moderation in admin, and review data for the product page",
                 "category": "shop",
                 "author": {
