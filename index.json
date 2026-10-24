@@ -976,13 +976,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-hcaptcha",
-            "tag": "v1.1.0",
-            "commitSha": "614fe52a183e25ee01c80037a7493e4029c5c591",
-            "pushedAt": "2026-10-15T17:19:42Z",
+            "tag": "v1.1.2",
+            "commitSha": "59890708560b9ece55595976dacd5bf088974812",
+            "pushedAt": "2026-10-24T20:32:34Z",
             "manifest": {
                 "id": "hcaptcha",
                 "name": "hCaptcha",
-                "version": "1.1.0",
+                "version": "1.1.2",
                 "description": "Spam protection for forms via hCaptcha - a privacy-focused alternative to Google reCAPTCHA and Cloudflare Turnstile, admin-editable site/secret key",
                 "category": "security-privacy",
                 "author": {
