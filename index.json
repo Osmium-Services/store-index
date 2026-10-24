@@ -1473,13 +1473,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-paypal",
-            "tag": "v1.4.0",
-            "commitSha": "9ef0fdd0d29ed8aab621a41c5ee3c8256bb2601e",
-            "pushedAt": "2026-10-24T16:04:02Z",
+            "tag": "v1.4.1",
+            "commitSha": "1a9a63cb1c13a8b54aef565f226f982f12e33fbe",
+            "pushedAt": "2026-10-24T17:00:16Z",
             "manifest": {
                 "id": "paypal",
                 "name": "PayPal",
-                "version": "1.4.0",
+                "version": "1.4.1",
                 "description": "Takes PayPal payments at checkout (Orders v2, server-side capture), with a signature-verified webhook to reconcile orders. Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "author": {
@@ -2984,13 +2984,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-stripe",
-            "tag": "v1.2.0",
-            "commitSha": "7eee3e6393813dbb2e832a7968f1c4817c09a88f",
-            "pushedAt": "2026-10-19T10:08:26Z",
+            "tag": "v1.2.2",
+            "commitSha": "83c60bc71361ebd9e22f752f674b5756b15f1de2",
+            "pushedAt": "2026-10-24T17:00:12Z",
             "manifest": {
                 "id": "stripe",
                 "name": "Stripe",
-                "version": "1.2.0",
+                "version": "1.2.2",
                 "description": "Takes card payments at checkout through Stripe (PaymentIntents, plus Apple Pay/Google Pay via the card element), with a signature-verified webhook to reconcile orders. Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "author": {
