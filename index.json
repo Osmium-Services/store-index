@@ -1473,13 +1473,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-paypal",
-            "tag": "v1.2.0",
-            "commitSha": "5d630f08c7cf2cf043887c5faf2453c1de58e8b6",
-            "pushedAt": "2026-10-19T10:08:29Z",
+            "tag": "v1.2.1",
+            "commitSha": "dc5cef7714738e495434d347b9927ff9b8e2f5f3",
+            "pushedAt": "2026-10-24T15:21:49Z",
             "manifest": {
                 "id": "paypal",
                 "name": "PayPal",
-                "version": "1.2.0",
+                "version": "1.2.1",
                 "description": "Takes PayPal payments at checkout (Orders v2, server-side capture), with a signature-verified webhook to reconcile orders. Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "author": {
@@ -1509,10 +1509,16 @@
                 },
                 "csp": {
                     "script-src": [
-                        "https://www.paypal.com"
+                        "https://www.paypal.com",
+                        "https://www.sandbox.paypal.com"
                     ],
                     "frame-src": [
-                        "https://www.paypal.com"
+                        "https://www.paypal.com",
+                        "https://www.sandbox.paypal.com"
+                    ],
+                    "connect-src": [
+                        "https://www.paypal.com",
+                        "https://www.sandbox.paypal.com"
                     ]
                 },
                 "admin": {
