@@ -615,14 +615,14 @@
         },
         {
             "repo": "Osmium-Services/osmium-geocoder",
-            "tag": "v1.1.0",
-            "commitSha": "8ca109e2f16916f1cd70a3a7dad49bebe1ee61f0",
-            "pushedAt": "2026-10-26T12:40:52Z",
+            "tag": "v1.1.1",
+            "commitSha": "cc9b5d87dc2d08564a93dd25a428f4a9cfb8fbee",
+            "pushedAt": "2026-10-26T12:44:35Z",
             "manifest": {
                 "id": "geocoder",
                 "name": "Postcode Geocoder",
-                "version": "1.1.0",
-                "description": "Looks up a UK postcode's lat/lng via postcodes.io - a pure capability with no admin page of its own, for other services to depend on, and fills the coordinates when Company > Location is saved",
+                "version": "1.1.1",
+                "description": "Looks up a UK postcode's lat/lng via postcodes.io - a pure capability with no admin page of its own, for other services to depend on",
                 "category": "developer",
                 "author": {
                     "name": "Gavin Cox"
@@ -635,12 +635,7 @@
                 },
                 "autoload": [
                     "models"
-                ],
-                "hooks": {
-                    "location.geocode": [
-                        "Osmium\\Services\\Geocoder\\Models\\GeocoderHooks::geocode"
-                    ]
-                }
+                ]
             }
         },
         {
@@ -2035,13 +2030,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-schema",
-            "tag": "v0.7.0",
-            "commitSha": "a024c51fcf45739622db6f24c6efc8ea64c2b8bf",
-            "pushedAt": "2026-10-26T12:41:03Z",
+            "tag": "v0.8.0",
+            "commitSha": "64ac7b9e3054e1c3588ff5572e98b48e18faa3cb",
+            "pushedAt": "2026-10-26T12:44:43Z",
             "manifest": {
                 "id": "schema",
                 "name": "Osmium Schema",
-                "version": "0.7.0",
+                "version": "0.8.0",
                 "description": "Site-wide structured data: Organization or LocalBusiness (address and opening hours from Company > Location, contact point, and geo looked up from the postcode) and WebSite, as JSON-LD with fixed @ids other services can reference",
                 "category": "marketing-analytics",
                 "author": {
@@ -2051,7 +2046,9 @@
                 "requires": {
                     "osmium": ">=1.0.0",
                     "php": ">=8.1",
-                    "services": []
+                    "services": [
+                        "geocoder"
+                    ]
                 },
                 "autoload": [
                     "models"
