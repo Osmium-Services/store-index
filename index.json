@@ -190,16 +190,20 @@
         },
         {
             "repo": "Osmium-Services/osmium-brevo",
-            "tag": "v1.2.2",
-            "commitSha": "79383d059f057d6024367a1e20ab47fe7b712114",
-            "pushedAt": "2026-10-27T16:06:23Z",
+            "tag": "v1.2.3",
+            "commitSha": "f3545dc4d62d20a8ace31ba63339f5dd219dd27c",
+            "pushedAt": "2026-10-27T16:36:29Z",
             "manifest": {
                 "id": "brevo",
                 "name": "Brevo",
-                "version": "1.2.2",
+                "version": "1.2.3",
                 "description": "Send site email through Brevo's HTTP API, and add newsletter signups to a Brevo list. A generous free plan, and useful where hosting blocks outbound SMTP. Appears as a provider on the Email settings page.",
                 "category": "email",
                 "website": "https://www.brevo.com",
+                "account": {
+                    "required": "free",
+                    "note": "Free plan available; paid plans for higher volume."
+                },
                 "author": {
                     "name": "Gavin Cox"
                 },
@@ -252,16 +256,19 @@
         },
         {
             "repo": "Osmium-Services/osmium-clarity",
-            "tag": "v1.1.3",
-            "commitSha": "cd3497baefdef14e1af8890235b6ee1a9e21771e",
-            "pushedAt": "2026-10-27T16:06:26Z",
+            "tag": "v1.1.4",
+            "commitSha": "62d6cfe6af6647840fdfbd6c38918ab5d5398ffc",
+            "pushedAt": "2026-10-27T16:36:03Z",
             "manifest": {
                 "id": "clarity",
                 "name": "Microsoft Clarity",
-                "version": "1.1.3",
+                "version": "1.1.4",
                 "description": "Microsoft Clarity heatmaps and session recordings - free, consent-gated, gated on an admin-editable toggle and production-only; requires the Cookie Consent service",
                 "category": "marketing-analytics",
                 "website": "https://clarity.microsoft.com",
+                "account": {
+                    "required": "free"
+                },
                 "author": {
                     "name": "Gavin Cox"
                 },
@@ -536,16 +543,20 @@
         },
         {
             "repo": "Osmium-Services/osmium-freeagent",
-            "tag": "v1.2.2",
-            "commitSha": "e4ed35f0a8aef66e2d76e722ca0e40f8b3a63163",
-            "pushedAt": "2026-10-27T16:06:30Z",
+            "tag": "v1.2.3",
+            "commitSha": "6897664e56d72ac3326dd47f2af7341a42faae84",
+            "pushedAt": "2026-10-27T16:35:35Z",
             "manifest": {
                 "id": "freeagent",
                 "name": "FreeAgent",
-                "version": "1.2.2",
+                "version": "1.2.3",
                 "description": "Connects the shop to FreeAgent (OAuth2) and adds a 'Push to FreeAgent' button on paid orders that creates a sales invoice. Locked to one named FreeAgent company",
                 "category": "business",
                 "website": "https://www.freeagent.com",
+                "account": {
+                    "required": "paid",
+                    "note": "Needs a FreeAgent subscription."
+                },
                 "author": {
                     "name": "Gavin Cox"
                 },
@@ -644,16 +655,19 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-analytics",
-            "tag": "v2.0.5",
-            "commitSha": "a1133326cc5b5e87c2d6f49c475d8d69c68a0af0",
-            "pushedAt": "2026-10-27T16:06:34Z",
+            "tag": "v2.0.6",
+            "commitSha": "d8285e536918a76da345bb3549586c79cfb2e41a",
+            "pushedAt": "2026-10-27T16:36:11Z",
             "manifest": {
                 "id": "google-analytics",
                 "name": "Google Analytics",
-                "version": "2.0.5",
+                "version": "2.0.6",
                 "description": "Google Tag Manager / GA4 loading with Consent Mode v2, gated on an admin-editable toggle and production-only; requires the Cookie Consent service",
                 "category": "marketing-analytics",
                 "website": "https://marketingplatform.google.com/about/analytics/",
+                "account": {
+                    "required": "free"
+                },
                 "author": {
                     "name": "Gavin Cox"
                 },
@@ -719,16 +733,20 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-maps",
-            "tag": "v1.0.4",
-            "commitSha": "0cda51b30dd7215ebb8b9e9a01361d955bc379f2",
-            "pushedAt": "2026-10-27T16:06:37Z",
+            "tag": "v1.0.6",
+            "commitSha": "fd6faa121fc02a86ad95fa36ba5271266786e03b",
+            "pushedAt": "2026-10-27T16:39:19Z",
             "manifest": {
                 "id": "google-maps",
                 "name": "Google Maps",
-                "version": "1.0.4",
+                "version": "1.0.6",
                 "description": "Draws a map of pins (clustered, with a fullscreen button) on Google Maps, for a theme to place anywhere - the Google counterpart of Leaflet Maps, taking the same pin list. Needs your own API key (billing account); loads Google only after cookie consent",
                 "category": "developer",
                 "website": "https://mapsplatform.google.com",
+                "account": {
+                    "required": "free",
+                    "note": "Needs a Google Cloud billing account (card on file). Google's free monthly allowance covers a small site; usage beyond it is billed."
+                },
                 "author": {
                     "name": "Gavin Cox"
                 },
@@ -802,16 +820,20 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-maps-embed",
-            "tag": "v2.1.1",
-            "commitSha": "abf4d982334b26195a44f24cce160afa01355708",
-            "pushedAt": "2026-10-27T16:06:40Z",
+            "tag": "v2.1.3",
+            "commitSha": "1f0bf187d03202c0816d40add7c4abf9d1b73396",
+            "pushedAt": "2026-10-27T16:39:22Z",
             "manifest": {
                 "id": "google-maps-embed",
                 "name": "Google Maps Embed",
-                "version": "2.1.1",
+                "version": "2.1.3",
                 "description": "Google Maps Embed (a single place in an iframe): named maps managed in admin, for a theme to show anywhere, found by slug",
                 "category": "content",
                 "website": "https://developers.google.com/maps/documentation/embed",
+                "account": {
+                    "required": "free",
+                    "note": "Needs a Google Cloud billing account (card on file); Embed requests themselves are free."
+                },
                 "author": {
                     "name": "Gavin Cox"
                 },
@@ -871,16 +893,19 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-merchant-center",
-            "tag": "v1.2.2",
-            "commitSha": "90cb7e122627b523be611b14ba97fa9961504a0b",
-            "pushedAt": "2026-10-27T16:06:44Z",
+            "tag": "v1.2.3",
+            "commitSha": "7e40d1a59eb75a9a46fbe63f991d0958fe6da1ce",
+            "pushedAt": "2026-10-27T16:36:14Z",
             "manifest": {
                 "id": "google-merchant-center",
                 "name": "Google Merchant Center",
-                "version": "1.2.2",
+                "version": "1.2.3",
                 "description": "Pushes product data to Google Merchant Center (Merchant API) whenever a product is saved, status-changed or removed. Service-account auth, admin-editable credentials, test connection and one-click full sync",
                 "category": "marketing-analytics",
                 "website": "https://merchants.google.com",
+                "account": {
+                    "required": "free"
+                },
                 "author": {
                     "name": "Gavin Cox"
                 },
@@ -934,13 +959,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-reviews",
-            "tag": "v1.1.2",
-            "commitSha": "1a1d0b88f6b3e9e2b22dd1a0f05a72d211da1b92",
-            "pushedAt": "2026-10-27T16:06:48Z",
+            "tag": "v1.1.4",
+            "commitSha": "d348c7e544ac3a930d28ab05b10c916e3bb197fe",
+            "pushedAt": "2026-10-27T16:39:05Z",
             "manifest": {
                 "id": "google-reviews",
                 "name": "Google Reviews",
-                "version": "1.1.2",
+                "version": "1.1.4",
                 "description": "Hand-curated Google review admin CRUD and homepage social-proof widget model",
                 "category": "marketing-analytics",
                 "website": "https://business.google.com",
@@ -989,16 +1014,19 @@
         },
         {
             "repo": "Osmium-Services/osmium-hcaptcha",
-            "tag": "v1.1.3",
-            "commitSha": "148bf3eeaa877842638c0ebc9eb03ea97a7a06c5",
-            "pushedAt": "2026-10-27T16:06:52Z",
+            "tag": "v1.1.4",
+            "commitSha": "70d96791ae036faa898b7d919fc8171b3733bec9",
+            "pushedAt": "2026-10-27T16:35:53Z",
             "manifest": {
                 "id": "hcaptcha",
                 "name": "hCaptcha",
-                "version": "1.1.3",
+                "version": "1.1.4",
                 "description": "Spam protection for forms via hCaptcha - a privacy-focused alternative to Google reCAPTCHA and Cloudflare Turnstile, admin-editable site/secret key",
                 "category": "security-privacy",
                 "website": "https://www.hcaptcha.com",
+                "account": {
+                    "required": "free"
+                },
                 "author": {
                     "name": "Gavin Cox"
                 },
@@ -1116,16 +1144,20 @@
         },
         {
             "repo": "Osmium-Services/osmium-mailgun",
-            "tag": "v1.1.2",
-            "commitSha": "998a725f3d1e2cb4a36c8af89681316e1abd792c",
-            "pushedAt": "2026-10-27T16:06:59Z",
+            "tag": "v1.1.3",
+            "commitSha": "c6aecaa3c81b7c46a739fe720c92786c98b9f066",
+            "pushedAt": "2026-10-27T16:36:33Z",
             "manifest": {
                 "id": "mailgun",
                 "name": "Mailgun",
-                "version": "1.1.2",
+                "version": "1.1.3",
                 "description": "Send site email through Mailgun's HTTP API - useful where hosting blocks outbound SMTP. Appears as a provider on the Email settings page.",
                 "category": "email",
                 "website": "https://www.mailgun.com",
+                "account": {
+                    "required": "free",
+                    "note": "Free plan available; paid plans for higher volume."
+                },
                 "author": {
                     "name": "Gavin Cox"
                 },
@@ -1173,16 +1205,20 @@
         },
         {
             "repo": "Osmium-Services/osmium-mailjet",
-            "tag": "v1.1.2",
-            "commitSha": "84913b3fce7639309dabad5526e5c638aef1636b",
-            "pushedAt": "2026-10-27T16:07:03Z",
+            "tag": "v1.1.3",
+            "commitSha": "3981990b3905abd1a245991830d46b58c3b399d5",
+            "pushedAt": "2026-10-27T16:36:36Z",
             "manifest": {
                 "id": "mailjet",
                 "name": "Mailjet",
-                "version": "1.1.2",
+                "version": "1.1.3",
                 "description": "Send site email through Mailjet's HTTP API - a free plan of 6,000 emails a month, and useful where hosting blocks outbound SMTP. Appears as a provider on the Email settings page.",
                 "category": "email",
                 "website": "https://www.mailjet.com",
+                "account": {
+                    "required": "free",
+                    "note": "Free plan available; paid plans for higher volume."
+                },
                 "author": {
                     "name": "Gavin Cox"
                 },
@@ -1230,16 +1266,20 @@
         },
         {
             "repo": "Osmium-Services/osmium-mailtrap",
-            "tag": "v1.1.2",
-            "commitSha": "e5b944ab9f694741b82f924cb79cc95d16728d05",
-            "pushedAt": "2026-10-27T16:07:06Z",
+            "tag": "v1.1.3",
+            "commitSha": "62310f04e78ce79b4c4bb16e08313fb564b70a41",
+            "pushedAt": "2026-10-27T16:36:43Z",
             "manifest": {
                 "id": "mailtrap",
                 "name": "Mailtrap",
-                "version": "1.1.2",
+                "version": "1.1.3",
                 "description": "Send site email through Mailtrap - live sending, or a sandbox inbox that catches every email so nothing reaches real customers while testing. Appears as a provider on the Email settings page.",
                 "category": "email",
                 "website": "https://mailtrap.io",
+                "account": {
+                    "required": "free",
+                    "note": "Free plan available; paid plans for higher volume."
+                },
                 "author": {
                     "name": "Gavin Cox"
                 },
@@ -1357,16 +1397,19 @@
         },
         {
             "repo": "Osmium-Services/osmium-meta-pixel",
-            "tag": "v1.2.5",
-            "commitSha": "03ddaff936328cd988e7a9e73c847d69e943a680",
-            "pushedAt": "2026-10-27T16:07:13Z",
+            "tag": "v1.2.6",
+            "commitSha": "4e3f71ac54322f91b76e412cad67a8b65031cd20",
+            "pushedAt": "2026-10-27T16:36:07Z",
             "manifest": {
                 "id": "meta-pixel",
                 "name": "Meta Pixel",
-                "version": "1.2.5",
+                "version": "1.2.6",
                 "description": "Meta (Facebook/Instagram) Pixel PageView plus optional shop events (ViewContent, AddToCart, Purchase) and server-side Purchase, consent-gated, gated on an admin-editable toggle and production-only; requires the Cookie Consent service",
                 "category": "marketing-analytics",
                 "website": "https://www.facebook.com/business/tools/meta-pixel",
+                "account": {
+                    "required": "free"
+                },
                 "author": {
                     "name": "Gavin Cox"
                 },
@@ -1437,16 +1480,20 @@
         },
         {
             "repo": "Osmium-Services/osmium-microsoft-graph",
-            "tag": "v1.1.2",
-            "commitSha": "560b191d60695843726a21a45fb6cb091281048a",
-            "pushedAt": "2026-10-27T16:07:17Z",
+            "tag": "v1.1.3",
+            "commitSha": "f832bc2f7fc4ee62a5bb246304a906063d476744",
+            "pushedAt": "2026-10-27T16:35:39Z",
             "manifest": {
                 "id": "microsoft-graph",
                 "name": "Microsoft 365 Mail",
-                "version": "1.1.2",
+                "version": "1.1.3",
                 "description": "Send site email through the Microsoft Graph API using an Azure AD app registration - for Microsoft 365 tenants that have disabled SMTP AUTH. Appears as a provider on the Email settings page.",
                 "category": "email",
                 "website": "https://www.microsoft.com/microsoft-365",
+                "account": {
+                    "required": "paid",
+                    "note": "Needs a Microsoft 365 mailbox."
+                },
                 "author": {
                     "name": "Gavin Cox"
                 },
@@ -1494,16 +1541,20 @@
         },
         {
             "repo": "Osmium-Services/osmium-paypal",
-            "tag": "v1.4.4",
-            "commitSha": "12418c8146d2ba8dacb0181e553a15c86ae36000",
-            "pushedAt": "2026-10-27T16:07:20Z",
+            "tag": "v1.4.5",
+            "commitSha": "e1692d665beb615bfcd644443f27a25331f5d200",
+            "pushedAt": "2026-10-27T16:36:51Z",
             "manifest": {
                 "id": "paypal",
                 "name": "PayPal",
-                "version": "1.4.4",
+                "version": "1.4.5",
                 "description": "Takes PayPal payments at checkout (Orders v2, server-side capture), with a signature-verified webhook to reconcile orders. Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "website": "https://www.paypal.com",
+                "account": {
+                    "required": "free",
+                    "note": "Free to open; fees are charged per payment."
+                },
                 "author": {
                     "name": "Gavin Cox"
                 },
@@ -1582,16 +1633,20 @@
         },
         {
             "repo": "Osmium-Services/osmium-quickbooks",
-            "tag": "v1.1.2",
-            "commitSha": "1ca0af233bd0942115ab4d13e7924d0b166ecb14",
-            "pushedAt": "2026-10-27T16:07:24Z",
+            "tag": "v1.1.3",
+            "commitSha": "7e730bf876b96bc4e6c99d3d868884f66debf548",
+            "pushedAt": "2026-10-27T16:35:27Z",
             "manifest": {
                 "id": "quickbooks",
                 "name": "QuickBooks",
-                "version": "1.1.2",
+                "version": "1.1.3",
                 "description": "Connects the shop to QuickBooks (OAuth2) and adds a 'Push to QuickBooks' button on paid orders that creates a sales invoice. Locked to one named QuickBooks company",
                 "category": "business",
                 "website": "https://quickbooks.intuit.com",
+                "account": {
+                    "required": "paid",
+                    "note": "Needs a QuickBooks Online subscription."
+                },
                 "author": {
                     "name": "Gavin Cox"
                 },
@@ -1664,16 +1719,20 @@
         },
         {
             "repo": "Osmium-Services/osmium-recaptcha",
-            "tag": "v1.1.3",
-            "commitSha": "896c7765fa1ed4a39762a77d1b16d53daef83fd2",
-            "pushedAt": "2026-10-27T16:07:27Z",
+            "tag": "v1.1.5",
+            "commitSha": "bb239d6699116d5abf4e070e8442b2241230c6b0",
+            "pushedAt": "2026-10-27T16:39:08Z",
             "manifest": {
                 "id": "recaptcha",
                 "name": "Google reCAPTCHA v3",
-                "version": "1.1.3",
+                "version": "1.1.5",
                 "description": "Spam protection for forms via Google reCAPTCHA v3 - score-based, invisible by default, admin-editable site/secret key and score threshold",
                 "category": "security-privacy",
                 "website": "https://www.google.com/recaptcha/about/",
+                "account": {
+                    "required": "free",
+                    "note": "Free up to 10,000 assessments a month; above that the Google Cloud project needs billing enabled."
+                },
                 "author": {
                     "name": "Gavin Cox"
                 },
@@ -1744,16 +1803,20 @@
         },
         {
             "repo": "Osmium-Services/osmium-resend",
-            "tag": "v1.1.2",
-            "commitSha": "660a98d8f7120d29eeecff11d24be0b3e28bd80d",
-            "pushedAt": "2026-10-27T16:07:30Z",
+            "tag": "v1.1.3",
+            "commitSha": "786ba7e6d1b6d0a4ea46dbbb8f4a16e668cffb89",
+            "pushedAt": "2026-10-27T16:36:39Z",
             "manifest": {
                 "id": "resend",
                 "name": "Resend",
-                "version": "1.1.2",
+                "version": "1.1.3",
                 "description": "Send site email through Resend's HTTP API - a simple developer-friendly API with a free plan, and useful where hosting blocks outbound SMTP. Appears as a provider on the Email settings page.",
                 "category": "email",
                 "website": "https://resend.com",
+                "account": {
+                    "required": "free",
+                    "note": "Free plan available; paid plans for higher volume."
+                },
                 "author": {
                     "name": "Gavin Cox"
                 },
@@ -1970,16 +2033,20 @@
         },
         {
             "repo": "Osmium-Services/osmium-sage",
-            "tag": "v1.1.2",
-            "commitSha": "94692adadeb79622cf237c64dd55d92701d7326d",
-            "pushedAt": "2026-10-27T16:07:34Z",
+            "tag": "v1.1.4",
+            "commitSha": "c9e50114968b80bbc90c710bc537787820d61746",
+            "pushedAt": "2026-10-27T16:39:15Z",
             "manifest": {
                 "id": "sage",
                 "name": "Sage Accounting",
-                "version": "1.1.2",
+                "version": "1.1.4",
                 "description": "Connects the shop to Sage Accounting (OAuth2) and adds a 'Push to Sage' button on paid orders that creates a sales invoice. Locked to one named Sage business",
                 "category": "business",
                 "website": "https://www.sage.com",
+                "account": {
+                    "required": "paid",
+                    "note": "Needs a Sage Accounting subscription. Creating sales invoices works on every Sage plan."
+                },
                 "author": {
                     "name": "Gavin Cox"
                 },
@@ -2682,16 +2749,20 @@
         },
         {
             "repo": "Osmium-Services/osmium-sinch",
-            "tag": "v1.0.2",
-            "commitSha": "ab1b6ce0e34948a03d405f6b614c51573a48819a",
-            "pushedAt": "2026-10-27T16:07:37Z",
+            "tag": "v1.0.3",
+            "commitSha": "2cb444b79bd9f15ef68d118546ad854bc8481469",
+            "pushedAt": "2026-10-27T16:35:49Z",
             "manifest": {
                 "id": "sinch",
                 "name": "Sinch SMS",
-                "version": "1.0.2",
+                "version": "1.0.3",
                 "description": "Send SMS through Sinch's SMS REST API. Admin-editable credentials and sender, plus a test-text button. A capability for core and other services: answers the sms.providers and sms.send hooks",
                 "category": "sms",
                 "website": "https://www.sinch.com",
+                "account": {
+                    "required": "paid",
+                    "note": "Needs a Sinch account; messages are billed per SMS."
+                },
                 "author": {
                     "name": "Gavin Cox"
                 },
@@ -2804,16 +2875,20 @@
         },
         {
             "repo": "Osmium-Services/osmium-square",
-            "tag": "v1.1.5",
-            "commitSha": "cdf2cf7cafa8d4e33880bea59717b76e080baa99",
-            "pushedAt": "2026-10-27T16:07:41Z",
+            "tag": "v1.1.6",
+            "commitSha": "c4ca44e05a87380137a0bb586e1d4406fef855c9",
+            "pushedAt": "2026-10-27T16:36:55Z",
             "manifest": {
                 "id": "square",
                 "name": "Square",
-                "version": "1.1.5",
+                "version": "1.1.6",
                 "description": "Takes card payments at checkout through Square (Web Payments SDK card form on your own page, charged server-side with the CreatePayment API). Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "website": "https://squareup.com",
+                "account": {
+                    "required": "free",
+                    "note": "Free to open; fees are charged per payment."
+                },
                 "author": {
                     "name": "Gavin Cox"
                 },
@@ -3018,16 +3093,20 @@
         },
         {
             "repo": "Osmium-Services/osmium-stripe",
-            "tag": "v1.2.6",
-            "commitSha": "6acd00f95194486615ec1bc4d89ae97f84925000",
-            "pushedAt": "2026-10-27T16:07:44Z",
+            "tag": "v1.2.7",
+            "commitSha": "bea1211ba9c85e1de55e52431bbc07b1a07a058f",
+            "pushedAt": "2026-10-27T16:36:48Z",
             "manifest": {
                 "id": "stripe",
                 "name": "Stripe",
-                "version": "1.2.6",
+                "version": "1.2.7",
                 "description": "Takes card payments at checkout through Stripe (PaymentIntents, plus Apple Pay/Google Pay via the card element), with a signature-verified webhook to reconcile orders. Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "website": "https://stripe.com",
+                "account": {
+                    "required": "free",
+                    "note": "Free to open; fees are charged per payment."
+                },
                 "author": {
                     "name": "Gavin Cox"
                 },
@@ -3100,16 +3179,19 @@
         },
         {
             "repo": "Osmium-Services/osmium-turnstile",
-            "tag": "v1.2.2",
-            "commitSha": "7c36a646d71b927727af049aca515bb9b6765142",
-            "pushedAt": "2026-10-27T16:07:48Z",
+            "tag": "v1.2.3",
+            "commitSha": "8b38c7099936894ac2619fa40bc38a74d7ba8bd2",
+            "pushedAt": "2026-10-27T16:35:56Z",
             "manifest": {
                 "id": "turnstile",
                 "name": "Cloudflare Turnstile",
-                "version": "1.2.2",
+                "version": "1.2.3",
                 "description": "Spam protection for forms via Cloudflare Turnstile - free, no DNS dependency, admin-editable site/secret key and widget mode",
                 "category": "security-privacy",
                 "website": "https://www.cloudflare.com/application-services/products/turnstile/",
+                "account": {
+                    "required": "free"
+                },
                 "author": {
                     "name": "Gavin Cox"
                 },
@@ -3169,16 +3251,20 @@
         },
         {
             "repo": "Osmium-Services/osmium-twilio",
-            "tag": "v1.1.3",
-            "commitSha": "7fcdf33415eea3c3bac2e2ade4e56aa7fab1f9c0",
-            "pushedAt": "2026-10-27T16:07:51Z",
+            "tag": "v1.1.4",
+            "commitSha": "4cf3ac3b572f29c1d1ca1fc8ddc19507425b353c",
+            "pushedAt": "2026-10-27T16:35:42Z",
             "manifest": {
                 "id": "twilio",
                 "name": "Twilio SMS",
-                "version": "1.1.3",
+                "version": "1.1.4",
                 "description": "Send SMS through Twilio's Messages API. Admin-editable credentials and sender, plus a test-text button. A capability for core and other services: answers the sms.providers and sms.send hooks",
                 "category": "sms",
                 "website": "https://www.twilio.com",
+                "account": {
+                    "required": "paid",
+                    "note": "Needs a Twilio account; messages are billed per SMS."
+                },
                 "author": {
                     "name": "Gavin Cox"
                 },
@@ -3232,16 +3318,20 @@
         },
         {
             "repo": "Osmium-Services/osmium-vonage",
-            "tag": "v1.0.4",
-            "commitSha": "fe27753ab808e2b693cf0a69ad3095a78dc1e5f6",
-            "pushedAt": "2026-10-27T16:07:55Z",
+            "tag": "v1.0.5",
+            "commitSha": "c98ce2b9148e367e3ce9e31b0a0d933ae461e8e5",
+            "pushedAt": "2026-10-27T16:35:46Z",
             "manifest": {
                 "id": "vonage",
                 "name": "Vonage SMS",
-                "version": "1.0.4",
+                "version": "1.0.5",
                 "description": "Send SMS through Vonage's SMS API. Admin-editable credentials and sender, plus a test-text button. A capability for core and other services: answers the sms.providers and sms.send hooks",
                 "category": "sms",
                 "website": "https://www.vonage.com",
+                "account": {
+                    "required": "paid",
+                    "note": "Needs a Vonage account; messages are billed per SMS."
+                },
                 "author": {
                     "name": "Gavin Cox"
                 },
@@ -3295,16 +3385,20 @@
         },
         {
             "repo": "Osmium-Services/osmium-xero",
-            "tag": "v1.2.2",
-            "commitSha": "35f12415549d08691cd40230eeac39a745fded58",
-            "pushedAt": "2026-10-27T16:07:58Z",
+            "tag": "v1.2.4",
+            "commitSha": "aca7b3fdbe7fe79638b04a0c1b608f1163e5d6a5",
+            "pushedAt": "2026-10-27T16:39:12Z",
             "manifest": {
                 "id": "xero",
                 "name": "Xero",
-                "version": "1.2.2",
+                "version": "1.2.4",
                 "description": "Connects the shop to Xero (OAuth2) and adds a 'Push to Xero' button on paid orders that creates an AUTHORISED sales invoice. Locked to one named Xero organisation",
                 "category": "business",
                 "website": "https://www.xero.com",
+                "account": {
+                    "required": "paid",
+                    "note": "Needs a Xero subscription. Xero's free API tier allows up to 5 connections."
+                },
                 "author": {
                     "name": "Gavin Cox"
                 },
