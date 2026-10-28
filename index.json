@@ -189,6 +189,77 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-bookings",
+            "tag": "v0.1.0",
+            "commitSha": "c32eb06fac906458720d6e29e90aa2528a78fd2a",
+            "pushedAt": "2026-10-28T16:57:58Z",
+            "manifest": {
+                "id": "osmium-bookings",
+                "name": "Osmium Bookings",
+                "version": "0.1.0",
+                "description": "Appointment requests the business confirms or declines: things to book, who or what is booked, opening hours, emails and calendar links, with hooks so a calendar service can follow along",
+                "category": "business",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "migrations": "migrations/",
+                "hooks": {
+                    "dashboard.widgets": [
+                        "Osmium\\Services\\OsmiumBookings\\Models\\BookingDashboard::widget"
+                    ]
+                },
+                "api": {
+                    "routes": {
+                        "api/bookings": "controllers/submit.php",
+                        "api/bookings-calendar": "controllers/calendar.php"
+                    },
+                    "external": [
+                        "api/bookings-calendar"
+                    ]
+                },
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "osmium-bookings",
+                                "label": "Osmium Bookings",
+                                "icon": "bx bx-calendar-check",
+                                "route": "admin/bookings",
+                                "activePattern": "admin/bookings*",
+                                "role": "admin"
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/bookings": {
+                            "controller": "controllers/BookingsController.php",
+                            "class": "Osmium\\Services\\OsmiumBookings\\Controllers\\BookingsController",
+                            "method": "index",
+                            "title": "Osmium Bookings"
+                        },
+                        "admin/bookings/action": {
+                            "controller": "controllers/BookingsController.php",
+                            "class": "Osmium\\Services\\OsmiumBookings\\Controllers\\BookingsController",
+                            "method": "action"
+                        }
+                    }
+                },
+                "setup": {
+                    "postInstallNote": "Under Content > Osmium Bookings add the things that can be booked (with their length), optionally the people or places they are booked with, and set the opening hours, notice and who is emailed. The service ships no form: a theme builds one that posts to /api/bookings (with a trailing slash if the site uses them) with the fields type_id, resource_id (optional), date (YYYY-MM-DD), time (HH:MM), name, email, phone (optional), notes (optional), the form token and the empty zip honeypot, and reads what it needs from $bookings = new \\Osmium\\Services\\OsmiumBookings\\Models\\Bookings($this->osmium->dataSource): types(), resources(), rules() and pullNotice() (status sent or failed, and a message, shown once). Requests are emailed to the customer and to the addresses in the settings; the owner confirms or declines in the admin. A confirmed booking's email links to Google Calendar and to an .ics file. Other services follow along through the hooks booking.requested, booking.confirmed, booking.changed, booking.declined and booking.cancelled (payload: booking, bookingId, dataSource, osmium)."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-brevo",
             "tag": "v1.2.3",
             "commitSha": "f3545dc4d62d20a8ace31ba63339f5dd219dd27c",
