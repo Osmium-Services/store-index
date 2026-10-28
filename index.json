@@ -103,14 +103,14 @@
         },
         {
             "repo": "Osmium-Services/osmium-appointments",
-            "tag": "v0.4.0",
-            "commitSha": "113459910716fce650bb0a18a90e9208348c79e3",
-            "pushedAt": "2026-10-28T18:58:12Z",
+            "tag": "v0.5.0",
+            "commitSha": "a0ccf5b06dada9eb9fc06171312ccc2270119a86",
+            "pushedAt": "2026-10-28T19:16:09Z",
             "manifest": {
                 "id": "osmium-appointments",
                 "name": "Osmium Appointments",
-                "version": "0.4.0",
-                "description": "Appointment requests the business confirms or declines: things to book, who or what is booked, opening hours, emails and calendar links, with hooks so a calendar service can follow along",
+                "version": "0.5.0",
+                "description": "Appointment requests the business confirms or declines, for one customer at a time per person or booth (hairdressers, tanning, dentists, physios): things to book, who or what is booked, opening hours, time off, clean-up time, emails and calendar links, with hooks so a calendar service can follow along",
                 "category": "business",
                 "author": {
                     "name": "Gavin Cox"
