@@ -1144,13 +1144,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-links",
-            "tag": "v0.1.2",
-            "commitSha": "411f4166a1aab0afbda813533e4a52814ea900bc",
-            "pushedAt": "2026-10-28T15:36:51Z",
+            "tag": "v0.1.3",
+            "commitSha": "8740ab3cd1c35514c483b062eac3807351a7112e",
+            "pushedAt": "2026-10-28T15:46:29Z",
             "manifest": {
                 "id": "osmium-links",
                 "name": "Osmium Links",
-                "version": "0.1.2",
+                "version": "0.1.3",
                 "description": "A list of external links (name, address, short description, logo) managed in admin, optionally in groups, for a theme to show anywhere",
                 "category": "content",
                 "author": {
