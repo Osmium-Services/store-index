@@ -733,15 +733,15 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-maps",
-            "tag": "v1.0.6",
-            "commitSha": "fd6faa121fc02a86ad95fa36ba5271266786e03b",
-            "pushedAt": "2026-10-27T16:39:19Z",
+            "tag": "v1.0.7",
+            "commitSha": "6341714dd9fe738e3449b04b14a93a1f1e10138a",
+            "pushedAt": "2026-10-28T12:28:10Z",
             "manifest": {
                 "id": "google-maps",
                 "name": "Google Maps",
-                "version": "1.0.6",
+                "version": "1.0.7",
                 "description": "Draws a map of pins (clustered, with a fullscreen button) on Google Maps, for a theme to place anywhere - the Google counterpart of Leaflet Maps, taking the same pin list. Needs your own API key (billing account); loads Google only after cookie consent",
-                "category": "developer",
+                "category": "content",
                 "website": "https://mapsplatform.google.com",
                 "account": {
                     "required": "free",
@@ -1104,15 +1104,15 @@
         },
         {
             "repo": "Osmium-Services/osmium-leaflet-maps",
-            "tag": "v1.1.3",
-            "commitSha": "186016f775656703dd230a1d5d6489f0bf2eb14a",
-            "pushedAt": "2026-10-27T16:06:56Z",
+            "tag": "v1.1.4",
+            "commitSha": "23ec29fa4d700f9576e6ee76ecf186175ca0a340",
+            "pushedAt": "2026-10-28T12:28:12Z",
             "manifest": {
                 "id": "leaflet-maps",
                 "name": "Leaflet Maps",
-                "version": "1.1.3",
+                "version": "1.1.4",
                 "description": "Draws a map of pins (clustered, with a fullscreen button) from OpenStreetMap tiles using a bundled Leaflet, for a theme to place anywhere - no API key, no cookies",
-                "category": "developer",
+                "category": "content",
                 "website": "https://leafletjs.com",
                 "author": {
                     "name": "Gavin Cox"
