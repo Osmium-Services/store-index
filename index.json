@@ -1246,6 +1246,92 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-hire",
+            "tag": "v0.1.1",
+            "commitSha": "2a5549a6a39c46bf7b22d9d07052766336218ce4",
+            "pushedAt": "2026-10-28T19:58:20Z",
+            "manifest": {
+                "id": "osmium-hire",
+                "name": "Osmium Hire",
+                "version": "0.1.1",
+                "description": "Equipment hire for whole days: groups of individual items (a 3 tonne digger, a van), turnaround days after each hire, out-of-service dates, request-and-confirm with collection and return details, a per-item planner, emails and calendar links, with hooks so other services can follow along",
+                "category": "business",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "migrations": "migrations/",
+                "hooks": {
+                    "dashboard.widgets": [
+                        "Osmium\\Services\\OsmiumHire\\Models\\HireDashboard::widget"
+                    ]
+                },
+                "api": {
+                    "routes": {
+                        "api/hire": "controllers/submit.php",
+                        "api/hire-calendar": "controllers/calendar.php"
+                    },
+                    "external": [
+                        "api/hire-calendar"
+                    ]
+                },
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "hire",
+                                "label": "Hire",
+                                "icon": "bx bx-package",
+                                "placement": "top",
+                                "route": "admin/hire",
+                                "activePattern": "admin/hire*",
+                                "role": null
+                            },
+                            {
+                                "id": "settings",
+                                "label": "Osmium Hire",
+                                "icon": "bx bx-package",
+                                "route": "admin/settings/hire",
+                                "activePattern": "admin/settings/hire",
+                                "role": "admin"
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/hire": {
+                            "controller": "controllers/HireController.php",
+                            "class": "Osmium\\Services\\OsmiumHire\\Controllers\\HireController",
+                            "method": "index",
+                            "title": "Hire"
+                        },
+                        "admin/hire/action": {
+                            "controller": "controllers/HireController.php",
+                            "class": "Osmium\\Services\\OsmiumHire\\Controllers\\HireController",
+                            "method": "action"
+                        },
+                        "admin/settings/hire": {
+                            "controller": "controllers/HireController.php",
+                            "class": "Osmium\\Services\\OsmiumHire\\Controllers\\HireController",
+                            "method": "settings",
+                            "title": "Osmium Hire"
+                        }
+                    }
+                },
+                "setup": {
+                    "postInstallNote": "Under Content > Osmium Hire add a group for each thing customers ask for (with its turnaround days and a price to show), then add the individual items in it (with an optional serial number or registration, and any out-of-service dates). Set notice, how far ahead and who is emailed. Opening days come from Company > Location. The service ships no form: a theme builds one that posts to /api/hire with the fields group_id, start and end (YYYY-MM-DD, first and last day), name, email, phone (optional), notes (optional), the form token and the empty zip honeypot, and reads what it needs from $hires = new \\Osmium\\Services\\OsmiumHire\\Models\\Hires($this->osmium->dataSource): groups(), rules() and pullNotice() (status sent or failed, and a message, shown once). No payment is taken. Confirming a hire lets you add collection and return details for the customer's email. Other services follow along through the hooks hire.requested, hire.confirmed, hire.changed, hire.declined and hire.cancelled (payload: hire, hireId, dataSource, osmium)."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-leaflet-maps",
             "tag": "v1.1.4",
             "commitSha": "23ec29fa4d700f9576e6ee76ecf186175ca0a340",
