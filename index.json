@@ -2150,14 +2150,14 @@
         },
         {
             "repo": "Osmium-Services/osmium-reservations",
-            "tag": "v0.1.0",
-            "commitSha": "09a42465de7d4cae971d8dcf5251d81a73d120f0",
-            "pushedAt": "2026-10-28T20:51:13Z",
+            "tag": "v0.4.0",
+            "commitSha": "1c7adaf0cf5e6f037a9926218085b3312ffd9bed",
+            "pushedAt": "2026-10-28T22:22:35Z",
             "manifest": {
                 "id": "osmium-reservations",
                 "name": "Osmium Reservations",
-                "version": "0.1.0",
-                "description": "Table reservation requests the restaurant confirms or declines: tables with seats, party size, opening hours with a break between lunch and dinner, a hidden dining time, emails and calendar links, with hooks so a calendar service can follow along",
+                "version": "0.4.0",
+                "description": "Table reservation requests the restaurant confirms or declines: tables with seats, party size, opening hours with a break between lunch and dinner, a hidden dining time and turnaround, a Live schedule, drag a booking to another table or time (with an email/text prompt), an Arrived step that locks the table, optional automatic answers that book a free table at once and email the nearest free times when full, emails and calendar links, with hooks so a calendar service can follow along",
                 "category": "business",
                 "author": {
                     "name": "Gavin Cox"
