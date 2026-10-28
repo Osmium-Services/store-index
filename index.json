@@ -1143,6 +1143,63 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-links",
+            "tag": "v0.1.0",
+            "commitSha": "a031965007175d2c1416c2252893ddc3382a6470",
+            "pushedAt": "2026-10-28T15:19:57Z",
+            "manifest": {
+                "id": "osmium-links",
+                "name": "Osmium Links",
+                "version": "0.1.0",
+                "description": "A list of external links (name, address, short description, logo) managed in admin, optionally in groups, for a theme to show anywhere",
+                "category": "content",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "migrations": "migrations/",
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "osmium-links",
+                                "label": "Links",
+                                "icon": "bx bx-link",
+                                "route": "admin/links",
+                                "activePattern": "admin/links*",
+                                "role": "admin"
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/links": {
+                            "controller": "controllers/LinksController.php",
+                            "class": "Osmium\\Services\\OsmiumLinks\\Controllers\\LinksController",
+                            "method": "index",
+                            "title": "Links"
+                        },
+                        "admin/links/action": {
+                            "controller": "controllers/LinksController.php",
+                            "class": "Osmium\\Services\\OsmiumLinks\\Controllers\\LinksController",
+                            "method": "action"
+                        }
+                    }
+                },
+                "setup": {
+                    "postInstallNote": "Add links under Content > Links, optionally giving each a group such as Brands or Suppliers. A theme controller reads them: $links = new \\Osmium\\Services\\OsmiumLinks\\Models\\Links($this->osmium->dataSource); $links->all() for one list, or $links->grouped() for group name => links (ungrouped links come first under the key ''). Each link has name, url, description and logo (a site-relative path, or null). The theme prints the markup; add rel=\"noopener\" (and nofollow if wanted) to the anchors. Uploaded logos are saved in assets/images/links/."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-mailgun",
             "tag": "v1.1.3",
             "commitSha": "c6aecaa3c81b7c46a739fe720c92786c98b9f066",
