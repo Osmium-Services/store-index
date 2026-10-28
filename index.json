@@ -255,6 +255,63 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-carousel",
+            "tag": "v0.1.0",
+            "commitSha": "cd0f8283c9807b7ce58f9e9f1f88eabf58d229ec",
+            "pushedAt": "2026-10-28T16:08:26Z",
+            "manifest": {
+                "id": "osmium-carousel",
+                "name": "Osmium Carousel",
+                "version": "0.1.0",
+                "description": "Homepage slides (image, title, text, link) managed in admin with schedules, for a theme to show with any carousel or none",
+                "category": "content",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "migrations": "migrations/",
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "osmium-carousel",
+                                "label": "Osmium Carousel",
+                                "icon": "bx bx-images",
+                                "route": "admin/carousel",
+                                "activePattern": "admin/carousel*",
+                                "role": "admin"
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/carousel": {
+                            "controller": "controllers/CarouselController.php",
+                            "class": "Osmium\\Services\\OsmiumCarousel\\Controllers\\CarouselController",
+                            "method": "index",
+                            "title": "Osmium Carousel"
+                        },
+                        "admin/carousel/action": {
+                            "controller": "controllers/CarouselController.php",
+                            "class": "Osmium\\Services\\OsmiumCarousel\\Controllers\\CarouselController",
+                            "method": "action"
+                        }
+                    }
+                },
+                "setup": {
+                    "postInstallNote": "Set the slide size on Content > Osmium Carousel (default 1920 x 600), then add slides. The service ships no carousel and no markup: a theme controller reads the slides that are live today and prints them with whatever slider it likes: $carousel = new \\Osmium\\Services\\OsmiumCarousel\\Models\\Carousel($this->osmium->dataSource); $slides = $carousel->active(); (slides with no group), or $carousel->active('Offers') for a second carousel made of the slides in the group Offers. Each slide has title, summary, buttonText, url (or null) and image / imageMobile, each with width, height, jpg, webp and avif (webp and avif may be null) for a <picture> element. Uploaded images are saved in assets/images/carousel/."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-clarity",
             "tag": "v1.1.4",
             "commitSha": "62d6cfe6af6647840fdfbd6c38918ab5d5398ffc",
