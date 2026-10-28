@@ -4,13 +4,13 @@
     "services": [
         {
             "repo": "Osmium-Services/osmium-analytics",
-            "tag": "v1.1.8",
-            "commitSha": "19add982e635a9da46c0da52bf757a7e03fa2057",
-            "pushedAt": "2026-10-24T20:26:14Z",
+            "tag": "v1.1.9",
+            "commitSha": "5054e06357c5888ccaa676c5b487d846b1fcffdc",
+            "pushedAt": "2026-10-28T11:00:25Z",
             "manifest": {
                 "id": "osmium-analytics",
                 "name": "Osmium Analytics",
-                "version": "1.1.8",
+                "version": "1.1.9",
                 "description": "Cookieless, first-party visitor statistics: visits, top pages, referrers, device and country, with a retention setting",
                 "category": "marketing-analytics",
                 "author": {
@@ -103,13 +103,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-blog",
-            "tag": "v0.10.2",
-            "commitSha": "78ef74a2118aeebffaf216eda3ae8d0b4c39480d",
-            "pushedAt": "2026-10-24T20:23:55Z",
+            "tag": "v0.10.3",
+            "commitSha": "694bc3aa10a40a3e59d93f94a8d882579369adc9",
+            "pushedAt": "2026-10-28T11:00:27Z",
             "manifest": {
                 "id": "osmium-blog",
                 "name": "Osmium Blog",
-                "version": "0.10.2",
+                "version": "0.10.3",
                 "description": "Blog posts written in admin and published as ordinary pages under /blog/, with the markup supplied by the theme",
                 "category": "content",
                 "author": {
@@ -398,13 +398,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-faqs",
-            "tag": "v1.8.1",
-            "commitSha": "e8eaa4db0bf2ec14e74bebc2ab28b5a0dbc20e56",
-            "pushedAt": "2026-10-23T21:20:48Z",
+            "tag": "v1.8.2",
+            "commitSha": "0699bd22711c74876bdb5461456047de897af95a",
+            "pushedAt": "2026-10-28T11:00:29Z",
             "manifest": {
                 "id": "osmium-faqs",
                 "name": "Osmium FAQs",
-                "version": "1.8.1",
+                "version": "1.8.2",
                 "description": "Named lists of questions and answers managed in admin, for a theme to show anywhere, with FAQPage schema for search engines",
                 "category": "content",
                 "author": {
@@ -820,13 +820,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-maps-embed",
-            "tag": "v2.1.3",
-            "commitSha": "1f0bf187d03202c0816d40add7c4abf9d1b73396",
-            "pushedAt": "2026-10-27T16:39:22Z",
+            "tag": "v2.1.4",
+            "commitSha": "2fc43e7d59080d7d1f07f16b42fb779b0d8af4fa",
+            "pushedAt": "2026-10-28T11:00:30Z",
             "manifest": {
                 "id": "google-maps-embed",
                 "name": "Google Maps Embed",
-                "version": "2.1.3",
+                "version": "2.1.4",
                 "description": "Google Maps Embed (a single place in an iframe): named maps managed in admin, for a theme to show anywhere, found by slug",
                 "category": "content",
                 "website": "https://developers.google.com/maps/documentation/embed",
@@ -959,13 +959,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-reviews",
-            "tag": "v1.1.4",
-            "commitSha": "d348c7e544ac3a930d28ab05b10c916e3bb197fe",
-            "pushedAt": "2026-10-27T16:39:05Z",
+            "tag": "v1.1.5",
+            "commitSha": "f5ec975d5d29244dda399d84df54fe1daaf647b3",
+            "pushedAt": "2026-10-28T11:00:32Z",
             "manifest": {
                 "id": "google-reviews",
                 "name": "Google Reviews",
-                "version": "1.1.4",
+                "version": "1.1.5",
                 "description": "Hand-curated Google review admin CRUD and homepage social-proof widget model",
                 "category": "marketing-analytics",
                 "website": "https://business.google.com",
@@ -1933,13 +1933,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-reviews",
-            "tag": "v0.6.2",
-            "commitSha": "a4a0052f0c578467e91880c516c4afa000da5d04",
-            "pushedAt": "2026-10-24T20:23:59Z",
+            "tag": "v0.6.3",
+            "commitSha": "1dd975dd22db5395dd30fa9cfa77627b86f2d8ba",
+            "pushedAt": "2026-10-28T11:00:34Z",
             "manifest": {
                 "id": "osmium-reviews",
                 "name": "Osmium Reviews",
-                "version": "0.6.2",
+                "version": "0.6.3",
                 "description": "Customer product reviews: a submit endpoint with spam protection, moderation in admin, and review data for the product page",
                 "category": "shop",
                 "author": {
@@ -2180,13 +2180,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-search-analytics",
-            "tag": "v0.3.0",
-            "commitSha": "95654a3cca3974a5860166f55054173eb4dd91a9",
-            "pushedAt": "2026-10-19T09:52:05Z",
+            "tag": "v0.3.1",
+            "commitSha": "b23468b757da5e61d5a0470c4f26d9c282c8a54c",
+            "pushedAt": "2026-10-28T11:00:36Z",
             "manifest": {
                 "id": "osmium-search-analytics",
                 "name": "Osmium Search Analytics",
-                "version": "0.3.0",
+                "version": "0.3.1",
                 "description": "Records what customers search for in the shop, shows the top and zero-result searches in admin, and adds a search synonym in one click from a failed search",
                 "category": "shop",
                 "author": {
@@ -2249,13 +2249,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-shop",
-            "tag": "v0.37.1",
-            "commitSha": "d43cb92495cf66d5afa5b2c6a0a43d1935a251f4",
-            "pushedAt": "2026-10-27T21:51:12Z",
+            "tag": "v0.37.2",
+            "commitSha": "42a0693ae3a87ee1495e57985e859520a3d8063c",
+            "pushedAt": "2026-10-28T11:00:38Z",
             "manifest": {
                 "id": "osmium-shop",
                 "name": "Osmium Shop",
-                "version": "0.37.1",
+                "version": "0.37.2",
                 "description": "The shop: catalogue, baskets, checkout, orders, discounts and the admin screens that run them",
                 "category": "shop",
                 "author": {
@@ -2691,13 +2691,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-shows",
-            "tag": "v1.2.1",
-            "commitSha": "575556f9d1f9350200ca82fae1171441ecd22648",
-            "pushedAt": "2026-10-24T09:08:18Z",
+            "tag": "v1.2.2",
+            "commitSha": "2c264e1338156857838a181715f0a730b2045e83",
+            "pushedAt": "2026-10-28T11:00:40Z",
             "manifest": {
                 "id": "osmium-shows",
                 "name": "Osmium Shows",
-                "version": "1.2.1",
+                "version": "1.2.2",
                 "description": "Curated trade show/event listings with postcode geocoding and logo upload",
                 "category": "content",
                 "author": {
@@ -2977,13 +2977,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-stock-control",
-            "tag": "v0.8.1",
-            "commitSha": "8c1b6e8bdc801ccb2b0b8789905ad59cd1748749",
-            "pushedAt": "2026-10-24T20:38:27Z",
+            "tag": "v0.8.2",
+            "commitSha": "dbac9c3b7b89625983e5076fa8ee00308ae0be91",
+            "pushedAt": "2026-10-28T11:00:42Z",
             "manifest": {
                 "id": "osmium-stock-control",
                 "name": "Osmium Stock Control",
-                "version": "0.8.1",
+                "version": "0.8.2",
                 "description": "Counts stock down when an order is paid, stops customers adding more than is in stock, and treats a kit's parts as stock of their own",
                 "category": "shop",
                 "author": {
