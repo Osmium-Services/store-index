@@ -2149,6 +2149,92 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-reservations",
+            "tag": "v0.1.0",
+            "commitSha": "09a42465de7d4cae971d8dcf5251d81a73d120f0",
+            "pushedAt": "2026-10-28T20:51:13Z",
+            "manifest": {
+                "id": "osmium-reservations",
+                "name": "Osmium Reservations",
+                "version": "0.1.0",
+                "description": "Table reservation requests the restaurant confirms or declines: tables with seats, party size, opening hours with a break between lunch and dinner, a hidden dining time, emails and calendar links, with hooks so a calendar service can follow along",
+                "category": "business",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "migrations": "migrations/",
+                "hooks": {
+                    "dashboard.widgets": [
+                        "Osmium\\Services\\OsmiumReservations\\Models\\ReservationDashboard::widget"
+                    ]
+                },
+                "api": {
+                    "routes": {
+                        "api/reservations": "controllers/submit.php",
+                        "api/reservations-calendar": "controllers/calendar.php"
+                    },
+                    "external": [
+                        "api/reservations-calendar"
+                    ]
+                },
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "reservations",
+                                "label": "Reservations",
+                                "icon": "bx bx-restaurant",
+                                "placement": "top",
+                                "route": "admin/reservations",
+                                "activePattern": "admin/reservations*",
+                                "role": null
+                            },
+                            {
+                                "id": "settings",
+                                "label": "Osmium Reservations",
+                                "icon": "bx bx-restaurant",
+                                "route": "admin/settings/reservations",
+                                "activePattern": "admin/settings/reservations",
+                                "role": "admin"
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/reservations": {
+                            "controller": "controllers/ReservationsController.php",
+                            "class": "Osmium\\Services\\OsmiumReservations\\Controllers\\ReservationsController",
+                            "method": "index",
+                            "title": "Reservations"
+                        },
+                        "admin/reservations/action": {
+                            "controller": "controllers/ReservationsController.php",
+                            "class": "Osmium\\Services\\OsmiumReservations\\Controllers\\ReservationsController",
+                            "method": "action"
+                        },
+                        "admin/settings/reservations": {
+                            "controller": "controllers/ReservationsController.php",
+                            "class": "Osmium\\Services\\OsmiumReservations\\Controllers\\ReservationsController",
+                            "method": "settings",
+                            "title": "Osmium Reservations"
+                        }
+                    }
+                },
+                "setup": {
+                    "postInstallNote": "Under Content > Osmium Reservations add the tables (name and seats) and set the booking rules: dining time (how long a table is held, never shown to customers), smallest and largest party, notice, how far ahead and who is emailed. Opening hours come from Company > Location. The service ships no form: a theme builds one that posts to /api/reservations (with a trailing slash if the site uses them) with the fields party_size, date (YYYY-MM-DD), time (HH:MM), name, email, phone (optional), notes (optional), the form token and the empty zip honeypot, and reads what it needs from $reservations = new \\Osmium\\Services\\OsmiumReservations\\Models\\Reservations($this->osmium->dataSource): rules() and pullNotice() (status sent or failed, and a message, shown once). Requests are emailed to the customer and to the addresses in the settings; the owner confirms or declines in the admin, and confirming gives the booking the smallest free table that fits. A confirmed reservation's email links to Google Calendar and to an .ics file. Other services follow along through the hooks reservation.requested, reservation.confirmed, reservation.changed, reservation.declined and reservation.cancelled (payload: reservation, reservationId, dataSource, osmium)."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-restock-leads",
             "tag": "v0.3.1",
             "commitSha": "48d99b130b94db6692ad9c52e13a6f83ecb7ee7e",
