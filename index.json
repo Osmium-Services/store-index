@@ -1427,13 +1427,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-lacrm",
-            "tag": "v0.2.1",
-            "commitSha": "414fdb741fcf9ab4e44c4753052e5340406c96a5",
-            "pushedAt": "2026-10-29T18:18:54Z",
+            "tag": "v0.3.0",
+            "commitSha": "0a352c08282171f54d2e4645c876194ce7728c14",
+            "pushedAt": "2026-10-29T20:44:19Z",
             "manifest": {
                 "id": "osmium-lacrm",
                 "name": "Less Annoying CRM",
-                "version": "0.2.1",
+                "version": "0.3.0",
                 "description": "Connects the site to Less Annoying CRM: a configurable API connection, a signed webhook receiver, and a local copy of calendar events. Other services use it through hooks, so it needs none of them and none of them are needed by it",
                 "category": "business",
                 "website": "https://www.lessannoyingcrm.com",
@@ -1469,6 +1469,9 @@
                     ],
                     "lacrm.sales.lost": [
                         "Osmium\\Services\\Lacrm\\Models\\LacrmLookup::lostContacts"
+                    ],
+                    "dashboard.widgets": [
+                        "Osmium\\Services\\Lacrm\\Models\\LacrmDashboard::widget"
                     ]
                 },
                 "admin": {
@@ -1482,6 +1485,14 @@
                                 "route": "admin/settings/lacrm",
                                 "activePattern": "admin/settings/lacrm*",
                                 "role": null
+                            },
+                            {
+                                "id": "lacrm-events",
+                                "label": "LACRM Calendar",
+                                "icon": "bx bx-calendar",
+                                "route": "admin/lacrm/events",
+                                "activePattern": "admin/lacrm/events*",
+                                "role": null
                             }
                         ]
                     },
@@ -1491,6 +1502,17 @@
                             "class": "Osmium\\Services\\Lacrm\\Controllers\\LacrmController",
                             "method": "index",
                             "title": "Less Annoying CRM"
+                        },
+                        "admin/lacrm/events": {
+                            "controller": "controllers/LacrmEventsController.php",
+                            "class": "Osmium\\Services\\Lacrm\\Controllers\\LacrmEventsController",
+                            "method": "index",
+                            "title": "LACRM Calendar Events"
+                        },
+                        "admin/lacrm/events/action": {
+                            "controller": "controllers/LacrmEventsController.php",
+                            "class": "Osmium\\Services\\Lacrm\\Controllers\\LacrmEventsController",
+                            "method": "action"
                         }
                     }
                 },
@@ -3730,13 +3752,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-trade-accounts",
-            "tag": "v0.2.5",
-            "commitSha": "df46aef2676e1446ba570114924b215bef65c544",
-            "pushedAt": "2026-10-29T20:35:36Z",
+            "tag": "v0.3.0",
+            "commitSha": "6f9187cfa4ac5e5d6541735f7798e0ef6f6355e9",
+            "pushedAt": "2026-10-29T20:44:22Z",
             "manifest": {
                 "id": "osmium-trade-accounts",
                 "name": "Trade Accounts",
-                "version": "0.2.5",
+                "version": "0.3.0",
                 "description": "B2B trade customer accounts: a status workflow, admin, and passwordless login. Customers come from your own admin or from a chosen source such as a CRM, through neutral hooks. Needs no shop and no CRM",
                 "category": "business",
                 "author": {
@@ -3797,6 +3819,9 @@
                     ],
                     "lacrm.contact.updated": [
                         "Osmium\\Services\\TradeAccounts\\Models\\TradeLacrmHooks::contactUpdated"
+                    ],
+                    "crm.contacts.linked": [
+                        "Osmium\\Services\\TradeAccounts\\Models\\TradeLinkedCustomers::answer"
                     ]
                 },
                 "admin": {
