@@ -1427,13 +1427,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-lacrm",
-            "tag": "v0.2.0",
-            "commitSha": "cb51f764da9a3cb56a9748ca0634a4edf9f8033f",
-            "pushedAt": "2026-10-29T18:15:40Z",
+            "tag": "v0.2.1",
+            "commitSha": "414fdb741fcf9ab4e44c4753052e5340406c96a5",
+            "pushedAt": "2026-10-29T18:18:54Z",
             "manifest": {
                 "id": "osmium-lacrm",
                 "name": "Less Annoying CRM",
-                "version": "0.2.0",
+                "version": "0.2.1",
                 "description": "Connects the site to Less Annoying CRM: a configurable API connection, a signed webhook receiver, and a local copy of calendar events. Other services use it through hooks, so it needs none of them and none of them are needed by it",
                 "category": "business",
                 "website": "https://www.lessannoyingcrm.com",
