@@ -3874,13 +3874,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-trade-ordering",
-            "tag": "v0.3.0",
-            "commitSha": "c81f6578dadb316ada76063c6cc25a9496bdbc06",
-            "pushedAt": "2026-10-29T22:52:47Z",
+            "tag": "v0.4.0",
+            "commitSha": "f14b777caf389a543b0a04144fcd31780324ff68",
+            "pushedAt": "2026-10-29T22:56:34Z",
             "manifest": {
                 "id": "osmium-trade-ordering",
                 "name": "Trade Ordering",
-                "version": "0.3.0",
+                "version": "0.4.0",
                 "description": "Trade pricing and ordering for trade customers: a discount and payment terms per customer, brands excluded from the discount, and trade orders. Builds on Trade Accounts and the shop.",
                 "category": "business",
                 "author": {
@@ -3915,6 +3915,15 @@
                         "section": "Content",
                         "items": [
                             {
+                                "id": "trade-orders",
+                                "label": "Trade Orders",
+                                "icon": "bx bx-package",
+                                "placement": "top",
+                                "route": "admin/trade/orders",
+                                "activePattern": "admin/trade/orders*",
+                                "role": null
+                            },
+                            {
                                 "id": "trade-ordering-settings",
                                 "label": "Trade Ordering",
                                 "icon": "bx bx-purchase-tag",
@@ -3930,6 +3939,17 @@
                             "class": "Osmium\\Services\\TradeOrdering\\Controllers\\TradeOrderingSettingsController",
                             "method": "index",
                             "title": "Trade Ordering Settings"
+                        },
+                        "admin/trade/orders": {
+                            "controller": "controllers/TradeOrdersController.php",
+                            "class": "Osmium\\Services\\TradeOrdering\\Controllers\\TradeOrdersController",
+                            "method": "index",
+                            "title": "Trade Orders"
+                        },
+                        "admin/trade/orders/action": {
+                            "controller": "controllers/TradeOrdersController.php",
+                            "class": "Osmium\\Services\\TradeOrdering\\Controllers\\TradeOrdersController",
+                            "method": "action"
                         }
                     }
                 }
