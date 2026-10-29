@@ -3883,13 +3883,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-trade-downloads",
-            "tag": "v0.1.0",
-            "commitSha": "b4489b5d9a94814b5274e60d8d09b09fd42c550d",
-            "pushedAt": "2026-10-29T23:42:21Z",
+            "tag": "v0.1.1",
+            "commitSha": "c8db5d489415b0553b72faa84a7d5260c86f67fd",
+            "pushedAt": "2026-10-29T23:49:18Z",
             "manifest": {
                 "id": "osmium-trade-downloads",
                 "name": "Trade Downloads",
-                "version": "0.1.0",
+                "version": "0.1.1",
                 "description": "A page for logged-in trade customers listing the shop's product documents and images by category, with a one-click ZIP of a product's images. Needs Trade Accounts and the shop",
                 "category": "business",
                 "author": {
