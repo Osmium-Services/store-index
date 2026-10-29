@@ -3730,13 +3730,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-trade-accounts",
-            "tag": null,
-            "commitSha": null,
-            "pushedAt": "2026-10-29T19:13:14Z",
+            "tag": "v0.2.0",
+            "commitSha": "586583ef83de15e55678b728ae3fe2d6c9fc39dc",
+            "pushedAt": "2026-10-29T19:40:36Z",
             "manifest": {
                 "id": "osmium-trade-accounts",
                 "name": "Trade Accounts",
-                "version": "0.1.0",
+                "version": "0.2.0",
                 "description": "B2B trade customer accounts: a status workflow, admin, and passwordless login. Customers come from your own admin or from a chosen source such as a CRM, through neutral hooks. Needs no shop and no CRM",
                 "category": "business",
                 "author": {
@@ -3770,6 +3770,33 @@
                     ],
                     "pages.protected_urls": [
                         "Osmium\\Services\\TradeAccounts\\Models\\TradePages::protectedUrls"
+                    ],
+                    "trade.application.received": [
+                        "Osmium\\Services\\TradeAccounts\\Models\\TradeEvents::received"
+                    ],
+                    "trade.customer.approved": [
+                        "Osmium\\Services\\TradeAccounts\\Models\\TradeEvents::approved"
+                    ],
+                    "trade.customer.suspended": [
+                        "Osmium\\Services\\TradeAccounts\\Models\\TradeEvents::suspended"
+                    ],
+                    "trade.customer.updated": [
+                        "Osmium\\Services\\TradeAccounts\\Models\\TradeEvents::updated"
+                    ],
+                    "trade.sources": [
+                        "Osmium\\Services\\TradeAccounts\\Models\\TradeLacrmHooks::source"
+                    ],
+                    "lacrm.form.submitted": [
+                        "Osmium\\Services\\TradeAccounts\\Models\\TradeLacrmHooks::formSubmitted"
+                    ],
+                    "lacrm.sale.won": [
+                        "Osmium\\Services\\TradeAccounts\\Models\\TradeLacrmHooks::saleWon"
+                    ],
+                    "lacrm.sale.lost": [
+                        "Osmium\\Services\\TradeAccounts\\Models\\TradeLacrmHooks::saleLost"
+                    ],
+                    "lacrm.contact.updated": [
+                        "Osmium\\Services\\TradeAccounts\\Models\\TradeLacrmHooks::contactUpdated"
                     ]
                 },
                 "admin": {
@@ -3784,6 +3811,14 @@
                                 "route": "admin/trade/customers",
                                 "activePattern": "admin/trade/customers*",
                                 "role": null
+                            },
+                            {
+                                "id": "trade-settings",
+                                "label": "Trade Accounts",
+                                "icon": "bx bx-id-card",
+                                "route": "admin/settings/trade",
+                                "activePattern": "admin/settings/trade*",
+                                "role": "admin"
                             }
                         ]
                     },
@@ -3797,6 +3832,23 @@
                         "admin/trade/customers/action": {
                             "controller": "controllers/TradeCustomersController.php",
                             "class": "Osmium\\Services\\TradeAccounts\\Controllers\\TradeCustomersController",
+                            "method": "action"
+                        },
+                        "admin/settings/trade": {
+                            "controller": "controllers/TradeSettingsController.php",
+                            "class": "Osmium\\Services\\TradeAccounts\\Controllers\\TradeSettingsController",
+                            "method": "index",
+                            "title": "Trade Accounts Settings"
+                        },
+                        "admin/trade/import": {
+                            "controller": "controllers/TradeImportController.php",
+                            "class": "Osmium\\Services\\TradeAccounts\\Controllers\\TradeImportController",
+                            "method": "index",
+                            "title": "Import Customers"
+                        },
+                        "admin/trade/import/action": {
+                            "controller": "controllers/TradeImportController.php",
+                            "class": "Osmium\\Services\\TradeAccounts\\Controllers\\TradeImportController",
                             "method": "action"
                         }
                     }
