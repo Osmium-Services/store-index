@@ -1426,6 +1426,88 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-lacrm",
+            "tag": "v0.1.0",
+            "commitSha": "bf595794530c5b2039d2c6b542f75cf03a4a2fbf",
+            "pushedAt": "2026-10-29T18:08:41Z",
+            "manifest": {
+                "id": "osmium-lacrm",
+                "name": "Less Annoying CRM",
+                "version": "0.1.0",
+                "description": "Connects the site to Less Annoying CRM: a configurable API connection, a signed webhook receiver, and a local copy of calendar events. Other services use it through hooks, so it needs none of them and none of them are needed by it",
+                "category": "business",
+                "website": "https://www.lessannoyingcrm.com",
+                "account": {
+                    "required": "paid",
+                    "note": "Needs a Less Annoying CRM account and an API key."
+                },
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "migrations": "migrations/",
+                "hooks": {
+                    "lacrm.contact.get": [
+                        "Osmium\\Services\\Lacrm\\Models\\LacrmLookup::contact"
+                    ],
+                    "lacrm.contacts.get_many": [
+                        "Osmium\\Services\\Lacrm\\Models\\LacrmLookup::contacts"
+                    ],
+                    "lacrm.contact.linked_people": [
+                        "Osmium\\Services\\Lacrm\\Models\\LacrmLookup::linkedPeople"
+                    ],
+                    "lacrm.sales.won": [
+                        "Osmium\\Services\\Lacrm\\Models\\LacrmLookup::wonContacts"
+                    ],
+                    "lacrm.sales.lost": [
+                        "Osmium\\Services\\Lacrm\\Models\\LacrmLookup::lostContacts"
+                    ]
+                },
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "lacrm",
+                                "label": "Less Annoying CRM",
+                                "icon": "bx bx-sync",
+                                "route": "admin/settings/lacrm",
+                                "activePattern": "admin/settings/lacrm*",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/settings/lacrm": {
+                            "controller": "controllers/LacrmController.php",
+                            "class": "Osmium\\Services\\Lacrm\\Controllers\\LacrmController",
+                            "method": "index",
+                            "title": "Less Annoying CRM"
+                        }
+                    }
+                },
+                "api": {
+                    "routes": {
+                        "api/lacrm-webhook": "controllers/webhook.php"
+                    },
+                    "external": [
+                        "api/lacrm-webhook"
+                    ]
+                },
+                "setup": {
+                    "postInstallNote": "Off until configured. Enter your LACRM API key on the Less Annoying CRM settings page, press Test connection, then Register webhooks (the site must be reachable over HTTPS). Optionally enter the pipeline and the Won / Lost status IDs so the service announces sales; press List pipelines to see them. This service only connects and announces: other services listen for the lacrm.* hooks (lacrm.form.submitted, lacrm.sale.won, lacrm.sale.lost, lacrm.contact.updated, lacrm.event.saved, lacrm.event.deleted) and ask it questions through lacrm.contact.get and friends."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-leaflet-maps",
             "tag": "v1.1.4",
             "commitSha": "23ec29fa4d700f9576e6ee76ecf186175ca0a340",
