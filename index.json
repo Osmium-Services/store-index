@@ -3882,6 +3882,62 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-trade-downloads",
+            "tag": "v0.1.0",
+            "commitSha": "b4489b5d9a94814b5274e60d8d09b09fd42c550d",
+            "pushedAt": "2026-10-29T23:42:21Z",
+            "manifest": {
+                "id": "osmium-trade-downloads",
+                "name": "Trade Downloads",
+                "version": "0.1.0",
+                "description": "A page for logged-in trade customers listing the shop's product documents and images by category, with a one-click ZIP of a product's images. Needs Trade Accounts and the shop",
+                "category": "business",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": [
+                        "osmium-trade-accounts",
+                        "osmium-shop"
+                    ]
+                },
+                "autoload": [
+                    "models"
+                ],
+                "hooks": {
+                    "page.claim": [
+                        "Osmium\\Services\\TradeDownloads\\Models\\TradeDownloadsClaim::page"
+                    ],
+                    "service.installed": [
+                        "Osmium\\Services\\TradeDownloads\\Models\\TradeDownloadsPages::onEnabled"
+                    ],
+                    "service.enabled": [
+                        "Osmium\\Services\\TradeDownloads\\Models\\TradeDownloadsPages::onEnabled"
+                    ],
+                    "service.disabled": [
+                        "Osmium\\Services\\TradeDownloads\\Models\\TradeDownloadsPages::onDisabled"
+                    ],
+                    "service.removing": [
+                        "Osmium\\Services\\TradeDownloads\\Models\\TradeDownloadsPages::onDisabled"
+                    ],
+                    "pages.protected_urls": [
+                        "Osmium\\Services\\TradeDownloads\\Models\\TradeDownloadsPages::protectedUrls"
+                    ]
+                },
+                "api": {
+                    "routes": {
+                        "api/trade-download-images": "controllers/trade-download-images.php"
+                    }
+                },
+                "setup": {
+                    "postInstallNote": "Your theme supplies the trade/views/downloads.phtml view (see the README). Trade customers see the page at /trade/downloads/ once they are logged in."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-trade-ordering",
             "tag": "v0.7.2",
             "commitSha": "b257621384eaaca7c0fce7a799f75e8adb68422d",
