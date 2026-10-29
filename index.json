@@ -876,13 +876,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-calendar",
-            "tag": "v0.1.0",
-            "commitSha": "60d80e77a34026a6c7c11f286ebf79466626ca77",
-            "pushedAt": "2026-10-29T09:06:20Z",
+            "tag": "v0.1.1",
+            "commitSha": "fb7328c71d5a019449280faa82e1e1cd1fec1128",
+            "pushedAt": "2026-10-29T09:10:05Z",
             "manifest": {
                 "id": "google-calendar",
                 "name": "Google Calendar",
-                "version": "0.1.0",
+                "version": "0.1.1",
                 "description": "Puts confirmed Osmium Appointments, Hire and Reservations on a Google Calendar, and moves or removes them when they change or are cancelled. One-way: the site stays the source of truth. Uses a Google service account, so there is no sign-in or token to renew.",
                 "category": "business",
                 "website": "https://calendar.google.com",
