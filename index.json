@@ -3870,6 +3870,46 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-trade-ordering",
+            "tag": "v0.1.0",
+            "commitSha": "dc30407e0144cdd231777d14db5a46eeab2f1cb9",
+            "pushedAt": "2026-10-29T22:35:07Z",
+            "manifest": {
+                "id": "osmium-trade-ordering",
+                "name": "Trade Ordering",
+                "version": "0.1.0",
+                "description": "Trade pricing and ordering for trade customers: a discount and payment terms per customer, brands excluded from the discount, and trade orders. Builds on Trade Accounts and the shop.",
+                "category": "business",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": [
+                        "osmium-trade-accounts",
+                        "osmium-shop"
+                    ]
+                },
+                "autoload": [
+                    "models"
+                ],
+                "migrations": "migrations/",
+                "hooks": {
+                    "trade.customer.fields": [
+                        "Osmium\\Services\\TradeOrdering\\Models\\TradeOrderingHooks::fields"
+                    ],
+                    "trade.customer.fields.validate": [
+                        "Osmium\\Services\\TradeOrdering\\Models\\TradeOrderingHooks::validate"
+                    ],
+                    "trade.customer.fields.save": [
+                        "Osmium\\Services\\TradeOrdering\\Models\\TradeOrderingHooks::save"
+                    ]
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-turnstile",
             "tag": "v1.2.3",
             "commitSha": "8b38c7099936894ac2619fa40bc38a74d7ba8bd2",
