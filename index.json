@@ -3730,13 +3730,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-trade-accounts",
-            "tag": "v0.3.1",
-            "commitSha": "fed511cfa6cfc7de548f03430d6d2ec720076af0",
-            "pushedAt": "2026-10-29T21:01:27Z",
+            "tag": "v0.3.2",
+            "commitSha": "4f7be740a2b1a0988dd23982898bae8e2cc8fbfc",
+            "pushedAt": "2026-10-29T21:06:01Z",
             "manifest": {
                 "id": "osmium-trade-accounts",
                 "name": "Trade Accounts",
-                "version": "0.3.1",
+                "version": "0.3.2",
                 "description": "B2B trade customer accounts: a status workflow, admin, and passwordless login. Customers come from your own admin or from a chosen source such as a CRM, through neutral hooks. Needs no shop and no CRM",
                 "category": "business",
                 "author": {
