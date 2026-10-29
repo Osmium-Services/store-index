@@ -3736,13 +3736,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-trade-accounts",
-            "tag": "v0.5.0",
-            "commitSha": "91932c56d3db5b5b3c45057b13f158e094ff9081",
-            "pushedAt": "2026-10-29T22:33:07Z",
+            "tag": "v0.6.0",
+            "commitSha": "15d9f048624169f5393977cfa2e73e7256d97a01",
+            "pushedAt": "2026-10-29T23:10:27Z",
             "manifest": {
                 "id": "osmium-trade-accounts",
                 "name": "Trade Accounts",
-                "version": "0.5.0",
+                "version": "0.6.0",
                 "description": "B2B trade customer accounts: a status workflow, admin, and passwordless login. Customers come from your own admin or from a chosen source such as a CRM, through neutral hooks. Needs no shop and no CRM",
                 "category": "business",
                 "author": {
@@ -3803,6 +3803,9 @@
                     ],
                     "lacrm.contact.updated": [
                         "Osmium\\Services\\TradeAccounts\\Models\\TradeLacrmHooks::contactUpdated"
+                    ],
+                    "email.samples": [
+                        "Osmium\\Services\\TradeAccounts\\Models\\TradeEmailSamples::samples"
                     ]
                 },
                 "admin": {
@@ -3874,13 +3877,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-trade-ordering",
-            "tag": "v0.5.0",
-            "commitSha": "eee42023e61da834716ad76864412b4be0d65a01",
-            "pushedAt": "2026-10-29T23:04:40Z",
+            "tag": "v0.6.0",
+            "commitSha": "27168f3ee65cfef74491cbe01b90f7869fc5f866",
+            "pushedAt": "2026-10-29T23:10:29Z",
             "manifest": {
                 "id": "osmium-trade-ordering",
                 "name": "Trade Ordering",
-                "version": "0.5.0",
+                "version": "0.6.0",
                 "description": "Trade pricing and ordering for trade customers: a discount and payment terms per customer, brands excluded from the discount, and trade orders. Builds on Trade Accounts and the shop.",
                 "category": "business",
                 "author": {
