@@ -3871,13 +3871,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-trade-ordering",
-            "tag": "v0.1.0",
-            "commitSha": "dc30407e0144cdd231777d14db5a46eeab2f1cb9",
-            "pushedAt": "2026-10-29T22:35:07Z",
+            "tag": "v0.1.1",
+            "commitSha": "9e20a983b8ef360ccbd02138377149fa3895777b",
+            "pushedAt": "2026-10-29T22:37:22Z",
             "manifest": {
                 "id": "osmium-trade-ordering",
                 "name": "Trade Ordering",
-                "version": "0.1.0",
+                "version": "0.1.1",
                 "description": "Trade pricing and ordering for trade customers: a discount and payment terms per customer, brands excluded from the discount, and trade orders. Builds on Trade Accounts and the shop.",
                 "category": "business",
                 "author": {
