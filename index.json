@@ -3729,6 +3729,92 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-trade-accounts",
+            "tag": null,
+            "commitSha": null,
+            "pushedAt": "2026-10-29T19:13:14Z",
+            "manifest": {
+                "id": "osmium-trade-accounts",
+                "name": "Trade Accounts",
+                "version": "0.1.0",
+                "description": "B2B trade customer accounts: a status workflow, admin, and passwordless login. Customers come from your own admin or from a chosen source such as a CRM, through neutral hooks. Needs no shop and no CRM",
+                "category": "business",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "migrations": "migrations/",
+                "hooks": {
+                    "page.claim": [
+                        "Osmium\\Services\\TradeAccounts\\Models\\TradeClaim::page"
+                    ],
+                    "service.installed": [
+                        "Osmium\\Services\\TradeAccounts\\Models\\TradePages::onEnabled"
+                    ],
+                    "service.enabled": [
+                        "Osmium\\Services\\TradeAccounts\\Models\\TradePages::onEnabled"
+                    ],
+                    "service.disabled": [
+                        "Osmium\\Services\\TradeAccounts\\Models\\TradePages::onDisabled"
+                    ],
+                    "service.removing": [
+                        "Osmium\\Services\\TradeAccounts\\Models\\TradePages::onDisabled"
+                    ],
+                    "pages.protected_urls": [
+                        "Osmium\\Services\\TradeAccounts\\Models\\TradePages::protectedUrls"
+                    ]
+                },
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "trade-customers",
+                                "label": "Trade Customers",
+                                "icon": "bx bx-id-card",
+                                "placement": "top",
+                                "route": "admin/trade/customers",
+                                "activePattern": "admin/trade/customers*",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/trade/customers": {
+                            "controller": "controllers/TradeCustomersController.php",
+                            "class": "Osmium\\Services\\TradeAccounts\\Controllers\\TradeCustomersController",
+                            "method": "index",
+                            "title": "Trade Customers"
+                        },
+                        "admin/trade/customers/action": {
+                            "controller": "controllers/TradeCustomersController.php",
+                            "class": "Osmium\\Services\\TradeAccounts\\Controllers\\TradeCustomersController",
+                            "method": "action"
+                        }
+                    }
+                },
+                "api": {
+                    "routes": {
+                        "api/trade-login": "controllers/trade-login.php",
+                        "api/trade-verify": "controllers/trade-verify.php",
+                        "api/trade-code": "controllers/trade-code.php",
+                        "api/trade-logout": "controllers/trade-logout.php"
+                    }
+                },
+                "setup": {
+                    "postInstallNote": "Add and approve customers under Trade Customers. Customer login and the public pages come in a later version."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-turnstile",
             "tag": "v1.2.3",
             "commitSha": "8b38c7099936894ac2619fa40bc38a74d7ba8bd2",
