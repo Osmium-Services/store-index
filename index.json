@@ -875,6 +875,100 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-google-calendar",
+            "tag": "v0.1.0",
+            "commitSha": "60d80e77a34026a6c7c11f286ebf79466626ca77",
+            "pushedAt": "2026-10-29T09:06:20Z",
+            "manifest": {
+                "id": "google-calendar",
+                "name": "Google Calendar",
+                "version": "0.1.0",
+                "description": "Puts confirmed Osmium Appointments, Hire and Reservations on a Google Calendar, and moves or removes them when they change or are cancelled. One-way: the site stays the source of truth. Uses a Google service account, so there is no sign-in or token to renew.",
+                "category": "business",
+                "website": "https://calendar.google.com",
+                "account": {
+                    "required": "free",
+                    "note": "A free Google account and a free Google Cloud project with the Calendar API switched on."
+                },
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "google-calendar",
+                                "label": "Google Calendar",
+                                "icon": "bx bx-calendar",
+                                "route": "admin/settings/google-calendar",
+                                "activePattern": "admin/settings/google-calendar",
+                                "role": "admin"
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/settings/google-calendar": {
+                            "controller": "controllers/GoogleCalendarController.php",
+                            "class": "Osmium\\Services\\GoogleCalendar\\Controllers\\GoogleCalendarController",
+                            "method": "index",
+                            "title": "Google Calendar"
+                        }
+                    }
+                },
+                "hooks": {
+                    "appointment.confirmed": [
+                        "Osmium\\Services\\GoogleCalendar\\Models\\CalendarSync::appointmentSaved"
+                    ],
+                    "appointment.changed": [
+                        "Osmium\\Services\\GoogleCalendar\\Models\\CalendarSync::appointmentSaved"
+                    ],
+                    "appointment.declined": [
+                        "Osmium\\Services\\GoogleCalendar\\Models\\CalendarSync::appointmentRemoved"
+                    ],
+                    "appointment.cancelled": [
+                        "Osmium\\Services\\GoogleCalendar\\Models\\CalendarSync::appointmentRemoved"
+                    ],
+                    "hire.confirmed": [
+                        "Osmium\\Services\\GoogleCalendar\\Models\\CalendarSync::hireSaved"
+                    ],
+                    "hire.changed": [
+                        "Osmium\\Services\\GoogleCalendar\\Models\\CalendarSync::hireSaved"
+                    ],
+                    "hire.declined": [
+                        "Osmium\\Services\\GoogleCalendar\\Models\\CalendarSync::hireRemoved"
+                    ],
+                    "hire.cancelled": [
+                        "Osmium\\Services\\GoogleCalendar\\Models\\CalendarSync::hireRemoved"
+                    ],
+                    "reservation.confirmed": [
+                        "Osmium\\Services\\GoogleCalendar\\Models\\CalendarSync::reservationSaved"
+                    ],
+                    "reservation.changed": [
+                        "Osmium\\Services\\GoogleCalendar\\Models\\CalendarSync::reservationSaved"
+                    ],
+                    "reservation.declined": [
+                        "Osmium\\Services\\GoogleCalendar\\Models\\CalendarSync::reservationRemoved"
+                    ],
+                    "reservation.cancelled": [
+                        "Osmium\\Services\\GoogleCalendar\\Models\\CalendarSync::reservationRemoved"
+                    ]
+                },
+                "setup": {
+                    "postInstallNote": "In Google Cloud Console create a project, switch on the Google Calendar API, create a service account and download its JSON key. In Google Calendar share the calendar you want to use with the service account's email address (Make changes to events). Then open Content > Google Calendar, paste the JSON key and the Calendar ID (Calendar settings > Integrate calendar) and use Send test event. Confirmed bookings from Osmium Appointments, Hire or Reservations then appear on that calendar; changes and cancellations follow."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-google-maps",
             "tag": "v1.0.7",
             "commitSha": "6341714dd9fe738e3449b04b14a93a1f1e10138a",
