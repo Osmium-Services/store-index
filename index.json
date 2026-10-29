@@ -3874,13 +3874,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-trade-ordering",
-            "tag": "v0.1.1",
-            "commitSha": "9e20a983b8ef360ccbd02138377149fa3895777b",
-            "pushedAt": "2026-10-29T22:37:22Z",
+            "tag": "v0.2.0",
+            "commitSha": "35bd073ffcc13744b5dc31455fc78c717eddd393",
+            "pushedAt": "2026-10-29T22:43:52Z",
             "manifest": {
                 "id": "osmium-trade-ordering",
                 "name": "Trade Ordering",
-                "version": "0.1.1",
+                "version": "0.2.0",
                 "description": "Trade pricing and ordering for trade customers: a discount and payment terms per customer, brands excluded from the discount, and trade orders. Builds on Trade Accounts and the shop.",
                 "category": "business",
                 "author": {
@@ -3909,6 +3909,29 @@
                     "trade.customer.fields.save": [
                         "Osmium\\Services\\TradeOrdering\\Models\\TradeOrderingHooks::save"
                     ]
+                },
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "trade-ordering-settings",
+                                "label": "Trade Ordering",
+                                "icon": "bx bx-purchase-tag",
+                                "route": "admin/settings/trade-ordering",
+                                "activePattern": "admin/settings/trade-ordering*",
+                                "role": "admin"
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/settings/trade-ordering": {
+                            "controller": "controllers/TradeOrderingSettingsController.php",
+                            "class": "Osmium\\Services\\TradeOrdering\\Controllers\\TradeOrderingSettingsController",
+                            "method": "index",
+                            "title": "Trade Ordering Settings"
+                        }
+                    }
                 }
             }
         },
