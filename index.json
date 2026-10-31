@@ -2802,6 +2802,81 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-seo-audit",
+            "tag": "v0.1.0",
+            "commitSha": "e8084a39b7b6710581302e402c1726b5b3943e24",
+            "pushedAt": "2026-10-31T16:23:01Z",
+            "manifest": {
+                "id": "osmium-seo-audit",
+                "name": "Osmium SEO Audit",
+                "version": "0.1.0",
+                "description": "Audits the whole site on demand for SEO problems and lists the fixes in priority order, with a score you can track between runs",
+                "category": "marketing-analytics",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1"
+                },
+                "autoload": [
+                    "models"
+                ],
+                "migrations": "migrations/",
+                "hooks": {
+                    "request.internal": [
+                        "Osmium\\Services\\SeoAudit\\Models\\SeoAuditHooks::requestInternal"
+                    ]
+                },
+                "admin": {
+                    "menu": {
+                        "section": "Traffic",
+                        "items": [
+                            {
+                                "id": "seo-audit",
+                                "label": "SEO Audit",
+                                "icon": "bx bx-search-alt-2",
+                                "color": "#198754",
+                                "placement": "traffic",
+                                "route": "admin/seo-audit",
+                                "activePattern": "admin/seo-audit*",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/seo-audit": {
+                            "controller": "controllers/SeoAuditController.php",
+                            "class": "Osmium\\Services\\SeoAudit\\Controllers\\SeoAuditController",
+                            "method": "index",
+                            "title": "SEO Audit"
+                        },
+                        "admin/seo-audit/action": {
+                            "controller": "controllers/SeoAuditController.php",
+                            "class": "Osmium\\Services\\SeoAudit\\Controllers\\SeoAuditController",
+                            "method": "action"
+                        },
+                        "admin/seo-audit/runs": {
+                            "controller": "controllers/SeoAuditController.php",
+                            "class": "Osmium\\Services\\SeoAudit\\Controllers\\SeoAuditController",
+                            "method": "runs",
+                            "title": "SEO Audit Runs"
+                        },
+                        "admin/seo-audit/settings": {
+                            "controller": "controllers/SeoAuditController.php",
+                            "class": "Osmium\\Services\\SeoAudit\\Controllers\\SeoAuditController",
+                            "method": "settings",
+                            "title": "SEO Audit Settings"
+                        }
+                    }
+                },
+                "setup": {
+                    "postInstallNote": "Open Traffic > SEO Audit and press Run audit. It fetches the site's own pages (from this server, marked so they never count in visitor stats or the redirect log), checks them and lists the fixes from Critical down to Low. Past runs and what changed since the last one are under Runs, and page limit, delay and the length thresholds are under Settings. It audits on demand only."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-shop",
             "tag": "v0.43.1",
             "commitSha": "f5dc0a4eab751da368d11e1b28fb3eb1fa7b4c15",
