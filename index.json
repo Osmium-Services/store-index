@@ -2803,13 +2803,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-seo-audit",
-            "tag": "v0.1.0",
-            "commitSha": "e8084a39b7b6710581302e402c1726b5b3943e24",
-            "pushedAt": "2026-10-31T16:23:01Z",
+            "tag": "v0.2.0",
+            "commitSha": "0f81717e5001dc67dc7782bc11cc6ee09b385010",
+            "pushedAt": "2026-10-31T16:35:57Z",
             "manifest": {
                 "id": "osmium-seo-audit",
                 "name": "Osmium SEO Audit",
-                "version": "0.1.0",
+                "version": "0.2.0",
                 "description": "Audits the whole site on demand for SEO problems and lists the fixes in priority order, with a score you can track between runs",
                 "category": "marketing-analytics",
                 "author": {
@@ -2863,6 +2863,11 @@
                             "method": "runs",
                             "title": "SEO Audit Runs"
                         },
+                        "admin/seo-audit/download": {
+                            "controller": "controllers/SeoAuditController.php",
+                            "class": "Osmium\\Services\\SeoAudit\\Controllers\\SeoAuditController",
+                            "method": "download"
+                        },
                         "admin/seo-audit/settings": {
                             "controller": "controllers/SeoAuditController.php",
                             "class": "Osmium\\Services\\SeoAudit\\Controllers\\SeoAuditController",
@@ -2872,7 +2877,7 @@
                     }
                 },
                 "setup": {
-                    "postInstallNote": "Open Traffic > SEO Audit and press Run audit. It fetches the site's own pages (from this server, marked so they never count in visitor stats or the redirect log), checks them and lists the fixes from Critical down to Low. Past runs and what changed since the last one are under Runs, and page limit, delay and the length thresholds are under Settings. It audits on demand only."
+                    "postInstallNote": "Open Traffic > SEO Audit and press Run audit. It fetches the site's own pages (from this server, marked so they never count in visitor stats or the redirect log), checks them and lists the fixes from Critical down to Low. Download report on a finished audit saves it as a Markdown file you can hand to an assistant to suggest fixes. Past runs and what changed since the last one are under Runs, and page limit, delay and the length thresholds are under Settings. It audits on demand only."
                 }
             }
         },
