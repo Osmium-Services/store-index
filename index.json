@@ -2803,13 +2803,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-seo-audit",
-            "tag": "v0.3.0",
-            "commitSha": "6b785eecdb7b72aa9c9c4de663819cc016300e44",
-            "pushedAt": "2026-10-31T17:13:16Z",
+            "tag": "v0.4.0",
+            "commitSha": "c0c5d098a6fed74be0ffc0baea665af6d90ec139",
+            "pushedAt": "2026-10-31T17:23:34Z",
             "manifest": {
                 "id": "osmium-seo-audit",
                 "name": "Osmium SEO Audit",
-                "version": "0.3.0",
+                "version": "0.4.0",
                 "description": "Audits the whole site on demand for SEO problems and lists the fixes in priority order, with a score you can track between runs",
                 "category": "marketing-analytics",
                 "author": {
