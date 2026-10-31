@@ -4252,6 +4252,90 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-vehicles",
+            "tag": "v0.1.0",
+            "commitSha": "d8cc46012bd83576cfafe3a45fbf935817296b8b",
+            "pushedAt": "2026-10-31T20:49:04Z",
+            "manifest": {
+                "id": "osmium-vehicles",
+                "name": "Osmium Vehicles",
+                "version": "0.1.0",
+                "description": "Vehicles for sale (cars, caravans, motorhomes, vans) managed in admin and published as ordinary pages, with photo galleries, features and custom specs and the markup supplied by the theme",
+                "category": "content",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "migrations": "migrations/",
+                "hooks": {
+                    "page.claim": [
+                        "Osmium\\Services\\Vehicles\\Models\\VehicleClaim::page"
+                    ],
+                    "pages.owners": [
+                        "Osmium\\Services\\Vehicles\\Models\\VehicleOwners::pages"
+                    ]
+                },
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "vehicles",
+                                "label": "Vehicles",
+                                "icon": "bx bx-car",
+                                "color": "#e53935",
+                                "placement": "top",
+                                "route": "admin/vehicles",
+                                "activePattern": "admin/vehicles*",
+                                "role": null
+                            },
+                            {
+                                "id": "settings",
+                                "label": "Osmium Vehicles",
+                                "icon": "bx bx-car",
+                                "route": "admin/settings/vehicles",
+                                "activePattern": "admin/settings/vehicles",
+                                "role": "admin"
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/vehicles": {
+                            "controller": "controllers/VehicleController.php",
+                            "class": "Osmium\\Services\\Vehicles\\Controllers\\VehicleController",
+                            "method": "index",
+                            "title": "Vehicles"
+                        },
+                        "admin/vehicles/edit": {
+                            "controller": "controllers/VehicleController.php",
+                            "class": "Osmium\\Services\\Vehicles\\Controllers\\VehicleController",
+                            "method": "edit",
+                            "title": "Edit Vehicle"
+                        },
+                        "admin/vehicles/action": {
+                            "controller": "controllers/VehicleController.php",
+                            "class": "Osmium\\Services\\Vehicles\\Controllers\\VehicleController",
+                            "method": "action"
+                        },
+                        "admin/settings/vehicles": {
+                            "controller": "controllers/SettingsController.php",
+                            "class": "Osmium\\Services\\Vehicles\\Controllers\\SettingsController",
+                            "method": "index",
+                            "title": "Vehicles Settings"
+                        }
+                    }
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-vonage",
             "tag": "v1.0.5",
             "commitSha": "c98ce2b9148e367e3ce9e31b0a0d933ae461e8e5",
