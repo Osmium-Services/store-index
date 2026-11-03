@@ -4114,14 +4114,14 @@
         },
         {
             "repo": "Osmium-Services/osmium-turnstile",
-            "tag": "v1.2.3",
-            "commitSha": "8b38c7099936894ac2619fa40bc38a74d7ba8bd2",
-            "pushedAt": "2026-10-27T16:35:56Z",
+            "tag": "v1.2.4",
+            "commitSha": "66dc2191e518c9fb80274565b0121b63e1392fd2",
+            "pushedAt": "2026-11-03T12:05:13Z",
             "manifest": {
                 "id": "turnstile",
                 "name": "Cloudflare Turnstile",
-                "version": "1.2.3",
-                "description": "Spam protection for forms via Cloudflare Turnstile - free, no DNS dependency, admin-editable site/secret key and widget mode",
+                "version": "1.2.4",
+                "description": "Spam protection for forms via Cloudflare Turnstile - free, no DNS dependency, admin-editable site and secret key",
                 "category": "security-privacy",
                 "website": "https://www.cloudflare.com/application-services/products/turnstile/",
                 "account": {
