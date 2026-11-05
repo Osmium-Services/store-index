@@ -189,13 +189,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-blog",
-            "tag": "v0.10.6",
-            "commitSha": "fb6095f38c039ab8e36176f0b3de9d09da67e0aa",
-            "pushedAt": "2026-11-05T21:57:47Z",
+            "tag": "v0.10.7",
+            "commitSha": "273e02f93fce1da182374ccf71ed1daeacd44d78",
+            "pushedAt": "2026-11-05T22:03:12Z",
             "manifest": {
                 "id": "osmium-blog",
                 "name": "Osmium Blog",
-                "version": "0.10.6",
+                "version": "0.10.7",
                 "description": "Blog posts written in admin and published as ordinary pages under /blog/, with the markup supplied by the theme",
                 "category": "content",
                 "author": {
@@ -543,13 +543,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-faqs",
-            "tag": "v1.8.5",
-            "commitSha": "5f548e083e51562112ee40f440a54430ddc25c5c",
-            "pushedAt": "2026-11-05T21:57:49Z",
+            "tag": "v1.8.6",
+            "commitSha": "51d69db8b357bf12bfa268d84d63266ed6bbdaa6",
+            "pushedAt": "2026-11-05T22:03:14Z",
             "manifest": {
                 "id": "osmium-faqs",
                 "name": "Osmium FAQs",
-                "version": "1.8.5",
+                "version": "1.8.6",
                 "description": "Named lists of questions and answers managed in admin, for a theme to show anywhere, with FAQPage schema for search engines",
                 "category": "content",
                 "author": {
@@ -4266,13 +4266,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-vehicles",
-            "tag": "v0.1.4",
-            "commitSha": "ff6f54f87c51989a1eaa93ecffe8e6637e4d35fc",
-            "pushedAt": "2026-11-05T21:57:45Z",
+            "tag": "v0.1.5",
+            "commitSha": "c60636b3fc45655e7e437c3a3e75d1e052210585",
+            "pushedAt": "2026-11-05T22:03:10Z",
             "manifest": {
                 "id": "osmium-vehicles",
                 "name": "Osmium Vehicles",
-                "version": "0.1.4",
+                "version": "0.1.5",
                 "description": "Vehicles for sale (cars, caravans, motorhomes, vans) managed in admin and published as ordinary pages, with photo galleries, features and custom specs and the markup supplied by the theme",
                 "category": "content",
                 "author": {
