@@ -1059,13 +1059,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-maps-embed",
-            "tag": "v2.1.4",
-            "commitSha": "2fc43e7d59080d7d1f07f16b42fb779b0d8af4fa",
-            "pushedAt": "2026-10-28T11:00:30Z",
+            "tag": "v2.1.5",
+            "commitSha": "30b3900d0644f51606bd2da39a3e8c4b1f7fe5ed",
+            "pushedAt": "2026-11-05T21:20:08Z",
             "manifest": {
                 "id": "google-maps-embed",
                 "name": "Google Maps Embed",
-                "version": "2.1.4",
+                "version": "2.1.5",
                 "description": "Google Maps Embed (a single place in an iframe): named maps managed in admin, for a theme to show anywhere, found by slug",
                 "category": "content",
                 "website": "https://developers.google.com/maps/documentation/embed",
@@ -1100,6 +1100,8 @@
                                 "icon": "bx bx-map",
                                 "route": "admin/google-maps-embed",
                                 "activePattern": "admin/google-maps-embed*",
+                                "color": "#4285f4",
+                                "placement": "top",
                                 "role": null
                             }
                         ]
