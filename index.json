@@ -1198,13 +1198,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-reviews",
-            "tag": "v1.2.3",
-            "commitSha": "1ecd1225a1a2a18ad277bbe1e2ed20ca251ffcaf",
-            "pushedAt": "2026-11-05T21:06:14Z",
+            "tag": "v1.2.4",
+            "commitSha": "b57ccab8c216e066c6c2a686466da590439c6b62",
+            "pushedAt": "2026-11-05T21:13:48Z",
             "manifest": {
                 "id": "google-reviews",
                 "name": "Google Reviews",
-                "version": "1.2.3",
+                "version": "1.2.4",
                 "description": "Hand-curated Google review admin CRUD and homepage social-proof widget model",
                 "category": "marketing-analytics",
                 "website": "https://business.google.com",
@@ -2812,13 +2812,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-seo-audit",
-            "tag": "v0.4.1",
-            "commitSha": "28fbd998ccf685f5e7a4e473f36664edabf62809",
-            "pushedAt": "2026-11-03T15:06:46Z",
+            "tag": "v0.4.2",
+            "commitSha": "56fd9d7a95a8978e1917e4b992c5cedf45317bde",
+            "pushedAt": "2026-11-05T21:16:50Z",
             "manifest": {
                 "id": "osmium-seo-audit",
                 "name": "Osmium SEO Audit",
-                "version": "0.4.1",
+                "version": "0.4.2",
                 "description": "Audits the whole site on demand for SEO problems and lists the fixes in priority order, with a score you can track between runs",
                 "category": "marketing-analytics",
                 "author": {
@@ -2850,7 +2850,7 @@
                                 "placement": "traffic",
                                 "route": "admin/seo-audit",
                                 "activePattern": "admin/seo-audit*",
-                                "role": "admin"
+                                "role": null
                             }
                         ]
                     },
