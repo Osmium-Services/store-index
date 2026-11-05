@@ -189,13 +189,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-blog",
-            "tag": "v0.10.3",
-            "commitSha": "694bc3aa10a40a3e59d93f94a8d882579369adc9",
-            "pushedAt": "2026-10-28T11:00:27Z",
+            "tag": "v0.10.5",
+            "commitSha": "fe13636875fc04cda9424f04faca6645f2fa93ac",
+            "pushedAt": "2026-11-05T21:35:54Z",
             "manifest": {
                 "id": "osmium-blog",
                 "name": "Osmium Blog",
-                "version": "0.10.3",
+                "version": "0.10.5",
                 "description": "Blog posts written in admin and published as ordinary pages under /blog/, with the markup supplied by the theme",
                 "category": "content",
                 "author": {
@@ -228,9 +228,9 @@
                         "items": [
                             {
                                 "id": "blog",
-                                "label": "Blog",
+                                "label": "Osmium Blog",
                                 "icon": "bx bx-news",
-                                "color": "#000000",
+                                "color": "#6c757d",
                                 "placement": "top",
                                 "route": "admin/blog",
                                 "activePattern": "admin/blog*",
@@ -251,7 +251,7 @@
                             "controller": "controllers/BlogController.php",
                             "class": "Osmium\\Services\\Blog\\Controllers\\BlogController",
                             "method": "index",
-                            "title": "Blog"
+                            "title": "Osmium Blog"
                         },
                         "admin/blog/edit": {
                             "controller": "controllers/BlogController.php",
@@ -543,13 +543,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-faqs",
-            "tag": "v1.8.3",
-            "commitSha": "7421a40a48ab09aad809063a10540144baf5e536",
-            "pushedAt": "2026-11-03T16:31:21Z",
+            "tag": "v1.8.4",
+            "commitSha": "4f15c6c526b293c2a9efb39bfdde49399e92e47b",
+            "pushedAt": "2026-11-05T21:27:47Z",
             "manifest": {
                 "id": "osmium-faqs",
                 "name": "Osmium FAQs",
-                "version": "1.8.3",
+                "version": "1.8.4",
                 "description": "Named lists of questions and answers managed in admin, for a theme to show anywhere, with FAQPage schema for search engines",
                 "category": "content",
                 "author": {
@@ -582,7 +582,7 @@
                         "items": [
                             {
                                 "id": "faqs",
-                                "label": "FAQs",
+                                "label": "Osmium FAQs",
                                 "icon": "bx bx-help-circle",
                                 "color": "#28a745",
                                 "placement": "top",
@@ -597,7 +597,7 @@
                             "controller": "controllers/FaqsController.php",
                             "class": "Osmium\\Services\\Faqs\\Controllers\\FaqsController",
                             "method": "index",
-                            "title": "FAQs"
+                            "title": "Osmium Frequently Asked Questions"
                         },
                         "admin/faqs/edit": {
                             "controller": "controllers/FaqsController.php",
@@ -3345,13 +3345,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-shows",
-            "tag": "v1.3.0",
-            "commitSha": "62e390a9955bc531665fb3660f5bf3ebb0971c16",
-            "pushedAt": "2026-10-30T11:26:41Z",
+            "tag": "v1.3.1",
+            "commitSha": "81d7f66efb25262b2f9dd59ff2aae43405c1f48c",
+            "pushedAt": "2026-11-05T21:30:50Z",
             "manifest": {
                 "id": "osmium-shows",
                 "name": "Osmium Shows",
-                "version": "1.3.0",
+                "version": "1.3.1",
                 "description": "Curated trade show/event listings with postcode geocoding and logo upload",
                 "category": "content",
                 "author": {
@@ -3375,7 +3375,7 @@
                         "items": [
                             {
                                 "id": "shows",
-                                "label": "Shows",
+                                "label": "Osmium Shows",
                                 "icon": "bx bx-calendar-event",
                                 "color": "#fd7e14",
                                 "placement": "top",
@@ -3390,7 +3390,7 @@
                             "controller": "controllers/ShowsController.php",
                             "class": "Osmium\\Services\\Shows\\Controllers\\ShowsController",
                             "method": "index",
-                            "title": "Shows"
+                            "title": "Osmium Events/Shows"
                         },
                         "admin/shows/action": {
                             "controller": "controllers/ShowsController.php",
@@ -3473,13 +3473,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-social-links",
-            "tag": "v0.3.3",
-            "commitSha": "f2d0f561336ec2064195b4f23d2677c3a943ee42",
-            "pushedAt": "2026-10-24T20:39:25Z",
+            "tag": "v0.4.1",
+            "commitSha": "fffbb9beb6e9e3500d8e6bc297faad5ec1cf154e",
+            "pushedAt": "2026-11-05T21:38:56Z",
             "manifest": {
                 "id": "osmium-social-links",
                 "name": "Osmium Social Links",
-                "version": "0.3.3",
+                "version": "0.4.1",
                 "description": "One place for the business's social profile URLs, shown as a list of links by a theme and available to other services such as Schema",
                 "category": "content",
                 "author": {
@@ -3502,14 +3502,16 @@
                                 "id": "social-links",
                                 "label": "Osmium Social Links",
                                 "icon": "bx bx-share-alt",
-                                "route": "admin/settings/social-links",
-                                "activePattern": "admin/settings/social-links",
+                                "route": "admin/social-links",
+                                "activePattern": "admin/social-links",
+                                "color": "#1da1f2",
+                                "placement": "top",
                                 "role": null
                             }
                         ]
                     },
                     "routes": {
-                        "admin/settings/social-links": {
+                        "admin/social-links": {
                             "controller": "controllers/SocialLinksController.php",
                             "class": "Osmium\\Services\\OsmiumSocialLinks\\Controllers\\SocialLinksController",
                             "method": "index",
