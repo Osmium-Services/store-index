@@ -342,13 +342,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-carousel",
-            "tag": "v0.2.2",
-            "commitSha": "e69c701e8bce6ac0a3250e3a843ad4e400e556cd",
-            "pushedAt": "2026-11-05T20:56:39Z",
+            "tag": "v0.2.3",
+            "commitSha": "73b859a8e0bb99d56ad4a40ae1118d8077a8415a",
+            "pushedAt": "2026-11-05T21:06:11Z",
             "manifest": {
                 "id": "osmium-carousel",
                 "name": "Osmium Carousel",
-                "version": "0.2.2",
+                "version": "0.2.3",
                 "description": "Homepage slides (image, title, text, link) managed in admin with schedules, for a theme to show with any carousel or none",
                 "category": "content",
                 "author": {
@@ -374,6 +374,7 @@
                                 "icon": "bx bx-images",
                                 "route": "admin/carousel",
                                 "activePattern": "admin/carousel*",
+                                "color": "#17a2b8",
                                 "placement": "top",
                                 "role": null
                             }
@@ -1197,13 +1198,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-reviews",
-            "tag": "v1.2.2",
-            "commitSha": "6fd0a9f0752e05c15a9be823b5b77c2a1fe41fa2",
-            "pushedAt": "2026-11-05T20:56:42Z",
+            "tag": "v1.2.3",
+            "commitSha": "1ecd1225a1a2a18ad277bbe1e2ed20ca251ffcaf",
+            "pushedAt": "2026-11-05T21:06:14Z",
             "manifest": {
                 "id": "google-reviews",
                 "name": "Google Reviews",
-                "version": "1.2.2",
+                "version": "1.2.3",
                 "description": "Hand-curated Google review admin CRUD and homepage social-proof widget model",
                 "category": "marketing-analytics",
                 "website": "https://business.google.com",
@@ -1227,9 +1228,10 @@
                             {
                                 "id": "google-reviews",
                                 "label": "Google Reviews",
-                                "icon": "bx bx-star",
+                                "icon": "bx bxs-star",
                                 "route": "admin/google-reviews",
                                 "activePattern": "admin/google-reviews*",
+                                "color": "#f4b400",
                                 "placement": "top",
                                 "role": null
                             }
@@ -1557,13 +1559,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-links",
-            "tag": "v0.2.2",
-            "commitSha": "e1f0e90505cc9fdfca12a2dbdf39bd126899c87a",
-            "pushedAt": "2026-11-05T20:56:41Z",
+            "tag": "v0.2.3",
+            "commitSha": "beb680dc4737ad599d5cafbc3b186a317e7d8ad6",
+            "pushedAt": "2026-11-05T21:06:12Z",
             "manifest": {
                 "id": "osmium-links",
                 "name": "Osmium Links",
-                "version": "0.2.2",
+                "version": "0.2.3",
                 "description": "A list of external links (name, address, short description, logo) managed in admin, optionally in groups, for a theme to show anywhere",
                 "category": "content",
                 "author": {
@@ -1589,6 +1591,7 @@
                                 "icon": "bx bx-link",
                                 "route": "admin/links",
                                 "activePattern": "admin/links*",
+                                "color": "#e83e8c",
                                 "placement": "top",
                                 "role": null
                             }
