@@ -3632,6 +3632,78 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-sso",
+            "tag": "v0.1.0",
+            "commitSha": "4e340c12beb55aa7c0e564c9eed3a4b701e5011f",
+            "pushedAt": "2026-11-07T10:09:51Z",
+            "manifest": {
+                "id": "osmium-sso",
+                "name": "Single Sign-On",
+                "version": "0.1.0",
+                "description": "Lets existing admin users sign in to the admin with their Google account. It only logs in people who already have an admin account, matched by verified email, and never creates accounts or changes roles. Two-step sign-in still applies.",
+                "category": "security-privacy",
+                "website": "https://developers.google.com/identity/openid-connect/openid-connect",
+                "account": {
+                    "required": "free",
+                    "note": "A free Google Cloud project with an OAuth web client."
+                },
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "api": {
+                    "routes": {
+                        "api/sso-google": "controllers/google-start.php",
+                        "api/sso-google-callback": "controllers/google-callback.php"
+                    },
+                    "external": [
+                        "api/sso-google",
+                        "api/sso-google-callback"
+                    ]
+                },
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "single-sign-on",
+                                "label": "Single Sign-On",
+                                "icon": "bx bx-log-in-circle",
+                                "route": "admin/settings/single-sign-on",
+                                "activePattern": "admin/settings/single-sign-on",
+                                "role": "admin"
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/settings/single-sign-on": {
+                            "controller": "controllers/SsoController.php",
+                            "class": "Osmium\\Services\\OsmiumSso\\Controllers\\SsoController",
+                            "method": "index",
+                            "title": "Single Sign-On"
+                        }
+                    }
+                },
+                "hooks": {
+                    "admin.login.buttons": [
+                        "Osmium\\Services\\OsmiumSso\\Models\\SsoButtons::loginButtons"
+                    ]
+                },
+                "setup": {
+                    "requiresConnection": true,
+                    "postInstallNote": "In Google Cloud Console create a project, set up the OAuth consent screen (choose Internal if your team uses Google Workspace), then create an OAuth client ID of type Web application. Add the redirect URI shown on Content > Single Sign-On, then paste the client ID and secret there and switch Google on. People can then sign in with Google if their Google email matches an existing admin user. Keep password sign-in until you have tried it."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-stock-control",
             "tag": "v0.8.2",
             "commitSha": "dbac9c3b7b89625983e5076fa8ee00308ae0be91",
