@@ -4266,13 +4266,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-vehicles",
-            "tag": "v0.1.6",
-            "commitSha": "3935369d61640b5ee5a3171196147ede7f0dc226",
-            "pushedAt": "2026-11-07T12:37:58Z",
+            "tag": "v0.1.8",
+            "commitSha": "3030d69ffc3d8653f3a62a4cbb90e494f681d388",
+            "pushedAt": "2026-11-07T15:22:15Z",
             "manifest": {
                 "id": "osmium-vehicles",
                 "name": "Osmium Vehicles",
-                "version": "0.1.6",
+                "version": "0.1.8",
                 "description": "Vehicles for sale (cars, caravans, motorhomes, vans) managed in admin and published as ordinary pages, with photo galleries, features and custom specs and the markup supplied by the theme",
                 "category": "content",
                 "author": {
