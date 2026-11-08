@@ -2894,13 +2894,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-shop",
-            "tag": "v0.49.16",
-            "commitSha": "15cf577c5a5ec0b5ad369ea5f783c95418046ca1",
-            "pushedAt": "2026-11-08T11:40:31Z",
+            "tag": "v0.49.17",
+            "commitSha": "aa8af56617ee425e85ccf4e6bdd1b2ec32540c14",
+            "pushedAt": "2026-11-08T12:19:45Z",
             "manifest": {
                 "id": "osmium-shop",
                 "name": "Osmium Shop",
-                "version": "0.49.16",
+                "version": "0.49.17",
                 "description": "The shop: catalogue, baskets, checkout, orders, discounts and the admin screens that run them",
                 "category": "shop",
                 "author": {
@@ -2908,7 +2908,7 @@
                 },
                 "license": "proprietary",
                 "requires": {
-                    "osmium": ">=1.0.0",
+                    "osmium": ">=2.2.0",
                     "php": ">=8.1",
                     "services": []
                 },
