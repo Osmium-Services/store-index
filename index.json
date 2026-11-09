@@ -6,7 +6,7 @@
             "repo": "Osmium-Services/osmium-analytics",
             "tag": "v1.1.10",
             "commitSha": "005b2a7bb22f4880c8a4cf442d02b87f0d11271d",
-            "pushedAt": "2026-11-07T14:56:06Z",
+            "pushedAt": "2026-11-09T09:38:06Z",
             "manifest": {
                 "id": "osmium-analytics",
                 "name": "Osmium Analytics",
@@ -189,13 +189,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-blog",
-            "tag": "v0.10.9",
-            "commitSha": "c277f6a8933ad51467a84390742991f53d3a82b3",
-            "pushedAt": "2026-11-08T11:11:09Z",
+            "tag": "v0.11.1",
+            "commitSha": "57ea05142b5889b8a43acd6792529144ba7646f9",
+            "pushedAt": "2026-11-09T11:35:53Z",
             "manifest": {
                 "id": "osmium-blog",
                 "name": "Osmium Blog",
-                "version": "0.10.9",
+                "version": "0.11.1",
                 "description": "Blog posts written in admin and published as ordinary pages under /blog/, with the markup supplied by the theme",
                 "category": "content",
                 "author": {
@@ -545,7 +545,7 @@
             "repo": "Osmium-Services/osmium-faqs",
             "tag": "v1.8.7",
             "commitSha": "3f7310df06c2ae3453f3499a11bb808eb42fbb88",
-            "pushedAt": "2026-11-07T15:14:47Z",
+            "pushedAt": "2026-11-09T09:49:50Z",
             "manifest": {
                 "id": "osmium-faqs",
                 "name": "Osmium FAQs",
@@ -621,7 +621,7 @@
             "repo": "Osmium-Services/osmium-featured-products",
             "tag": "v0.2.2",
             "commitSha": "9dd24128ae6081ea7d1851ea31c91f5e11ed620a",
-            "pushedAt": "2026-10-24T21:24:41Z",
+            "pushedAt": "2026-11-09T09:49:52Z",
             "manifest": {
                 "id": "osmium-featured-products",
                 "name": "Osmium Featured Products",
@@ -974,7 +974,7 @@
             "repo": "Osmium-Services/osmium-google-maps",
             "tag": "v1.0.7",
             "commitSha": "6341714dd9fe738e3449b04b14a93a1f1e10138a",
-            "pushedAt": "2026-10-28T12:28:10Z",
+            "pushedAt": "2026-11-09T09:49:54Z",
             "manifest": {
                 "id": "google-maps",
                 "name": "Google Maps",
@@ -1061,7 +1061,7 @@
             "repo": "Osmium-Services/osmium-google-maps-embed",
             "tag": "v2.1.6",
             "commitSha": "17a0a2413a9178016ac26964b18f54a2e259b059",
-            "pushedAt": "2026-11-07T15:10:45Z",
+            "pushedAt": "2026-11-09T09:38:17Z",
             "manifest": {
                 "id": "google-maps-embed",
                 "name": "Google Maps Embed",
@@ -1441,7 +1441,7 @@
             "repo": "Osmium-Services/osmium-lacrm",
             "tag": "v0.4.0",
             "commitSha": "455e229152c8e2680801a3cf9319655352b652ff",
-            "pushedAt": "2026-10-29T21:01:25Z",
+            "pushedAt": "2026-11-09T09:38:19Z",
             "manifest": {
                 "id": "osmium-lacrm",
                 "name": "Less Annoying CRM",
@@ -1523,7 +1523,7 @@
             "repo": "Osmium-Services/osmium-leaflet-maps",
             "tag": "v1.1.4",
             "commitSha": "23ec29fa4d700f9576e6ee76ecf186175ca0a340",
-            "pushedAt": "2026-10-28T12:28:12Z",
+            "pushedAt": "2026-11-09T09:49:55Z",
             "manifest": {
                 "id": "leaflet-maps",
                 "name": "Leaflet Maps",
@@ -1875,7 +1875,7 @@
             "repo": "Osmium-Services/osmium-meta-pixel",
             "tag": "v1.2.6",
             "commitSha": "4e3f71ac54322f91b76e412cad67a8b65031cd20",
-            "pushedAt": "2026-10-27T16:36:07Z",
+            "pushedAt": "2026-11-09T09:49:57Z",
             "manifest": {
                 "id": "meta-pixel",
                 "name": "Meta Pixel",
@@ -2428,7 +2428,7 @@
             "repo": "Osmium-Services/osmium-restock-leads",
             "tag": "v0.3.1",
             "commitSha": "48d99b130b94db6692ad9c52e13a6f83ecb7ee7e",
-            "pushedAt": "2026-10-24T21:24:44Z",
+            "pushedAt": "2026-11-09T09:49:59Z",
             "manifest": {
                 "id": "osmium-restock-leads",
                 "name": "Osmium Restock Leads",
@@ -2497,7 +2497,7 @@
             "repo": "Osmium-Services/osmium-reviews",
             "tag": "v0.6.3",
             "commitSha": "1dd975dd22db5395dd30fa9cfa77627b86f2d8ba",
-            "pushedAt": "2026-10-28T11:00:34Z",
+            "pushedAt": "2026-11-09T11:13:27Z",
             "manifest": {
                 "id": "osmium-reviews",
                 "name": "Osmium Reviews",
@@ -2744,7 +2744,7 @@
             "repo": "Osmium-Services/osmium-search-analytics",
             "tag": "v0.4.0",
             "commitSha": "33807c43b317d3bc576343f8fc5f277aaaaecfad",
-            "pushedAt": "2026-11-05T16:38:49Z",
+            "pushedAt": "2026-11-09T09:50:03Z",
             "manifest": {
                 "id": "osmium-search-analytics",
                 "name": "Osmium Search Analytics",
@@ -2816,7 +2816,7 @@
             "repo": "Osmium-Services/osmium-seo-audit",
             "tag": "v0.4.2",
             "commitSha": "56fd9d7a95a8978e1917e4b992c5cedf45317bde",
-            "pushedAt": "2026-11-05T21:16:50Z",
+            "pushedAt": "2026-11-09T09:38:32Z",
             "manifest": {
                 "id": "osmium-seo-audit",
                 "name": "Osmium SEO Audit",
@@ -2896,7 +2896,7 @@
             "repo": "Osmium-Services/osmium-shop",
             "tag": "v0.49.17",
             "commitSha": "aa8af56617ee425e85ccf4e6bdd1b2ec32540c14",
-            "pushedAt": "2026-11-08T12:19:45Z",
+            "pushedAt": "2026-11-09T09:38:34Z",
             "manifest": {
                 "id": "osmium-shop",
                 "name": "Osmium Shop",
@@ -3635,7 +3635,7 @@
             "repo": "Osmium-Services/osmium-stock-control",
             "tag": "v0.8.2",
             "commitSha": "dbac9c3b7b89625983e5076fa8ee00308ae0be91",
-            "pushedAt": "2026-10-28T11:00:42Z",
+            "pushedAt": "2026-11-09T09:50:05Z",
             "manifest": {
                 "id": "osmium-stock-control",
                 "name": "Osmium Stock Control",
@@ -3840,7 +3840,7 @@
             "repo": "Osmium-Services/osmium-trade-accounts",
             "tag": "v0.7.1",
             "commitSha": "f4098015785116a2415268ea26da07d0e06ae75f",
-            "pushedAt": "2026-11-08T11:18:49Z",
+            "pushedAt": "2026-11-09T09:38:38Z",
             "manifest": {
                 "id": "osmium-trade-accounts",
                 "name": "Trade Accounts",
@@ -3984,7 +3984,7 @@
             "repo": "Osmium-Services/osmium-trade-downloads",
             "tag": "v0.1.1",
             "commitSha": "c8db5d489415b0553b72faa84a7d5260c86f67fd",
-            "pushedAt": "2026-10-29T23:49:18Z",
+            "pushedAt": "2026-11-09T09:38:40Z",
             "manifest": {
                 "id": "osmium-trade-downloads",
                 "name": "Trade Downloads",
@@ -4040,7 +4040,7 @@
             "repo": "Osmium-Services/osmium-trade-ordering",
             "tag": "v0.7.2",
             "commitSha": "b257621384eaaca7c0fce7a799f75e8adb68422d",
-            "pushedAt": "2026-10-29T23:22:07Z",
+            "pushedAt": "2026-11-09T09:38:41Z",
             "manifest": {
                 "id": "osmium-trade-ordering",
                 "name": "Trade Ordering",
@@ -4129,7 +4129,7 @@
             "repo": "Osmium-Services/osmium-turnstile",
             "tag": "v1.2.4",
             "commitSha": "66dc2191e518c9fb80274565b0121b63e1392fd2",
-            "pushedAt": "2026-11-03T12:05:13Z",
+            "pushedAt": "2026-11-09T09:50:07Z",
             "manifest": {
                 "id": "turnstile",
                 "name": "Cloudflare Turnstile",
@@ -4268,7 +4268,7 @@
             "repo": "Osmium-Services/osmium-vehicles",
             "tag": "v0.1.9",
             "commitSha": "7f3b90a0ba860cb9ce49b901946a14f671254ff1",
-            "pushedAt": "2026-11-08T11:11:11Z",
+            "pushedAt": "2026-11-09T09:50:09Z",
             "manifest": {
                 "id": "osmium-vehicles",
                 "name": "Osmium Vehicles",
