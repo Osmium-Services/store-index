@@ -1456,6 +1456,69 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-indexnow",
+            "tag": "v0.1.0",
+            "commitSha": "299635704d3f111851391b21f01bf11670a9890c",
+            "pushedAt": "2026-11-12T12:13:04Z",
+            "manifest": {
+                "id": "osmium-indexnow",
+                "name": "Osmium IndexNow",
+                "version": "0.1.0",
+                "description": "Tells Bing, Yandex and other IndexNow search engines the moment a page is created, edited or deleted, instead of waiting for them to re-crawl; Google does not use IndexNow",
+                "category": "marketing-analytics",
+                "website": "https://www.indexnow.org",
+                "account": {
+                    "required": "none"
+                },
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1"
+                },
+                "autoload": [
+                    "models"
+                ],
+                "migrations": "migrations/",
+                "hooks": {
+                    "page.saved": [
+                        "Osmium\\Services\\IndexNow\\Models\\IndexNowHooks::pageSaved"
+                    ],
+                    "page.removed": [
+                        "Osmium\\Services\\IndexNow\\Models\\IndexNowHooks::pageRemoved"
+                    ]
+                },
+                "admin": {
+                    "menu": {
+                        "section": "Traffic",
+                        "items": [
+                            {
+                                "id": "indexnow",
+                                "label": "IndexNow",
+                                "icon": "bx bx-rocket",
+                                "route": "admin/indexnow",
+                                "activePattern": "admin/indexnow*",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/indexnow": {
+                            "controller": "controllers/IndexNowController.php",
+                            "class": "Osmium\\Services\\IndexNow\\Controllers\\IndexNowController",
+                            "method": "index",
+                            "title": "IndexNow"
+                        }
+                    }
+                },
+                "setup": {
+                    "postInstallNote": "Off by default. Open Traffic > IndexNow, switch it on and save: that creates the key and writes its file to the site's web root. Pings are sent only on a live site (never dev or staging), for pages that allow indexing. It covers pages saved in the admin Pages area; use Submit all pages after install or when a service adds pages of its own. Google ignores IndexNow."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-lacrm",
             "tag": "v0.4.2",
             "commitSha": "c84f6143f35f659c99ab9b512bfb3055d5036aa6",
