@@ -189,13 +189,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-blog",
-            "tag": "v0.11.5",
-            "commitSha": "c5b57d06c3ea9aa28d541ae729231e126cb37cb6",
-            "pushedAt": "2026-11-11T11:36:19Z",
+            "tag": "v0.11.6",
+            "commitSha": "239d49dba22e746462c2f40c75bf17f75e3bbcf9",
+            "pushedAt": "2026-11-12T11:25:39Z",
             "manifest": {
                 "id": "osmium-blog",
                 "name": "Osmium Blog",
-                "version": "0.11.5",
+                "version": "0.11.6",
                 "description": "Blog posts written in admin and published as ordinary pages under /blog/, with the markup supplied by the theme",
                 "category": "content",
                 "author": {
@@ -252,6 +252,12 @@
                             "class": "Osmium\\Services\\Blog\\Controllers\\BlogController",
                             "method": "index",
                             "title": "Osmium Blog"
+                        },
+                        "admin/blog/add": {
+                            "controller": "controllers/BlogController.php",
+                            "class": "Osmium\\Services\\Blog\\Controllers\\BlogController",
+                            "method": "add",
+                            "title": "New Post"
                         },
                         "admin/blog/edit": {
                             "controller": "controllers/BlogController.php",
@@ -543,13 +549,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-faqs",
-            "tag": "v1.8.7",
-            "commitSha": "3f7310df06c2ae3453f3499a11bb808eb42fbb88",
-            "pushedAt": "2026-11-11T11:36:26Z",
+            "tag": "v1.8.8",
+            "commitSha": "a7670e8d82403b1fb20c8300818816c15643b6ba",
+            "pushedAt": "2026-11-12T11:25:41Z",
             "manifest": {
                 "id": "osmium-faqs",
                 "name": "Osmium FAQs",
-                "version": "1.8.7",
+                "version": "1.8.8",
                 "description": "Named lists of questions and answers managed in admin, for a theme to show anywhere, with FAQPage schema for search engines",
                 "category": "content",
                 "author": {
@@ -598,6 +604,12 @@
                             "class": "Osmium\\Services\\Faqs\\Controllers\\FaqsController",
                             "method": "index",
                             "title": "Osmium Frequently Asked Questions"
+                        },
+                        "admin/faqs/add": {
+                            "controller": "controllers/FaqsController.php",
+                            "class": "Osmium\\Services\\Faqs\\Controllers\\FaqsController",
+                            "method": "add",
+                            "title": "New List"
                         },
                         "admin/faqs/edit": {
                             "controller": "controllers/FaqsController.php",
@@ -1059,13 +1071,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-maps-embed",
-            "tag": "v2.1.6",
-            "commitSha": "17a0a2413a9178016ac26964b18f54a2e259b059",
-            "pushedAt": "2026-11-11T11:36:33Z",
+            "tag": "v2.1.7",
+            "commitSha": "f7227583b811c24af7dff27eafbfeac1f4cc0ca1",
+            "pushedAt": "2026-11-12T11:25:43Z",
             "manifest": {
                 "id": "google-maps-embed",
                 "name": "Google Maps Embed",
-                "version": "2.1.6",
+                "version": "2.1.7",
                 "description": "Google Maps Embed (a single place in an iframe): named maps managed in admin, for a theme to show anywhere, found by slug",
                 "category": "content",
                 "website": "https://developers.google.com/maps/documentation/embed",
@@ -1112,6 +1124,12 @@
                             "class": "Osmium\\Services\\GoogleMapsEmbed\\Controllers\\GoogleMapsEmbedController",
                             "method": "index",
                             "title": "Google Maps Embed"
+                        },
+                        "admin/google-maps-embed/add": {
+                            "controller": "controllers/GoogleMapsEmbedController.php",
+                            "class": "Osmium\\Services\\GoogleMapsEmbed\\Controllers\\GoogleMapsEmbedController",
+                            "method": "add",
+                            "title": "New Map"
                         },
                         "admin/google-maps-embed/edit": {
                             "controller": "controllers/GoogleMapsEmbedController.php",
@@ -2495,13 +2513,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-reviews",
-            "tag": "v0.6.4",
-            "commitSha": "f9e697d20e508b199fd5c260a393c6bf176ead11",
-            "pushedAt": "2026-11-11T11:36:44Z",
+            "tag": "v0.6.5",
+            "commitSha": "939fa6d24ff2ebe7ef261abc2f059d57ff5f5ec2",
+            "pushedAt": "2026-11-12T11:25:45Z",
             "manifest": {
                 "id": "osmium-reviews",
                 "name": "Osmium Reviews",
-                "version": "0.6.4",
+                "version": "0.6.5",
                 "description": "Customer product reviews: a submit endpoint with spam protection, moderation in admin, and review data for the product page",
                 "category": "shop",
                 "author": {
@@ -2563,6 +2581,12 @@
                             "class": "Osmium\\Services\\Reviews\\Controllers\\ReviewsController",
                             "method": "index",
                             "title": "Reviews"
+                        },
+                        "admin/reviews/add": {
+                            "controller": "controllers/ReviewsController.php",
+                            "class": "Osmium\\Services\\Reviews\\Controllers\\ReviewsController",
+                            "method": "add",
+                            "title": "Add Review"
                         },
                         "admin/reviews/edit": {
                             "controller": "controllers/ReviewsController.php",
@@ -2894,13 +2918,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-shop",
-            "tag": "v0.49.33",
-            "commitSha": "3a2ad20789be153570ad7cfea793fc79b2a0b63a",
-            "pushedAt": "2026-11-11T16:57:42Z",
+            "tag": "v0.49.34",
+            "commitSha": "3756b06fc93dc9f3ddd38075ccce2531cc6407c0",
+            "pushedAt": "2026-11-12T11:25:49Z",
             "manifest": {
                 "id": "osmium-shop",
                 "name": "Osmium Shop",
-                "version": "0.49.33",
+                "version": "0.49.34",
                 "description": "The shop: catalogue, baskets, checkout, orders, discounts and the admin screens that run them",
                 "category": "shop",
                 "author": {
@@ -3048,6 +3072,12 @@
                             "method": "index",
                             "title": "Statuses"
                         },
+                        "admin/shop/statuses/add": {
+                            "controller": "controllers/StatusesController.php",
+                            "class": "Osmium\\Modules\\Admin\\Controllers\\StatusesController",
+                            "method": "add",
+                            "title": "Create Status"
+                        },
                         "admin/shop/statuses/edit*": {
                             "controller": "controllers/StatusesController.php",
                             "class": "Osmium\\Modules\\Admin\\Controllers\\StatusesController",
@@ -3064,6 +3094,12 @@
                             "class": "Osmium\\Modules\\Admin\\Controllers\\BrandsController",
                             "method": "index",
                             "title": "Brands"
+                        },
+                        "admin/shop/brands/add": {
+                            "controller": "controllers/BrandsController.php",
+                            "class": "Osmium\\Modules\\Admin\\Controllers\\BrandsController",
+                            "method": "add",
+                            "title": "Create Brand"
                         },
                         "admin/shop/brands/edit*": {
                             "controller": "controllers/BrandsController.php",
@@ -3108,6 +3144,12 @@
                             "class": "Osmium\\Modules\\Admin\\Controllers\\DiscountsController",
                             "method": "index",
                             "title": "Discounts"
+                        },
+                        "admin/shop/discounts/add": {
+                            "controller": "controllers/DiscountsController.php",
+                            "class": "Osmium\\Modules\\Admin\\Controllers\\DiscountsController",
+                            "method": "add",
+                            "title": "Create Discount"
                         },
                         "admin/shop/discounts/edit*": {
                             "controller": "controllers/DiscountsController.php",
@@ -4266,13 +4308,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-vehicles",
-            "tag": "v0.1.10",
-            "commitSha": "6f8fa0d60952919064a9feead36b111548728982",
-            "pushedAt": "2026-11-11T11:37:01Z",
+            "tag": "v0.1.11",
+            "commitSha": "57d631568d35b014727907ffc17d9040183f8cf1",
+            "pushedAt": "2026-11-12T11:25:47Z",
             "manifest": {
                 "id": "osmium-vehicles",
                 "name": "Osmium Vehicles",
-                "version": "0.1.10",
+                "version": "0.1.11",
                 "description": "Vehicles for sale (cars, caravans, motorhomes, vans) managed in admin and published as ordinary pages, with photo galleries, features and custom specs and the markup supplied by the theme",
                 "category": "content",
                 "author": {
@@ -4326,6 +4368,12 @@
                             "class": "Osmium\\Services\\Vehicles\\Controllers\\VehicleController",
                             "method": "index",
                             "title": "Osmium Vehicles"
+                        },
+                        "admin/vehicles/add": {
+                            "controller": "controllers/VehicleController.php",
+                            "class": "Osmium\\Services\\Vehicles\\Controllers\\VehicleController",
+                            "method": "add",
+                            "title": "New Vehicle"
                         },
                         "admin/vehicles/edit": {
                             "controller": "controllers/VehicleController.php",
