@@ -1457,13 +1457,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-indexnow",
-            "tag": "v0.2.0",
-            "commitSha": "020609f64de389bc9e87a522601df1a35ac4a303",
-            "pushedAt": "2026-11-12T12:35:06Z",
+            "tag": "v0.3.0",
+            "commitSha": "ac957c55312ef9f5b2c37abbc64227469f632787",
+            "pushedAt": "2026-11-12T13:04:45Z",
             "manifest": {
                 "id": "osmium-indexnow",
                 "name": "Osmium IndexNow",
-                "version": "0.2.0",
+                "version": "0.3.0",
                 "description": "Tells Bing, Yandex and other IndexNow search engines the moment a page is created, edited or deleted, instead of waiting for them to re-crawl; Google does not use IndexNow",
                 "category": "marketing-analytics",
                 "website": "https://www.indexnow.org",
@@ -1516,7 +1516,7 @@
                     }
                 },
                 "setup": {
-                    "postInstallNote": "Off by default. Open Traffic > IndexNow, switch it on and save: that creates the key and writes its file to the site's web root. Pings are sent only on a live site (never dev or staging), for pages that allow indexing. It covers pages saved in the admin Pages area; use Submit all pages after install or when a service adds pages of its own. Google ignores IndexNow."
+                    "postInstallNote": "Off by default. Open Traffic > IndexNow and press Turn on: on the live site that makes the key, writes its file to the web root and sends every page once. After that, pages saved in the admin (including Blog and Shop pages) are sent automatically. Nothing is sent from dev or staging. Google ignores IndexNow."
                 }
             }
         },
