@@ -631,13 +631,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-featured-products",
-            "tag": "v0.2.2",
-            "commitSha": "9dd24128ae6081ea7d1851ea31c91f5e11ed620a",
-            "pushedAt": "2026-11-11T11:36:29Z",
+            "tag": "v0.3.0",
+            "commitSha": "dae98877e0705e0a424e3a8ae127e4c4909af021",
+            "pushedAt": "2026-11-12T19:33:46Z",
             "manifest": {
                 "id": "osmium-featured-products",
                 "name": "Osmium Featured Products",
-                "version": "0.2.2",
+                "version": "0.3.0",
                 "description": "A hand-picked list of up to 5 featured products, ordered by drag and drop in admin, with an edit lock for busy admin teams and the list handed to the theme",
                 "category": "shop",
                 "author": {
@@ -672,7 +672,9 @@
                                 "label": "Featured Products",
                                 "icon": "bx bx-crown",
                                 "color": "#7367f0",
-                                "placement": "top",
+                                "placement": "group",
+                                "group": "shop",
+                                "order": 130,
                                 "route": "admin/featured-products",
                                 "activePattern": "admin/featured-products*",
                                 "role": null
@@ -2509,13 +2511,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-restock-leads",
-            "tag": "v0.3.1",
-            "commitSha": "48d99b130b94db6692ad9c52e13a6f83ecb7ee7e",
-            "pushedAt": "2026-11-11T11:36:42Z",
+            "tag": "v0.4.0",
+            "commitSha": "312f18407580cf2101c0c2d8d75e8ac510e33c56",
+            "pushedAt": "2026-11-12T19:33:40Z",
             "manifest": {
                 "id": "osmium-restock-leads",
                 "name": "Osmium Restock Leads",
-                "version": "0.3.1",
+                "version": "0.4.0",
                 "description": "Lets customers leave their email to hear when an out-of-stock product is back, collects those requests, and lists them in admin",
                 "category": "shop",
                 "author": {
@@ -2550,7 +2552,9 @@
                                 "label": "Restock Leads",
                                 "icon": "bx bx-bell",
                                 "color": "#ffd60a",
-                                "placement": "top",
+                                "placement": "group",
+                                "group": "shop",
+                                "order": 100,
                                 "route": "admin/restock-leads",
                                 "activePattern": "admin/restock-leads*",
                                 "role": null
@@ -2578,13 +2582,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-reviews",
-            "tag": "v0.6.5",
-            "commitSha": "939fa6d24ff2ebe7ef261abc2f059d57ff5f5ec2",
-            "pushedAt": "2026-11-12T11:25:45Z",
+            "tag": "v0.7.0",
+            "commitSha": "787c582a5eef53a8368823f35f5ebe69909c1279",
+            "pushedAt": "2026-11-12T19:33:42Z",
             "manifest": {
                 "id": "osmium-reviews",
                 "name": "Osmium Reviews",
-                "version": "0.6.5",
+                "version": "0.7.0",
                 "description": "Customer product reviews: a submit endpoint with spam protection, moderation in admin, and review data for the product page",
                 "category": "shop",
                 "author": {
@@ -2625,7 +2629,9 @@
                                 "label": "Reviews",
                                 "icon": "bx bx-star",
                                 "color": "#d4a017",
-                                "placement": "top",
+                                "placement": "group",
+                                "group": "shop",
+                                "order": 110,
                                 "route": "admin/reviews",
                                 "activePattern": "admin/reviews*",
                                 "role": null
@@ -2831,13 +2837,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-search-analytics",
-            "tag": "v0.4.0",
-            "commitSha": "33807c43b317d3bc576343f8fc5f277aaaaecfad",
-            "pushedAt": "2026-11-11T11:36:47Z",
+            "tag": "v0.5.0",
+            "commitSha": "8966d0a997e69af6d2cf545f74618803f1bd66e9",
+            "pushedAt": "2026-11-12T19:33:44Z",
             "manifest": {
                 "id": "osmium-search-analytics",
                 "name": "Osmium Search Analytics",
-                "version": "0.4.0",
+                "version": "0.5.0",
                 "description": "Records what customers search for in the shop, shows the top and zero-result searches in admin, and adds a search synonym in one click from a failed search",
                 "category": "shop",
                 "author": {
@@ -2875,7 +2881,9 @@
                                 "label": "Search Analytics",
                                 "icon": "bx bx-search-alt",
                                 "color": "#0d6efd",
-                                "placement": "top",
+                                "placement": "group",
+                                "group": "shop",
+                                "order": 120,
                                 "route": "admin/search-analytics",
                                 "activePattern": "admin/search-analytics*",
                                 "role": null
@@ -3740,13 +3748,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-stock-control",
-            "tag": "v0.8.4",
-            "commitSha": "b334714864041492ab0e7a19c05d2602bfab89f0",
-            "pushedAt": "2026-11-11T11:36:53Z",
+            "tag": "v0.9.0",
+            "commitSha": "1c9007db9e41a174c3106062ef8ecf75fc30e124",
+            "pushedAt": "2026-11-12T19:33:39Z",
             "manifest": {
                 "id": "osmium-stock-control",
                 "name": "Osmium Stock Control",
-                "version": "0.8.4",
+                "version": "0.9.0",
                 "description": "Counts stock down when an order is paid, stops customers adding more than is in stock, and treats a kit's parts as stock of their own",
                 "category": "shop",
                 "author": {
@@ -3797,7 +3805,9 @@
                                 "label": "Stock",
                                 "icon": "bx bx-package",
                                 "color": "#17a2b8",
-                                "placement": "top",
+                                "placement": "group",
+                                "group": "shop",
+                                "order": 90,
                                 "route": "admin/stock",
                                 "activePattern": "admin/stock*",
                                 "role": null
