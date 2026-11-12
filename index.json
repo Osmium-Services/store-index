@@ -1457,13 +1457,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-indexnow",
-            "tag": "v0.1.0",
-            "commitSha": "299635704d3f111851391b21f01bf11670a9890c",
-            "pushedAt": "2026-11-12T12:13:04Z",
+            "tag": "v0.1.1",
+            "commitSha": "780272de52c26414d042bcd8f5ee6cfc5ba19e6a",
+            "pushedAt": "2026-11-12T12:16:52Z",
             "manifest": {
                 "id": "osmium-indexnow",
                 "name": "Osmium IndexNow",
-                "version": "0.1.0",
+                "version": "0.1.1",
                 "description": "Tells Bing, Yandex and other IndexNow search engines the moment a page is created, edited or deleted, instead of waiting for them to re-crawl; Google does not use IndexNow",
                 "category": "marketing-analytics",
                 "website": "https://www.indexnow.org",
@@ -1498,6 +1498,8 @@
                                 "id": "indexnow",
                                 "label": "IndexNow",
                                 "icon": "bx bx-rocket",
+                                "color": "#6f42c1",
+                                "placement": "traffic",
                                 "route": "admin/indexnow",
                                 "activePattern": "admin/indexnow*",
                                 "role": null
