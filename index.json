@@ -3977,13 +3977,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-trade-accounts",
-            "tag": "v0.8.1",
-            "commitSha": "22ed2e027110ee2cbecca39d7ab83f0e19cbd346",
-            "pushedAt": "2026-11-12T20:25:26Z",
+            "tag": "v0.8.2",
+            "commitSha": "99fc47bdac4c87499c179865c25f2d9a0a17d258",
+            "pushedAt": "2026-11-12T20:47:49Z",
             "manifest": {
                 "id": "osmium-trade-accounts",
                 "name": "Trade Accounts",
-                "version": "0.8.1",
+                "version": "0.8.2",
                 "description": "B2B trade customer accounts: a status workflow, admin, and passwordless login. Customers come from your own admin or from a chosen source such as a CRM, through neutral hooks. Needs no shop and no CRM",
                 "category": "business",
                 "author": {
@@ -4058,7 +4058,7 @@
                         "items": [
                             {
                                 "id": "trade-customers",
-                                "label": "Trade Customers",
+                                "label": "Customers",
                                 "icon": "bx bx-id-card",
                                 "placement": "group",
                                 "group": "trade",
@@ -4179,13 +4179,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-trade-ordering",
-            "tag": "v0.8.1",
-            "commitSha": "bc75c3db0cd57ab5f0aaeb91b94524db12d72e81",
-            "pushedAt": "2026-11-12T20:25:04Z",
+            "tag": "v0.8.2",
+            "commitSha": "e9490d41e62a03b52c4f66dfa8a3cbe05432328b",
+            "pushedAt": "2026-11-12T20:47:53Z",
             "manifest": {
                 "id": "osmium-trade-ordering",
                 "name": "Trade Ordering",
-                "version": "0.8.1",
+                "version": "0.8.2",
                 "description": "Trade pricing and ordering for trade customers: a discount and payment terms per customer, brands excluded from the discount, and trade orders. Builds on Trade Accounts and the shop.",
                 "category": "business",
                 "author": {
@@ -4227,7 +4227,7 @@
                         "items": [
                             {
                                 "id": "trade-orders",
-                                "label": "Trade Orders",
+                                "label": "Orders",
                                 "icon": "bx bx-package",
                                 "placement": "group",
                                 "group": "trade",
