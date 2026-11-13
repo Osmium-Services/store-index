@@ -191,13 +191,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-blog",
-            "tag": "v0.12.1",
-            "commitSha": "720a6d84e1179c0babc5fda135dcce18e1ac2c7c",
-            "pushedAt": "2026-11-12T20:25:08Z",
+            "tag": "v0.12.3",
+            "commitSha": "0fb31361f3e2695a1ddf9f0388ae2a9f659fa97c",
+            "pushedAt": "2026-11-13T12:30:38Z",
             "manifest": {
                 "id": "osmium-blog",
                 "name": "Osmium Blog",
-                "version": "0.12.1",
+                "version": "0.12.3",
                 "description": "Blog posts written in admin and published as ordinary pages under /blog/, with the markup supplied by the theme",
                 "category": "content",
                 "author": {
@@ -222,6 +222,12 @@
                     ],
                     "mcp.tools": [
                         "Osmium\\Services\\Blog\\Models\\BlogMcp::tools"
+                    ],
+                    "adminbar.context": [
+                        "Osmium\\Services\\Blog\\Models\\BlogAdminBar::context"
+                    ],
+                    "adminbar.links": [
+                        "Osmium\\Services\\Blog\\Models\\BlogAdminBar::links"
                     ]
                 },
                 "admin": {
@@ -555,13 +561,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-faqs",
-            "tag": "v1.9.0",
-            "commitSha": "e7942345e52356f863eb719b6b7eb02e10b5a03d",
-            "pushedAt": "2026-11-12T19:45:41Z",
+            "tag": "v1.9.2",
+            "commitSha": "4b407d3fa7e073c70448022959ff7629077bd42e",
+            "pushedAt": "2026-11-13T12:54:21Z",
             "manifest": {
                 "id": "osmium-faqs",
                 "name": "Osmium FAQs",
-                "version": "1.9.0",
+                "version": "1.9.2",
                 "description": "Named lists of questions and answers managed in admin, for a theme to show anywhere, with FAQPage schema for search engines",
                 "category": "content",
                 "author": {
@@ -585,6 +591,12 @@
                     ],
                     "mcp.tools": [
                         "Osmium\\Services\\Faqs\\Models\\FaqMcp::tools"
+                    ],
+                    "adminbar.context": [
+                        "Osmium\\Services\\Faqs\\Models\\FaqAdminBar::context"
+                    ],
+                    "adminbar.links": [
+                        "Osmium\\Services\\Faqs\\Models\\FaqAdminBar::links"
                     ]
                 },
                 "migrations": "migrations/",
@@ -1081,13 +1093,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-maps-embed",
-            "tag": "v2.2.0",
-            "commitSha": "656b6391d2bf8335c7d58d7f4c2f9d76c07e60b9",
-            "pushedAt": "2026-11-12T19:45:42Z",
+            "tag": "v2.2.1",
+            "commitSha": "9e6bbbf160c31edc71cf0a690bfb76658e6b4017",
+            "pushedAt": "2026-11-13T13:18:06Z",
             "manifest": {
                 "id": "google-maps-embed",
                 "name": "Google Maps Embed",
-                "version": "2.2.0",
+                "version": "2.2.1",
                 "description": "Google Maps Embed (a single place in an iframe): named maps managed in admin, for a theme to show anywhere, found by slug",
                 "category": "content",
                 "website": "https://developers.google.com/maps/documentation/embed",
@@ -1107,6 +1119,14 @@
                 "autoload": [
                     "models"
                 ],
+                "hooks": {
+                    "adminbar.context": [
+                        "Osmium\\Services\\GoogleMapsEmbed\\Models\\MapsAdminBar::context"
+                    ],
+                    "adminbar.links": [
+                        "Osmium\\Services\\GoogleMapsEmbed\\Models\\MapsAdminBar::links"
+                    ]
+                },
                 "csp": {
                     "frame-src": [
                         "https://www.google.com"
@@ -1230,13 +1250,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-reviews",
-            "tag": "v1.3.0",
-            "commitSha": "57f14268701f7726dca19cd0221d18ce013eff4e",
-            "pushedAt": "2026-11-12T19:45:45Z",
+            "tag": "v1.3.1",
+            "commitSha": "806971d861267f24b243d47deac1dba71e673ab8",
+            "pushedAt": "2026-11-13T13:23:02Z",
             "manifest": {
                 "id": "google-reviews",
                 "name": "Google Reviews",
-                "version": "1.3.0",
+                "version": "1.3.1",
                 "description": "Hand-curated Google review admin CRUD and homepage social-proof widget model",
                 "category": "marketing-analytics",
                 "website": "https://business.google.com",
@@ -1252,6 +1272,14 @@
                 "autoload": [
                     "models"
                 ],
+                "hooks": {
+                    "adminbar.context": [
+                        "Osmium\\Services\\GoogleReviews\\Models\\ReviewsAdminBar::context"
+                    ],
+                    "adminbar.links": [
+                        "Osmium\\Services\\GoogleReviews\\Models\\ReviewsAdminBar::links"
+                    ]
+                },
                 "migrations": "migrations/",
                 "admin": {
                     "menu": {
@@ -3009,13 +3037,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-shop",
-            "tag": "v0.49.34",
-            "commitSha": "3756b06fc93dc9f3ddd38075ccce2531cc6407c0",
-            "pushedAt": "2026-11-12T11:25:49Z",
+            "tag": "v0.49.38",
+            "commitSha": "4d0456414f784b44c933a75d0d06f591fa6f3f1f",
+            "pushedAt": "2026-11-13T12:32:08Z",
             "manifest": {
                 "id": "osmium-shop",
                 "name": "Osmium Shop",
-                "version": "0.49.34",
+                "version": "0.49.38",
                 "description": "The shop: catalogue, baskets, checkout, orders, discounts and the admin screens that run them",
                 "category": "shop",
                 "author": {
@@ -3107,6 +3135,12 @@
                     ],
                     "shop.product.files": [
                         "Osmium\\Modules\\Admin\\Services\\ShopProductFiles::files"
+                    ],
+                    "adminbar.context": [
+                        "Osmium\\Modules\\Admin\\Services\\ShopAdminBar::context"
+                    ],
+                    "adminbar.links": [
+                        "Osmium\\Modules\\Admin\\Services\\ShopAdminBar::links"
                     ]
                 },
                 "admin": {
@@ -3478,13 +3512,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-shows",
-            "tag": "v1.5.0",
-            "commitSha": "68becafae51fb0abc739284056f335dddf4605e7",
-            "pushedAt": "2026-11-12T19:45:48Z",
+            "tag": "v1.5.1",
+            "commitSha": "4421922ee5f0e34dc52316595c98deef878ea5a5",
+            "pushedAt": "2026-11-13T13:29:15Z",
             "manifest": {
                 "id": "osmium-shows",
                 "name": "Osmium Shows",
-                "version": "1.5.0",
+                "version": "1.5.1",
                 "description": "Curated trade show/event listings with postcode geocoding and logo upload",
                 "category": "content",
                 "author": {
@@ -3501,6 +3535,14 @@
                 "autoload": [
                     "models"
                 ],
+                "hooks": {
+                    "adminbar.context": [
+                        "Osmium\\Services\\Shows\\Models\\ShowsAdminBar::context"
+                    ],
+                    "adminbar.links": [
+                        "Osmium\\Services\\Shows\\Models\\ShowsAdminBar::links"
+                    ]
+                },
                 "migrations": "migrations/",
                 "admin": {
                     "menu": {
@@ -3608,13 +3650,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-social-links",
-            "tag": "v0.5.0",
-            "commitSha": "9392cd56208a7a3c4058f777500af026730ab705",
-            "pushedAt": "2026-11-12T19:45:50Z",
+            "tag": "v0.5.1",
+            "commitSha": "cd2762f9affc1735389cc9819869b04ee11647b2",
+            "pushedAt": "2026-11-13T13:11:12Z",
             "manifest": {
                 "id": "osmium-social-links",
                 "name": "Osmium Social Links",
-                "version": "0.5.0",
+                "version": "0.5.1",
                 "description": "One place for the business's social profile URLs, shown as a list of links by a theme and available to other services such as Schema",
                 "category": "content",
                 "author": {
@@ -3629,6 +3671,14 @@
                 "autoload": [
                     "models"
                 ],
+                "hooks": {
+                    "adminbar.context": [
+                        "Osmium\\Services\\OsmiumSocialLinks\\Models\\SocialLinksAdminBar::context"
+                    ],
+                    "adminbar.links": [
+                        "Osmium\\Services\\OsmiumSocialLinks\\Models\\SocialLinksAdminBar::links"
+                    ]
+                },
                 "admin": {
                     "menu": {
                         "section": "Content",
@@ -4409,13 +4459,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-vehicles",
-            "tag": "v0.2.1",
-            "commitSha": "0d5d5d798c4fcec857f073a2a32bde065d394178",
-            "pushedAt": "2026-11-12T20:25:19Z",
+            "tag": "v0.2.3",
+            "commitSha": "c2b9eb0fc40a8e56feb90d3e2d312d5d04b9c8bd",
+            "pushedAt": "2026-11-13T12:33:09Z",
             "manifest": {
                 "id": "osmium-vehicles",
                 "name": "Osmium Vehicles",
-                "version": "0.2.1",
+                "version": "0.2.3",
                 "description": "Vehicles for sale (cars, caravans, motorhomes, vans) managed in admin and published as ordinary pages, with photo galleries, features and custom specs and the markup supplied by the theme",
                 "category": "content",
                 "author": {
@@ -4437,6 +4487,12 @@
                     ],
                     "pages.owners": [
                         "Osmium\\Services\\Vehicles\\Models\\VehicleOwners::pages"
+                    ],
+                    "adminbar.context": [
+                        "Osmium\\Services\\Vehicles\\Models\\VehicleAdminBar::context"
+                    ],
+                    "adminbar.links": [
+                        "Osmium\\Services\\Vehicles\\Models\\VehicleAdminBar::links"
                     ]
                 },
                 "admin": {
