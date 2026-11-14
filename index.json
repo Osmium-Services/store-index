@@ -191,13 +191,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-blog",
-            "tag": "v0.12.4",
-            "commitSha": "3b36a6000e33aa8a3e56b46931472c7c4b4d777a",
-            "pushedAt": "2026-11-14T10:34:01Z",
+            "tag": "v0.13.0",
+            "commitSha": "1bcdd66eee6912e255c63221b11e042fe739e657",
+            "pushedAt": "2026-11-14T23:03:48Z",
             "manifest": {
                 "id": "osmium-blog",
                 "name": "Osmium Blog",
-                "version": "0.12.4",
+                "version": "0.13.0",
                 "description": "Blog posts written in admin and published as ordinary pages under /blog/, with the markup supplied by the theme",
                 "category": "content",
                 "author": {
@@ -4095,13 +4095,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-trade-accounts",
-            "tag": "v0.9.0",
-            "commitSha": "0cff96f436b0acbe98b89d4e7fc103a8bfe2e5c9",
-            "pushedAt": "2026-11-14T21:26:58Z",
+            "tag": "v0.9.1",
+            "commitSha": "c02658d9cd8dbe2e65f5f7c08097db5b41dfd625",
+            "pushedAt": "2026-11-14T23:42:09Z",
             "manifest": {
                 "id": "osmium-trade-accounts",
                 "name": "Trade Accounts",
-                "version": "0.9.0",
+                "version": "0.9.1",
                 "description": "B2B trade customer accounts: a status workflow, admin, and passwordless login. Customers come from your own admin or from a chosen source such as a CRM, through neutral hooks. Needs no shop and no CRM",
                 "category": "business",
                 "author": {
