@@ -2237,6 +2237,65 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-pv-installs",
+            "tag": "v0.1.0",
+            "commitSha": "dd83ba8508fc72efdaef8df9948e547f608ce824",
+            "pushedAt": "2026-11-14T22:11:05Z",
+            "manifest": {
+                "id": "osmium-pv-installs",
+                "name": "Osmium PV Installs",
+                "version": "0.1.0",
+                "description": "Lists the solar PV installation requests a site's enquiry form has saved, under a PV Installs item at the top of the admin sidebar",
+                "category": "content",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1"
+                },
+                "autoload": [
+                    "models"
+                ],
+                "migrations": "migrations/",
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "pv-installs",
+                                "label": "PV Installs",
+                                "icon": "bx bx-sun",
+                                "color": "#f5a623",
+                                "placement": "top",
+                                "order": 100,
+                                "route": "admin/pv-installs",
+                                "activePattern": "admin/pv-installs*",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/pv-installs": {
+                            "controller": "controllers/PvInstallsController.php",
+                            "class": "Osmium\\Services\\PvInstalls\\Controllers\\PvInstallsController",
+                            "method": "index",
+                            "title": "PV Installs"
+                        },
+                        "admin/pv-installs/action": {
+                            "controller": "controllers/PvInstallsController.php",
+                            "class": "Osmium\\Services\\PvInstalls\\Controllers\\PvInstallsController",
+                            "method": "action"
+                        }
+                    }
+                },
+                "setup": {
+                    "postInstallNote": "This service only lists requests: it does not create the pvinstall_leads table or the form that fills it. Without that table the page shows a notice and nothing else."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-quickbooks",
             "tag": "v1.1.4",
             "commitSha": "98ad57be96aef01a61acc7870b10f9925d2c8c38",
