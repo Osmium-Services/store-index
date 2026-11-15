@@ -191,13 +191,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-blog",
-            "tag": "v0.13.1",
-            "commitSha": "44478192ff7eb6fffb3a671be4b3116e91e8b790",
-            "pushedAt": "2026-11-15T11:37:18Z",
+            "tag": "v0.14.1",
+            "commitSha": "3425edd2c64ebdceac06ec404c0f2697aefc977a",
+            "pushedAt": "2026-11-15T15:49:19Z",
             "manifest": {
                 "id": "osmium-blog",
                 "name": "Osmium Blog",
-                "version": "0.13.1",
+                "version": "0.14.1",
                 "description": "Blog posts written in admin and published as ordinary pages under /blog/, with the markup supplied by the theme",
                 "category": "content",
                 "author": {
@@ -358,13 +358,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-carousel",
-            "tag": "v0.3.0",
-            "commitSha": "d3149efeb9a46c311e5753b3462c4f977d579057",
-            "pushedAt": "2026-11-12T19:45:39Z",
+            "tag": "v0.6.0",
+            "commitSha": "7cfc513478307db1c1045294c9a20e2dfff4b474",
+            "pushedAt": "2026-11-15T17:24:05Z",
             "manifest": {
                 "id": "osmium-carousel",
                 "name": "Osmium Carousel",
-                "version": "0.3.0",
+                "version": "0.6.0",
                 "description": "Homepage slides (image, title, text, link) managed in admin with schedules, for a theme to show with any carousel or none",
                 "category": "content",
                 "author": {
@@ -380,6 +380,14 @@
                     "models"
                 ],
                 "migrations": "migrations/",
+                "hooks": {
+                    "adminbar.context": [
+                        "Osmium\\Services\\OsmiumCarousel\\Models\\CarouselAdminBar::context"
+                    ],
+                    "adminbar.links": [
+                        "Osmium\\Services\\OsmiumCarousel\\Models\\CarouselAdminBar::links"
+                    ]
+                },
                 "admin": {
                     "menu": {
                         "section": "Content",
@@ -404,6 +412,18 @@
                             "class": "Osmium\\Services\\OsmiumCarousel\\Controllers\\CarouselController",
                             "method": "index",
                             "title": "Osmium Carousel"
+                        },
+                        "admin/carousel/add": {
+                            "controller": "controllers/CarouselController.php",
+                            "class": "Osmium\\Services\\OsmiumCarousel\\Controllers\\CarouselController",
+                            "method": "add",
+                            "title": "New Slide"
+                        },
+                        "admin/carousel/edit": {
+                            "controller": "controllers/CarouselController.php",
+                            "class": "Osmium\\Services\\OsmiumCarousel\\Controllers\\CarouselController",
+                            "method": "edit",
+                            "title": "Edit Slide"
                         },
                         "admin/carousel/action": {
                             "controller": "controllers/CarouselController.php",
@@ -1250,14 +1270,14 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-reviews",
-            "tag": "v1.3.2",
-            "commitSha": "3bf0306112be3da83b3d33338d687b10462c97c0",
-            "pushedAt": "2026-11-14T10:33:49Z",
+            "tag": "v1.3.4",
+            "commitSha": "0cf0a41ddaa778a8b915f70e086483c01283b9aa",
+            "pushedAt": "2026-11-15T17:53:46Z",
             "manifest": {
                 "id": "google-reviews",
                 "name": "Google Reviews",
-                "version": "1.3.2",
-                "description": "Hand-curated Google review admin CRUD and homepage social-proof widget model",
+                "version": "1.3.4",
+                "description": "Hand-curated Google review admin CRUD and shown reviews (social-proof) model",
                 "category": "marketing-analytics",
                 "website": "https://business.google.com",
                 "author": {
@@ -2687,13 +2707,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-reviews",
-            "tag": "v0.8.0",
-            "commitSha": "04c60bc0c07f510e89c722003e595a55124ff7e1",
-            "pushedAt": "2026-11-14T22:40:19Z",
+            "tag": "v0.8.1",
+            "commitSha": "9afb49af7d3a68c1bae315f720310c240effdfd7",
+            "pushedAt": "2026-11-15T13:10:13Z",
             "manifest": {
                 "id": "osmium-reviews",
                 "name": "Osmium Reviews",
-                "version": "0.8.0",
+                "version": "0.8.1",
                 "description": "Customer product reviews: a submit endpoint with spam protection, moderation in admin, and review data for the product page",
                 "category": "shop",
                 "author": {
@@ -3580,13 +3600,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-shows",
-            "tag": "v1.5.2",
-            "commitSha": "45461e2ffb34fd870a0725826f3075119c2e3861",
-            "pushedAt": "2026-11-14T10:33:56Z",
+            "tag": "v1.5.3",
+            "commitSha": "ee4c820f786bcc2c6e3342bd2109ac32b7bf5f02",
+            "pushedAt": "2026-11-15T18:03:33Z",
             "manifest": {
                 "id": "osmium-shows",
                 "name": "Osmium Shows",
-                "version": "1.5.2",
+                "version": "1.5.3",
                 "description": "Curated trade show/event listings with postcode geocoding and logo upload",
                 "category": "content",
                 "author": {
