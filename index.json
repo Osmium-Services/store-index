@@ -1952,13 +1952,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-mals",
-            "tag": "v0.3.3",
-            "commitSha": "13b0fe6586fdcd7f6fd8edba5685b164cd08c37b",
-            "pushedAt": "2026-11-10T17:21:46Z",
+            "tag": "v0.3.4",
+            "commitSha": "311c4af972432cc0ad1c4c392665b552104df182",
+            "pushedAt": "2026-11-16T10:20:27Z",
             "manifest": {
                 "id": "mals",
                 "name": "Mals Ecommerce",
-                "version": "0.3.3",
+                "version": "0.3.4",
                 "description": "Sells through the Mals hosted cart: add-to-cart buttons post to Mals, the checkout is Mals' own page, and the header shows the cart count. No basket or checkout pages of its own",
                 "category": "payments",
                 "website": "https://www.mals-e.com",
