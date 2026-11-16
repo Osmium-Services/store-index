@@ -514,13 +514,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-cookie-consent",
-            "tag": "v1.1.9",
-            "commitSha": "3c5b7c0b5b8c8e9d9c13bcd3be71307e7cbcc55d",
-            "pushedAt": "2026-11-10T17:20:57Z",
+            "tag": "v1.1.10",
+            "commitSha": "ea17487ff3c671080222e9f40938939452f85f78",
+            "pushedAt": "2026-11-16T10:47:13Z",
             "manifest": {
                 "id": "cookie-consent",
                 "name": "Osmium Cookie Consent",
-                "version": "1.1.9",
+                "version": "1.1.10",
                 "description": "GDPR-style cookie consent banner and status ribbon, production-only, with an admin-editable cookie name/privacy URL/colors/copy",
                 "category": "security-privacy",
                 "author": {
