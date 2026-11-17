@@ -854,13 +854,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-analytics",
-            "tag": "v2.0.8",
-            "commitSha": "43713e8e56ba65f3c209f8dc1e611cf816786648",
-            "pushedAt": "2026-11-16T16:33:20Z",
+            "tag": "v2.0.9",
+            "commitSha": "e260e3b5d2166038f11abc4e8cb7d96eeb3089f2",
+            "pushedAt": "2026-11-17T10:12:21Z",
             "manifest": {
                 "id": "google-analytics",
                 "name": "Google Analytics",
-                "version": "2.0.8",
+                "version": "2.0.9",
                 "description": "Google Tag Manager / GA4 loading with Consent Mode v2, gated on an admin-editable toggle and production-only; requires the Cookie Consent service",
                 "category": "marketing-analytics",
                 "website": "https://marketingplatform.google.com/about/analytics/",
