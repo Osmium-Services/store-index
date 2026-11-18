@@ -1586,13 +1586,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-lacrm",
-            "tag": "v0.4.2",
-            "commitSha": "c84f6143f35f659c99ab9b512bfb3055d5036aa6",
-            "pushedAt": "2026-11-11T11:36:36Z",
+            "tag": "v0.4.3",
+            "commitSha": "c5f6903259e644f232368636894053b2c98d5053",
+            "pushedAt": "2026-11-18T10:24:03Z",
             "manifest": {
                 "id": "osmium-lacrm",
                 "name": "Less Annoying CRM",
-                "version": "0.4.2",
+                "version": "0.4.3",
                 "description": "Connects the site to Less Annoying CRM: a configurable API connection, and a signed webhook receiver. Other services use it through hooks, so it needs none of them and none of them are needed by it",
                 "category": "business",
                 "website": "https://www.lessannoyingcrm.com",
@@ -1613,6 +1613,15 @@
                     "models"
                 ],
                 "migrations": "migrations/",
+                "csp": {
+                    "script-src": [
+                        "https://embed.lessannoyingcrm.com"
+                    ],
+                    "frame-src": [
+                        "https://embed.lessannoyingcrm.com",
+                        "https://forms.lessannoyingcrm.com"
+                    ]
+                },
                 "hooks": {
                     "lacrm.contact.get": [
                         "Osmium\\Services\\Lacrm\\Models\\LacrmLookup::contact"
@@ -2901,13 +2910,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-schema",
-            "tag": "v0.8.5",
-            "commitSha": "a41f92a472f7db05eac8821472749639859ca782",
-            "pushedAt": "2026-11-10T17:26:04Z",
+            "tag": "v0.8.6",
+            "commitSha": "c8daa79416d471de1eb4015375a6febca71dd9fc",
+            "pushedAt": "2026-11-18T08:55:57Z",
             "manifest": {
                 "id": "schema",
                 "name": "Osmium Schema",
-                "version": "0.8.5",
+                "version": "0.8.6",
                 "description": "Site-wide structured data: Organization or LocalBusiness (address and opening hours from Company > Location, contact point, and geo looked up from the postcode) and WebSite, as JSON-LD with fixed @ids other services can reference",
                 "category": "marketing-analytics",
                 "author": {
