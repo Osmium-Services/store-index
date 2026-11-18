@@ -513,6 +513,70 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-cloudflare",
+            "tag": "v0.1.0",
+            "commitSha": "9fe6186c6930f96551c0d1e43fadf0b903b7eed9",
+            "pushedAt": "2026-11-18T16:51:18Z",
+            "manifest": {
+                "id": "osmium-cloudflare",
+                "name": "Osmium Cloudflare",
+                "version": "0.1.0",
+                "description": "Clears the Cloudflare cache for you: automatically after every admin or assistant change, from a button, from a deploy script, and from the assistant (MCP). Also toggles development mode",
+                "category": "performance",
+                "website": "https://www.cloudflare.com",
+                "account": {
+                    "required": "free"
+                },
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1"
+                },
+                "autoload": [
+                    "models"
+                ],
+                "hooks": {
+                    "content.changed": [
+                        "Osmium\\Services\\Cloudflare\\Models\\CloudflareHooks::contentChanged"
+                    ],
+                    "mcp.tools": [
+                        "Osmium\\Services\\Cloudflare\\Models\\CloudflareMcp::tools"
+                    ]
+                },
+                "admin": {
+                    "menu": {
+                        "section": "Traffic",
+                        "items": [
+                            {
+                                "id": "cloudflare",
+                                "label": "Cloudflare",
+                                "icon": "bx bx-cloud",
+                                "color": "#f6821f",
+                                "placement": "traffic",
+                                "route": "admin/cloudflare",
+                                "activePattern": "admin/cloudflare*",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/cloudflare": {
+                            "controller": "controllers/CloudflareController.php",
+                            "class": "Osmium\\Services\\Cloudflare\\Controllers\\CloudflareController",
+                            "method": "index",
+                            "title": "Cloudflare"
+                        }
+                    }
+                },
+                "setup": {
+                    "postInstallNote": "Open Traffic > Cloudflare and enter an API token with the Cache Purge permission, the zone ID and the site's hostnames, then press Test connection. After that every change saved in the admin or by an assistant clears the cache for the site's hostnames (at most once every 15 seconds). The token is kept only in this site's config file. Deploy scripts can run: php app/services/osmium-cloudflare/cloudflare.php purge"
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-cookie-consent",
             "tag": "v1.1.10",
             "commitSha": "ea17487ff3c671080222e9f40938939452f85f78",
