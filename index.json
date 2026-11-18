@@ -514,13 +514,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-cloudflare",
-            "tag": "v0.1.0",
-            "commitSha": "9fe6186c6930f96551c0d1e43fadf0b903b7eed9",
-            "pushedAt": "2026-11-18T16:51:18Z",
+            "tag": "v0.2.0",
+            "commitSha": "53e37288cb725e2b7de405e3302364e6c76aeb35",
+            "pushedAt": "2026-11-18T17:56:34Z",
             "manifest": {
                 "id": "osmium-cloudflare",
                 "name": "Osmium Cloudflare",
-                "version": "0.1.0",
+                "version": "0.2.0",
                 "description": "Clears the Cloudflare cache for you: automatically after every admin or assistant change, from a button, from a deploy script, and from the assistant (MCP). Also toggles development mode",
                 "category": "performance",
                 "website": "https://www.cloudflare.com",
@@ -541,6 +541,9 @@
                 "hooks": {
                     "content.changed": [
                         "Osmium\\Services\\Cloudflare\\Models\\CloudflareHooks::contentChanged"
+                    ],
+                    "admin.status_icons": [
+                        "Osmium\\Services\\Cloudflare\\Models\\CloudflareStatusIcon::icons"
                     ],
                     "mcp.tools": [
                         "Osmium\\Services\\Cloudflare\\Models\\CloudflareMcp::tools"
@@ -572,7 +575,7 @@
                     }
                 },
                 "setup": {
-                    "postInstallNote": "Open Traffic > Cloudflare and enter an API token with the Cache Purge permission, the zone ID and the site's hostnames, then press Test connection. After that every change saved in the admin or by an assistant clears the cache for the site's hostnames (at most once every 15 seconds). The token is kept only in this site's config file. Deploy scripts can run: php app/services/osmium-cloudflare/cloudflare.php purge"
+                    "postInstallNote": "Open Traffic > Cloudflare and enter an API token with the Cache Purge permission, the zone ID and the site's hostnames, then press Test connection. After that every change saved in the admin or by an assistant clears the cache for the site's hostnames (at most 4 times a minute). The token is kept only in this site's config file. Deploy scripts can run: php app/services/osmium-cloudflare/cloudflare.php purge"
                 }
             }
         },
