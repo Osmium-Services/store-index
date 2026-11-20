@@ -4195,13 +4195,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-trade-accounts",
-            "tag": "v0.9.3",
-            "commitSha": "caa8810e0c469332159280e0ca8927eb42cd44e3",
-            "pushedAt": "2026-11-16T14:17:55Z",
+            "tag": "v0.11.0",
+            "commitSha": "eabb233ef95ac4b7520692aa3ef3efa128032ffd",
+            "pushedAt": "2026-11-20T22:53:08Z",
             "manifest": {
                 "id": "osmium-trade-accounts",
                 "name": "Trade Accounts",
-                "version": "0.9.3",
+                "version": "0.11.0",
                 "description": "B2B trade customer accounts: a status workflow, admin, and passwordless login. Customers come from your own admin or from a chosen source such as a CRM, through neutral hooks. Needs no shop and no CRM",
                 "category": "business",
                 "author": {
@@ -4209,7 +4209,7 @@
                 },
                 "license": "proprietary",
                 "requires": {
-                    "osmium": ">=1.0.0",
+                    "osmium": ">=2.3.0",
                     "php": ">=8.1",
                     "services": []
                 },
@@ -4296,9 +4296,32 @@
                             "method": "index",
                             "title": "Trade Customers"
                         },
+                        "admin/trade/customers/add": {
+                            "controller": "controllers/TradeCustomersController.php",
+                            "class": "Osmium\\Services\\TradeAccounts\\Controllers\\TradeCustomersController",
+                            "method": "add",
+                            "title": "Add Customer"
+                        },
+                        "admin/trade/customers/edit*": {
+                            "controller": "controllers/TradeCustomersController.php",
+                            "class": "Osmium\\Services\\TradeAccounts\\Controllers\\TradeCustomersController",
+                            "method": "edit",
+                            "title": "Edit Customer"
+                        },
                         "admin/trade/customers/action": {
                             "controller": "controllers/TradeCustomersController.php",
                             "class": "Osmium\\Services\\TradeAccounts\\Controllers\\TradeCustomersController",
+                            "method": "action"
+                        },
+                        "admin/trade/customers/import": {
+                            "controller": "controllers/TradeCustomersImportController.php",
+                            "class": "Osmium\\Services\\TradeAccounts\\Controllers\\TradeCustomersImportController",
+                            "method": "index",
+                            "title": "Import Customers"
+                        },
+                        "admin/trade/customers/import/action": {
+                            "controller": "controllers/TradeCustomersImportController.php",
+                            "class": "Osmium\\Services\\TradeAccounts\\Controllers\\TradeCustomersImportController",
                             "method": "action"
                         },
                         "admin/settings/trade": {
