@@ -1587,13 +1587,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-indexnow",
-            "tag": "v0.3.4",
-            "commitSha": "8580dde80e8074257030b0d30ed1026224416154",
-            "pushedAt": "2026-11-16T16:45:37Z",
+            "tag": "v0.4.0",
+            "commitSha": "02a139937f4b1c05e7f048440b8f50454441b52b",
+            "pushedAt": "2026-11-21T10:58:24Z",
             "manifest": {
                 "id": "osmium-indexnow",
                 "name": "Osmium IndexNow",
-                "version": "0.3.4",
+                "version": "0.4.0",
                 "description": "Tells Bing, Yandex and other IndexNow search engines the moment a page is created, edited or deleted, instead of waiting for them to re-crawl; Google does not use IndexNow",
                 "category": "marketing-analytics",
                 "website": "https://www.indexnow.org",
@@ -1618,6 +1618,9 @@
                     ],
                     "page.removed": [
                         "Osmium\\Services\\IndexNow\\Models\\IndexNowHooks::pageRemoved"
+                    ],
+                    "mcp.tools": [
+                        "Osmium\\Services\\IndexNow\\Models\\IndexNowMcp::tools"
                     ]
                 },
                 "admin": {
@@ -3111,13 +3114,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-seo-audit",
-            "tag": "v0.5.2",
-            "commitSha": "dbbe8f3985040fe74f5288ab0a3045054ca87124",
-            "pushedAt": "2026-11-19T11:39:01Z",
+            "tag": "v0.6.0",
+            "commitSha": "bb6e469aedf0d9b5a18f27446895b4397715da64",
+            "pushedAt": "2026-11-21T09:35:59Z",
             "manifest": {
                 "id": "osmium-seo-audit",
                 "name": "Osmium SEO Audit",
-                "version": "0.5.2",
+                "version": "0.6.0",
                 "description": "Audits the whole site on demand for SEO problems and lists the fixes in priority order, with a score you can track between runs",
                 "category": "marketing-analytics",
                 "author": {
@@ -3135,6 +3138,9 @@
                 "hooks": {
                     "request.internal": [
                         "Osmium\\Services\\SeoAudit\\Models\\SeoAuditHooks::requestInternal"
+                    ],
+                    "mcp.tools": [
+                        "Osmium\\Services\\SeoAudit\\Models\\SeoAuditMcp::tools"
                     ]
                 },
                 "admin": {
@@ -3191,13 +3197,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-shop",
-            "tag": "v0.49.52",
-            "commitSha": "f5b809c0207412eda48fd62c98770f60ff00ee85",
-            "pushedAt": "2026-11-20T10:26:56Z",
+            "tag": "v0.52.0",
+            "commitSha": "d35d7aec83260333fc97bb34c2209f929fe6947e",
+            "pushedAt": "2026-11-21T10:40:52Z",
             "manifest": {
                 "id": "osmium-shop",
                 "name": "Osmium Shop",
-                "version": "0.49.52",
+                "version": "0.52.0",
                 "description": "The shop: catalogue, baskets, checkout, orders, discounts and the admin screens that run them",
                 "category": "shop",
                 "author": {
@@ -4195,13 +4201,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-trade-accounts",
-            "tag": "v0.11.0",
-            "commitSha": "eabb233ef95ac4b7520692aa3ef3efa128032ffd",
-            "pushedAt": "2026-11-20T22:53:08Z",
+            "tag": "v0.12.0",
+            "commitSha": "0d2d76068e239b98b86df599079d9cf007d0e3a8",
+            "pushedAt": "2026-11-21T11:06:09Z",
             "manifest": {
                 "id": "osmium-trade-accounts",
                 "name": "Trade Accounts",
-                "version": "0.11.0",
+                "version": "0.12.0",
                 "description": "B2B trade customer accounts: a status workflow, admin, and passwordless login. Customers come from your own admin or from a chosen source such as a CRM, through neutral hooks. Needs no shop and no CRM",
                 "category": "business",
                 "author": {
@@ -4218,6 +4224,9 @@
                 ],
                 "migrations": "migrations/",
                 "hooks": {
+                    "mcp.tools": [
+                        "Osmium\\Services\\TradeAccounts\\Models\\TradeAccountsMcp::tools"
+                    ],
                     "page.claim": [
                         "Osmium\\Services\\TradeAccounts\\Models\\TradeClaim::page"
                     ],
@@ -4469,13 +4478,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-trade-ordering",
-            "tag": "v0.10.0",
-            "commitSha": "e4139b930d90a62da8c82c52c6e9f24b9caa12ef",
-            "pushedAt": "2026-11-14T18:24:18Z",
+            "tag": "v0.11.0",
+            "commitSha": "c6921b516f52c2addfb6e13528f00242396e60de",
+            "pushedAt": "2026-11-21T11:01:15Z",
             "manifest": {
                 "id": "osmium-trade-ordering",
                 "name": "Trade Ordering",
-                "version": "0.10.0",
+                "version": "0.11.0",
                 "description": "Trade pricing and ordering for trade customers: a discount and payment terms per customer, brands excluded from the discount, and trade orders. Builds on Trade Accounts and the shop.",
                 "category": "business",
                 "author": {
@@ -4495,6 +4504,9 @@
                 ],
                 "migrations": "migrations/",
                 "hooks": {
+                    "mcp.tools": [
+                        "Osmium\\Services\\TradeOrdering\\Models\\TradeOrderingMcp::tools"
+                    ],
                     "trade.customer.fields": [
                         "Osmium\\Services\\TradeOrdering\\Models\\TradeOrderingHooks::fields"
                     ],
@@ -4729,13 +4741,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-vehicles",
-            "tag": "v0.2.4",
-            "commitSha": "8f6e778f4cd54e85f76b61cde6edd018af6f6bf6",
-            "pushedAt": "2026-11-14T10:33:58Z",
+            "tag": "v0.5.0",
+            "commitSha": "a6f3fcf3ec996978c2ffe830030eb61e2fc3600e",
+            "pushedAt": "2026-11-21T12:07:29Z",
             "manifest": {
                 "id": "osmium-vehicles",
                 "name": "Osmium Vehicles",
-                "version": "0.2.4",
+                "version": "0.5.0",
                 "description": "Vehicles for sale (cars, caravans, motorhomes, vans) managed in admin and published as ordinary pages, with photo galleries, features and custom specs and the markup supplied by the theme",
                 "category": "content",
                 "author": {
@@ -4763,6 +4775,10 @@
                     ],
                     "adminbar.links": [
                         "Osmium\\Services\\Vehicles\\Models\\VehicleAdminBar::links"
+                    ],
+                    "mcp.tools": [
+                        "Osmium\\Services\\Vehicles\\Models\\VehiclesMcp::tools",
+                        "Osmium\\Services\\Vehicles\\Models\\VehiclesWriteMcp::tools"
                     ]
                 },
                 "admin": {
