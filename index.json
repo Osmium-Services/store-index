@@ -191,13 +191,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-blog",
-            "tag": "v0.14.2",
-            "commitSha": "7953bc9bd1ca86b993307ef2a6ce06e32b2931c6",
-            "pushedAt": "2026-11-19T11:18:27Z",
+            "tag": "v0.14.3",
+            "commitSha": "eaa2e671847244fa5dffd156817dbe68d2883138",
+            "pushedAt": "2026-11-22T15:24:20Z",
             "manifest": {
                 "id": "osmium-blog",
                 "name": "Osmium Blog",
-                "version": "0.14.2",
+                "version": "0.14.3",
                 "description": "Blog posts written in admin and published as ordinary pages under /blog/, with the markup supplied by the theme",
                 "category": "content",
                 "author": {
@@ -219,6 +219,9 @@
                     ],
                     "pages.owners": [
                         "Osmium\\Services\\Blog\\Models\\BlogOwners::pages"
+                    ],
+                    "sitemap.groups": [
+                        "Osmium\\Services\\Blog\\Models\\BlogOwners::sitemapGroups"
                     ],
                     "mcp.tools": [
                         "Osmium\\Services\\Blog\\Models\\BlogMcp::tools"
@@ -1587,13 +1590,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-indexnow",
-            "tag": "v0.4.0",
-            "commitSha": "02a139937f4b1c05e7f048440b8f50454441b52b",
-            "pushedAt": "2026-11-21T10:58:24Z",
+            "tag": "v0.4.1",
+            "commitSha": "ee707cf3f7e76b7f7202a1c456057ab7c0d5445e",
+            "pushedAt": "2026-11-22T16:44:00Z",
             "manifest": {
                 "id": "osmium-indexnow",
                 "name": "Osmium IndexNow",
-                "version": "0.4.0",
+                "version": "0.4.1",
                 "description": "Tells Bing, Yandex and other IndexNow search engines the moment a page is created, edited or deleted, instead of waiting for them to re-crawl; Google does not use IndexNow",
                 "category": "marketing-analytics",
                 "website": "https://www.indexnow.org",
@@ -1625,14 +1628,12 @@
                 },
                 "admin": {
                     "menu": {
-                        "section": "Traffic",
                         "items": [
                             {
                                 "id": "indexnow",
                                 "label": "IndexNow",
                                 "icon": "bx bx-rocket",
                                 "color": "#6f42c1",
-                                "placement": "traffic",
                                 "route": "admin/indexnow",
                                 "activePattern": "admin/indexnow*",
                                 "role": null
@@ -1649,7 +1650,7 @@
                     }
                 },
                 "setup": {
-                    "postInstallNote": "Off by default. Open Traffic > IndexNow and press Turn on: on the live site that makes the key, writes its file to the web root and sends every page once. After that, pages saved in the admin (including Blog and Shop pages) are sent automatically. Nothing is sent from dev or staging. Google ignores IndexNow."
+                    "postInstallNote": "Off by default. Open Service Settings > IndexNow and press Turn on: on the live site that makes the key, writes its file to the web root and sends every page once. After that, pages saved in the admin (including Blog and Shop pages) are sent automatically. Nothing is sent from dev or staging. Google ignores IndexNow."
                 }
             }
         },
@@ -3115,13 +3116,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-seo-audit",
-            "tag": "v0.6.0",
-            "commitSha": "bb6e469aedf0d9b5a18f27446895b4397715da64",
-            "pushedAt": "2026-11-21T09:35:59Z",
+            "tag": "v0.6.2",
+            "commitSha": "5a2deb3d863f17776dbdd64cdda4288770c17370",
+            "pushedAt": "2026-11-22T16:44:02Z",
             "manifest": {
                 "id": "osmium-seo-audit",
                 "name": "Osmium SEO Audit",
-                "version": "0.6.0",
+                "version": "0.6.2",
                 "description": "Audits the whole site on demand for SEO problems and lists the fixes in priority order, with a score you can track between runs",
                 "category": "marketing-analytics",
                 "author": {
@@ -3146,14 +3147,12 @@
                 },
                 "admin": {
                     "menu": {
-                        "section": "Traffic",
                         "items": [
                             {
                                 "id": "seo-audit",
                                 "label": "SEO Audit",
                                 "icon": "bx bx-search-alt-2",
                                 "color": "#198754",
-                                "placement": "traffic",
                                 "route": "admin/seo-audit",
                                 "activePattern": "admin/seo-audit*",
                                 "role": null
@@ -3192,19 +3191,19 @@
                     }
                 },
                 "setup": {
-                    "postInstallNote": "Open Traffic > SEO Audit and press Run audit. It fetches the site's own pages (from this server, marked so they never count in visitor stats or the redirect log), checks them and lists the fixes from Critical down to Low. Download report on a finished audit saves it as a Markdown file you can hand to an assistant to suggest fixes. Past runs and what changed since the last one are under Runs, and page limit, delay and the length thresholds are under Settings. It audits on demand only."
+                    "postInstallNote": "Open Service Settings > SEO Audit and press Run audit. It fetches the site's own pages (from this server, marked so they never count in visitor stats or the redirect log), checks them and lists the fixes from Critical down to Low. Download report on a finished audit saves it as a Markdown file you can hand to an assistant to suggest fixes. Past runs and what changed since the last one are under Runs, and page limit, delay and the length thresholds are under Settings. It audits on demand only."
                 }
             }
         },
         {
             "repo": "Osmium-Services/osmium-shop",
-            "tag": "v0.52.0",
-            "commitSha": "d35d7aec83260333fc97bb34c2209f929fe6947e",
-            "pushedAt": "2026-11-21T10:40:52Z",
+            "tag": "v0.54.1",
+            "commitSha": "1ae3464f88287b36341b1e4c4ad086825c3cb940",
+            "pushedAt": "2026-11-22T16:07:30Z",
             "manifest": {
                 "id": "osmium-shop",
                 "name": "Osmium Shop",
-                "version": "0.52.0",
+                "version": "0.54.1",
                 "description": "The shop: catalogue, baskets, checkout, orders, discounts and the admin screens that run them",
                 "category": "shop",
                 "author": {
@@ -3270,6 +3269,9 @@
                     ],
                     "pages.owners": [
                         "Osmium\\Modules\\Admin\\Services\\ShopPageLinks::owners"
+                    ],
+                    "sitemap.groups": [
+                        "Osmium\\Modules\\Admin\\Services\\ShopPageLinks::sitemapGroups"
                     ],
                     "pages.reserved_ids": [
                         "Osmium\\Modules\\Admin\\Services\\ShopPageLinks::reservedIds"
@@ -4742,13 +4744,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-vehicles",
-            "tag": "v0.5.0",
-            "commitSha": "a6f3fcf3ec996978c2ffe830030eb61e2fc3600e",
-            "pushedAt": "2026-11-21T12:07:29Z",
+            "tag": "v0.5.1",
+            "commitSha": "4724f20073aeb7fbfb80f14558813c5a5a2f31e7",
+            "pushedAt": "2026-11-22T15:34:27Z",
             "manifest": {
                 "id": "osmium-vehicles",
                 "name": "Osmium Vehicles",
-                "version": "0.5.0",
+                "version": "0.5.1",
                 "description": "Vehicles for sale (cars, caravans, motorhomes, vans) managed in admin and published as ordinary pages, with photo galleries, features and custom specs and the markup supplied by the theme",
                 "category": "content",
                 "author": {
@@ -4770,6 +4772,9 @@
                     ],
                     "pages.owners": [
                         "Osmium\\Services\\Vehicles\\Models\\VehicleOwners::pages"
+                    ],
+                    "sitemap.groups": [
+                        "Osmium\\Services\\Vehicles\\Models\\VehicleOwners::sitemapGroups"
                     ],
                     "adminbar.context": [
                         "Osmium\\Services\\Vehicles\\Models\\VehicleAdminBar::context"
