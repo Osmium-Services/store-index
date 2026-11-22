@@ -2244,13 +2244,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-paypal",
-            "tag": "v1.4.7",
-            "commitSha": "eabcef4c9c7b2df661352e847daafb7f64790e60",
-            "pushedAt": "2026-11-11T14:18:25Z",
+            "tag": "v1.4.9",
+            "commitSha": "af5dd25aace36c16f86589e9332671775687396a",
+            "pushedAt": "2026-11-22T11:13:33Z",
             "manifest": {
                 "id": "paypal",
                 "name": "PayPal",
-                "version": "1.4.7",
+                "version": "1.4.9",
                 "description": "Takes PayPal payments at checkout (Orders v2, server-side capture), with a signature-verified webhook to reconcile orders. Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "website": "https://www.paypal.com",
@@ -2330,6 +2330,7 @@
                 },
                 "setup": {
                     "requiresConnection": true,
+                    "configuredCheck": "Osmium\\Services\\PayPal\\Models\\PayPalConfig::isConfigured",
                     "postInstallNote": "PayPal is off until configured. Enter your client IDs and secrets on the PayPal settings page, create a webhook in the PayPal developer dashboard pointing at /api/checkout-paypal-webhook (events: PAYMENT.CAPTURE.COMPLETED, PAYMENT.CAPTURE.DENIED, PAYMENT.CAPTURE.REFUNDED) and paste its Webhook ID. Then choose PayPal as the Active Checkout Provider in Settings > Payments."
                 }
             }
