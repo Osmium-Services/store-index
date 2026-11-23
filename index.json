@@ -3,14 +3,95 @@
     "generatedWeek": "2026-W48",
     "services": [
         {
+            "repo": "Osmium-Services/osmium-aio-audit",
+            "tag": "v0.3.1",
+            "commitSha": "a9461ee6d129ab843b82c8994f8ce73ac75c1749",
+            "pushedAt": "2026-11-23T14:12:15Z",
+            "manifest": {
+                "id": "osmium-aio-audit",
+                "name": "Osmium AIO Audit",
+                "version": "0.3.1",
+                "description": "Audits on demand how well AI answer engines can find and cite the site (blocked AI crawlers, missing organisation and structured data) and lists the fixes in priority order, with a score you can track between runs",
+                "category": "marketing-analytics",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=1.0.0",
+                    "php": ">=8.1"
+                },
+                "autoload": [
+                    "models"
+                ],
+                "migrations": "migrations/",
+                "hooks": {
+                    "request.internal": [
+                        "Osmium\\Services\\AioAudit\\Models\\AioAuditHooks::requestInternal"
+                    ],
+                    "mcp.tools": [
+                        "Osmium\\Services\\AioAudit\\Models\\AioAuditMcp::tools"
+                    ]
+                },
+                "admin": {
+                    "menu": {
+                        "items": [
+                            {
+                                "id": "aio-audit",
+                                "label": "AIO Audit",
+                                "icon": "bx bx-bot",
+                                "color": "#6f42c1",
+                                "route": "admin/aio-audit",
+                                "activePattern": "admin/aio-audit*",
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/aio-audit": {
+                            "controller": "controllers/AioAuditController.php",
+                            "class": "Osmium\\Services\\AioAudit\\Controllers\\AioAuditController",
+                            "method": "index",
+                            "title": "AIO Audit"
+                        },
+                        "admin/aio-audit/action": {
+                            "controller": "controllers/AioAuditController.php",
+                            "class": "Osmium\\Services\\AioAudit\\Controllers\\AioAuditController",
+                            "method": "action"
+                        },
+                        "admin/aio-audit/runs": {
+                            "controller": "controllers/AioAuditController.php",
+                            "class": "Osmium\\Services\\AioAudit\\Controllers\\AioAuditController",
+                            "method": "runs",
+                            "title": "AIO Audit Runs"
+                        },
+                        "admin/aio-audit/download": {
+                            "controller": "controllers/AioAuditController.php",
+                            "class": "Osmium\\Services\\AioAudit\\Controllers\\AioAuditController",
+                            "method": "download"
+                        },
+                        "admin/aio-audit/settings": {
+                            "controller": "controllers/AioAuditController.php",
+                            "class": "Osmium\\Services\\AioAudit\\Controllers\\AioAuditController",
+                            "method": "settings",
+                            "title": "AIO Audit Settings"
+                        }
+                    }
+                },
+                "setup": {
+                    "postInstallNote": "Open Service Settings > AIO Audit and press Run audit. It fetches the site's own pages (from this server, marked so they never count in visitor stats or the redirect log), checks how well AI answer engines can find and cite them and lists the fixes from Critical down to Low. Download report on a finished audit saves it as a Markdown file you can hand to an assistant. Past runs and what changed since the last one are under Runs; page limit, delay and crawl address are under Settings. It audits on demand only."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-analytics",
-            "tag": "v1.1.12",
-            "commitSha": "418cf0bad45bc4b23b2eb071d600a21925469960",
-            "pushedAt": "2026-11-11T11:36:17Z",
+            "tag": "v1.1.13",
+            "commitSha": "1510327539f81008165adfe1652b88d0810b70ae",
+            "pushedAt": "2026-11-23T14:17:13Z",
             "manifest": {
                 "id": "osmium-analytics",
                 "name": "Osmium Analytics",
-                "version": "1.1.12",
+                "version": "1.1.13",
                 "description": "Cookieless, first-party visitor statistics: visits, top pages, referrers, device and country, with a retention setting",
                 "category": "marketing-analytics",
                 "author": {
@@ -103,13 +184,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-appointments",
-            "tag": "v0.7.1",
-            "commitSha": "83cb567726bde8980a3ef50b1cb4a51726dfa138",
-            "pushedAt": "2026-11-12T20:24:53Z",
+            "tag": "v0.7.2",
+            "commitSha": "003bbb95e9d4aa177d6b7e4be35e55e75ed366d9",
+            "pushedAt": "2026-11-23T14:17:15Z",
             "manifest": {
                 "id": "osmium-appointments",
                 "name": "Osmium Appointments",
-                "version": "0.7.1",
+                "version": "0.7.2",
                 "description": "Appointment requests the business confirms or declines, for one customer at a time per person or booth (hairdressers, tanning, dentists, physios): things to book, who or what is booked, opening hours, time off, clean-up time, emails and calendar links, with hooks so a calendar service can follow along",
                 "category": "business",
                 "author": {
@@ -191,13 +272,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-blog",
-            "tag": "v0.14.3",
-            "commitSha": "eaa2e671847244fa5dffd156817dbe68d2883138",
-            "pushedAt": "2026-11-22T15:24:20Z",
+            "tag": "v0.16.1",
+            "commitSha": "43d879a33d1f17693edc58f89b12faad41c83b38",
+            "pushedAt": "2026-11-23T14:15:07Z",
             "manifest": {
                 "id": "osmium-blog",
                 "name": "Osmium Blog",
-                "version": "0.14.3",
+                "version": "0.16.1",
                 "description": "Blog posts written in admin and published as ordinary pages under /blog/, with the markup supplied by the theme",
                 "category": "content",
                 "author": {
@@ -205,7 +286,7 @@
                 },
                 "license": "proprietary",
                 "requires": {
-                    "osmium": ">=1.0.0",
+                    "osmium": ">=2.4.0",
                     "php": ">=8.1",
                     "services": []
                 },
@@ -295,13 +376,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-brevo",
-            "tag": "v1.2.5",
-            "commitSha": "e1cee3bb6fb4b55b0e6dc91f2518252979ef8d54",
-            "pushedAt": "2026-11-10T17:20:51Z",
+            "tag": "v1.2.6",
+            "commitSha": "84c5d54cc82afb10bde5f83d38e15b46dc0d9341",
+            "pushedAt": "2026-11-23T14:18:25Z",
             "manifest": {
                 "id": "brevo",
                 "name": "Brevo",
-                "version": "1.2.5",
+                "version": "1.2.6",
                 "description": "Send site email through Brevo's HTTP API, and add newsletter signups to a Brevo list. A generous free plan, and useful where hosting blocks outbound SMTP. Appears as a provider on the Email settings page.",
                 "category": "email",
                 "website": "https://www.brevo.com",
@@ -361,13 +442,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-carousel",
-            "tag": "v0.6.0",
-            "commitSha": "7cfc513478307db1c1045294c9a20e2dfff4b474",
-            "pushedAt": "2026-11-15T17:24:05Z",
+            "tag": "v0.7.1",
+            "commitSha": "2940c7c440cbf893ddb33acd259a75223a728ae3",
+            "pushedAt": "2026-11-23T14:15:09Z",
             "manifest": {
                 "id": "osmium-carousel",
                 "name": "Osmium Carousel",
-                "version": "0.6.0",
+                "version": "0.7.1",
                 "description": "Homepage slides (image, title, text, link) managed in admin with schedules, for a theme to show with any carousel or none",
                 "category": "content",
                 "author": {
@@ -375,7 +456,7 @@
                 },
                 "license": "proprietary",
                 "requires": {
-                    "osmium": ">=1.0.0",
+                    "osmium": ">=2.4.0",
                     "php": ">=8.1",
                     "services": []
                 },
@@ -442,13 +523,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-clarity",
-            "tag": "v1.1.5",
-            "commitSha": "fdab7417379196dac1578a9d26e2af39b431e9a0",
-            "pushedAt": "2026-11-10T17:20:54Z",
+            "tag": "v1.1.6",
+            "commitSha": "885126b549146f25f791d86e34063ae7fc41112f",
+            "pushedAt": "2026-11-23T14:12:28Z",
             "manifest": {
                 "id": "clarity",
                 "name": "Microsoft Clarity",
-                "version": "1.1.5",
+                "version": "1.1.6",
                 "description": "Microsoft Clarity heatmaps and session recordings - free, consent-gated, gated on an admin-editable toggle and production-only; requires the Cookie Consent service",
                 "category": "marketing-analytics",
                 "website": "https://clarity.microsoft.com",
@@ -517,13 +598,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-cloudflare",
-            "tag": "v0.3.0",
-            "commitSha": "53488282c0ab153020b6ba566783dface4bd88cf",
-            "pushedAt": "2026-11-18T18:19:19Z",
+            "tag": "v0.3.1",
+            "commitSha": "e3095810f3b7b249733f4253e859783a520a3542",
+            "pushedAt": "2026-11-23T14:12:33Z",
             "manifest": {
                 "id": "osmium-cloudflare",
                 "name": "Osmium Cloudflare",
-                "version": "0.3.0",
+                "version": "0.3.1",
                 "description": "Clears the Cloudflare cache for you: automatically after every admin or assistant change, from a button, from a deploy script, and from the assistant (MCP). Also toggles development mode",
                 "category": "performance",
                 "website": "https://www.cloudflare.com",
@@ -583,13 +664,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-cookie-consent",
-            "tag": "v1.1.10",
-            "commitSha": "ea17487ff3c671080222e9f40938939452f85f78",
-            "pushedAt": "2026-11-16T10:47:13Z",
+            "tag": "v1.1.11",
+            "commitSha": "8fcca342791209d9cd4670c466c69de0ed150133",
+            "pushedAt": "2026-11-23T14:12:37Z",
             "manifest": {
                 "id": "cookie-consent",
                 "name": "Osmium Cookie Consent",
-                "version": "1.1.10",
+                "version": "1.1.11",
                 "description": "GDPR-style cookie consent banner and status ribbon, production-only, with an admin-editable cookie name/privacy URL/colors/copy",
                 "category": "security-privacy",
                 "author": {
@@ -650,13 +731,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-faqs",
-            "tag": "v1.9.2",
-            "commitSha": "4b407d3fa7e073c70448022959ff7629077bd42e",
-            "pushedAt": "2026-11-13T12:54:21Z",
+            "tag": "v1.10.1",
+            "commitSha": "828a33a30d503e830b557a2c5b8d62bc270c8cf7",
+            "pushedAt": "2026-11-23T14:15:12Z",
             "manifest": {
                 "id": "osmium-faqs",
                 "name": "Osmium FAQs",
-                "version": "1.9.2",
+                "version": "1.10.1",
                 "description": "Named lists of questions and answers managed in admin, for a theme to show anywhere, with FAQPage schema for search engines",
                 "category": "content",
                 "author": {
@@ -664,7 +745,7 @@
                 },
                 "license": "proprietary",
                 "requires": {
-                    "osmium": ">=1.0.0",
+                    "osmium": ">=2.4.0",
                     "php": ">=8.1",
                     "services": []
                 },
@@ -740,13 +821,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-featured-products",
-            "tag": "v0.3.0",
-            "commitSha": "dae98877e0705e0a424e3a8ae127e4c4909af021",
-            "pushedAt": "2026-11-12T19:33:46Z",
+            "tag": "v0.3.1",
+            "commitSha": "3adc519bb3ebcb9825ed5cdd52dd02414b887ebb",
+            "pushedAt": "2026-11-23T14:15:14Z",
             "manifest": {
                 "id": "osmium-featured-products",
                 "name": "Osmium Featured Products",
-                "version": "0.3.0",
+                "version": "0.3.1",
                 "description": "A hand-picked list of up to 5 featured products, ordered by drag and drop in admin, with an edit lock for busy admin teams and the list handed to the theme",
                 "category": "shop",
                 "author": {
@@ -811,13 +892,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-freeagent",
-            "tag": "v1.2.4",
-            "commitSha": "640757e5ba18cbaaeda7eceb048b5c0f98852227",
-            "pushedAt": "2026-11-10T17:21:01Z",
+            "tag": "v1.2.5",
+            "commitSha": "161f20bcbd1c3ccc51e8eda836a011742b2b0662",
+            "pushedAt": "2026-11-23T14:18:29Z",
             "manifest": {
                 "id": "freeagent",
                 "name": "FreeAgent",
-                "version": "1.2.4",
+                "version": "1.2.5",
                 "description": "Connects the shop to FreeAgent (OAuth2) and adds a 'Push to FreeAgent' button on paid orders that creates a sales invoice. Locked to one named FreeAgent company",
                 "category": "business",
                 "website": "https://www.freeagent.com",
@@ -923,13 +1004,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-analytics",
-            "tag": "v2.0.9",
-            "commitSha": "e260e3b5d2166038f11abc4e8cb7d96eeb3089f2",
-            "pushedAt": "2026-11-17T10:12:21Z",
+            "tag": "v2.0.10",
+            "commitSha": "7b830881434091b52f402d7c347cc7b6b51b8e0c",
+            "pushedAt": "2026-11-23T14:12:47Z",
             "manifest": {
                 "id": "google-analytics",
                 "name": "Google Analytics",
-                "version": "2.0.9",
+                "version": "2.0.10",
                 "description": "Google Tag Manager / GA4 loading with Consent Mode v2, gated on an admin-editable toggle and production-only; requires the Cookie Consent service",
                 "category": "marketing-analytics",
                 "website": "https://marketingplatform.google.com/about/analytics/",
@@ -1001,13 +1082,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-calendar",
-            "tag": "v0.1.2",
-            "commitSha": "75db752f78a13ae9ca06251691fdfbaaff87934e",
-            "pushedAt": "2026-11-10T17:21:10Z",
+            "tag": "v0.1.3",
+            "commitSha": "0281f134e0bc7d35491f1b5e75c57aa02f2d9852",
+            "pushedAt": "2026-11-23T14:12:52Z",
             "manifest": {
                 "id": "google-calendar",
                 "name": "Google Calendar",
-                "version": "0.1.2",
+                "version": "0.1.3",
                 "description": "Puts confirmed Osmium Appointments, Hire and Reservations on a Google Calendar, and moves or removes them when they change or are cancelled. One-way: the site stays the source of truth. Uses a Google service account, so there is no sign-in or token to renew.",
                 "category": "business",
                 "website": "https://calendar.google.com",
@@ -1095,13 +1176,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-maps",
-            "tag": "v1.0.8",
-            "commitSha": "1c254ef63714ca3ed7178d5cf467ec38fe181f9e",
-            "pushedAt": "2026-11-11T11:36:31Z",
+            "tag": "v1.0.9",
+            "commitSha": "8cd22cee49c58cd2c12c2f7da3d29b6c54257568",
+            "pushedAt": "2026-11-23T14:12:58Z",
             "manifest": {
                 "id": "google-maps",
                 "name": "Google Maps",
-                "version": "1.0.8",
+                "version": "1.0.9",
                 "description": "Draws a map of pins (clustered, with a fullscreen button) on Google Maps, for a theme to place anywhere - the Google counterpart of Leaflet Maps, taking the same pin list. Needs your own API key (billing account); loads Google only after cookie consent",
                 "category": "content",
                 "website": "https://mapsplatform.google.com",
@@ -1182,13 +1263,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-maps-embed",
-            "tag": "v2.2.1",
-            "commitSha": "9e6bbbf160c31edc71cf0a690bfb76658e6b4017",
-            "pushedAt": "2026-11-13T13:18:06Z",
+            "tag": "v2.3.1",
+            "commitSha": "460f41496d0d30e21e205af09bb3a31faf6196ae",
+            "pushedAt": "2026-11-23T14:15:17Z",
             "manifest": {
                 "id": "google-maps-embed",
                 "name": "Google Maps Embed",
-                "version": "2.2.1",
+                "version": "2.3.1",
                 "description": "Google Maps Embed (a single place in an iframe): named maps managed in admin, for a theme to show anywhere, found by slug",
                 "category": "content",
                 "website": "https://developers.google.com/maps/documentation/embed",
@@ -1201,7 +1282,7 @@
                 },
                 "license": "proprietary",
                 "requires": {
-                    "osmium": ">=1.0.0",
+                    "osmium": ">=2.4.0",
                     "php": ">=8.1",
                     "services": []
                 },
@@ -1273,13 +1354,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-merchant-center",
-            "tag": "v1.2.4",
-            "commitSha": "e16a27088500dd3c718c42e03ba6b954bf45c024",
-            "pushedAt": "2026-11-10T17:21:19Z",
+            "tag": "v1.2.5",
+            "commitSha": "efa8a44494e7fd4a72aa1aa8b35e8c20f839296d",
+            "pushedAt": "2026-11-23T14:13:02Z",
             "manifest": {
                 "id": "google-merchant-center",
                 "name": "Google Merchant Center",
-                "version": "1.2.4",
+                "version": "1.2.5",
                 "description": "Pushes product data to Google Merchant Center (Merchant API) whenever a product is saved, status-changed or removed. Service-account auth, admin-editable credentials, test connection and one-click full sync",
                 "category": "marketing-analytics",
                 "website": "https://merchants.google.com",
@@ -1339,13 +1420,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-google-reviews",
-            "tag": "v1.3.4",
-            "commitSha": "0cf0a41ddaa778a8b915f70e086483c01283b9aa",
-            "pushedAt": "2026-11-15T17:53:46Z",
+            "tag": "v1.3.5",
+            "commitSha": "6b6243797f75dd353f76538adac4989af0a47903",
+            "pushedAt": "2026-11-23T14:15:20Z",
             "manifest": {
                 "id": "google-reviews",
                 "name": "Google Reviews",
-                "version": "1.3.4",
+                "version": "1.3.5",
                 "description": "Hand-curated Google review admin CRUD and shown reviews (social-proof) model",
                 "category": "marketing-analytics",
                 "website": "https://business.google.com",
@@ -1412,13 +1493,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-hcaptcha",
-            "tag": "v1.1.6",
-            "commitSha": "383d6c9313f2eb56ca23d6e12d8108716daa414f",
-            "pushedAt": "2026-11-10T17:21:26Z",
+            "tag": "v1.1.7",
+            "commitSha": "44fffdb8bafa8805df715e22dca1dcbfd2a9f6a4",
+            "pushedAt": "2026-11-23T14:18:32Z",
             "manifest": {
                 "id": "hcaptcha",
                 "name": "hCaptcha",
-                "version": "1.1.6",
+                "version": "1.1.7",
                 "description": "Spam protection for forms via hCaptcha - a privacy-focused alternative to Google reCAPTCHA and Cloudflare Turnstile, admin-editable site/secret key",
                 "category": "security-privacy",
                 "website": "https://www.hcaptcha.com",
@@ -1502,13 +1583,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-hire",
-            "tag": "v0.2.1",
-            "commitSha": "2c3b89c6d85ff293692e4355d2df9d3db2b13471",
-            "pushedAt": "2026-11-12T20:24:56Z",
+            "tag": "v0.2.2",
+            "commitSha": "81994cd36c264e57ae7d151a1905e16488058201",
+            "pushedAt": "2026-11-23T14:17:18Z",
             "manifest": {
                 "id": "osmium-hire",
                 "name": "Osmium Hire",
-                "version": "0.2.1",
+                "version": "0.2.2",
                 "description": "Equipment hire for whole days: groups of individual items (a 3 tonne digger, a van), turnaround days after each hire, out-of-service dates, request-and-confirm with collection and return details, a per-item planner, emails and calendar links, with hooks so other services can follow along",
                 "category": "business",
                 "author": {
@@ -1590,13 +1671,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-indexnow",
-            "tag": "v0.4.1",
-            "commitSha": "ee707cf3f7e76b7f7202a1c456057ab7c0d5445e",
-            "pushedAt": "2026-11-22T16:44:00Z",
+            "tag": "v0.4.2",
+            "commitSha": "7d7c3234cf9872d8537501bd6d6f5aa63df61d91",
+            "pushedAt": "2026-11-23T14:18:34Z",
             "manifest": {
                 "id": "osmium-indexnow",
                 "name": "Osmium IndexNow",
-                "version": "0.4.1",
+                "version": "0.4.2",
                 "description": "Tells Bing, Yandex and other IndexNow search engines the moment a page is created, edited or deleted, instead of waiting for them to re-crawl; Google does not use IndexNow",
                 "category": "marketing-analytics",
                 "website": "https://www.indexnow.org",
@@ -1656,13 +1737,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-lacrm",
-            "tag": "v0.4.3",
-            "commitSha": "c5f6903259e644f232368636894053b2c98d5053",
-            "pushedAt": "2026-11-18T10:24:03Z",
+            "tag": "v0.4.4",
+            "commitSha": "a10a9b729de392d5cbaa2a5a07661b27d7152970",
+            "pushedAt": "2026-11-23T14:18:37Z",
             "manifest": {
                 "id": "osmium-lacrm",
                 "name": "Less Annoying CRM",
-                "version": "0.4.3",
+                "version": "0.4.4",
                 "description": "Connects the site to Less Annoying CRM: a configurable API connection, and a signed webhook receiver. Other services use it through hooks, so it needs none of them and none of them are needed by it",
                 "category": "business",
                 "website": "https://www.lessannoyingcrm.com",
@@ -1787,13 +1868,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-links",
-            "tag": "v0.4.0",
-            "commitSha": "8ae17fa3e433ca992703fde2a6fe71dcff63c8b3",
-            "pushedAt": "2026-11-12T19:45:47Z",
+            "tag": "v0.5.1",
+            "commitSha": "08d5f8cb46935fd74a749f1e862ada6feb2dfffa",
+            "pushedAt": "2026-11-23T14:15:23Z",
             "manifest": {
                 "id": "osmium-links",
                 "name": "Osmium Links",
-                "version": "0.4.0",
+                "version": "0.5.1",
                 "description": "A list of external links (name, address, short description, logo) managed in admin, optionally in groups, for a theme to show anywhere",
                 "category": "content",
                 "author": {
@@ -1801,7 +1882,7 @@
                 },
                 "license": "proprietary",
                 "requires": {
-                    "osmium": ">=1.0.0",
+                    "osmium": ">=2.4.0",
                     "php": ">=8.1",
                     "services": []
                 },
@@ -1848,13 +1929,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-mailgun",
-            "tag": "v1.1.5",
-            "commitSha": "aaa394baeb3862b56f796fe7226dd744c59579c5",
-            "pushedAt": "2026-11-10T17:21:35Z",
+            "tag": "v1.1.6",
+            "commitSha": "bd0cfac3029d6a48ab9961fe8039d980ea9d8784",
+            "pushedAt": "2026-11-23T14:13:17Z",
             "manifest": {
                 "id": "mailgun",
                 "name": "Mailgun",
-                "version": "1.1.5",
+                "version": "1.1.6",
                 "description": "Send site email through Mailgun's HTTP API - useful where hosting blocks outbound SMTP. Appears as a provider on the Email settings page.",
                 "category": "email",
                 "website": "https://www.mailgun.com",
@@ -1909,13 +1990,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-mailjet",
-            "tag": "v1.1.4",
-            "commitSha": "6b3711ec001ce52a74ec2c26f9a15e781fac1988",
-            "pushedAt": "2026-11-10T17:21:38Z",
+            "tag": "v1.1.5",
+            "commitSha": "c75565b58b84e55e01c991e84691a8a7bd0a7c2a",
+            "pushedAt": "2026-11-23T14:13:22Z",
             "manifest": {
                 "id": "mailjet",
                 "name": "Mailjet",
-                "version": "1.1.4",
+                "version": "1.1.5",
                 "description": "Send site email through Mailjet's HTTP API - a free plan of 6,000 emails a month, and useful where hosting blocks outbound SMTP. Appears as a provider on the Email settings page.",
                 "category": "email",
                 "website": "https://www.mailjet.com",
@@ -1970,13 +2051,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-mailtrap",
-            "tag": "v1.1.4",
-            "commitSha": "7dbaeab7d897d89e33b2489940d63bad06afcd53",
-            "pushedAt": "2026-11-10T17:21:42Z",
+            "tag": "v1.1.5",
+            "commitSha": "43eb8ccd81b13f3cdb9ed823409fea4c336f8ff7",
+            "pushedAt": "2026-11-23T14:13:27Z",
             "manifest": {
                 "id": "mailtrap",
                 "name": "Mailtrap",
-                "version": "1.1.4",
+                "version": "1.1.5",
                 "description": "Send site email through Mailtrap - live sending, or a sandbox inbox that catches every email so nothing reaches real customers while testing. Appears as a provider on the Email settings page.",
                 "category": "email",
                 "website": "https://mailtrap.io",
@@ -2031,13 +2112,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-mals",
-            "tag": "v0.3.5",
-            "commitSha": "2b5e2c2ff0f913d6d7ba6a22f657e5a1b7431df7",
-            "pushedAt": "2026-11-16T10:41:28Z",
+            "tag": "v0.3.6",
+            "commitSha": "4ce2defdbd684233615ea5ad8755b1fa3917a05c",
+            "pushedAt": "2026-11-23T14:18:39Z",
             "manifest": {
                 "id": "mals",
                 "name": "Mals Ecommerce",
-                "version": "0.3.5",
+                "version": "0.3.6",
                 "description": "Sells through the Mals hosted cart: add-to-cart buttons post to Mals, the checkout is Mals' own page, and the header shows the cart count. No basket or checkout pages of its own",
                 "category": "payments",
                 "website": "https://www.mals-e.com",
@@ -2101,13 +2182,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-meta-pixel",
-            "tag": "v1.2.7",
-            "commitSha": "23c89750c154598eb58cb6d552cb638da385f3c9",
-            "pushedAt": "2026-11-11T11:36:40Z",
+            "tag": "v1.2.8",
+            "commitSha": "c3374de1522f524b91fa8094e9b18a978c5b85ec",
+            "pushedAt": "2026-11-23T14:13:33Z",
             "manifest": {
                 "id": "meta-pixel",
                 "name": "Meta Pixel",
-                "version": "1.2.7",
+                "version": "1.2.8",
                 "description": "Meta (Facebook/Instagram) Pixel PageView plus optional shop events (ViewContent, AddToCart, Purchase) and server-side Purchase, consent-gated, gated on an admin-editable toggle and production-only; requires the Cookie Consent service",
                 "category": "marketing-analytics",
                 "website": "https://www.facebook.com/business/tools/meta-pixel",
@@ -2184,13 +2265,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-microsoft-graph",
-            "tag": "v1.1.4",
-            "commitSha": "807543faa1ae9866703a6305686f6a77f7028dac",
-            "pushedAt": "2026-11-10T17:21:54Z",
+            "tag": "v1.1.5",
+            "commitSha": "399a6236b6a9cad02978eb3b8309a22cc0e235b9",
+            "pushedAt": "2026-11-23T14:13:38Z",
             "manifest": {
                 "id": "microsoft-graph",
                 "name": "Microsoft 365 Mail",
-                "version": "1.1.4",
+                "version": "1.1.5",
                 "description": "Send site email through the Microsoft Graph API using an Azure AD app registration - for Microsoft 365 tenants that have disabled SMTP AUTH. Appears as a provider on the Email settings page.",
                 "category": "email",
                 "website": "https://www.microsoft.com/microsoft-365",
@@ -2245,13 +2326,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-paypal",
-            "tag": "v1.4.9",
-            "commitSha": "af5dd25aace36c16f86589e9332671775687396a",
-            "pushedAt": "2026-11-22T11:13:33Z",
+            "tag": "v1.4.10",
+            "commitSha": "7faecb9fbd9ed4daec1ab572b85c17693bd4f0af",
+            "pushedAt": "2026-11-23T14:18:42Z",
             "manifest": {
                 "id": "paypal",
                 "name": "PayPal",
-                "version": "1.4.9",
+                "version": "1.4.10",
                 "description": "Takes PayPal payments at checkout (Orders v2, server-side capture), with a signature-verified webhook to reconcile orders. Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "website": "https://www.paypal.com",
@@ -2338,13 +2419,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-pv-installs",
-            "tag": "v0.1.0",
-            "commitSha": "dd83ba8508fc72efdaef8df9948e547f608ce824",
-            "pushedAt": "2026-11-14T22:11:05Z",
+            "tag": "v0.1.1",
+            "commitSha": "ef32e7a258ab2bcd7419b424ee78f987c8256a14",
+            "pushedAt": "2026-11-23T14:13:43Z",
             "manifest": {
                 "id": "osmium-pv-installs",
                 "name": "Osmium PV Installs",
-                "version": "0.1.0",
+                "version": "0.1.1",
                 "description": "Lists the solar PV installation requests a site's enquiry form has saved, under a PV Installs item at the top of the admin sidebar",
                 "category": "content",
                 "author": {
@@ -2397,13 +2478,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-quickbooks",
-            "tag": "v1.1.4",
-            "commitSha": "98ad57be96aef01a61acc7870b10f9925d2c8c38",
-            "pushedAt": "2026-11-10T17:22:02Z",
+            "tag": "v1.1.5",
+            "commitSha": "917d5e9c80aad714eb131435d2b40e5288318eb1",
+            "pushedAt": "2026-11-23T14:18:44Z",
             "manifest": {
                 "id": "quickbooks",
                 "name": "QuickBooks",
-                "version": "1.1.4",
+                "version": "1.1.5",
                 "description": "Connects the shop to QuickBooks (OAuth2) and adds a 'Push to QuickBooks' button on paid orders that creates a sales invoice. Locked to one named QuickBooks company",
                 "category": "business",
                 "website": "https://quickbooks.intuit.com",
@@ -2483,13 +2564,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-recaptcha",
-            "tag": "v1.1.7",
-            "commitSha": "16d8d3473fe8a3e438a43b4d6eb9c5a524db0fdd",
-            "pushedAt": "2026-11-10T17:22:10Z",
+            "tag": "v1.1.8",
+            "commitSha": "7d6bc1ed15ecfe9c4aef719ff74e72f38bb27677",
+            "pushedAt": "2026-11-23T14:18:46Z",
             "manifest": {
                 "id": "recaptcha",
                 "name": "Google reCAPTCHA v3",
-                "version": "1.1.7",
+                "version": "1.1.8",
                 "description": "Spam protection for forms via Google reCAPTCHA v3 - score-based, invisible by default, admin-editable site/secret key and score threshold",
                 "category": "security-privacy",
                 "website": "https://www.google.com/recaptcha/about/",
@@ -2567,13 +2648,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-resend",
-            "tag": "v1.1.5",
-            "commitSha": "23b9b5fb36d396b966811786a510c6d5cd9dab08",
-            "pushedAt": "2026-11-10T17:22:14Z",
+            "tag": "v1.1.6",
+            "commitSha": "865b7b4b5c658f7bd2ae33b592998e9249c3594f",
+            "pushedAt": "2026-11-23T14:13:54Z",
             "manifest": {
                 "id": "resend",
                 "name": "Resend",
-                "version": "1.1.5",
+                "version": "1.1.6",
                 "description": "Send site email through Resend's HTTP API - a simple developer-friendly API with a free plan, and useful where hosting blocks outbound SMTP. Appears as a provider on the Email settings page.",
                 "category": "email",
                 "website": "https://resend.com",
@@ -2628,13 +2709,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-reservations",
-            "tag": "v0.5.1",
-            "commitSha": "5ca210a8a51e7588481befbbc23af76655ddf58e",
-            "pushedAt": "2026-11-12T20:25:00Z",
+            "tag": "v0.5.2",
+            "commitSha": "9c0f66d77259b457bb2922a539cc2d4dbe68128a",
+            "pushedAt": "2026-11-23T14:34:42Z",
             "manifest": {
                 "id": "osmium-reservations",
                 "name": "Osmium Reservations",
-                "version": "0.5.1",
+                "version": "0.5.2",
                 "description": "Table reservation requests the restaurant confirms or declines: tables with seats, party size, opening hours with a break between lunch and dinner, a hidden dining time and turnaround, a Live schedule, drag a booking to another table or time (with an email/text prompt), an Arrived step that locks the table, optional automatic answers that book a free table at once and email the nearest free times when full, emails and calendar links, with hooks so a calendar service can follow along",
                 "category": "business",
                 "author": {
@@ -2716,13 +2797,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-restock-leads",
-            "tag": "v0.4.0",
-            "commitSha": "312f18407580cf2101c0c2d8d75e8ac510e33c56",
-            "pushedAt": "2026-11-12T19:33:40Z",
+            "tag": "v0.4.1",
+            "commitSha": "f6260c2c3e0c0adbe898828b5922621f60f0f445",
+            "pushedAt": "2026-11-23T14:15:27Z",
             "manifest": {
                 "id": "osmium-restock-leads",
                 "name": "Osmium Restock Leads",
-                "version": "0.4.0",
+                "version": "0.4.1",
                 "description": "Lets customers leave their email to hear when an out-of-stock product is back, collects those requests, and lists them in admin",
                 "category": "shop",
                 "author": {
@@ -2787,13 +2868,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-reviews",
-            "tag": "v0.8.1",
-            "commitSha": "9afb49af7d3a68c1bae315f720310c240effdfd7",
-            "pushedAt": "2026-11-15T13:10:13Z",
+            "tag": "v0.8.2",
+            "commitSha": "f02146dc25b34f868d4727dc93f94a6e923abcff",
+            "pushedAt": "2026-11-23T14:15:30Z",
             "manifest": {
                 "id": "osmium-reviews",
                 "name": "Osmium Reviews",
-                "version": "0.8.1",
+                "version": "0.8.2",
                 "description": "Customer product reviews: a submit endpoint with spam protection, moderation in admin, and review data for the product page",
                 "category": "shop",
                 "author": {
@@ -2895,13 +2976,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-sage",
-            "tag": "v1.1.5",
-            "commitSha": "137c1b7b85b59b0423853429ea9aa400cd2c0f9f",
-            "pushedAt": "2026-11-10T17:22:21Z",
+            "tag": "v1.1.6",
+            "commitSha": "a799bd8416456b7b3278b9b71369afb228838c66",
+            "pushedAt": "2026-11-23T14:18:51Z",
             "manifest": {
                 "id": "sage",
                 "name": "Sage Accounting",
-                "version": "1.1.5",
+                "version": "1.1.6",
                 "description": "Connects the shop to Sage Accounting (OAuth2) and adds a 'Push to Sage' button on paid orders that creates a sales invoice. Locked to one named Sage business",
                 "category": "business",
                 "website": "https://www.sage.com",
@@ -2981,13 +3062,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-schema",
-            "tag": "v0.8.7",
-            "commitSha": "269244ebd814c6e4b323131e98a19f0a66480d85",
-            "pushedAt": "2026-11-19T16:21:14Z",
+            "tag": "v0.8.8",
+            "commitSha": "19ed89af49a18f1e6497db63eddcbdd74d64f7e6",
+            "pushedAt": "2026-11-23T14:14:06Z",
             "manifest": {
                 "id": "schema",
                 "name": "Osmium Schema",
-                "version": "0.8.7",
+                "version": "0.8.8",
                 "description": "Site-wide structured data: Organization or LocalBusiness (address and opening hours from Company > Location, contact point, and geo looked up from the postcode) and WebSite, as JSON-LD with fixed @ids other services can reference",
                 "category": "marketing-analytics",
                 "author": {
@@ -3042,13 +3123,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-search-analytics",
-            "tag": "v0.5.0",
-            "commitSha": "8966d0a997e69af6d2cf545f74618803f1bd66e9",
-            "pushedAt": "2026-11-12T19:33:44Z",
+            "tag": "v0.5.1",
+            "commitSha": "f86dc5ff6df9c4d7ad0d8b71af5f71b154514216",
+            "pushedAt": "2026-11-23T14:15:32Z",
             "manifest": {
                 "id": "osmium-search-analytics",
                 "name": "Osmium Search Analytics",
-                "version": "0.5.0",
+                "version": "0.5.1",
                 "description": "Records what customers search for in the shop, shows the top and zero-result searches in admin, and adds a search synonym in one click from a failed search",
                 "category": "shop",
                 "author": {
@@ -3116,13 +3197,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-seo-audit",
-            "tag": "v0.6.2",
-            "commitSha": "5a2deb3d863f17776dbdd64cdda4288770c17370",
-            "pushedAt": "2026-11-22T16:44:02Z",
+            "tag": "v0.7.1",
+            "commitSha": "a9affc40490591f9b93bfd5b6d6bac9af4de6367",
+            "pushedAt": "2026-11-23T14:15:35Z",
             "manifest": {
                 "id": "osmium-seo-audit",
                 "name": "Osmium SEO Audit",
-                "version": "0.6.2",
+                "version": "0.7.1",
                 "description": "Audits the whole site on demand for SEO problems and lists the fixes in priority order, with a score you can track between runs",
                 "category": "marketing-analytics",
                 "author": {
@@ -3197,13 +3278,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-shop",
-            "tag": "v0.54.1",
-            "commitSha": "1ae3464f88287b36341b1e4c4ad086825c3cb940",
-            "pushedAt": "2026-11-22T16:07:30Z",
+            "tag": "v0.54.3",
+            "commitSha": "1c4cf2b87e7d42fc75e0150d4726b080a46881b5",
+            "pushedAt": "2026-11-23T14:15:50Z",
             "manifest": {
                 "id": "osmium-shop",
                 "name": "Osmium Shop",
-                "version": "0.54.1",
+                "version": "0.54.3",
                 "description": "The shop: catalogue, baskets, checkout, orders, discounts and the admin screens that run them",
                 "category": "shop",
                 "author": {
@@ -3211,7 +3292,7 @@
                 },
                 "license": "proprietary",
                 "requires": {
-                    "osmium": ">=2.2.0",
+                    "osmium": ">=2.4.0",
                     "php": ">=8.1",
                     "services": []
                 },
@@ -3689,13 +3770,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-shows",
-            "tag": "v1.5.3",
-            "commitSha": "ee4c820f786bcc2c6e3342bd2109ac32b7bf5f02",
-            "pushedAt": "2026-11-15T18:03:33Z",
+            "tag": "v1.6.1",
+            "commitSha": "8764977ed16b76ad140d03eff41ee32b21b93d66",
+            "pushedAt": "2026-11-23T14:15:53Z",
             "manifest": {
                 "id": "osmium-shows",
                 "name": "Osmium Shows",
-                "version": "1.5.3",
+                "version": "1.6.1",
                 "description": "Curated trade show/event listings with postcode geocoding and logo upload",
                 "category": "content",
                 "author": {
@@ -3703,7 +3784,7 @@
                 },
                 "license": "proprietary",
                 "requires": {
-                    "osmium": ">=1.0.0",
+                    "osmium": ">=2.4.0",
                     "php": ">=8.1",
                     "services": [
                         "geocoder"
@@ -3760,13 +3841,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-sinch",
-            "tag": "v1.0.4",
-            "commitSha": "b9aace711d6f55d23af96fbbfd2efec834d7d0f8",
-            "pushedAt": "2026-11-10T17:22:40Z",
+            "tag": "v1.0.5",
+            "commitSha": "9c69c5729f8e41224248d5e372f96cab26ae7af5",
+            "pushedAt": "2026-11-23T14:14:17Z",
             "manifest": {
                 "id": "sinch",
                 "name": "Sinch SMS",
-                "version": "1.0.4",
+                "version": "1.0.5",
                 "description": "Send SMS through Sinch's SMS REST API. Admin-editable credentials and sender, plus a test-text button. A capability for core and other services: answers the sms.providers and sms.send hooks",
                 "category": "sms",
                 "website": "https://www.sinch.com",
@@ -3827,13 +3908,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-social-links",
-            "tag": "v0.5.2",
-            "commitSha": "ce7300943eee042d8d0bbbefa0c9d849bd22b524",
-            "pushedAt": "2026-11-14T10:33:54Z",
+            "tag": "v0.5.3",
+            "commitSha": "165f30bbd7cbb9df3722ddf57f68f789352fa19a",
+            "pushedAt": "2026-11-23T14:15:56Z",
             "manifest": {
                 "id": "osmium-social-links",
                 "name": "Osmium Social Links",
-                "version": "0.5.2",
+                "version": "0.5.3",
                 "description": "One place for the business's social profile URLs, shown as a list of links by a theme and available to other services such as Schema",
                 "category": "content",
                 "author": {
@@ -3898,13 +3979,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-square",
-            "tag": "v1.1.8",
-            "commitSha": "2f24d18bb5c03fc08312de8067b3e43015b4a57f",
-            "pushedAt": "2026-11-11T14:18:28Z",
+            "tag": "v1.1.9",
+            "commitSha": "76b649e6025fe8f6826d9e8843dcaf29559c6704",
+            "pushedAt": "2026-11-23T14:14:23Z",
             "manifest": {
                 "id": "square",
                 "name": "Square",
-                "version": "1.1.8",
+                "version": "1.1.9",
                 "description": "Takes card payments at checkout through Square (Web Payments SDK card form on your own page, charged server-side with the CreatePayment API). Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "website": "https://squareup.com",
@@ -3997,13 +4078,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-stock-control",
-            "tag": "v0.9.1",
-            "commitSha": "06d89ad840e739532a11509bfbdc26bc63f3c068",
-            "pushedAt": "2026-11-12T20:25:23Z",
+            "tag": "v0.9.2",
+            "commitSha": "cd2fa0bba37e93ff0c7c83a90a859782b60a10ba",
+            "pushedAt": "2026-11-23T14:34:45Z",
             "manifest": {
                 "id": "osmium-stock-control",
                 "name": "Osmium Stock Control",
-                "version": "0.9.1",
+                "version": "0.9.2",
                 "description": "Counts stock down when an order is paid, stops customers adding more than is in stock, and treats a kit's parts as stock of their own",
                 "category": "shop",
                 "author": {
@@ -4118,13 +4199,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-stripe",
-            "tag": "v1.2.9",
-            "commitSha": "6e9df7de96049156a26845f38b99956b8273460c",
-            "pushedAt": "2026-11-11T14:18:21Z",
+            "tag": "v1.2.10",
+            "commitSha": "35011c62a5a868419f5af156c7d4527b02f2f325",
+            "pushedAt": "2026-11-23T14:18:56Z",
             "manifest": {
                 "id": "stripe",
                 "name": "Stripe",
-                "version": "1.2.9",
+                "version": "1.2.10",
                 "description": "Takes card payments at checkout through Stripe (PaymentIntents, plus Apple Pay/Google Pay via the card element), with a signature-verified webhook to reconcile orders. Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "website": "https://stripe.com",
@@ -4204,13 +4285,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-trade-accounts",
-            "tag": "v0.12.0",
-            "commitSha": "0d2d76068e239b98b86df599079d9cf007d0e3a8",
-            "pushedAt": "2026-11-21T11:06:09Z",
+            "tag": "v0.13.1",
+            "commitSha": "46f813e4324ecccf8ac0853be9e55ac0c700701b",
+            "pushedAt": "2026-11-23T14:16:00Z",
             "manifest": {
                 "id": "osmium-trade-accounts",
                 "name": "Trade Accounts",
-                "version": "0.12.0",
+                "version": "0.13.1",
                 "description": "B2B trade customer accounts: a status workflow, admin, and passwordless login. Customers come from your own admin or from a chosen source such as a CRM, through neutral hooks. Needs no shop and no CRM",
                 "category": "business",
                 "author": {
@@ -4218,7 +4299,7 @@
                 },
                 "license": "proprietary",
                 "requires": {
-                    "osmium": ">=2.3.0",
+                    "osmium": ">=2.4.0",
                     "php": ">=8.1",
                     "services": []
                 },
@@ -4359,13 +4440,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-trade-downloads",
-            "tag": "v0.3.0",
-            "commitSha": "b15428e0e10bd9313f4954e35ba1b7c13b11381c",
-            "pushedAt": "2026-11-14T18:18:03Z",
+            "tag": "v0.3.1",
+            "commitSha": "e8c1638d1ecb4bf16effe5d92e7941f54df70e4f",
+            "pushedAt": "2026-11-23T14:18:58Z",
             "manifest": {
                 "id": "osmium-trade-downloads",
                 "name": "Trade Downloads",
-                "version": "0.3.0",
+                "version": "0.3.1",
                 "description": "A page for logged-in trade customers listing the shop's product documents and images by category, with a one-click ZIP of a product's images. Needs Trade Accounts and the shop",
                 "category": "business",
                 "author": {
@@ -4418,13 +4499,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-trade-lacrm",
-            "tag": "v0.1.0",
-            "commitSha": "83f213fcb5191e1e92c08930fc4c8a21271897ae",
-            "pushedAt": "2026-11-14T21:26:11Z",
+            "tag": "v0.1.1",
+            "commitSha": "7d4073215bda3994836caa499e2ebd0221b8fa58",
+            "pushedAt": "2026-11-23T14:14:34Z",
             "manifest": {
                 "id": "osmium-trade-lacrm",
                 "name": "Trade LACRM Sync",
-                "version": "0.1.0",
+                "version": "0.1.1",
                 "description": "Fills Trade Accounts from Less Annoying CRM: a submitted application form creates a pending customer, a won sale activates one, a lost sale suspends one, and a bulk import catches up. Trade Accounts and the LACRM service know nothing of each other; this connects them",
                 "category": "business",
                 "author": {
@@ -4481,13 +4562,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-trade-ordering",
-            "tag": "v0.11.0",
-            "commitSha": "c6921b516f52c2addfb6e13528f00242396e60de",
-            "pushedAt": "2026-11-21T11:01:15Z",
+            "tag": "v0.11.1",
+            "commitSha": "b63804d4700063b18f8714a3224b12b9f2ff5326",
+            "pushedAt": "2026-11-23T14:16:03Z",
             "manifest": {
                 "id": "osmium-trade-ordering",
                 "name": "Trade Ordering",
-                "version": "0.11.0",
+                "version": "0.11.1",
                 "description": "Trade pricing and ordering for trade customers: a discount and payment terms per customer, brands excluded from the discount, and trade orders. Builds on Trade Accounts and the shop.",
                 "category": "business",
                 "author": {
@@ -4605,13 +4686,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-turnstile",
-            "tag": "v1.2.7",
-            "commitSha": "4a4e3827ecd779c2cfccc72230d3bf406b202562",
-            "pushedAt": "2026-11-12T20:15:54Z",
+            "tag": "v1.2.8",
+            "commitSha": "89b6bef0d8a2f103e4586de48c530af1bb667146",
+            "pushedAt": "2026-11-23T14:16:06Z",
             "manifest": {
                 "id": "turnstile",
                 "name": "Cloudflare Turnstile",
-                "version": "1.2.7",
+                "version": "1.2.8",
                 "description": "Spam protection for forms via Cloudflare Turnstile - free, no DNS dependency, admin-editable site and secret key",
                 "category": "security-privacy",
                 "website": "https://www.cloudflare.com/application-services/products/turnstile/",
@@ -4677,13 +4758,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-twilio",
-            "tag": "v1.1.5",
-            "commitSha": "c799b75181dcf840e4afe3c3fb75b0f2282336a8",
-            "pushedAt": "2026-11-10T17:23:09Z",
+            "tag": "v1.1.6",
+            "commitSha": "041f7fa35a1d02c83257ad448e92dd2f1b2a9602",
+            "pushedAt": "2026-11-23T14:14:41Z",
             "manifest": {
                 "id": "twilio",
                 "name": "Twilio SMS",
-                "version": "1.1.5",
+                "version": "1.1.6",
                 "description": "Send SMS through Twilio's Messages API. Admin-editable credentials and sender, plus a test-text button. A capability for core and other services: answers the sms.providers and sms.send hooks",
                 "category": "sms",
                 "website": "https://www.twilio.com",
@@ -4744,13 +4825,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-vehicles",
-            "tag": "v0.5.1",
-            "commitSha": "4724f20073aeb7fbfb80f14558813c5a5a2f31e7",
-            "pushedAt": "2026-11-22T15:34:27Z",
+            "tag": "v0.5.2",
+            "commitSha": "91ef867510c9515a2ef15334923020c7e2891711",
+            "pushedAt": "2026-11-23T14:19:01Z",
             "manifest": {
                 "id": "osmium-vehicles",
                 "name": "Osmium Vehicles",
-                "version": "0.5.1",
+                "version": "0.5.2",
                 "description": "Vehicles for sale (cars, caravans, motorhomes, vans) managed in admin and published as ordinary pages, with photo galleries, features and custom specs and the markup supplied by the theme",
                 "category": "content",
                 "author": {
@@ -4849,13 +4930,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-vonage",
-            "tag": "v1.0.6",
-            "commitSha": "5bae98217c19439d9e419cc98cc5dfe421dbf3db",
-            "pushedAt": "2026-11-10T17:23:17Z",
+            "tag": "v1.0.7",
+            "commitSha": "9abdbb5c230c6b26329595a9aa887f73e565c2a0",
+            "pushedAt": "2026-11-23T14:14:47Z",
             "manifest": {
                 "id": "vonage",
                 "name": "Vonage SMS",
-                "version": "1.0.6",
+                "version": "1.0.7",
                 "description": "Send SMS through Vonage's SMS API. Admin-editable credentials and sender, plus a test-text button. A capability for core and other services: answers the sms.providers and sms.send hooks",
                 "category": "sms",
                 "website": "https://www.vonage.com",
@@ -4916,13 +4997,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-xero",
-            "tag": "v1.2.5",
-            "commitSha": "c548312a3e6c789d195cefed89a04bca6cb87caf",
-            "pushedAt": "2026-11-10T17:23:21Z",
+            "tag": "v1.2.6",
+            "commitSha": "2f76f85ffd8b795872f9574d0179301bd4900d2a",
+            "pushedAt": "2026-11-23T14:19:03Z",
             "manifest": {
                 "id": "xero",
                 "name": "Xero",
-                "version": "1.2.5",
+                "version": "1.2.6",
                 "description": "Connects the shop to Xero (OAuth2) and adds a 'Push to Xero' button on paid orders that creates an AUTHORISED sales invoice. Locked to one named Xero organisation",
                 "category": "business",
                 "website": "https://www.xero.com",
