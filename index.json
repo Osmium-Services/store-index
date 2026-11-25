@@ -977,6 +977,79 @@
             }
         },
         {
+            "repo": "Osmium-Services/osmium-gallery",
+            "tag": "v0.3.0",
+            "commitSha": "0c426751f5c8e3dec738fcc22f597fafa58026cc",
+            "pushedAt": "2026-11-25T18:14:36Z",
+            "manifest": {
+                "id": "osmium-gallery",
+                "name": "Osmium Gallery",
+                "version": "0.3.0",
+                "description": "Albums of photos managed in admin, stored and optimised for a theme to show in any layout",
+                "category": "content",
+                "author": {
+                    "name": "Gavin Cox"
+                },
+                "license": "proprietary",
+                "requires": {
+                    "osmium": ">=2.4.0",
+                    "php": ">=8.1",
+                    "services": []
+                },
+                "autoload": [
+                    "models"
+                ],
+                "migrations": "migrations/",
+                "admin": {
+                    "menu": {
+                        "section": "Content",
+                        "items": [
+                            {
+                                "id": "osmium-gallery",
+                                "label": "Gallery",
+                                "icon": "bx bx-photo-album",
+                                "route": "admin/gallery",
+                                "activePattern": "admin/gallery*",
+                                "color": "#e83e8c",
+                                "placement": "group",
+                                "group": "content",
+                                "order": 25,
+                                "role": null
+                            }
+                        ]
+                    },
+                    "routes": {
+                        "admin/gallery": {
+                            "controller": "controllers/GalleryController.php",
+                            "class": "Osmium\\Services\\OsmiumGallery\\Controllers\\GalleryController",
+                            "method": "index",
+                            "title": "Osmium Gallery"
+                        },
+                        "admin/gallery/add": {
+                            "controller": "controllers/GalleryController.php",
+                            "class": "Osmium\\Services\\OsmiumGallery\\Controllers\\GalleryController",
+                            "method": "add",
+                            "title": "New Album"
+                        },
+                        "admin/gallery/edit": {
+                            "controller": "controllers/GalleryController.php",
+                            "class": "Osmium\\Services\\OsmiumGallery\\Controllers\\GalleryController",
+                            "method": "edit",
+                            "title": "Edit Album"
+                        },
+                        "admin/gallery/action": {
+                            "controller": "controllers/GalleryController.php",
+                            "class": "Osmium\\Services\\OsmiumGallery\\Controllers\\GalleryController",
+                            "method": "action"
+                        }
+                    }
+                },
+                "setup": {
+                    "postInstallNote": "Create an album on Content > Gallery, drop photos into it and publish it. The service ships no markup and no route: a theme controller reads the published albums with $gallery = new \\Osmium\\Services\\OsmiumGallery\\Models\\Gallery($this->osmium->dataSource, $this->osmium->imagePath(...)); $gallery->albums(), $gallery->album('slug'), $gallery->media($albumId) and $gallery->byYear($gallery->albums()). Each photo has src, srcset, width, height, alt, caption and type. Photos are saved in assets/images/gallery/<album>/<size>/ (thumb 240, medium 600, large 1200, extra 1920 on the long edge) with the untouched upload in <album>/original/. The server needs AddType image/avif .avif in .htaccess."
+                }
+            }
+        },
+        {
             "repo": "Osmium-Services/osmium-geocoder",
             "tag": "v1.1.2",
             "commitSha": "a051a068d2984f4d3552ff4cc536f9e5fb090c47",
@@ -2326,13 +2399,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-paypal",
-            "tag": "v1.4.11",
-            "commitSha": "ce6970212bd01ddc7dbf3e149bdf4748ce928e48",
-            "pushedAt": "2026-11-24T12:45:20Z",
+            "tag": "v1.4.12",
+            "commitSha": "1cde1fb8b8b726936d3b9ad2e9a44afc4aaf5992",
+            "pushedAt": "2026-11-25T13:31:17Z",
             "manifest": {
                 "id": "paypal",
                 "name": "PayPal",
-                "version": "1.4.11",
+                "version": "1.4.12",
                 "description": "Takes PayPal payments at checkout (Orders v2, server-side capture), with a signature-verified webhook to reconcile orders. Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "website": "https://www.paypal.com",
@@ -2355,6 +2428,9 @@
                     "models"
                 ],
                 "hooks": {
+                    "admin.status_icons": [
+                        "Osmium\\Services\\PayPal\\Models\\PayPalStatusIcon::icons"
+                    ],
                     "payment.providers": [
                         "Osmium\\Services\\PayPal\\Models\\PayPalPaymentProvider::provider"
                     ],
@@ -3979,13 +4055,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-square",
-            "tag": "v1.1.10",
-            "commitSha": "96eb2495a59db1c052fc7f6ade9dc7fee52e59ca",
-            "pushedAt": "2026-11-24T12:43:02Z",
+            "tag": "v1.1.11",
+            "commitSha": "7b37cd2d12b949332a2ec2b84690c54e80de2a30",
+            "pushedAt": "2026-11-25T13:31:20Z",
             "manifest": {
                 "id": "square",
                 "name": "Square",
-                "version": "1.1.10",
+                "version": "1.1.11",
                 "description": "Takes card payments at checkout through Square (Web Payments SDK card form on your own page, charged server-side with the CreatePayment API). Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "website": "https://squareup.com",
@@ -4008,6 +4084,9 @@
                     "models"
                 ],
                 "hooks": {
+                    "admin.status_icons": [
+                        "Osmium\\Services\\Square\\Models\\SquareStatusIcon::icons"
+                    ],
                     "payment.providers": [
                         "Osmium\\Services\\Square\\Models\\SquarePaymentProvider::provider"
                     ],
@@ -4199,13 +4278,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-stripe",
-            "tag": "v1.2.11",
-            "commitSha": "896038e708e526c22cff1db65f1745c1e27facc5",
-            "pushedAt": "2026-11-24T12:45:31Z",
+            "tag": "v1.2.12",
+            "commitSha": "ce748381f34d10e52c46414c986c52d4d015acab",
+            "pushedAt": "2026-11-25T13:31:15Z",
             "manifest": {
                 "id": "stripe",
                 "name": "Stripe",
-                "version": "1.2.11",
+                "version": "1.2.12",
                 "description": "Takes card payments at checkout through Stripe (PaymentIntents, plus Apple Pay/Google Pay via the card element), with a signature-verified webhook to reconcile orders. Appears as a payment provider in Settings > Payments",
                 "category": "payments",
                 "website": "https://stripe.com",
@@ -4228,6 +4307,9 @@
                     "models"
                 ],
                 "hooks": {
+                    "admin.status_icons": [
+                        "Osmium\\Services\\Stripe\\Models\\StripeStatusIcon::icons"
+                    ],
                     "payment.providers": [
                         "Osmium\\Services\\Stripe\\Models\\StripePaymentProvider::provider"
                     ],
