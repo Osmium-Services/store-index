@@ -978,13 +978,13 @@
         },
         {
             "repo": "Osmium-Services/osmium-gallery",
-            "tag": "v0.3.0",
-            "commitSha": "0c426751f5c8e3dec738fcc22f597fafa58026cc",
-            "pushedAt": "2026-11-25T18:14:36Z",
+            "tag": "v0.4.0",
+            "commitSha": "c96d33d1cfe8a347f9ea9dcfdf03324e30dc53ad",
+            "pushedAt": "2026-11-25T20:32:16Z",
             "manifest": {
                 "id": "osmium-gallery",
                 "name": "Osmium Gallery",
-                "version": "0.3.0",
+                "version": "0.4.0",
                 "description": "Albums of photos managed in admin, stored and optimised for a theme to show in any layout",
                 "category": "content",
                 "author": {
